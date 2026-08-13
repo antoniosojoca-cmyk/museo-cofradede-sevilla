@@ -105,6 +105,60 @@
   background: #c9a35b;
   color: #080808;
 }
+    .sala {
+  width: min(1000px, 100%);
+  margin: 120px auto 60px;
+  padding: 80px 30px;
+  border: 1px solid #c9a35b;
+  text-align: center;
+  background: #101010;
+}
+
+.sala-numero {
+  color: #c9a35b;
+  font-size: 14px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.sala h1 {
+  color: #ffffff;
+  font-size: 42px;
+  letter-spacing: 8px;
+  margin: 0;
+}
+
+.sala-intro {
+  max-width: 700px;
+  margin: 25px auto 40px;
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.sala-titulo {
+  color: #c9a35b;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+  .sala {
+    margin-top: 80px;
+    padding: 60px 20px;
+  }
+
+  .sala h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+
+  .sala-titulo {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
     .frase {
       margin-top: 35px;
       color: #aaaaaa;
@@ -168,7 +222,24 @@
     <div class="frase">
       Donde la memoria se convierte en arte.
     </div>
+<section id="sala-sevilla" class="sala">
 
+  <div class="sala-numero">SALA I</div>
+
+  <h1>SEVILLA</h1>
+
+  <div class="linea"></div>
+
+  <p class="sala-intro">
+    Un recorrido por la historia, el arte y la devoción
+    de las grandes hermandades de Sevilla.
+  </p>
+
+  <div class="sala-titulo">
+    LOS ROSTROS DE LA ESPERANZA
+  </div>
+
+</section>
   </main>
 
 </body>
