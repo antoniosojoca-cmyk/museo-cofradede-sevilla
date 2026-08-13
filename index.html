@@ -142,7 +142,70 @@
   letter-spacing: 4px;
   margin-top: 40px;
 }
+.pieza {
+  max-width: 850px;
+  margin: 70px auto 20px;
+  padding: 45px 30px;
+  border: 1px solid #c9a35b;
+  background: #080808;
+  text-align: center;
+}
 
+.pieza-numero {
+  color: #c9a35b;
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+}
+
+.pieza h2 {
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.pieza-linea {
+  width: 80px;
+  height: 1px;
+  background: #c9a35b;
+  margin: 25px auto;
+}
+
+.pieza-imagen {
+  width: 100%;
+  min-height: 420px;
+  border: 1px solid #c9a35b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  letter-spacing: 2px;
+  font-size: 13px;
+  background: #151515;
+}
+
+.pieza-texto {
+  max-width: 650px;
+  margin: 30px auto 0;
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .pieza {
+    padding: 35px 20px;
+  }
+
+  .pieza h2 {
+    font-size: 24px;
+  }
+
+  .pieza-imagen {
+    min-height: 300px;
+  }
+}
 @media (max-width: 700px) {
   .sala {
     margin-top: 80px;
@@ -238,7 +301,28 @@
   <div class="sala-titulo">
     LOS ROSTROS DE LA ESPERANZA
   </div>
+<div class="pieza">
 
+  <div class="pieza-numero">
+    PIEZA I
+  </div>
+
+  <h2>
+    La Esperanza Macarena
+  </h2>
+
+  <div class="pieza-linea"></div>
+
+  <div class="pieza-imagen">
+    IMAGEN DE LA ESPERANZA MACARENA
+  </div>
+
+  <p class="pieza-texto">
+    María Santísima de la Esperanza Macarena,
+    una de las grandes devociones de Sevilla.
+  </p>
+
+</div>
 </section>
   </main>
 
