@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Salas — Museo Cofrade de Sevilla</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f1f1f1;
+      font-family: Georgia, serif;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .numero {
+      color: #c9a35b;
+      letter-spacing: 5px;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: 4px;
+      margin: 10px 0;
+    }
+
+    .linea {
+      width: 120px;
+      height: 1px;
+      background: #c9a35b;
+      margin: 25px auto 45px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #cccccc;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .salas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .sala {
+      border: 1px solid #c9a35b;
+      padding: 35px 25px;
+      background: #111111;
+      transition: 0.3s;
+    }
+
+    .sala:hover {
+      transform: translateY(-5px);
+      background: #181818;
+    }
+
+    .sala-numero {
+      color: #c9a35b;
+      letter-spacing: 4px;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 18px 0;
+      line-height: 1.4;
+    }
+
+    .sala p {
+      color: #bbbbbb;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .entrar {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 11px 22px;
+      border: 1px solid #c9a35b;
+      color: #c9a35b;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .entrar:hover {
+      background: #c9a35b;
+      color: #080808;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 55px;
+      color: #c9a35b;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .salas {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="contenedor">
+
+    <div class="numero">
+      MUSEO COFRADE DE SEVILLA
+    </div>
+
+    <h1>
+      SALAS
+    </h1>
+
+    <div class="linea"></div>
+
+    <p class="intro">
+      Un recorrido por la historia, el arte y la devoción
+      de la Semana Santa de Sevilla a través de sus diferentes salas.
+    </p>
+
+    <section class="salas">
+
+      <div class="sala">
+
+        <div class="sala-numero">
+          SALA I
+        </div>
+
+        <h2>
+          LOS ROSTROS DE LA ESPERANZA
+        </h2>
+
+        <p>
+          Un recorrido por las grandes devociones de la Esperanza
+          en Sevilla y sus hermandades.
+        </p>
+
+        <a class="entrar" href="index.html#sala-sevilla">
+          ENTRAR
+        </a>
+
+      </div>
+
+
+      <div class="sala">
+
+        <div class="sala-numero">
+          SALA II
+        </div>
+
+        <h2>
+          LOS GRANDES CRISTOS DE SEVILLA
+        </h2>
+
+        <p>
+          Una selección de imágenes de Cristo que forman parte
+          de la historia y la devoción de Sevilla.
+        </p>
+
+        <a class="entrar"
+           href="SALA%20-ii.html">
+          ENTRAR
+        </a>
+
+      </div>
+
+    </section>
+
+    <a class="volver" href="index.html">
+      ← VOLVER AL MUSEO
+    </a>
+
+  </main>
+
+</body>
+</html>
