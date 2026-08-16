@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Galerías — Museo Cofrade de Sevilla</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f1f1f1;
+      font-family: Georgia, serif;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .numero {
+      color: #c9a35b;
+      letter-spacing: 5px;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: 4px;
+      margin: 10px 0;
+    }
+
+    .linea {
+      width: 120px;
+      height: 1px;
+      background: #c9a35b;
+      margin: 25px auto 45px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #cccccc;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .galerias {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .galeria {
+      border: 1px solid #c9a35b;
+      padding: 35px 25px;
+      background: #111111;
+      transition: 0.3s;
+    }
+
+    .galeria:hover {
+      transform: translateY(-5px);
+      background: #181818;
+    }
+
+    .galeria-numero {
+      color: #c9a35b;
+      letter-spacing: 4px;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 18px 0;
+      line-height: 1.4;
+    }
+
+    .galeria p {
+      color: #bbbbbb;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .entrar {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 11px 22px;
+      border: 1px solid #c9a35b;
+      color: #c9a35b;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .entrar:hover {
+      background: #c9a35b;
+      color: #080808;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 55px;
+      color: #c9a35b;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .galerias {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="contenedor">
+
+    <div class="numero">
+      MUSEO COFRADE DE SEVILLA
+    </div>
+
+    <h1>
+      GALERÍAS
+    </h1>
+
+    <div class="linea"></div>
+
+    <p class="intro">
+      Un espacio dedicado a la imagen, la memoria y los detalles
+      de la Semana Santa de Sevilla.
+    </p>
+
+    <section class="galerias">
+
+      <div class="galeria">
+
+        <div class="galeria-numero">
+          GALERÍA I
+        </div>
+
+        <h2>
+          GALERÍA I
+        </h2>
+
+        <p>
+          Una colección de imágenes
+          de la Semana Santa de Sevilla.
+        </p>
+
+        <a class="entrar" href="galeria-I.html">
+          ENTRAR
+        </a>
+
+      </div>
+
+
+      <div class="galeria">
+
+        <div class="galeria-numero">
+          GALERÍA II
+        </div>
+
+        <h2>
+          GALERÍA II
+        </h2>
+
+        <p>
+          Una colección dedicada
+          a las imágenes y momentos de Sevilla.
+        </p>
+
+        <a class="entrar" href="galeria-II.html">
+          ENTRAR
+        </a>
+
+      </div>
+
+
+      <div class="galeria">
+
+        <div class="galeria-numero">
+          GALERÍA III
+        </div>
+
+        <h2>
+          GALERÍA III
+        </h2>
+
+        <p>
+          Fotografías y recuerdos
+          de nuestra Semana Santa.
+        </p>
+
+        <a class="entrar" href="galeria-III.html">
+          ENTRAR
+        </a>
+
+      </div>
+
+
+      <div class="galeria">
+
+        <div class="galeria-numero">
+          GALERÍA IV
+        </div>
+
+        <h2>
+          GALERÍA IV
+        </h2>
+
+        <p>
+          Un recorrido visual por
+          la devoción y la tradición.
+        </p>
+
+        <a class="entrar" href="galeria-IV.html">
+          ENTRAR
+        </a>
+
+      </div>
+
+    </section>
+
+    <a class="volver" href="index.html">
+      ← VOLVER AL MUSEO
+    </a>
+
+  </main>
+
+</body>
+</html>
