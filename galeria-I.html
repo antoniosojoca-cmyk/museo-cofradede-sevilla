@@ -7,32 +7,25 @@
   <title>Galería I — Museo Cofrade de Sevilla</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
 
     body {
       margin: 0;
       background: #080808;
       color: #f1f1f1;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, serif;
     }
 
     .contenedor {
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
       padding: 60px 20px;
-    }
-
-    .cabecera {
       text-align: center;
-      margin-bottom: 60px;
     }
 
     .numero {
       color: #c9a35b;
       letter-spacing: 5px;
-      font-size: 14px;
+      font-size: 15px;
       margin-bottom: 15px;
     }
 
@@ -46,73 +39,68 @@
       width: 120px;
       height: 1px;
       background: #c9a35b;
-      margin: 25px auto;
+      margin: 25px auto 45px;
     }
 
     .intro {
       max-width: 700px;
-      margin: auto;
+      margin: 0 auto 60px;
       color: #cccccc;
       font-size: 17px;
       line-height: 1.7;
-      text-align: center;
     }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 35px;
-    }
+    /* PIEZAS UNA DEBAJO DE OTRA */
 
     .pieza {
-      background: #111111;
+      max-width: 850px;
+      margin: 0 auto 70px;
+      padding: 35px 30px 40px;
       border: 1px solid #c9a35b;
-      padding: 15px;
-      transition: 0.3s;
-    }
-
-    .pieza:hover {
-      transform: translateY(-5px);
-      background: #181818;
-    }
-
-    .pieza img {
-      width: 100%;
-      height: 330px;
-      object-fit: cover;
-      display: block;
-      border: 1px solid #333333;
-    }
-
-    .pieza-info {
+      background: #101010;
       text-align: center;
-      padding: 25px 10px 15px;
     }
 
     .pieza-numero {
       color: #c9a35b;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       font-size: 13px;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
 
-    h2 {
-      font-size: 21px;
-      letter-spacing: 2px;
-      margin: 8px 0 15px;
+    .pieza img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 30px;
+      border: 1px solid #c9a35b;
+    }
+
+    .pieza h2 {
+      color: #ffffff;
+      font-size: 27px;
+      letter-spacing: 3px;
+      margin: 0 0 22px;
+    }
+
+    .pieza-linea {
+      width: 80px;
+      height: 1px;
+      background: #c9a35b;
+      margin: 20px auto 25px;
     }
 
     .pieza-texto {
-      color: #bbbbbb;
-      font-size: 15px;
-      line-height: 1.6;
-      margin: 0;
+      max-width: 650px;
+      margin: 0 auto;
+      color: #cccccc;
+      font-size: 16px;
+      line-height: 1.8;
     }
 
     .volver {
-      display: block;
-      width: fit-content;
-      margin: 60px auto 0;
+      display: inline-block;
+      margin-top: 10px;
       padding: 12px 25px;
       border: 1px solid #c9a35b;
       color: #c9a35b;
@@ -128,22 +116,20 @@
 
     @media (max-width: 700px) {
 
-      .contenedor {
-        padding: 40px 15px;
-      }
-
       h1 {
         font-size: 28px;
       }
 
-      .galeria {
-        grid-template-columns: 1fr;
+      .pieza {
+        padding: 25px 18px 30px;
       }
 
-      .pieza img {
-        height: auto;
+      .pieza h2 {
+        font-size: 22px;
       }
+
     }
+
   </style>
 </head>
 
@@ -151,202 +137,171 @@
 
   <main class="contenedor">
 
-    <header class="cabecera">
+    <div class="numero">
+      MUSEO COFRADE DE SEVILLA
+    </div>
 
-      <div class="numero">
-        MUSEO COFRADE DE SEVILLA
+    <h1>
+      GALERÍA I
+    </h1>
+
+    <div class="linea"></div>
+
+    <p class="intro">
+      Una colección de imágenes que nos acercan
+      a la belleza, la emoción y la devoción
+      de la Semana Santa de Sevilla.
+    </p>
+
+
+    <!-- PIEZA I -->
+
+    <div class="pieza">
+
+      <div class="pieza-numero">
+        PIEZA I
       </div>
 
-      <h1>
-        GALERÍA I
-      </h1>
+      <img src="https://i.pinimg.com/1200x/ff/52/1c/ff521cf4c164d85c69b88eadc308e70a.jpg"
+           alt="Imagen cofrade">
 
-      <div class="linea"></div>
+      <h2>
+        LA MIRADA COFRADE
+      </h2>
 
-      <p class="intro">
-        Una colección de imágenes que nos acercan
-        a los detalles, los rostros y la emoción
-        de la Semana Santa de Sevilla.
+      <div class="pieza-linea"></div>
+
+      <p class="pieza-texto">
+        Una mirada que nos acerca a la emoción
+        y a la belleza de nuestra Semana Santa.
       </p>
 
-    </header>
+    </div>
 
 
-    <section class="galeria">
+    <!-- PIEZA II -->
 
+    <div class="pieza">
 
-      <!-- PIEZA I -->
+      <div class="pieza-numero">
+        PIEZA II
+      </div>
 
-      <article class="pieza">
+      <img src="https://i.pinimg.com/1200x/92/7f/cc/927fccf9e14b79b18d63492596852287.jpg"
+           alt="Imagen cofrade">
 
-        <img
-          src="https://i.pinimg.com/1200x/ff/52/1c/ff521cf4c164d85c69b88eadc308e70a.jpg"
-          alt="Imagen cofrade de Sevilla">
+      <h2>
+        LUZ Y DEVOCIÓN
+      </h2>
 
-        <div class="pieza-info">
+      <div class="pieza-linea"></div>
 
-          <div class="pieza-numero">
-            PIEZA I
-          </div>
+      <p class="pieza-texto">
+        La luz de los cirios acompaña cada momento
+        de recogimiento y devoción.
+      </p>
 
-          <h2>
-            LA MIRADA COFRADE
-          </h2>
+    </div>
 
-          <p class="pieza-texto">
-            Una mirada que nos acerca
-            a la emoción y a la belleza
-            de nuestra Semana Santa.
-          </p>
 
-        </div>
+    <!-- PIEZA III -->
 
-      </article>
+    <div class="pieza">
 
+      <div class="pieza-numero">
+        PIEZA III
+      </div>
 
-      <!-- PIEZA II -->
+      <img src="https://i.pinimg.com/1200x/74/e7/31/74e73172b7f04a696febe0b9d17a1fcc.jpg"
+           alt="Imagen cofrade">
 
-      <article class="pieza">
+      <h2>
+        EL SILENCIO
+      </h2>
 
-        <img
-          src="https://i.pinimg.com/1200x/92/7f/cc/927fccf9e14b79b18d63492596852287.jpg"
-          alt="Semana Santa de Sevilla">
+      <div class="pieza-linea"></div>
 
-        <div class="pieza-info">
+      <p class="pieza-texto">
+        Instantes de silencio que forman parte
+        de la memoria de nuestra Semana Santa.
+      </p>
 
-          <div class="pieza-numero">
-            PIEZA II
-          </div>
+    </div>
 
-          <h2>
-            LUZ Y DEVOCIÓN
-          </h2>
 
-          <p class="pieza-texto">
-            La luz de los cirios acompaña
-            cada momento de recogimiento
-            y devoción.
-          </p>
+    <!-- PIEZA IV -->
 
-        </div>
+    <div class="pieza">
 
-      </article>
+      <div class="pieza-numero">
+        PIEZA IV
+      </div>
 
+      <img src="https://i.pinimg.com/1200x/7e/ae/41/7eae41111d2d8b73c09e328436eb9cb9.jpg"
+           alt="Imagen cofrade">
 
-      <!-- PIEZA III -->
+      <h2>
+        LA DEVOCIÓN
+      </h2>
 
-      <article class="pieza">
+      <div class="pieza-linea"></div>
 
-        <img
-          src="https://i.pinimg.com/1200x/74/e7/31/74e73172b7f04a696febe0b9d17a1fcc.jpg"
-          alt="Detalle de Semana Santa">
+      <p class="pieza-texto">
+        Una expresión de fe que se transmite
+        de generación en generación.
+      </p>
 
-        <div class="pieza-info">
+    </div>
 
-          <div class="pieza-numero">
-            PIEZA III
-          </div>
 
-          <h2>
-            EL SILENCIO
-          </h2>
+    <!-- PIEZA V -->
 
-          <p class="pieza-texto">
-            Instantes de silencio que forman
-            parte de la memoria de Sevilla
-            y de sus hermandades.
-          </p>
+    <div class="pieza">
 
-        </div>
+      <div class="pieza-numero">
+        PIEZA V
+      </div>
 
-      </article>
+      <img src="https://i.pinimg.com/1200x/bd/e6/d6/bde6d60704e8405c4c4ff6f06783ad3e.jpg"
+           alt="Imagen cofrade">
 
+      <h2>
+        TRADICIÓN Y MEMORIA
+      </h2>
 
-      <!-- PIEZA IV -->
+      <div class="pieza-linea"></div>
 
-      <article class="pieza">
+      <p class="pieza-texto">
+        La tradición cofrade permanece viva
+        en la memoria de Sevilla.
+      </p>
 
-        <img
-          src="https://i.pinimg.com/1200x/7e/ae/41/7eae41111d2d8b73c09e328436eb9cb9.jpg"
-          alt="Devoción cofrade">
+    </div>
 
-        <div class="pieza-info">
 
-          <div class="pieza-numero">
-            PIEZA IV
-          </div>
+    <!-- PIEZA VI -->
 
-          <h2>
-            LA DEVOCIÓN
-          </h2>
+    <div class="pieza">
 
-          <p class="pieza-texto">
-            Una expresión de fe que se transmite
-            de generación en generación.
-          </p>
+      <div class="pieza-numero">
+        PIEZA VI
+      </div>
 
-        </div>
+      <img src="https://i.pinimg.com/736x/23/78/81/23788159976cbeb57aff297dbd66586b.jpg"
+           alt="Imagen cofrade">
 
-      </article>
+      <h2>
+        SEVILLA COFRADE
+      </h2>
 
+      <div class="pieza-linea"></div>
 
-      <!-- PIEZA V -->
+      <p class="pieza-texto">
+        Una última mirada a la belleza
+        y a la emoción de nuestra Semana Santa.
+      </p>
 
-      <article class="pieza">
-
-        <img
-          src="https://i.pinimg.com/1200x/bd/e6/d6/bde6d60704e8405c4c4ff6f06783ad3e.jpg"
-          alt="Semana Santa sevillana">
-
-        <div class="pieza-info">
-
-          <div class="pieza-numero">
-            PIEZA V
-          </div>
-
-          <h2>
-            MEMORIA DE SEVILLA
-          </h2>
-
-          <p class="pieza-texto">
-            Imágenes que permanecen en la memoria
-            y forman parte de la historia cofrade.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <!-- PIEZA VI -->
-
-      <article class="pieza">
-
-        <img
-          src="https://i.pinimg.com/736x/23/78/81/23788159976cbeb57aff297dbd66586b.jpg"
-          alt="Tradición cofrade">
-
-        <div class="pieza-info">
-
-          <div class="pieza-numero">
-            PIEZA VI
-          </div>
-
-          <h2>
-            TRADICIÓN Y FE
-          </h2>
-
-          <p class="pieza-texto">
-            Una tradición viva que continúa
-            formando parte del corazón de Sevilla.
-          </p>
-
-        </div>
-
-      </article>
-
-
-    </section>
+    </div>
 
 
     <a class="volver" href="galerias.html">
@@ -357,3 +312,6 @@
 
 </body>
 </html>
+
+
+
