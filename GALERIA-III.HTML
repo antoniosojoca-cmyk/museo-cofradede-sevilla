@@ -303,33 +303,31 @@
       </p>
 
     </div>
+
+
 <!-- MÚSICA GALERÍA III -->
 
 <div style="text-align:center; margin:40px 0;">
 
   <button onclick="reproducirMusica()"
-    style="
-      background:#111111;
-      color:#c9a35b;
-      border:1px solid #c9a35b;
-      padding:13px 28px;
-      font-family:Georgia,serif;
-      font-size:14px;
-      letter-spacing:2px;
-      cursor:pointer;
-    ">
+    style="background:#111111;
+           color:#c9a35b;
+           border:1px solid #c9a35b;
+           padding:13px 28px;
+           font-family:Georgia,serif;
+           font-size:14px;
+           letter-spacing:2px;
+           cursor:pointer;">
     ▶ ESCUCHAR MÚSICA
   </button>
 
   <div id="reproductor-youtube"
-       style="
-         width:1px;
-         height:1px;
-         overflow:hidden;
-         position:absolute;
-         left:-9999px;
-         top:-9999px;
-       ">
+       style="width:1px;
+              height:1px;
+              overflow:hidden;
+              position:absolute;
+              left:-9999px;
+              top:-9999px;">
   </div>
 
 </div>
@@ -337,43 +335,30 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
-  var reproductor;
+var reproductor;
 
-  function onYouTubeIframeAPIReady() {
-    reproductor = new YT.Player('reproductor-youtube', {
-      height: '1',
-      width: '1',
-      videoId: 'EwArFoTivls',
-      playerVars: {
-        autoplay: 0,
-        controls: 0,
-        rel: 0
-      }
-    });
-  }
-
-  function reproducirMusica() {
-    if (reproductor) {
-      reproductor.playVideo();
+function onYouTubeIframeAPIReady() {
+  reproductor = new YT.Player('reproductor-youtube', {
+    height: '1',
+    width: '1',
+    videoId: 'EwArFoTivls',
+    playerVars: {
+      autoplay: 0,
+      controls: 0,
+      rel: 0
     }
-  }
-</script>
-<!-- BOTÓN MÚSICA GALERÍA III -->
+  });
+}
 
-<div style="text-align:center; margin:40px 0;">
-  <button style="
-    background:#111111;
-    color:#c9a35b;
-    border:1px solid #c9a35b;
-    padding:13px 28px;
-    font-family:Georgia,serif;
-    font-size:14px;
-    letter-spacing:2px;
-    cursor:pointer;
-  ">
-    ▶ ESCUCHAR MÚSICA
-  </button>
-</div>
+function reproducirMusica() {
+  if (reproductor) {
+    reproductor.playVideo();
+  }
+}
+</script>
+
+
+
     <a class="volver" href="galerias.html">
       ← VOLVER A GALERÍAS
     </a>
