@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,6 +44,41 @@ body {
   letter-spacing: 2px;
 }
 
+/* BOTÓN DE MÚSICA */
+
+.musica {
+  text-align: center;
+  margin: 35px auto 45px;
+}
+
+.boton-musica {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #080808;
+  color: #c9a35b;
+  border: 1px solid #c9a35b;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-musica:hover {
+  background: #c9a35b;
+  color: #080808;
+}
+
+/* YOUTUBE OCULTO */
+
+.youtube-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* GALERÍA */
 
 .galeria {
@@ -79,7 +116,6 @@ body {
 }
 
 /* IMÁGENES */
-
 
 .pieza img {
   width: 100%;
@@ -139,12 +175,7 @@ body {
   }
 
   .galeria {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .pieza img {
-    height: auto;
+    padding: 0 15px;
   }
 
 }
@@ -163,6 +194,25 @@ body {
   <p>Lunes Santo</p>
 
 </header>
+
+
+<!-- MÚSICA -->
+
+<div class="musica">
+
+  <button class="boton-musica" onclick="reproducirMusica()">
+    ▶ ESCUCHAR MÚSICA
+  </button>
+
+  <iframe
+    id="youtube"
+    class="youtube-oculto"
+    src="https://www.youtube.com/embed/RukJ8lfBsL0?enablejsapi=1"
+    title="Música Lunes Santo"
+    allow="autoplay">
+  </iframe>
+
+</div>
 
 
 <!-- GALERÍA DE PIEZAS -->
@@ -274,5 +324,26 @@ body {
 </div>
 
 
+<footer>
+
+  MUSEO COFRADE DE SEVILLA
+
+</footer>
+
+
+<script>
+
+function reproducirMusica() {
+
+  const iframe = document.getElementById("youtube");
+
+  iframe.src =
+    "https://www.youtube.com/embed/RukJ8lfBsL0?autoplay=1&enablejsapi=1";
+
+}
+
+</script>
+
 </body>
 </html>
+```
