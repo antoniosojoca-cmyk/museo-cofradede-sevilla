@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala II — Lunes Santo | Museo Cofrade de Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, serif;
+}
+
+/* CABECERA */
+
+.cabecera {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-bottom: 1px solid #c9a35b;
+}
+
+.cabecera h1 {
+  margin: 0;
+  color: #c9a35b;
+  font-size: 38px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.cabecera p {
+  margin-top: 12px;
+  color: #d8d8d8;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* GALERÍA */
+
+.galeria {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+/* PIEZAS */
+
+.pieza {
+  background: #111111;
+  border: 1px solid #c9a35b;
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pieza:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(201, 163, 91, 0.35);
+}
+
+/* NÚMERO DE PIEZA */
+
+.pieza-numero {
+  color: #c9a35b;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* IMÁGENES */
+
+.pieza img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #c9a35b;
+}
+
+/* TÍTULOS */
+
+.pieza h2 {
+  color: #c9a35b;
+  font-size: 21px;
+  margin: 18px 0 8px;
+  letter-spacing: 1px;
+}
+
+.pieza p {
+  color: #dddddd;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* BOTÓN VOLVER */
+
+.volver {
+  text-align: center;
+  margin: 45px 0 60px;
+}
+
+.volver a {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid #c9a35b;
+  color: #c9a35b;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.volver a:hover {
+  background: #c9a35b;
+  color: #080808;
+}
+
+/* MÓVIL */
+
+@media (max-width: 700px) {
+
+  .cabecera h1 {
+    font-size: 28px;
+  }
+
+  .cabecera p {
+    font-size: 15px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .pieza img {
+    height: auto;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CABECERA -->
+
+<header class="cabecera">
+
+  <h1>Sala II</h1>
+
+  <p>Lunes Santo</p>
+
+</header>
+
+
+<!-- GALERÍA DE PIEZAS -->
+
+<main class="galeria">
+
+
+  <!-- PIEZA I -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA I
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/53/00/71/5300713b5d9a31d5a0ca128652c8a3a1.jpg"
+      alt="Semana Santa de Sevilla - Lunes Santo">
+
+    <h2>LUNES SANTO</h2>
+
+    <p>
+      Una mirada al Lunes Santo de Sevilla,
+      donde la devoción y la tradición se encuentran
+      en las calles de la ciudad.
+    </p>
+
+  </article>
+
+
+  <!-- PIEZA II -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA II
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/2d/fd/d5/2dfdd5566f9810c0d0aa7b2dc3f92a3d.jpg"
+      alt="Semana Santa de Sevilla - Lunes Santo">
+
+    <h2>LA DEVOCIÓN</h2>
+
+    <p>
+      El Lunes Santo sevillano refleja
+      la emoción de los hermanos y la belleza
+      de sus cofradías.
+    </p>
+
+  </article>
+
+
+  <!-- PIEZA III -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA III
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/c8/96/cb/c896cb975e29e3a071d616ed03da6183.jpg"
+      alt="Semana Santa de Sevilla - Lunes Santo">
+
+    <h2>LA COFRADÍA</h2>
+
+    <p>
+      Una imagen que forma parte de la memoria
+      y de la identidad de la Semana Santa de Sevilla.
+    </p>
+
+  </article>
+
+
+  <!-- PIEZA IV -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA IV
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/bc/cd/88/bccd88c187afa546d10dfaef08e15b27.jpg"
+      alt="Semana Santa de Sevilla - Lunes Santo">
+
+    <h2>LA ESPERANZA</h2>
+
+    <p>
+      El Lunes Santo guarda momentos de recogimiento,
+      emoción y profunda tradición cofrade.
+    </p>
+
+  </article>
+
+
+</main>
+
+
+<!-- BOTÓN VOLVER -->
+
+<div class="volver">
+
+  <a href="index.html">
+    VOLVER AL MUSEO
+  </a>
+
+</div>
+
+
+</body>
+</html>
