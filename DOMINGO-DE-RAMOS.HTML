@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -69,6 +70,40 @@ h1 {
     border: 2px solid #c9a35b;
 }
 
+/* BOTÓN DE MÚSICA */
+
+.musica {
+    margin: 35px auto 50px;
+}
+
+.boton-musica {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #080808;
+    color: #c9a35b;
+    border: 1px solid #c9a35b;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-musica:hover {
+    background: #c9a35b;
+    color: #080808;
+}
+
+/* REPRODUCTOR DE YOUTUBE */
+
+.youtube-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .volver {
     display: inline-block;
     margin: 20px 0 50px;
@@ -111,6 +146,25 @@ Sala I · Hermandades
 
 
 <div class="contenedor">
+
+
+<!-- MÚSICA -->
+
+<div class="musica">
+
+<button class="boton-musica" onclick="reproducirMusica()">
+▶ ESCUCHAR MÚSICA
+</button>
+
+<iframe
+    id="youtube"
+    class="youtube-oculto"
+    src="https://www.youtube.com/embed/QxklwhOydco?enablejsapi=1"
+    title="Música Domingo de Ramos"
+    allow="autoplay">
+</iframe>
+
+</div>
 
 
 <!-- PIEZA I -->
@@ -191,6 +245,24 @@ MUSEO COFRADE DE SEVILLA
 
 </footer>
 
+
+<script>
+
+function reproducirMusica() {
+
+    const iframe = document.getElementById("youtube");
+
+    iframe.src =
+        "https://www.youtube.com/embed/QxklwhOydco?autoplay=1&enablejsapi=1";
+
+}
+
+</script>
+
+
 </body>
 
 </html>
+```
+
+
