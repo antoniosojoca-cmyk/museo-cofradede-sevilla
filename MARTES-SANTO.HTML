@@ -1,0 +1,273 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala III — Martes Santo | Museo Cofrade de Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, serif;
+}
+
+/* CABECERA */
+
+.cabecera {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-bottom: 1px solid #c9a35b;
+}
+
+.cabecera h1 {
+  margin: 0;
+  color: #c9a35b;
+  font-size: 38px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.cabecera p {
+  margin-top: 12px;
+  color: #d8d8d8;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* GALERÍA */
+
+.galeria {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+/* PIEZAS */
+
+.pieza {
+  background: #111111;
+  border: 1px solid #c9a35b;
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pieza:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(201, 163, 91, 0.35);
+}
+
+/* NÚMERO DE PIEZA */
+
+.pieza-numero {
+  color: #c9a35b;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* IMÁGENES */
+
+.pieza img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #c9a35b;
+}
+
+/* TÍTULOS */
+
+.pieza h2 {
+  color: #c9a35b;
+  font-size: 21px;
+  margin: 18px 0 8px;
+  letter-spacing: 1px;
+}
+
+.pieza p {
+  color: #dddddd;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* BOTÓN VOLVER */
+
+.volver {
+  text-align: center;
+  margin: 45px 0 60px;
+}
+
+.volver a {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid #c9a35b;
+  color: #c9a35b;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.volver a:hover {
+  background: #c9a35b;
+  color: #080808;
+}
+
+/* MÓVIL */
+
+@media (max-width: 700px) {
+
+  .cabecera h1 {
+    font-size: 28px;
+  }
+
+  .cabecera p {
+    font-size: 15px;
+  }
+
+  .galeria {
+    padding: 0 15px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CABECERA -->
+
+<header class="cabecera">
+
+  <h1>Sala III</h1>
+
+  <p>Martes Santo</p>
+
+</header>
+
+
+<!-- GALERÍA DE PIEZAS -->
+
+<main class="galeria">
+
+
+  <!-- PIEZA I -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA I
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/8f/3c/ab/8f3cab8a354698199783a9b1651ecc36.jpg"
+      alt="Semana Santa de Sevilla - Martes Santo">
+
+    <h2>MARTES SANTO</h2>
+
+    <p>
+      Una mirada al Martes Santo de Sevilla,
+      donde la tradición y la devoción cofrade
+      recorren las calles de la ciudad.
+    </p>
+
+  </article>
+
+
+  <!-- PIEZA II -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA II
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/5a/f8/85/5af885aaccba45fcc76f8db0f4b6f2fc.jpg"
+      alt="Semana Santa de Sevilla - Martes Santo">
+
+    <h2>LA DEVOCIÓN</h2>
+
+    <p>
+      El Martes Santo sevillano reúne momentos
+      de profunda emoción, recogimiento y tradición.
+    </p>
+
+  </article>
+
+
+  <!-- PIEZA III -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA III
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/53/93/3c/53933c5ba9976713660480aca9fe06a9.jpg"
+      alt="Semana Santa de Sevilla - Martes Santo">
+
+    <h2>LA COFRADÍA</h2>
+
+    <p>
+      Una imagen que forma parte de la historia
+      y de la memoria de la Semana Santa sevillana.
+    </p>
+
+  </article>
+
+
+  <!-- PIEZA IV -->
+
+  <article class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA IV
+    </div>
+
+    <img
+      src="https://i.pinimg.com/1200x/c3/9d/20/c39d20a84da4b3c93f3ba3d43d7b6f7e.jpg"
+      alt="Semana Santa de Sevilla - Martes Santo">
+
+    <h2>LA ESPERANZA</h2>
+
+    <p>
+      El Martes Santo conserva momentos de
+      solemnidad, emoción y profunda tradición cofrade.
+    </p>
+
+  </article>
+
+
+</main>
+
+
+<!-- BOTÓN VOLVER -->
+
+<div class="volver">
+
+  <a href="index.html">
+    VOLVER AL MUSEO
+  </a>
+
+</div>
+
+
+</body>
+</html>
+```
