@@ -236,7 +236,109 @@
       font-style: italic;
       letter-spacing: 1px;
     }
+/* =========================================
+   MENÚ DESPLEGABLE — EL MUSEO
+   ========================================= */
 
+.menu-item-museo {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-item-museo > a {
+  color: #c9a35b;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.menu-item-museo > a:hover {
+  color: #ffffff;
+}
+
+/* SUBMENÚ */
+
+.submenu-museo {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  min-width: 270px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #c9a35b;
+
+  padding: 12px 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.35s ease;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* TRIÁNGULO DECORATIVO */
+
+.submenu-museo::before {
+  content: "";
+  position: absolute;
+
+  top: -7px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(45deg);
+
+  width: 12px;
+  height: 12px;
+
+  background: #0d0d0d;
+
+  border-left: 1px solid #c9a35b;
+  border-top: 1px solid #c9a35b;
+}
+
+/* MOSTRAR SUBMENÚ AL PASAR EL RATÓN */
+
+.menu-item-museo:hover .submenu-museo {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 8px);
+}
+
+/* ENLACES DE LAS SALAS */
+
+.submenu-museo a {
+  display: block;
+
+  padding: 13px 22px;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  letter-spacing: 1.5px;
+
+  text-align: left;
+
+  transition: all 0.3s ease;
+}
+
+.submenu-museo a:hover {
+  background: #c9a35b;
+
+  color: #080808;
+
+  padding-left: 28px;
+}
     @media (max-width: 700px) {
       .titulo {
         font-size: 30px;
@@ -283,7 +385,41 @@
 
     <nav class="menu">
       <a href="#">INICIO</a>
-      <a href="#">EL MUSEO</a>
+      <div class="menu-item-museo">
+
+  <a href="#">
+    EL MUSEO ▾
+  </a>
+
+  <div class="submenu-museo">
+
+    <a href="sala-i-gran-poder.html">
+      SALA I · EL SILENCIO
+    </a>
+
+    <a href="sala-ii-gran-poder.html">
+      SALA II · EL CAMINO
+    </a>
+
+    <a href="sala-iii-gran-poder.html">
+      SALA III · LA MADRUGÁ
+    </a>
+
+    <a href="sala-iv-gran-poder.html">
+      SALA IV · LA MIRADA
+    </a>
+
+    <a href="sala-v-gran-poder.html">
+      SALA V · EL RECUERDO
+    </a>
+
+    <a href="sala-vi-gran-poder.html">
+      SALA VI · LA ORACIÓN
+    </a>
+
+  </div>
+
+</div>
       <a href="salas.html">SALAS</a>
    
       <a href="galerias.html">GALERÍAS</a>
