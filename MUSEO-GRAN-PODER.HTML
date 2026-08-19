@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>El Museo del Gran Poder | Museo Cofrade de Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.cabecera {
+  text-align: center;
+  padding: 55px 20px 35px;
+  border-bottom: 1px solid #c9a35b;
+}
+
+.cabecera h1 {
+  margin: 0;
+
+  color: #c9a35b;
+
+  font-size: 42px;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+}
+
+.cabecera p {
+  margin: 14px auto 0;
+
+  color: #eeeeee;
+
+  font-size: 17px;
+
+  font-style: italic;
+
+  letter-spacing: 2px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   LÍNEA DORADA
+   ========================================= */
+
+.linea {
+  width: 100px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 28px auto;
+}
+
+
+/* =========================================
+   CONTENEDOR DE LAS SALAS
+   ========================================= */
+
+.contenedor-salas {
+
+  width: min(1000px, 92%);
+
+  margin: 40px auto 70px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+}
+
+
+/* =========================================
+   TARJETA DE CADA SALA
+   ========================================= */
+
+.sala {
+
+  min-height: 155px;
+
+  border: 1px solid #c9a35b;
+
+  background: #101010;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  transition: all 0.35s ease;
+}
+
+
+/* EFECTO AL PASAR EL RATÓN */
+
+.sala:hover {
+
+  background: #151515;
+
+  box-shadow:
+    0 0 25px rgba(201,163,91,0.12);
+
+  transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   NÚMERO DE SALA
+   ========================================= */
+
+.sala-numero {
+
+  color: #c9a35b;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 12px;
+
+}
+
+
+/* =========================================
+   TÍTULO DE SALA
+   ========================================= */
+
+.sala h2 {
+
+  margin: 0 0 22px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   BOTÓN ENTRAR
+   ========================================= */
+
+.entrar {
+
+  display: inline-block;
+
+  padding: 10px 25px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+
+}
+
+
+.entrar:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
+
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+footer {
+
+  border-top: 1px solid #222222;
+
+  text-align: center;
+
+  padding: 30px 20px 45px;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .cabecera {
+
+    padding: 45px 20px 30px;
+
+  }
+
+  .cabecera h1 {
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+  }
+
+  .cabecera p {
+
+    font-size: 15px;
+
+  }
+
+  .contenedor-salas {
+
+    grid-template-columns: 1fr;
+
+    width: 92%;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+  }
+
+  .sala {
+
+    min-height: 160px;
+
+  }
+
+  .sala h2 {
+
+    font-size: 22px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
+<header class="cabecera">
+
+  <h1>
+    El Museo del Gran Poder
+  </h1>
+
+  <div class="linea"></div>
+
+  <p>
+    Seis salas para acercarse al Señor
+  </p>
+
+</header>
+
+
+
+<!-- =========================================
+     SEIS SALAS
+     ========================================= -->
+
+<main class="contenedor-salas">
+
+
+  <!-- SALA I -->
+
+  <section class="sala">
+
+    <div class="sala-numero">
+      SALA I
+    </div>
+
+    <h2>
+      El Silencio
+    </h2>
+
+    <a
+      class="entrar"
+      href="sala-i-gran-poder.html">
+
+      ENTRAR EN LA SALA
+
+    </a>
+
+  </section>
+
+
+
+  <!-- SALA II -->
+
+  <section class="sala">
+
+    <div class="sala-numero">
+      SALA II
+    </div>
+
+    <h2>
+      El Camino
+    </h2>
+
+    <a
+      class="entrar"
+      href="sala-ii-gran-poder.html">
+
+      ENTRAR EN LA SALA
+
+    </a>
+
+  </section>
+
+
+
+  <!-- SALA III -->
+
+  <section class="sala">
+
+    <div class="sala-numero">
+      SALA III
+    </div>
+
+    <h2>
+      La Madrugá
+    </h2>
+
+    <a
+      class="entrar"
+      href="sala-iii-gran-poder.html">
+
+      ENTRAR EN LA SALA
+
+    </a>
+
+  </section>
+
+
+
+  <!-- SALA IV -->
+
+  <section class="sala">
+
+    <div class="sala-numero">
+      SALA IV
+    </div>
+
+    <h2>
+      La Mirada
+    </h2>
+
+    <a
+      class="entrar"
+      href="sala-iv-gran-poder.html">
+
+      ENTRAR EN LA SALA
+
+    </a>
+
+  </section>
+
+
+
+  <!-- SALA V -->
+
+  <section class="sala">
+
+    <div class="sala-numero">
+      SALA V
+    </div>
+
+    <h2>
+      El Recuerdo
+    </h2>
+
+    <a
+      class="entrar"
+      href="sala-v-gran-poder.html">
+
+      ENTRAR EN LA SALA
+
+    </a>
+
+  </section>
+
+
+
+  <!-- SALA VI -->
+
+  <section class="sala">
+
+    <div class="sala-numero">
+      SALA VI
+    </div>
+
+    <h2>
+      La Oración
+    </h2>
+
+    <a
+      class="entrar"
+      href="sala-vi-gran-poder.html">
+
+      ENTRAR EN LA SALA
+
+    </a>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     PIE
+     ========================================= -->
+
+<footer>
+
+  Museo Cofrade de Sevilla
+
+  <br><br>
+
+  El Museo del Gran Poder
+
+</footer>
+
+
+</body>
+
+</html>
