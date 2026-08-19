@@ -1,323 +1,254 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Museo Cofrade de Sevilla</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>Museo Cofrade de Sevilla</title>
 
-    body {
-      margin: 0;
-      background: #080808;
-      color: #ffffff;
-      font-family: Georgia, "Times New Roman", serif;
-    }
+<style>
 
-    .portada {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 25px;
-    }
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
 
-    .titulo {
-      color: #c9a35b;
-      font-size: 46px;
-      letter-spacing: 7px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .subtitulo {
-      color: #eeeeee;
-      font-size: 18px;
-      letter-spacing: 3px;
-      line-height: 1.7;
-      max-width: 750px;
-    }
-
-    .linea {
-      width: 120px;
-      height: 2px;
-      background: #c9a35b;
-      margin: 30px auto;
-    }
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
 
 
-    .imagen-portada {
-  width: min(1000px, 100%);
-  height: 300px;
-  margin: 15px 0 35px;
-  border: 1px solid #c9a35b;
-  background: #151515;
+/* =========================================
+   PORTADA
+   ========================================= */
+
+.portada {
+  min-height: 100vh;
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 25px;
+}
+
+.titulo {
+  color: #c9a35b;
+
+  font-size: 46px;
+
+  letter-spacing: 7px;
+
+  margin-bottom: 18px;
+
+  text-transform: uppercase;
+}
+
+.subtitulo {
+  color: #eeeeee;
+
+  font-size: 18px;
+
+  letter-spacing: 3px;
+
+  line-height: 1.7;
+
+  max-width: 750px;
+}
+
+.linea {
+  width: 120px;
+
+  height: 2px;
+
+  background: #c9a35b;
+
+  margin: 30px auto;
+}
+
+
+/* =========================================
+   IMAGEN DE PORTADA
+   ========================================= */
+
+.imagen-portada {
+  width: min(1000px, 100%);
+
+  height: 300px;
+
+  margin: 15px 0 35px;
+
+  border: 1px solid #c9a35b;
+
+  background: #151515;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   overflow: hidden;
 }
 
 .imagen-portada img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
+
   display: block;
+
   filter: brightness(45%);
 }
 
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 28px;
-      max-width: 1000px;
-    }
 
-    .menu a {
-      color: #c9a35b;
-      text-decoration: none;
-      font-size: 15px;
-      letter-spacing: 2px;
-      transition: 0.3s;
-    }
-
-    .menu a:hover {
-      color: #ffffff;
-    }
-.boton-museo {
-  display: inline-block;
-  padding: 16px 38px;
-  border: 1px solid #c9a35b;
-  color: #c9a35b;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-size: 15px;
-  transition: 0.3s;
-  margin-top: 5px;
-}
-
-.boton-museo:hover {
-  background: #c9a35b;
-  color: #080808;
-}
-    .sala {
-  width: min(1000px, 100%);
-  margin: 120px auto 60px;
-  padding: 80px 30px;
-  border: 1px solid #c9a35b;
-  text-align: center;
-  background: #101010;
-}
-
-.sala-numero {
-  color: #c9a35b;
-  font-size: 14px;
-  letter-spacing: 5px;
-  margin-bottom: 20px;
-}
-
-.sala h1 {
-  color: #ffffff;
-  font-size: 42px;
-  letter-spacing: 8px;
-  margin: 0;
-}
-
-.sala-intro {
-  max-width: 700px;
-  margin: 25px auto 40px;
-  color: #cccccc;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.sala-titulo {
-  color: #c9a35b;
-  font-size: 20px;
-  letter-spacing: 4px;
-  margin-top: 40px;
-}
-.pieza {
-  max-width: 850px;
-  margin: 70px auto 20px;
-  padding: 45px 30px;
-  border: 1px solid #c9a35b;
-  background: #080808;
-  text-align: center;
-}
-
-.pieza-numero {
-  color: #c9a35b;
-  font-size: 13px;
-  letter-spacing: 5px;
-  margin-bottom: 18px;
-}
-
-.pieza h2 {
-  color: #ffffff;
-  font-size: 30px;
-  letter-spacing: 3px;
-  margin: 0;
-}
-
-.pieza-linea {
-  width: 80px;
-  height: 1px;
-  background: #c9a35b;
-  margin: 25px auto;
-}
-
-.pieza-imagen {
-  width: 100%;
-  min-height: 420px;
-  border: 1px solid #c9a35b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777777;
-  letter-spacing: 2px;
-  font-size: 13px;
-  background: #151515;
-}
-
-.pieza-texto {
-  max-width: 650px;
-  margin: 30px auto 0;
-  color: #cccccc;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-@media (max-width: 700px) {
-  .pieza {
-    padding: 35px 20px;
-  }
-
-  .pieza h2 {
-    font-size: 24px;
-  }
-
-  .pieza-imagen {
-    min-height: 300px;
-  }
-}
-    .pieza-imagen img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-@media (max-width: 700px) {
-  .sala {
-    margin-top: 80px;
-    padding: 60px 20px;
-  }
-
-  .sala h1 {
-    font-size: 30px;
-    letter-spacing: 5px;
-  }
-
-  .sala-titulo {
-    font-size: 16px;
-    letter-spacing: 2px;
-  }
-}
-    .frase {
-      margin-top: 35px;
-      color: #aaaaaa;
-      font-size: 15px;
-      font-style: italic;
-      letter-spacing: 1px;
-    }
 /* =========================================
-   MENÚ DESPLEGABLE — EL MUSEO
+   MENÚ PRINCIPAL
+   ========================================= */
+
+.menu {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 28px;
+
+  max-width: 1000px;
+
+  position: relative;
+
+  z-index: 5000;
+}
+
+.menu > a {
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+.menu > a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   EL MUSEO — DESPLEGABLE
    ========================================= */
 
 .menu-item-museo {
   position: relative;
+
   display: inline-block;
+
+  z-index: 9999;
 }
 
 .menu-item-museo > a {
   color: #c9a35b;
+
   text-decoration: none;
+
   font-size: 15px;
+
   letter-spacing: 2px;
+
   transition: 0.3s;
+
+  cursor: pointer;
 }
 
 .menu-item-museo > a:hover {
   color: #ffffff;
 }
 
-/* SUBMENÚ */
+
+/* =========================================
+   SUBMENÚ
+   ========================================= */
 
 .submenu-museo {
+
   position: absolute;
-  top: calc(100% + 15px);
+
+  top: 100%;
+
   left: 50%;
+
   transform: translateX(-50%);
 
-  min-width: 270px;
+  width: 300px;
+
+  margin-top: 14px;
+
+  padding: 10px 0;
 
   background: #0d0d0d;
 
   border: 1px solid #c9a35b;
 
-  padding: 12px 0;
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.8);
 
   opacity: 0;
+
   visibility: hidden;
 
-  transition: all 0.35s ease;
+  z-index: 99999;
 
-  z-index: 9999;
-
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.7);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
-/* TRIÁNGULO DECORATIVO */
 
-.submenu-museo::before {
-  content: "";
-  position: absolute;
-
-  top: -7px;
-  left: 50%;
-
-  transform: translateX(-50%) rotate(45deg);
-
-  width: 12px;
-  height: 12px;
-
-  background: #0d0d0d;
-
-  border-left: 1px solid #c9a35b;
-  border-top: 1px solid #c9a35b;
-}
-
-/* MOSTRAR SUBMENÚ AL PASAR EL RATÓN */
+/* =========================================
+   MOSTRAR SUBMENÚ AL PASAR EL RATÓN
+   ========================================= */
 
 .menu-item-museo:hover .submenu-museo {
+
   opacity: 1;
+
   visibility: visible;
-  top: calc(100% + 8px);
+
 }
 
-/* ENLACES DE LAS SALAS */
+
+/* =========================================
+   ENLACES DEL SUBMENÚ
+   ========================================= */
 
 .submenu-museo a {
+
   display: block;
 
-  padding: 13px 22px;
+  width: 100%;
+
+  padding: 14px 22px;
 
   color: #c9a35b;
 
@@ -329,250 +260,724 @@
 
   text-align: left;
 
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .submenu-museo a:hover {
+
   background: #c9a35b;
 
   color: #080808;
 
   padding-left: 28px;
+
 }
-    @media (max-width: 700px) {
-      .titulo {
-        font-size: 30px;
-        letter-spacing: 4px;
-      }
 
-      .subtitulo {
-        font-size: 15px;
-      }
 
-      .imagen-portada {
-        height: 300px;
-      }
+/* =========================================
+   BOTÓN ENTRAR AL MUSEO
+   ========================================= */
 
-      .menu {
-        gap: 18px;
-      }
-    }
-  </style>
+.boton-museo {
+
+  display: inline-block;
+
+  padding: 16px 38px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  letter-spacing: 3px;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+
+  margin-top: 25px;
+}
+
+.boton-museo:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
+
+}
+
+
+/* =========================================
+   SALA SEVILLA
+   ========================================= */
+
+.sala {
+
+  width: min(1000px, 100%);
+
+  margin: 120px auto 60px;
+
+  padding: 80px 30px;
+
+  border: 1px solid #c9a35b;
+
+  text-align: center;
+
+  background: #101010;
+}
+
+.sala-numero {
+
+  color: #c9a35b;
+
+  font-size: 14px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 20px;
+}
+
+.sala h1 {
+
+  color: #ffffff;
+
+  font-size: 42px;
+
+  letter-spacing: 8px;
+
+  margin: 0;
+}
+
+.sala-intro {
+
+  max-width: 700px;
+
+  margin: 25px auto 40px;
+
+  color: #cccccc;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.sala-titulo {
+
+  color: #c9a35b;
+
+  font-size: 20px;
+
+  letter-spacing: 4px;
+
+  margin-top: 40px;
+}
+
+
+/* =========================================
+   PIEZAS
+   ========================================= */
+
+.pieza {
+
+  max-width: 850px;
+
+  margin: 70px auto 20px;
+
+  padding: 45px 30px;
+
+  border: 1px solid #c9a35b;
+
+  background: #080808;
+
+  text-align: center;
+}
+
+.pieza-numero {
+
+  color: #c9a35b;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 18px;
+}
+
+.pieza h2 {
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  letter-spacing: 3px;
+
+  margin: 0;
+}
+
+.pieza-linea {
+
+  width: 80px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 25px auto;
+}
+
+.pieza-imagen {
+
+  width: 100%;
+
+  min-height: 420px;
+
+  border: 1px solid #c9a35b;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #151515;
+
+  overflow: hidden;
+}
+
+.pieza-imagen img {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+}
+
+.pieza-texto {
+
+  max-width: 650px;
+
+  margin: 30px auto 0;
+
+  color: #cccccc;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   FRASE
+   ========================================= */
+
+.frase {
+
+  margin-top: 35px;
+
+  color: #aaaaaa;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MÚSICA
+   ========================================= */
+
+.bloque-musica {
+
+  text-align: center;
+
+  margin: 35px 0;
+}
+
+.bloque-musica button {
+
+  background: #111;
+
+  color: #c9a35b;
+
+  border: 1px solid #c9a35b;
+
+  padding: 14px 28px;
+
+  font-family: Georgia, serif;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.bloque-musica button:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .titulo {
+
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+  }
+
+  .subtitulo {
+
+    font-size: 15px;
+
+  }
+
+  .imagen-portada {
+
+    height: 300px;
+
+  }
+
+  .menu {
+
+    gap: 18px;
+
+  }
+
+  .submenu-museo {
+
+    width: 270px;
+
+  }
+
+  .pieza {
+
+    padding: 35px 20px;
+
+  }
+
+  .pieza h2 {
+
+    font-size: 24px;
+
+  }
+
+  .pieza-imagen {
+
+    min-height: 300px;
+
+  }
+
+  .sala {
+
+    margin-top: 80px;
+
+    padding: 60px 20px;
+
+  }
+
+  .sala h1 {
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+  }
+
+  .sala-titulo {
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+  }
+
+}
+
+</style>
+
 </head>
-<!-- Museo Cofrade de Sevilla -->
+
+
 <body>
 
-  <main class="portada">
 
-    <div class="titulo">
-      Museo Cofrade de Sevilla
-    </div>
+<main class="portada">
 
-    <div class="subtitulo">
-      Un viaje por la historia, el arte y la devoción
-      de nuestra Semana Santa
-    </div>
 
-    <div class="linea"></div>
+<!-- =========================================
+     TÍTULO
+     ========================================= -->
 
-   
-  
+<div class="titulo">
 
-    <div class="imagen-portada">
-  <img src="4c84f8e6a0b2d9e005e154929c4df5bc.jpg"
-       alt="Semana Santa de Sevilla">
+  Museo Cofrade de Sevilla
+
 </div>
 
-    <nav class="menu">
-      <a href="#">INICIO</a>
-      <div class="menu-item-museo">
+
+<div class="subtitulo">
+
+  Un viaje por la historia, el arte y la devoción
+  de nuestra Semana Santa
+
+</div>
+
+
+<div class="linea"></div>
+
+
+<!-- =========================================
+     IMAGEN
+     ========================================= -->
+
+<div class="imagen-portada">
+
+  <img
+    src="4c84f8e6a0b2d9e005e154929c4df5bc.jpg"
+    alt="Semana Santa de Sevilla">
+
+</div>
+
+
+<!-- =========================================
+     MENÚ
+     ========================================= -->
+
+<nav class="menu">
+
 
   <a href="#">
-    EL MUSEO ▾
+    INICIO
   </a>
 
-  <div class="submenu-museo">
 
-    <a href="sala-i-gran-poder.html">
-      SALA I · EL SILENCIO
+  <!-- EL MUSEO -->
+
+  <div class="menu-item-museo">
+
+    <a href="#">
+      EL MUSEO ▾
     </a>
 
-    <a href="sala-ii-gran-poder.html">
-      SALA II · EL CAMINO
-    </a>
 
-    <a href="sala-iii-gran-poder.html">
-      SALA III · LA MADRUGÁ
-    </a>
+    <div class="submenu-museo">
 
-    <a href="sala-iv-gran-poder.html">
-      SALA IV · LA MIRADA
-    </a>
 
-    <a href="sala-v-gran-poder.html">
-      SALA V · EL RECUERDO
-    </a>
+      <a href="sala-i-gran-poder.html">
+        SALA I · EL SILENCIO
+      </a>
 
-    <a href="sala-vi-gran-poder.html">
-      SALA VI · LA ORACIÓN
-    </a>
+
+      <a href="sala-ii-gran-poder.html">
+        SALA II · EL CAMINO
+      </a>
+
+
+      <a href="sala-iii-gran-poder.html">
+        SALA III · LA MADRUGÁ
+      </a>
+
+
+      <a href="sala-iv-gran-poder.html">
+        SALA IV · LA MIRADA
+      </a>
+
+
+      <a href="sala-v-gran-poder.html">
+        SALA V · EL RECUERDO
+      </a>
+
+
+      <a href="sala-vi-gran-poder.html">
+        SALA VI · LA ORACIÓN
+      </a>
+
+
+    </div>
 
   </div>
 
-</div>
-      <a href="salas.html">SALAS</a>
-   
-      <a href="galerias.html">GALERÍAS</a>
-      <a href="#">HISTORIA</a>
-      <a href="HERMANDADES.HTML">HERMANDADES</a>
-      <a href="#">MEMORIA</a>
-    </nav>
-<a class="boton-museo" href="#sala-sevilla">
+
+  <a href="salas.html">
+    SALAS
+  </a>
+
+
+  <a href="galerias.html">
+    GALERÍAS
+  </a>
+
+
+  <a href="#">
+    HISTORIA
+  </a>
+
+
+  <a href="HERMANDADES.HTML">
+    HERMANDADES
+  </a>
+
+
+  <a href="#">
+    MEMORIA
+  </a>
+
+
+</nav>
+
+
+<!-- =========================================
+     BOTÓN
+     ========================================= -->
+
+<a
+  class="boton-museo"
+  href="#sala-sevilla">
+
   ENTRAR AL MUSEO
+
 </a>
-    <div class="frase">
-      Donde la memoria se convierte en arte.
-    </div>
+
+
+<div class="frase">
+
+  Donde la memoria se convierte en arte.
+
+</div>
+
+
+
+<!-- =========================================
+     SALA SEVILLA
+     ========================================= -->
+
 <section id="sala-sevilla" class="sala">
 
-  <div class="sala-numero">SALA I</div>
 
-  <h1>SEVILLA</h1>
+  <div class="sala-numero">
+    SALA I
+  </div>
+
+
+  <h1>
+    SEVILLA
+  </h1>
+
 
   <div class="linea"></div>
 
+
   <p class="sala-intro">
+
     Un recorrido por la historia, el arte y la devoción
     de las grandes hermandades de Sevilla.
+
   </p>
+
 
   <div class="sala-titulo">
+
     LOS ROSTROS DE LA ESPERANZA
-  </div>
-<div class="pieza">
 
-  <div class="pieza-numero">
-    PIEZA I
   </div>
 
-  <h2>
-    La Esperanza Macarena
-  </h2>
-
-  <div class="pieza-linea"></div>
 
 
-  <div class="pieza-imagen">
-  <img src="0fa8ce813520899f0a0b63db91334ee2.jpg"
-       alt="Esperanza Macarena de Sevilla">
-</div>
+  <!-- PIEZA I -->
 
-  <p class="pieza-texto">
-    María Santísima de la Esperanza Macarena,
-    una de las grandes devociones de Sevilla.
-  </p>
-
-</div>
   <div class="pieza">
 
-  <div class="pieza-numero">
-    PIEZA II
+    <div class="pieza-numero">
+      PIEZA I
+    </div>
+
+    <h2>
+      La Esperanza Macarena
+    </h2>
+
+    <div class="pieza-linea"></div>
+
+    <div class="pieza-imagen">
+
+      <img
+        src="0fa8ce813520899f0a0b63db91334ee2.jpg"
+        alt="Esperanza Macarena de Sevilla">
+
+    </div>
+
+    <p class="pieza-texto">
+
+      María Santísima de la Esperanza Macarena,
+      una de las grandes devociones de Sevilla.
+
+    </p>
+
   </div>
 
-  <h2>
-    Nuestro Padre Jesús del Gran Poder
-  </h2>
 
-  <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
-    <img src="762250bdbb1016accb271703311c125d (1).jpg"
-         alt="Nuestro Padre Jesús del Gran Poder de Sevilla">
-  </div>
+  <!-- PIEZA II -->
 
-  <p class="pieza-texto">
-    Nuestro Padre Jesús del Gran Poder,
-    una de las grandes devociones de Sevilla
-    y una de las imágenes más veneradas
-    de nuestra Semana Santa.
-  </p>
-
-</div>
   <div class="pieza">
 
-  <div class="pieza-numero">
-    PIEZA III
+    <div class="pieza-numero">
+      PIEZA II
+    </div>
+
+    <h2>
+      Nuestro Padre Jesús del Gran Poder
+    </h2>
+
+    <div class="pieza-linea"></div>
+
+    <div class="pieza-imagen">
+
+      <img
+        src="762250bdbb1016accb271703311c125d (1).jpg"
+        alt="Nuestro Padre Jesús del Gran Poder de Sevilla">
+
+    </div>
+
+    <p class="pieza-texto">
+
+      Nuestro Padre Jesús del Gran Poder,
+      una de las grandes devociones de Sevilla
+      y una de las imágenes más veneradas
+      de nuestra Semana Santa.
+
+    </p>
+
   </div>
 
-  <h2>
-    Santísimo Cristo de la Expiración
-  </h2>
 
-  <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
-    <img src="ce8ccf7c0176a0eb8fe8453b8262f16b.jpg"
-         alt="Santísimo Cristo de la Expiración El Cachorro de Sevilla">
-  </div>
+  <!-- PIEZA III -->
 
-  <p class="pieza-texto">
-    Santísimo Cristo de la Expiración,
-    una de las imágenes más emblemáticas
-    de la Semana Santa de Sevilla.
-  </p>
-
-</div>
   <div class="pieza">
 
-  <div class="pieza-numero">
-    PIEZA IV
+    <div class="pieza-numero">
+      PIEZA III
+    </div>
+
+    <h2>
+      Santísimo Cristo de la Expiración
+    </h2>
+
+    <div class="pieza-linea"></div>
+
+    <div class="pieza-imagen">
+
+      <img
+        src="ce8ccf7c0176a0eb8fe8453b8262f16b.jpg"
+        alt="Santísimo Cristo de la Expiración El Cachorro de Sevilla">
+
+    </div>
+
+    <p class="pieza-texto">
+
+      Santísimo Cristo de la Expiración,
+      una de las imágenes más emblemáticas
+      de la Semana Santa de Sevilla.
+
+    </p>
+
   </div>
 
-  <h2>
-    María Santísima de la Esperanza de Triana
-  </h2>
 
-  <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
-    <img src="9af212fc13a490edac02811ba5e38cd3.jpg"
-         alt="María Santísima de la Esperanza de Triana">
+  <!-- PIEZA IV -->
+
+  <div class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA IV
+    </div>
+
+    <h2>
+      María Santísima de la Esperanza de Triana
+    </h2>
+
+    <div class="pieza-linea"></div>
+
+    <div class="pieza-imagen">
+
+      <img
+        src="9af212fc13a490edac02811ba5e38cd3.jpg"
+        alt="María Santísima de la Esperanza de Triana">
+
+    </div>
+
+    <p class="pieza-texto">
+
+      María Santísima de la Esperanza de Triana,
+      una de las grandes devociones del barrio
+      de Triana y de toda Sevilla.
+
+    </p>
+
   </div>
 
-  <p class="pieza-texto">
-    María Santísima de la Esperanza de Triana,
-    una de las grandes devociones del barrio
-    de Triana y de toda Sevilla.
-  </p>
 
-</div>
 </section>
-  </main>
-<div style="text-align:center; margin:35px 0;">
+
+
+</main>
+
+
+
+<!-- =========================================
+     MÚSICA
+     ========================================= -->
+
+<div class="bloque-musica">
 
   <button
-    onclick="document.getElementById('marcha-youtube').src='https://www.youtube.com/embed/ZQm6kIUK-m0?autoplay=1&controls=0&rel=0';"
-    style="
-      background:#111;
-      color:#c9a35b;
-      border:1px solid #c9a35b;
-      padding:14px 28px;
-      font-family:Georgia,serif;
-      font-size:16px;
-      cursor:pointer;">
+    onclick="
+      document.getElementById('marcha-youtube').src =
+      'https://www.youtube.com/embed/ZQm6kIUK-m0?autoplay=1&controls=0&rel=0';
+    ">
+
     🎵 ESCUCHAR LA MARCHA
+
   </button>
+
 
   <iframe
     id="marcha-youtube"
     width="1"
     height="1"
-    src="ZQm6kIUK-m0"
-    style="position:absolute; left:-9999px; border:0;"
+    src=""
+    style="
+      position:absolute;
+      left:-9999px;
+      border:0;
+    "
     allow="autoplay">
+
   </iframe>
 
 </div>
-  
+
+
 </body>
+
 </html>
+```
+
+
+  
+
+
