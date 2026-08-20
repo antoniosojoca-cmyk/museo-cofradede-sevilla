@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala I · El Silencio | Museo del Gran Poder</title>
+
+
+<style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #080808;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.cabecera {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 25px;
+
+}
+
+
+.museo {
+
+  color: #8f7545;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 35px;
+
+}
+
+
+.numero {
+
+  color: #c9a35b;
+
+  font-size: 14px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 22px;
+
+}
+
+
+.titulo {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 58px;
+
+  font-weight: normal;
+
+  letter-spacing: 10px;
+
+  text-transform: uppercase;
+
+}
+
+
+.linea {
+
+  width: 90px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 35px auto;
+
+}
+
+
+.entrada {
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #aaaaaa;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================================
+   INDICACIÓN PARA BAJAR
+   ========================================= */
+
+.bajar {
+
+  margin-top: 80px;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s;
+
+}
+
+
+.bajar:hover {
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================
+   PRIMER SILENCIO
+   ========================================= */
+
+.silencio {
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 25px;
+
+}
+
+
+.silencio p {
+
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #dddddd;
+
+  font-size: 28px;
+
+  font-style: italic;
+
+  line-height: 1.8;
+
+}
+
+
+.silencio strong {
+
+  color: #c9a35b;
+
+  font-weight: normal;
+
+}
+
+
+/* =========================================
+   GRAN IMAGEN
+   ========================================= */
+
+.imagen-principal {
+
+  width: min(1100px, 92%);
+
+  margin: 30px auto 0;
+
+  border: 1px solid #c9a35b;
+
+  background: #111111;
+
+  overflow: hidden;
+
+}
+
+
+.imagen-principal img {
+
+  width: 100%;
+
+  display: block;
+
+  max-height: 850px;
+
+  object-fit: cover;
+
+}
+
+
+/* =========================================
+   TEXTO DE LA IMAGEN
+   ========================================= */
+
+.pie-imagen {
+
+  width: min(750px, 88%);
+
+  margin: 35px auto 120px;
+
+  text-align: center;
+
+  color: #888888;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================================
+   PREGÓN DE 1975
+   ========================================= */
+
+.pregon {
+
+  width: min(900px, 90%);
+
+  margin: 0 auto 120px;
+
+  padding: 70px 35px;
+
+  border-top: 1px solid #c9a35b;
+
+  border-bottom: 1px solid #c9a35b;
+
+  text-align: center;
+
+}
+
+
+.pregon-fecha {
+
+  color: #c9a35b;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 25px;
+
+  text-transform: uppercase;
+
+}
+
+
+.pregon h2 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: normal;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+}
+
+
+.pregon-linea {
+
+  width: 70px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 30px auto;
+
+}
+
+
+.texto-pregon {
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #cccccc;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 2;
+
+}
+
+
+.cita {
+
+  margin-top: 35px;
+
+  color: #c9a35b;
+
+  font-size: 22px;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================================
+   REFLEXIÓN
+   ========================================= */
+
+.reflexion {
+
+  min-height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+}
+
+
+.reflexion-contenido {
+
+  max-width: 760px;
+
+}
+
+
+.reflexion h2 {
+
+  margin: 0 0 45px;
+
+  color: #c9a35b;
+
+  font-size: 16px;
+
+  font-weight: normal;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+
+}
+
+
+.reflexion p {
+
+  margin: 25px 0;
+
+  color: #dddddd;
+
+  font-size: 22px;
+
+  line-height: 2;
+
+}
+
+
+.reflexion .destacado {
+
+  margin-top: 60px;
+
+  color: #c9a35b;
+
+  font-size: 28px;
+
+  font-style: italic;
+
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 25px;
+
+  border-top: 1px solid #222222;
+
+}
+
+
+.final .detente {
+
+  color: #c9a35b;
+
+  font-size: 16px;
+
+  letter-spacing: 8px;
+
+  margin-bottom: 70px;
+
+}
+
+
+.final p {
+
+  max-width: 650px;
+
+  margin: 20px auto;
+
+  color: #eeeeee;
+
+  font-size: 25px;
+
+  line-height: 1.9;
+
+}
+
+
+.final .ultimo {
+
+  margin-top: 80px;
+
+  color: #c9a35b;
+
+  font-size: 30px;
+
+  font-style: italic;
+
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+   ========================================= */
+
+.volver {
+
+  display: inline-block;
+
+  margin-top: 100px;
+
+  padding: 14px 30px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s;
+
+}
+
+
+.volver:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
+
+}
+
+
+/* =========================================
+   PIE
+   ========================================= */
+
+footer {
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-top: 1px solid #222222;
+
+  color: #666666;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .cabecera {
+
+    min-height: 90vh;
+
+  }
+
+
+  .titulo {
+
+    font-size: 34px;
+
+    letter-spacing: 5px;
+
+  }
+
+
+  .entrada {
+
+    font-size: 16px;
+
+  }
+
+
+  .silencio {
+
+    min-height: 60vh;
+
+  }
+
+
+  .silencio p {
+
+    font-size: 22px;
+
+  }
+
+
+  .pregon {
+
+    padding: 55px 20px;
+
+  }
+
+
+  .pregon h2 {
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+  }
+
+
+  .texto-pregon {
+
+    font-size: 16px;
+
+  }
+
+
+  .cita {
+
+    font-size: 19px;
+
+  }
+
+
+  .reflexion p {
+
+    font-size: 19px;
+
+  }
+
+
+  .final p {
+
+    font-size: 21px;
+
+  }
+
+
+  .final .ultimo {
+
+    font-size: 25px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     ENTRADA A LA SALA
+     ========================================= -->
+
+<section class="cabecera">
+
+
+  <div class="museo">
+
+    EL MUSEO DEL GRAN PODER
+
+  </div>
+
+
+  <div class="numero">
+
+    SALA I
+
+  </div>
+
+
+  <h1 class="titulo">
+
+    EL SILENCIO
+
+  </h1>
+
+
+  <div class="linea"></div>
+
+
+  <p class="entrada">
+
+    Hay lugares a los que no se entra hablando.
+
+    <br><br>
+
+    Hay miradas ante las que
+    las palabras dejan de ser necesarias.
+
+  </p>
+
+
+  <a class="bajar" href="#comienzo">
+
+    ↓ &nbsp; ENTRAR EN SILENCIO
+
+  </a>
+
+
+</section>
+
+
+
+<!-- =========================================
+     PRIMER MOMENTO
+     ========================================= -->
+
+<section id="comienzo" class="silencio">
+
+  <p>
+
+    Sevilla despierta.
+
+    <br><br>
+
+    Pero antes de que llegue el ruido,
+    <strong>Él ya está caminando.</strong>
+
+  </p>
+
+</section>
+
+
+
+<!-- =========================================
+     IMAGEN DEL GRAN PODER
+     ========================================= -->
+
+<div class="imagen-principal">
+
+  <img
+    src="https://i.pinimg.com/1200x/fe/53/73/fe53737f81cb9fa5072124bc55fc932a.jpg"
+    alt="Nuestro Padre Jesús del Gran Poder">
+
+</div>
+
+
+
+<div class="pie-imagen">
+
+  Nuestro Padre Jesús del Gran Poder.
+
+  <br><br>
+
+  Una mirada puede contener
+  todo aquello que no somos capaces de decir.
+
+</div>
+
+
+
+<!-- =========================================
+     PREGÓN DE 1975
+     ========================================= -->
+
+<section class="pregon">
+
+
+  <div class="pregon-fecha">
+
+    SEVILLA · 1975
+
+  </div>
+
+
+  <h2>
+
+    EL RECUERDO DE UN PREGÓN
+
+  </h2>
+
+
+  <div class="pregon-linea"></div>
+
+
+  <p class="texto-pregon">
+
+    Rafael Duque del Castillo dedicó en su Pregón de la Semana Santa
+    de Sevilla de 1975 unas palabras al encuentro íntimo entre
+    el Señor y quienes se acercan hasta Él.
+
+    <br><br>
+
+    Habló de un diálogo que puede nacer
+    sin necesidad de pronunciar una sola palabra,
+    cuando las miradas se encuentran
+    en medio de la Madrugá.
+
+  </p>
+
+
+  <div class="cita">
+
+    «Nazareno de San Lorenzo,
+    Cristo bendito de Sevilla…»
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     REFLEXIÓN
+     ========================================= -->
+
+<section class="reflexion">
+
+
+  <div class="reflexion-contenido">
+
+
+    <h2>
+
+      AHORA MÍRALO
+
+    </h2>
+
+
+    <p>
+
+      No tengas prisa.
+
+    </p>
+
+
+    <p>
+
+      No hace falta entenderlo todo.
+
+    </p>
+
+
+    <p>
+
+      Quizás hayas llegado hasta aquí
+      con preguntas.
+
+    </p>
+
+
+    <p>
+
+      Quizás con recuerdos.
+
+    </p>
+
+
+    <p>
+
+      Quizás simplemente porque necesitabas
+      detenerte.
+
+    </p>
+
+
+    <p class="destacado">
+
+      El silencio también puede ser una oración.
+
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL DE LA SALA
+     ========================================= -->
+
+<section class="final">
+
+
+  <div class="detente">
+
+    DETENTE
+
+  </div>
+
+
+  <p>
+
+    No tienes que decir nada.
+
+  </p>
+
+
+  <p>
+
+    No tienes que explicar
+    por qué has venido.
+
+  </p>
+
+
+  <p>
+
+    Quédate un momento más.
+
+  </p>
+
+
+  <p class="ultimo">
+
+    Él ya sabe por qué has venido.
+
+  </p>
+
+
+  <a
+    class="volver"
+    href="MUSEO-GRAN-PODER.HTML">
+
+    ← VOLVER A LAS SALAS
+
+  </a>
+
+
+</section>
+
+
+
+<footer>
+
+  MUSEO COFRADE DE SEVILLA
+
+  <br><br>
+
+  EL MUSEO DEL GRAN PODER · SALA I
+
+</footer>
+
+
+</body>
+
+</html>
