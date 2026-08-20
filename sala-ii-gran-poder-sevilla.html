@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala II · El Gran Poder por Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.cabecera {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 25px;
+
+}
+
+
+.museo {
+
+  color: #8f7545;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 35px;
+
+}
+
+
+.numero {
+
+  color: #c9a35b;
+
+  font-size: 14px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 22px;
+
+}
+
+
+.titulo {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 52px;
+
+  font-weight: normal;
+
+  letter-spacing: 8px;
+
+  text-transform: uppercase;
+
+}
+
+
+.linea {
+
+  width: 90px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 35px auto;
+
+}
+
+
+.entrada {
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #aaaaaa;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+
+}
+
+
+.bajar {
+
+  margin-top: 80px;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+.galeria {
+
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding-bottom: 120px;
+
+}
+
+
+.momento {
+
+  margin-bottom: 150px;
+
+}
+
+
+.titulo-momento {
+
+  text-align: center;
+
+  color: #c9a35b;
+
+  font-size: 15px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+
+}
+
+
+.imagen {
+
+  width: 100%;
+
+  border: 1px solid #c9a35b;
+
+  background: #111111;
+
+  overflow: hidden;
+
+}
+
+
+.imagen img {
+
+  width: 100%;
+
+  display: block;
+
+  max-height: 800px;
+
+  object-fit: cover;
+
+  transition: transform 1s ease;
+
+}
+
+
+.imagen:hover img {
+
+  transform: scale(1.025);
+
+}
+
+
+.frase {
+
+  max-width: 700px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+
+  color: #888888;
+
+  font-size: 17px;
+
+  font-style: italic;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 25px;
+
+  border-top: 1px solid #222222;
+
+}
+
+
+.final h2 {
+
+  color: #c9a35b;
+
+  font-size: 15px;
+
+  font-weight: normal;
+
+  letter-spacing: 6px;
+
+}
+
+
+.final p {
+
+  max-width: 650px;
+
+  color: #eeeeee;
+
+  font-size: 25px;
+
+  line-height: 1.9;
+
+  font-style: italic;
+
+}
+
+
+.volver {
+
+  display: inline-block;
+
+  margin-top: 70px;
+
+  padding: 14px 30px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+}
+
+
+.volver:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .titulo {
+
+    font-size: 32px;
+
+    letter-spacing: 4px;
+
+  }
+
+  .entrada {
+
+    font-size: 16px;
+
+  }
+
+  .momento {
+
+    margin-bottom: 100px;
+
+  }
+
+  .imagen img {
+
+    max-height: 600px;
+
+  }
+
+  .frase {
+
+    font-size: 16px;
+
+  }
+
+  .final p {
+
+    font-size: 21px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     CABECERA DE LA SALA
+     ========================================= -->
+
+<section class="cabecera">
+
+  <div class="museo">
+    EL MUSEO DEL GRAN PODER
+  </div>
+
+  <div class="numero">
+    SALA II
+  </div>
+
+  <h1 class="titulo">
+    EL GRAN PODER POR SEVILLA
+  </h1>
+
+  <div class="linea"></div>
+
+  <p class="entrada">
+
+    El Señor sale de San Lorenzo.
+
+    <br><br>
+
+    Y Sevilla comienza a caminar con Él.
+
+  </p>
+
+  <a class="bajar" href="#recorrido">
+    ↓ &nbsp; COMENZAR EL RECORRIDO
+  </a>
+
+</section>
+
+
+<!-- =========================================
+     RECORRIDO FOTOGRÁFICO
+     ========================================= -->
+
+<section id="recorrido" class="galeria">
+
+
+  <!-- 1 · LA SALIDA -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      LA SALIDA
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/79/d1/41/79d1412a94449950423a78a63e427ae1.jpg"
+        alt="El Gran Poder · La salida">
+
+    </div>
+
+    <div class="frase">
+
+      Todo comienza cuando el Señor abandona San Lorenzo.
+
+    </div>
+
+  </div>
+
+
+  <!-- 2 · SAN LORENZO -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      SAN LORENZO
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/07/b7/e0/07b7e0b61f451487cc8093078560d167.jpg"
+        alt="El Gran Poder · San Lorenzo">
+
+    </div>
+
+    <div class="frase">
+
+      Desde su barrio, el Señor comienza su camino por Sevilla.
+
+    </div>
+
+  </div>
+
+
+  <!-- 3 · EL CORTEJO -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      EL CORTEJO
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/ba/9c/87/ba9c87821d2b82a5c0f378180b391feb.jpg"
+        alt="El Gran Poder · El cortejo">
+
+    </div>
+
+    <div class="frase">
+
+      Nazarenos y penitentes acompañan al Señor.
+
+    </div>
+
+  </div>
+
+
+  <!-- 4 · SEVILLA LO ESPERA -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      SEVILLA LO ESPERA
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/29/6b/94/296b94457a6a67180fb9d59ec548e38e.jpg"
+        alt="El Gran Poder · Sevilla lo espera">
+
+    </div>
+
+    <div class="frase">
+
+      En cada esquina hay alguien esperando su llegada.
+
+    </div>
+
+  </div>
+
+
+  <!-- 5 · EL SEÑOR CAMINA -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      EL SEÑOR CAMINA
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/15/0c/2c/150c2c26a99438999e1d2ee6a083f894.jpg"
+        alt="El Gran Poder · El Señor camina">
+
+    </div>
+
+    <div class="frase">
+
+      Paso a paso, el Gran Poder atraviesa las calles de Sevilla.
+
+    </div>
+
+  </div>
+
+
+  <!-- 6 · SEVILLA Y EL GRAN PODER -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      SEVILLA Y EL GRAN PODER
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/b5/eb/b4/b5ebb46b941f0d825ca2e57cfe1c423c.jpg"
+        alt="El Gran Poder · Sevilla">
+
+    </div>
+
+    <div class="frase">
+
+      El Señor y la ciudad forman una misma imagen.
+
+    </div>
+
+  </div>
+
+
+  <!-- 7 · EL CAMINO DE VUELTA -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      EL CAMINO DE VUELTA
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/69/dc/1c/69dc1cf8978d6e51d9dacd245d2f9a5a.jpg"
+        alt="El Gran Poder · Camino de vuelta">
+
+    </div>
+
+    <div class="frase">
+
+      La noche avanza y el Señor regresa a su barrio.
+
+    </div>
+
+  </div>
+
+
+  <!-- 8 · DE NUEVO EN SAN LORENZO -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+      DE NUEVO EN SAN LORENZO
+    </div>
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/a2/0d/2b/a20d2bb282582e52153c434f27b2c99e.jpg"
+        alt="El Gran Poder · San Lorenzo">
+
+    </div>
+
+    <div class="frase">
+
+      El Señor vuelve a casa. Sevilla queda atrás.
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================
+     FINAL
+     ========================================= -->
+
+<section class="final">
+
+  <h2>
+    EL CAMINO TERMINA
+  </h2>
+
+  <p>
+    El Señor vuelve a San Lorenzo.
+    <br><br>
+    Pero durante unas horas,
+    Sevilla ha caminado con Él.
+  </p>
+
+  <a
+    class="volver"
+    href="MUSEO-GRAN-PODER.HTML">
+
+    ← VOLVER A LAS SALAS
+
+  </a>
+
+</section>
+
+
+</body>
+
+</html>
