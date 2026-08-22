@@ -598,6 +598,7 @@ body {
 
   </div>
 
+
   <!-- =========================================
      PREGÓN · CHARO PADILLA
      ========================================= -->
@@ -605,7 +606,7 @@ body {
 <div style="
   max-width:650px;
   margin:80px auto 150px;
-  padding:30px 25px;
+  padding:35px 25px;
   border:1px solid #c9a35b;
   background:#0d0d0d;
   text-align:center;
@@ -642,36 +643,86 @@ body {
     color:#888888;
     font-size:14px;
     font-style:italic;
-    margin-bottom:25px;
+    margin-bottom:28px;
   ">
     Charo Padilla · Pregón de la Semana Santa de Sevilla · 2019
   </div>
 
-  <div style="
-    width:100%;
-    height:55px;
-    overflow:hidden;
-    border:1px solid #333333;
-    background:#050505;
+
+  <button
+    onclick="document.getElementById('ventanaPregon').style.display='flex'"
+    style="
+      padding:14px 30px;
+      border:1px solid #c9a35b;
+      background:transparent;
+      color:#c9a35b;
+      font-family:Georgia,serif;
+      font-size:12px;
+      letter-spacing:3px;
+      cursor:pointer;
+    ">
+    ▶ &nbsp; ESCUCHAR
+  </button>
+
+</div>
+
+
+<!-- VENTANA DEL PREGÓN -->
+
+<div
+  id="ventanaPregon"
+  style="
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,0.92);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
   ">
+
+  <div style="
+    position:relative;
+    width:min(800px,95%);
+    background:#080808;
+    border:1px solid #c9a35b;
+    padding:20px;
+  ">
+
+    <button
+      onclick="document.getElementById('ventanaPregon').style.display='none'"
+      style="
+        position:absolute;
+        right:10px;
+        top:8px;
+        z-index:2;
+        background:none;
+        border:0;
+        color:#c9a35b;
+        font-size:24px;
+        cursor:pointer;
+      ">
+      ×
+    </button>
 
     <iframe
       width="100%"
-      height="180"
+      height="315"
       src="https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505"
       title="Pregón de Charo Padilla"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      style="
-        display:block;
-        margin-top:-62px;
-      ">
+      allowfullscreen>
     </iframe>
 
   </div>
 
 </div>
+
+    
+
+  
   
   
 
