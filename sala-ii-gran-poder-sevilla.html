@@ -447,6 +447,34 @@ body {
     letter-spacing:5px;
     margin-bottom:14px;
   ">
+<!-- =========================================
+     AMBIENTE SACRO
+     ========================================= -->
+
+<div style="
+  max-width:650px;
+  margin:20px auto 120px;
+  padding:35px 25px;
+  border:1px solid #c9a35b;
+  background:#0d0d0d;
+  text-align:center;
+">
+
+  <div style="
+    color:#c9a35b;
+    font-size:28px;
+    letter-spacing:7px;
+    margin-bottom:18px;
+  ">
+    ♪ 〰 ♪
+  </div>
+
+  <div style="
+    color:#c9a35b;
+    font-size:12px;
+    letter-spacing:5px;
+    margin-bottom:14px;
+  ">
     AMBIENTE SACRO
   </div>
 
@@ -463,22 +491,85 @@ body {
     color:#888888;
     font-size:14px;
     font-style:italic;
-    margin-bottom:25px;
+    margin-bottom:28px;
   ">
     Música sacra · Para acompañar el recorrido
   </div>
 
-  <iframe
-    width="100%"
-    height="140"
-    src="https://www.youtube.com/embed/kpYBa7jBzY4"
-    title="Cantos Gregorianos · Música Sacra"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <button
+    onclick="document.getElementById('ventanaGregoriano').style.display='flex'"
+    style="
+      padding:14px 30px;
+      border:1px solid #c9a35b;
+      background:transparent;
+      color:#c9a35b;
+      font-family:Georgia,serif;
+      font-size:12px;
+      letter-spacing:3px;
+      cursor:pointer;
+    ">
+    ▶ &nbsp; ESCUCHAR
+  </button>
 
 </div>
+
+
+<!-- VENTANA DE CANTOS GREGORIANOS -->
+
+<div
+  id="ventanaGregoriano"
+  style="
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,0.92);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  ">
+
+  <div style="
+    position:relative;
+    width:min(800px,95%);
+    background:#080808;
+    border:1px solid #c9a35b;
+    padding:20px;
+  ">
+
+    <button
+      onclick="document.getElementById('ventanaGregoriano').style.display='none'"
+      style="
+        position:absolute;
+        right:10px;
+        top:8px;
+        z-index:2;
+        background:none;
+        border:0;
+        color:#c9a35b;
+        font-size:24px;
+        cursor:pointer;
+      ">
+      ×
+    </button>
+
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/kpYBa7jBzY4"
+      title="Cantos Gregorianos · Música Sacra"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</div>
+    
+
+
+    
       LA SALIDA
     </div>
 
