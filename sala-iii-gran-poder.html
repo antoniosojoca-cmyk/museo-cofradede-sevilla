@@ -105,25 +105,32 @@ body {
 
 .galeria {
 
-  width: min(900px, 92%);
+  width: min(1200px, 92%);
+
   margin: 0 auto;
-  padding-bottom: 100px;
+
+  padding-bottom: 120px;
 }
 
 
 .momento {
 
-  margin-bottom: 110px;
+  margin-bottom: 140px;
 }
 
 
 .titulo-momento {
 
   text-align: center;
+
   color: #c9a35b;
+
   font-size: 15px;
+
   letter-spacing: 5px;
-  margin-bottom: 25px;
+
+  margin-bottom: 30px;
+
   text-transform: uppercase;
 }
 
@@ -134,8 +141,9 @@ body {
 
 .imagen {
 
-  width: 92%;
-  max-width: 800px;
+  width: 100%;
+
+  max-width: 1200px;
 
   margin: 0 auto;
 
@@ -145,7 +153,7 @@ body {
 
   overflow: hidden;
 }
-   
+
 
 /* =========================================
    IMAGEN
@@ -155,7 +163,7 @@ body {
 
   width: 100%;
 
-  height: 420px;
+  height: 600px;
 
   object-fit: cover;
 
@@ -171,11 +179,15 @@ body {
 }
 
 
+/* =========================================
+   FRASE
+   ========================================= */
+
 .frase {
 
-  max-width: 650px;
+  max-width: 700px;
 
-  margin: 25px auto 0;
+  margin: 30px auto 0;
 
   text-align: center;
 
@@ -198,9 +210,11 @@ body {
   min-height: 50vh;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -273,9 +287,18 @@ body {
 
 @media (max-width: 700px) {
 
+  .cabecera {
+
+    min-height: 70vh;
+
+    padding: 50px 20px;
+  }
+
+
   .titulo {
 
     font-size: 32px;
+
     letter-spacing: 4px;
   }
 
@@ -286,22 +309,35 @@ body {
   }
 
 
+  .galeria {
+
+    width: 92%;
+  }
+
+
+  .momento {
+
+    margin-bottom: 100px;
+  }
+
+
   .imagen {
 
     width: 100%;
-    max-width: 500px;
   }
 
 
   .imagen img {
 
-    height: 320px;
+    height: 400px;
   }
 
 
   .frase {
 
     font-size: 16px;
+
+    padding: 0 10px;
   }
 
 
@@ -313,6 +349,47 @@ body {
 }
 
 </style>
+   
+
+   
+
+
+   
+
+
+
+
+   
+
+   
+
+
+   
+
+    
+
+
+   
+   
+
+
+   
+
+
+   
+
+
+
+   
+
+
+   
+
+
+   
+
+
+     
 
    
 
