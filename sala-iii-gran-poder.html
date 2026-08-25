@@ -135,8 +135,10 @@ body {
 }
 
 
+
+   ```css id="im1z8a"
 /* =========================================
-   MARCO DE LA IMAGEN
+   MARCO DE CUADRO · MUSEO
    ========================================= */
 
 .imagen {
@@ -147,12 +149,55 @@ body {
 
   margin: 0 auto;
 
-  border: 1px solid #c9a35b;
+  padding: 14px;
 
-  background: #111111;
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
 
   overflow: hidden;
 }
+
+
+/* INTERIOR DEL CUADRO */
+
+.imagen img {
+
+  width: 100%;
+
+  height: 600px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border: 4px solid #0b0b0b;
+
+  box-shadow:
+    inset 0 0 20px rgba(0,0,0,0.8);
+
+  transition: transform 0.8s ease;
+}
+
+
+.imagen:hover img {
+
+  transform: scale(1.02);
+}
+```
 
 
 /* =========================================
