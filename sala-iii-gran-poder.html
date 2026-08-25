@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sala III · La Madrugá</title>
+
 <style>
 
 /* =========================================
@@ -106,12 +109,14 @@ body {
 .galeria {
 
   width: min(1200px, 92%);
-
   margin: 0 auto;
-
   padding-bottom: 120px;
 }
 
+
+/* =========================================
+   CADA PIEZA
+   ========================================= */
 
 .momento {
 
@@ -122,21 +127,14 @@ body {
 .titulo-momento {
 
   text-align: center;
-
   color: #c9a35b;
-
   font-size: 15px;
-
   letter-spacing: 5px;
-
   margin-bottom: 30px;
-
   text-transform: uppercase;
 }
 
 
-
-   ```css id="im1z8a"
 /* =========================================
    MARCO DE CUADRO · MUSEO
    ========================================= */
@@ -144,7 +142,6 @@ body {
 .imagen {
 
   width: 100%;
-
   max-width: 1200px;
 
   margin: 0 auto;
@@ -172,12 +169,13 @@ body {
 }
 
 
-/* INTERIOR DEL CUADRO */
+/* =========================================
+   FOTOGRAFÍA
+   ========================================= */
 
 .imagen img {
 
   width: 100%;
-
   height: 600px;
 
   object-fit: cover;
@@ -185,34 +183,6 @@ body {
   display: block;
 
   border: 4px solid #0b0b0b;
-
-  box-shadow:
-    inset 0 0 20px rgba(0,0,0,0.8);
-
-  transition: transform 0.8s ease;
-}
-
-
-.imagen:hover img {
-
-  transform: scale(1.02);
-}
-```
-
-
-/* =========================================
-   IMAGEN
-   ========================================= */
-
-.imagen img {
-
-  width: 100%;
-
-  height: 600px;
-
-  object-fit: cover;
-
-  display: block;
 
   transition: transform 0.8s ease;
 }
@@ -236,7 +206,7 @@ body {
 
   text-align: center;
 
-  color: #999999;
+  color: #c9a35b;
 
   font-size: 17px;
 
@@ -255,11 +225,9 @@ body {
   min-height: 50vh;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -369,6 +337,8 @@ body {
   .imagen {
 
     width: 100%;
+
+    padding: 8px;
   }
 
 
@@ -393,147 +363,11 @@ body {
 
 }
 
-/* =========================================
-   PIEZA I · PRESENTACIÓN ESPECIAL
-   ========================================= */
-
-.pieza-intima .imagen {
-
-  max-width: 760px;
-
-  padding: 10px;
-
-  background: #111111;
-
-  border: 1px solid #c9a35b;
-
-}
-
-
-.pieza-intima .imagen img {
-
-  height: 480px;
-
-  object-fit: contain;
-
-}
-
-
-.pieza-intima .frase {
-
-  max-width: 560px;
-
-  margin-top: 35px;
-
-  color: #c9a35b;
-
-  font-size: 20px;
-
-  line-height: 1.8;
-
-}
-
-
-@media (max-width: 700px) {
-
-  .pieza-intima .imagen img {
-
-    height: 420px;
-
-  }
-
-}
-```
-
 </style>
-   
-
-   
-
-
-   
-
-
-
-
-   
-
-   
-
-
-   
-
-    
-
-
-   
-   
-
-
-   
-
-
-   
-
-
-
-   
-
-
-   
-
-
-   
-
-
-     
-
-   
-
-
-   
-
-
-   
-
-   
-
-
-   
-
-
-   
-
-   
-
-
-   
-
-   
-
-
-   
-
-
-   
-
-
-   
-      
-
-
-   
-
-   
-
-   
-   
-     
 
 </head>
 
 
-<body>
 <body>
 
 
@@ -581,6 +415,307 @@ body {
     border:0;
   ">
 </iframe>
+
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
+<section class="cabecera">
+
+  <div class="museo">
+
+    EL MUSEO DEL GRAN PODER
+
+  </div>
+
+
+  <div class="numero">
+
+    SALA III
+
+  </div>
+
+
+  <h1 class="titulo">
+
+    LA MADRUGÁ
+
+  </h1>
+
+
+  <div class="linea"></div>
+
+
+  <p class="entrada">
+
+    Los rostros, las voces y las emociones
+    que acompañan al Gran Poder durante la noche.
+
+  </p>
+
+</section>
+
+
+<!-- =========================================
+     GALERÍA
+     ========================================= -->
+
+<section class="galeria">
+
+
+  <!-- =========================================
+       PIEZA I · LA VOZ DE LA NOCHE
+       ========================================= -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+
+      LA VOZ DE LA NOCHE
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://www.utreradigital.com/web/wp-content/uploads/2024/02/consolacion-garcia-segovia.jpg"
+        alt="Saeta al Gran Poder durante la Madrugá">
+
+    </div>
+
+
+    <div class="frase">
+
+      Cuando el Gran Poder camina, Sevilla canta.
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       PIEZA II · DE RODILLAS ANTE ÉL
+       ========================================= -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+
+      DE RODILLAS ANTE ÉL
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/2a/fe/b1/2afeb1630e583a080485848cc121c200.jpg"
+        alt="Nazareno de rodillas ante el Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      Ante el Señor, las palabras sobran.
+      Solo queda la fe.
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       PIEZA III · LOS ROSTROS DE UNA NOCHE
+       ========================================= -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+
+      LOS ROSTROS DE UNA NOCHE
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://www.gran-poder.es/wp-content/uploads/2018/04/IMG_9175-1.jpg"
+        alt="El Gran Poder rodeado por Sevilla durante la Madrugá">
+
+    </div>
+
+
+    <div class="frase">
+
+      En la oscuridad de la Madrugá,
+      miles de miradas se encuentran con Él.
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       PIEZA IV · EL SILENCIO DE LA MULTITUD
+       ========================================= -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+
+      EL SILENCIO DE LA MULTITUD
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://static.grupojoly.com/clip/14890049-7fea-4006-9332-eed8ccc63c26_source-aspect-ratio_1600w_0.webp"
+        alt="Devotos ante el Gran Poder durante la Madrugá">
+
+    </div>
+
+
+    <div class="frase">
+
+      Cuando el Señor aparece,
+      Sevilla guarda silencio.
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       PIEZA V · ANTE SU MIRADA
+       ========================================= -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+
+      ANTE SU MIRADA
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://www.gran-poder.es/wp-content/uploads/2014/11/Besamanos-10.png"
+        alt="Devoto ante el Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      Hay miradas que no necesitan palabras.
+      Solo queda el silencio ante Él.
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       PIEZA VI · SEVILLA A SUS PIES
+       ========================================= -->
+
+  <div class="momento">
+
+    <div class="titulo-momento">
+
+      SEVILLA A SUS PIES
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://static.grupojoly.com/clip/09fed4d0-768f-44e6-95f9-1bdd7dac208b_source-aspect-ratio_1600w_0.webp"
+        alt="El Gran Poder ante la ciudad de Sevilla">
+
+    </div>
+
+
+    <div class="frase">
+
+      Sevilla se detiene a sus pies.
+      Él camina, y la ciudad lo acompaña.
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================
+     FINAL
+     ========================================= -->
+
+<section class="final">
+
+  <h2>
+
+    LOS ROSTROS DE UNA NOCHE
+
+  </h2>
+
+
+  <p>
+
+    La Madrugá termina,
+
+    <br><br>
+
+    pero queda en la memoria de Sevilla.
+
+  </p>
+
+
+  <a
+    class="volver"
+    href="MUSEO-GRAN-PODER.HTML">
+
+    ← VOLVER A LAS SALAS
+
+  </a>
+
+</section>
+
+
+<footer style="
+  text-align:center;
+  padding:35px 20px;
+  border-top:1px solid #222222;
+  color:#666666;
+  font-size:11px;
+  letter-spacing:2px;
+">
+
+  MUSEO COFRADE DE SEVILLA
+
+  <br><br>
+
+  EL MUSEO DEL GRAN PODER · SALA III
+
+</footer>
+
+
+</body>
+
+</html>
+```
+
 
   
 
