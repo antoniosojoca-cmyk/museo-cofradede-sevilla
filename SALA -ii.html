@@ -1,53 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sala II — Los Grandes Cristos de Sevilla</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #080808;
-      color: #f1f1f1;
-      font-family: Georgia, serif;
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    .sala-portada {
+
+    /* =========================================
+       CONTENIDO GENERAL
+       ========================================= */
+
+    main {
       max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
+      margin: auto;
+      padding: 60px 25px;
+    }
+
+
+    /* =========================================
+       TÍTULO DE LA SALA
+       ========================================= */
+
+    .sala-titulo-principal {
       text-align: center;
+      margin-bottom: 50px;
     }
 
     .sala-numero {
       color: #c9a35b;
-      letter-spacing: 5px;
       font-size: 15px;
+      letter-spacing: 5px;
       margin-bottom: 15px;
     }
 
-    h1 {
-      font-size: 36px;
-      letter-spacing: 3px;
-      margin: 10px 0;
+    .sala-titulo-principal h1 {
+      color: #ffffff;
+      font-size: 38px;
+      letter-spacing: 4px;
+      margin: 0;
+      text-transform: uppercase;
     }
 
     .linea {
-      width: 120px;
-      height: 1px;
+      width: 100px;
+      height: 2px;
       background: #c9a35b;
       margin: 25px auto;
     }
 
     .sala-intro {
       max-width: 700px;
-      margin: 0 auto 35px;
-      font-size: 17px;
-      line-height: 1.7;
+      margin: 0 auto;
       color: #cccccc;
+      font-size: 16px;
+      line-height: 1.8;
     }
+
+
+    /* =========================================
+       IMAGEN PRINCIPAL
+       ========================================= */
 
     .imagen-sala {
       width: 100%;
@@ -65,47 +93,71 @@
       filter: brightness(65%);
     }
 
-    .sala-titulo {
+
+    /* =========================================
+       TÍTULO DE PIEZAS
+       ========================================= */
+
+    .sala-subtitulo {
+      text-align: center;
       color: #c9a35b;
       font-size: 20px;
       letter-spacing: 3px;
-      margin: 30px 0;
+      margin-bottom: 40px;
     }
 
+
+    /* =========================================
+       PIEZAS
+       ========================================= */
+
     .pieza {
-      max-width: 700px;
-      margin: 0 auto 60px;
+      background: #111111;
       border: 1px solid #c9a35b;
-      padding: 25px;
-      box-sizing: border-box;
+      padding: 30px;
+      margin-bottom: 45px;
+      text-align: center;
     }
 
     .pieza img {
       width: 100%;
+      max-width: 100%;
+      height: auto;
       display: block;
-      margin-bottom: 25px;
+      margin: 0 auto 25px;
+      border: 1px solid #c9a35b;
     }
 
     .pieza-numero {
       color: #c9a35b;
+      font-size: 15px;
       letter-spacing: 3px;
-      font-size: 14px;
+      margin-bottom: 12px;
     }
 
-    h2 {
-      font-size: 25px;
-      margin: 12px 0 20px;
+    .pieza h2 {
+      color: #ffffff;
+      font-size: 28px;
+      margin: 10px 0 20px;
     }
 
     .pieza-texto {
-      color: #cccccc;
+      max-width: 750px;
+      margin: auto;
+      color: #dddddd;
+      font-size: 17px;
       line-height: 1.7;
-      font-size: 16px;
     }
 
+
+    /* =========================================
+       VOLVER
+       ========================================= */
+
     .volver {
-      display: inline-block;
-      margin-top: 20px;
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
       padding: 12px 25px;
       border: 1px solid #c9a35b;
       color: #c9a35b;
@@ -118,67 +170,102 @@
       color: #080808;
     }
 
+
+    /* =========================================
+       MÓVIL
+       ========================================= */
+
     @media (max-width: 700px) {
-      h1 {
-        font-size: 27px;
+
+      main {
+        padding: 45px 18px;
+      }
+
+      .sala-titulo-principal h1 {
+        font-size: 29px;
+        letter-spacing: 3px;
       }
 
       .imagen-sala {
         height: 280px;
       }
+
+      .pieza {
+        padding: 20px;
+      }
+
+      .pieza h2 {
+        font-size: 22px;
+      }
+
+      .pieza-texto {
+        font-size: 15px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <main class="sala-portada">
+  <main>
 
-    <div class="sala-numero">
-      SALA II
+
+    <!-- =========================================
+         CABECERA DE LA SALA
+         ========================================= -->
+
+    <div class="sala-titulo-principal">
+
+      <div class="sala-numero">
+        SALA II
+      </div>
+
+      <h1>
+        LOS GRANDES CRISTOS DE SEVILLA
+      </h1>
+
+      <div class="linea"></div>
+
+      <p class="sala-intro">
+        Un recorrido por algunas de las imágenes de Cristo
+        que forman parte de la historia, el arte y la devoción
+        de Sevilla.
+      </p>
+
     </div>
 
-    <h1>
-      LOS GRANDES CRISTOS DE SEVILLA
-    </h1>
 
-    <div class="linea"></div>
+    <!-- =========================================
+         IMAGEN PRINCIPAL
+         ========================================= -->
 
-    <p class="sala-intro">
-      Un recorrido por algunas de las imágenes de Cristo
-      que forman parte de la historia, el arte y la devoción
-      de Sevilla.
-    </p>
-
-    
-
-</div>
     <div class="imagen-sala">
-      <img src="ae1f56df344e23d60a226abbba80d0a9.jpg"
-           alt="Cristo de la Buena Muerte">
+
+      <img
+        src="ae1f56df344e23d60a226abbba80d0a9.jpg"
+        alt="Cristo de la Buena Muerte">
+
     </div>
 
-    <div class="sala-titulo">
+
+    <div class="sala-subtitulo">
       PRIMERA PIEZA
     </div>
 
-    <div class="pieza">
 
-      <img src="d68fcb0e4c52ccfdb209b332157700ac.jpg"
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-           alt="Cristo de la Buena Muerte">
+    <!-- =========================================
+         PIEZA I
+         ========================================= -->
+
+    <section class="pieza">
+
+      <img
+        src="d68fcb0e4c52ccfdb209b332157700ac.jpg"
+        alt="Cristo de la Buena Muerte">
 
       <div class="pieza-numero">
         PIEZA I
@@ -195,12 +282,18 @@
         parte de la historia devocional de la ciudad.
       </p>
 
-    </div>
+    </section>
 
-    <div class="pieza">
 
-      <img src="81c90b46e7ad134ff84272f250fc3f85.jpg"
-           alt="Nuestro Padre Jesús de la Salud">
+    <!-- =========================================
+         PIEZA II
+         ========================================= -->
+
+    <section class="pieza">
+
+      <img
+        src="81c90b46e7ad134ff84272f250fc3f85.jpg"
+        alt="Nuestro Padre Jesús de la Salud">
 
       <div class="pieza-numero">
         PIEZA II
@@ -216,81 +309,115 @@
         una de las grandes devociones de Sevilla.
       </p>
 
-    </div>
+    </section>
 
-    <div class="pieza">
 
-  <img src="32e0a7e6b0f647b7bdbd8020c54d4253.jpg"
-       alt="Nuestro Padre Jesús Nazareno">
+    <!-- =========================================
+         PIEZA III
+         ========================================= -->
 
-  <div class="pieza-numero">
-    PIEZA III
-  </div>
+    <section class="pieza">
 
-  <h2>
-    NUESTRO PADRE JESÚS NAZARENO
-  </h2>
+      <img
+        src="32e0a7e6b0f647b7bdbd8020c54d4253.jpg"
+        alt="Nuestro Padre Jesús Nazareno">
 
-  <p class="pieza-texto">
-    Nuestro Padre Jesús Nazareno,
-    titular de la Hermandad del Silencio,
-    una de las grandes devociones de la Semana Santa
-    de Sevilla y una de las imágenes más antiguas
-    y veneradas de la ciudad.
-  </p>
+      <div class="pieza-numero">
+        PIEZA III
+      </div>
 
-</div>
-    <div class="pieza">
+      <h2>
+        NUESTRO PADRE JESÚS NAZARENO
+      </h2>
 
-  <img src="a4a14457954c39e7322f36b6661feb4c.jpg"
-       alt="Santísimo Cristo de las Tres Caídas">
+      <p class="pieza-texto">
+        Nuestro Padre Jesús Nazareno,
+        titular de la Hermandad del Silencio,
+        una de las grandes devociones de la Semana Santa
+        de Sevilla y una de las imágenes más antiguas
+        y veneradas de la ciudad.
+      </p>
 
-  <div class="pieza-numero">
-    PIEZA IV
-  </div>
+    </section>
 
-  <h2>
-    SANTÍSIMO CRISTO DE LAS TRES CAÍDAS
-  </h2>
 
-  <p class="pieza-texto">
-    El Santísimo Cristo de las Tres Caídas,
-    titular de la Hermandad de la Esperanza de Triana,
-    una de las grandes devociones de la Semana Santa
-    de Sevilla y una de las imágenes más veneradas
-    del barrio de Triana.
-  </p>
+    <!-- =========================================
+         PIEZA IV
+         ========================================= -->
 
-</div>
+    <section class="pieza">
+
+      <img
+        src="a4a14457954c39e7322f36b6661feb4c.jpg"
+        alt="Santísimo Cristo de las Tres Caídas">
+
+      <div class="pieza-numero">
+        PIEZA IV
+      </div>
+
+      <h2>
+        SANTÍSIMO CRISTO DE LAS TRES CAÍDAS
+      </h2>
+
+      <p class="pieza-texto">
+        El Santísimo Cristo de las Tres Caídas,
+        titular de la Hermandad de la Esperanza de Triana,
+        una de las grandes devociones de la Semana Santa
+        de Sevilla y una de las imágenes más veneradas
+        del barrio de Triana.
+      </p>
+
+    </section>
+
+
+    <!-- =========================================
+         VOLVER
+         ========================================= -->
+
+    <a class="volver" href="index.html">
       VOLVER AL MUSEO
     </a>
-<div style="text-align:center; margin:50px 0;">
 
-  <button
-    onclick="document.getElementById('musica-sala-II').src='https://www.youtube.com/embed/crnVuKw1Cvk?autoplay=1&controls=0&rel=0';"
-    style="
-      background:#111;
-      color:#c9a35b;
-      border:1px solid #c9a35b;
-      padding:14px 28px;
-      font-family:Georgia,serif;
-      font-size:16px;
-      cursor:pointer;
-      letter-spacing:2px;">
-    🎵 ESCUCHAR LA MARCHA
-  </button>
 
-  <iframe
-    id="musica-sala-II"
-    width="1"
-    height="1"
-    src="about:blank"
-    style="position:absolute; left:-9999px; border:0;"
-    allow="autoplay">
-  </iframe>
+    <!-- =========================================
+         MÚSICA
+         ========================================= -->
 
-</div>
+    <div style="text-align:center; margin:50px 0;">
+
+      <button
+        onclick="document.getElementById('musica-sala-II').src='https://www.youtube.com/embed/crnVuKw1Cvk?autoplay=1&controls=0&rel=0';"
+        style="
+          background:#111;
+          color:#c9a35b;
+          border:1px solid #c9a35b;
+          padding:14px 28px;
+          font-family:Georgia,serif;
+          font-size:16px;
+          cursor:pointer;
+          letter-spacing:2px;">
+
+        🎵 ESCUCHAR LA MARCHA
+
+      </button>
+
+
+      <iframe
+        id="musica-sala-II"
+        width="1"
+        height="1"
+        src="about:blank"
+        style="position:absolute; left:-9999px; border:0;"
+        allow="autoplay">
+
+      </iframe>
+
+    </div>
+
+
   </main>
 
 </body>
+
 </html>
+
