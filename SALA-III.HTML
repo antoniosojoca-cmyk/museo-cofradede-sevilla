@@ -1,12 +1,21 @@
+
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sala III — Miércoles Santo</title>
 
   <style>
+
+    /* =========================================
+       CONFIGURACIÓN GENERAL
+       ========================================= */
+
     * {
       box-sizing: border-box;
     }
@@ -18,108 +27,407 @@
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 25px;
-    }
 
-    .sala-titulo {
+    /* =========================================
+       CABECERA
+       ========================================= */
+
+    .cabecera {
       text-align: center;
-      margin-bottom: 50px;
+
+      padding: 70px 25px 55px;
+
+      border-bottom: 1px solid #c9a35b;
+
+      background: #080808;
     }
 
-    .sala-titulo h1 {
+    .cabecera .museo {
       color: #c9a35b;
-      font-size: 42px;
-      letter-spacing: 4px;
+
+      font-size: 13px;
+
+      letter-spacing: 5px;
+
+      margin-bottom: 20px;
+    }
+
+    .cabecera h1 {
       margin: 0;
-    }
 
-    .sala-titulo h2 {
       color: #ffffff;
-      font-size: 24px;
-      letter-spacing: 3px;
-      margin-top: 12px;
+
+      font-size: 42px;
+
+      letter-spacing: 7px;
+
+      text-transform: uppercase;
     }
 
-    .linea-dorada {
-      width: 100px;
+    .linea {
+      width: 120px;
+
       height: 2px;
+
       background: #c9a35b;
-      margin: 25px auto;
+
+      margin: 30px auto;
     }
+
+    .cabecera h2 {
+      margin: 0;
+
+      color: #c9a35b;
+
+      font-size: 24px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================
+       CONTENIDO
+       ========================================= */
+
+    main {
+      width: min(1000px, 100%);
+
+      margin: 70px auto 90px;
+
+      padding: 0 30px;
+    }
+
+
+    /* =========================================
+       PIEZAS
+       ========================================= */
 
     .pieza {
-      background: #111111;
+      max-width: 850px;
+
+      margin: 0 auto 70px;
+
+      padding: 45px 30px;
+
       border: 1px solid #c9a35b;
-      padding: 30px;
-      margin-bottom: 45px;
+
+      background: #080808;
+
       text-align: center;
+
+      box-shadow:
+        0 0 30px rgba(201,163,91,0.07);
     }
 
-    .pieza img {
-      width: 100%;
-      max-width: 650px;
-      height: auto;
-      display: block;
-      margin: 0 auto 25px;
-    }
+
+    /* =========================================
+       NÚMERO DE PIEZA
+       ========================================= */
 
     .pieza-numero {
       color: #c9a35b;
-      font-size: 15px;
-      letter-spacing: 3px;
-      margin-bottom: 12px;
+
+      font-size: 13px;
+
+      letter-spacing: 5px;
+
+      margin-bottom: 18px;
     }
+
+
+    /* =========================================
+       TÍTULO
+       ========================================= */
 
     .pieza h2 {
+      margin: 0;
+
       color: #ffffff;
-      font-size: 28px;
-      margin: 10px 0 20px;
+
+      font-size: 30px;
+
+      letter-spacing: 3px;
+
+      line-height: 1.4;
+
+      text-transform: uppercase;
     }
+
+
+    /* =========================================
+       LÍNEA DE LA PIEZA
+       ========================================= */
+
+    .pieza-linea {
+      width: 80px;
+
+      height: 1px;
+
+      background: #c9a35b;
+
+      margin: 25px auto;
+    }
+
+
+    /* =========================================
+       MARCO DE LA IMAGEN
+       ========================================= */
+
+    .pieza-imagen {
+
+      width: 100%;
+
+      height: 500px;
+
+      border: 1px solid #c9a35b;
+
+      background: #151515;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       IMAGEN
+       ========================================= */
+
+    .pieza-imagen img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    /* =========================================
+       TEXTO
+       ========================================= */
 
     .pieza-texto {
-      max-width: 750px;
-      margin: auto;
-      color: #dddddd;
-      font-size: 17px;
-      line-height: 1.7;
+
+      max-width: 650px;
+
+      margin: 30px auto 0;
+
+      color: #cccccc;
+
+      font-size: 16px;
+
+      line-height: 1.8;
     }
 
+
+    /* =========================================
+       VOLVER
+       ========================================= */
+
     .volver {
+
       display: block;
+
       width: fit-content;
-      margin: 40px auto 0;
-      padding: 12px 25px;
+
+      margin: 20px auto 0;
+
+      padding: 14px 30px;
+
       border: 1px solid #c9a35b;
+
       color: #c9a35b;
+
       text-decoration: none;
+
+      font-size: 13px;
+
       letter-spacing: 2px;
+
+      transition: 0.3s ease;
     }
 
     .volver:hover {
+
       background: #c9a35b;
+
       color: #080808;
     }
+
+
+    /* =========================================
+       MÚSICA
+       ========================================= */
+
+    .bloque-musica {
+
+      text-align: center;
+
+      margin: 45px 0 0;
+    }
+
+    .bloque-musica button {
+
+      background: #111;
+
+      color: #c9a35b;
+
+      border: 1px solid #c9a35b;
+
+      padding: 14px 28px;
+
+      font-family: Georgia, serif;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+      letter-spacing: 2px;
+
+      transition: 0.3s;
+    }
+
+    .bloque-musica button:hover {
+
+      background: #c9a35b;
+
+      color: #080808;
+    }
+
+
+    /* =========================================
+       PIE DE PÁGINA
+       ========================================= */
+
+    footer {
+
+      border-top: 1px solid #222222;
+
+      text-align: center;
+
+      padding: 35px 20px 50px;
+
+      color: #777777;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================
+       MÓVIL
+       ========================================= */
+
+    @media (max-width: 700px) {
+
+      .cabecera {
+
+        padding: 55px 20px 45px;
+      }
+
+      .cabecera h1 {
+
+        font-size: 30px;
+
+        letter-spacing: 4px;
+      }
+
+      .cabecera h2 {
+
+        font-size: 19px;
+
+        letter-spacing: 2px;
+      }
+
+      main {
+
+        width: 100%;
+
+        margin-top: 50px;
+
+        padding: 0 20px;
+      }
+
+      .pieza {
+
+        padding: 35px 20px;
+
+        margin-bottom: 55px;
+      }
+
+      .pieza h2 {
+
+        font-size: 23px;
+
+        letter-spacing: 2px;
+      }
+
+      .pieza-imagen {
+
+        height: 350px;
+      }
+
+      .pieza-texto {
+
+        font-size: 15px;
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <main>
 
-    <div class="sala-titulo">
-      <h1>SALA III</h1>
-      <div class="linea-dorada"></div>
-      <h2>MIÉRCOLES SANTO</h2>
+  <!-- =========================================
+       CABECERA
+       ========================================= -->
+
+  <header class="cabecera">
+
+    <div class="museo">
+      MUSEO COFRADE DE SEVILLA
     </div>
 
-    <div class="pieza">
+    <h1>
+      SALA III
+    </h1>
 
-      <img
-        src="884bd98fad944b1cf56f5b582be80257.jpg"
-        alt="Cristo de Burgos">
+    <div class="linea"></div>
+
+    <h2>
+      MIÉRCOLES SANTO
+    </h2>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================================
+         PIEZA I
+         ========================================= -->
+
+    <section class="pieza">
 
       <div class="pieza-numero">
         PIEZA I
@@ -129,6 +437,16 @@
         CRISTO DE BURGOS
       </h2>
 
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="884bd98fad944b1cf56f5b582be80257.jpg"
+          alt="Cristo de Burgos">
+
+      </div>
+
       <p class="pieza-texto">
         El Santísimo Cristo de Burgos,
         una de las imágenes más veneradas
@@ -136,12 +454,15 @@
         protagonista del Miércoles Santo.
       </p>
 
-    </div>
-    <div class="pieza">
+    </section>
 
-      <img
-        src="7f0a533f8ba918f4ab72afac292878ae.jpg"
-        alt="El Baratillo">
+
+
+    <!-- =========================================
+         PIEZA II
+         ========================================= -->
+
+    <section class="pieza">
 
       <div class="pieza-numero">
         PIEZA II
@@ -151,6 +472,16 @@
         EL BARATILLO
       </h2>
 
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="7f0a533f8ba918f4ab72afac292878ae.jpg"
+          alt="El Baratillo">
+
+      </div>
+
       <p class="pieza-texto">
         La Hermandad del Baratillo,
         una de las grandes protagonistas
@@ -159,12 +490,15 @@
         en el corazón del Arenal.
       </p>
 
-    </div>
-    <div class="pieza">
+    </section>
 
-      <img
-        src="7a43ab3e9b3264428d9a2d6826323295.jpg"
-        alt="Los Panaderos">
+
+
+    <!-- =========================================
+         PIEZA III
+         ========================================= -->
+
+    <section class="pieza">
 
       <div class="pieza-numero">
         PIEZA III
@@ -174,6 +508,16 @@
         LOS PANADEROS
       </h2>
 
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="7a43ab3e9b3264428d9a2d6826323295.jpg"
+          alt="Los Panaderos">
+
+      </div>
+
       <p class="pieza-texto">
         La Hermandad de Los Panaderos,
         una de las grandes protagonistas
@@ -182,12 +526,15 @@
         más antiguas de la Semana Santa.
       </p>
 
-    </div>
-    <div class="pieza">
+    </section>
 
-      <img
-        src="e82fbf60d2d95c31c887675e066c00ff.jpg"
-        alt="Las Siete Palabras">
+
+
+    <!-- =========================================
+         PIEZA IV
+         ========================================= -->
+
+    <section class="pieza">
 
       <div class="pieza-numero">
         PIEZA IV
@@ -197,6 +544,16 @@
         LAS SIETE PALABRAS
       </h2>
 
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="e82fbf60d2d95c31c887675e066c00ff.jpg"
+          alt="Las Siete Palabras">
+
+      </div>
+
       <p class="pieza-texto">
         La Hermandad de las Siete Palabras,
         una de las corporaciones históricas
@@ -205,37 +562,51 @@
         del Miércoles Santo sevillano.
       </p>
 
-    </div>
+    </section>
+
+
+
+    <!-- =========================================
+         VOLVER
+         ========================================= -->
+
     <a class="volver" href="index.html">
       VOLVER AL MUSEO
     </a>
-<div style="text-align:center; margin:50px 0;">
 
-  <button
-    onclick="document.getElementById('musica-sala-III').src='https://www.youtube.com/embed/4yHxRP8PVXI?autoplay=1&controls=0&rel=0';"
-    style="
-      background:#111;
-      color:#c9a35b;
-      border:1px solid #c9a35b;
-      padding:14px 28px;
-      font-family:Georgia,serif;
-      font-size:16px;
-      cursor:pointer;
-      letter-spacing:2px;">
-    🎵 ESCUCHAR LA MARCHA
-  </button>
 
-  <iframe
-    id="musica-sala-III"
-    width="1"
-    height="1"
-    src="about:blank"
-    style="position:absolute; left:-9999px; border:0;"
-    allow="autoplay">
-  </iframe>
 
-</div>
+    <!-- =========================================
+         MÚSICA
+         ========================================= -->
+
+    <div class="bloque-musica">
+
+      <button
+        onclick="document.getElementById('musica-sala-III').src='https://www.youtube.com/embed/4yHxRP8PVXI?autoplay=1&controls=0&rel=0';">
+
+        🎵 ESCUCHAR LA MARCHA
+
+      </button>
+
+
+      <iframe
+        id="musica-sala-III"
+        width="1"
+        height="1"
+        src="about:blank"
+        style="position:absolute; left:-9999px; border:0;"
+        allow="autoplay">
+      </iframe>
+
+    </div>
+
+
   </main>
 
+
 </body>
+
 </html>
+```
+
