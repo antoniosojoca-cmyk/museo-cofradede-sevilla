@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -10,6 +9,10 @@
   <title>Sala I — Los Rostros de la Esperanza</title>
 
   <style>
+
+    /* =========================================
+       CONFIGURACIÓN GENERAL
+       ========================================= */
 
     * {
       box-sizing: border-box;
@@ -29,45 +32,67 @@
 
     .cabecera {
       text-align: center;
-      padding: 55px 20px 40px;
+
+      padding: 70px 25px 55px;
+
       border-bottom: 1px solid #c9a35b;
+
+      background: #080808;
     }
 
     .cabecera .museo {
       color: #c9a35b;
+
       font-size: 13px;
+
       letter-spacing: 5px;
-      margin-bottom: 18px;
+
+      margin-bottom: 20px;
     }
 
     .cabecera h1 {
       margin: 0;
+
       color: #ffffff;
-      font-size: 38px;
-      letter-spacing: 5px;
+
+      font-size: 42px;
+
+      letter-spacing: 7px;
+
       text-transform: uppercase;
     }
 
     .linea {
-      width: 100px;
-      height: 1px;
+      width: 120px;
+
+      height: 2px;
+
       background: #c9a35b;
-      margin: 25px auto;
+
+      margin: 30px auto;
     }
 
     .cabecera h2 {
       margin: 0;
+
       color: #c9a35b;
+
       font-size: 24px;
-      letter-spacing: 3px;
+
+      letter-spacing: 4px;
+
       text-transform: uppercase;
     }
 
     .intro {
       max-width: 700px;
-      margin: 22px auto 0;
+
+      margin: 28px auto 0;
+
       color: #cccccc;
+
       font-size: 16px;
+
       line-height: 1.8;
     }
 
@@ -77,8 +102,11 @@
        ========================================= */
 
     main {
-      width: min(1000px, 92%);
-      margin: 55px auto 80px;
+      width: min(1000px, 100%);
+
+      margin: 70px auto 90px;
+
+      padding: 0 30px;
     }
 
 
@@ -88,19 +116,25 @@
 
     .musica {
       text-align: center;
-      margin-bottom: 65px;
+
+      margin-bottom: 75px;
     }
 
     .musica-titulo {
       color: #c9a35b;
+
       font-size: 13px;
+
       letter-spacing: 3px;
-      margin-bottom: 18px;
+
+      margin-bottom: 20px;
     }
 
     .musica iframe {
       width: 300px;
+
       height: 80px;
+
       border: 1px solid #c9a35b;
     }
 
@@ -110,56 +144,125 @@
        ========================================= */
 
     .pieza {
-      text-align: center;
-      margin-bottom: 85px;
-    }
-
-
-    /* IMAGEN */
-
-    .pieza img {
-      width: 100%;
       max-width: 850px;
-      height: auto;
-      display: block;
-      margin: 0 auto 30px;
+
+      margin: 0 auto 70px;
+
+      padding: 45px 30px;
 
       border: 1px solid #c9a35b;
 
+      background: #080808;
+
+      text-align: center;
+
       box-shadow:
-        0 0 25px rgba(201,163,91,0.08);
+        0 0 30px rgba(201,163,91,0.07);
     }
 
 
-    /* NÚMERO DE PIEZA */
+    /* =========================================
+       NÚMERO DE PIEZA
+       ========================================= */
 
     .pieza-numero {
       color: #c9a35b;
+
       font-size: 13px;
+
       letter-spacing: 5px;
-      margin-bottom: 14px;
+
+      margin-bottom: 18px;
     }
 
 
-    /* TÍTULO */
+    /* =========================================
+       TÍTULO
+       ========================================= */
 
     .pieza h2 {
-      margin: 0 0 20px;
+      margin: 0;
+
       color: #ffffff;
-      font-size: 25px;
+
+      font-size: 30px;
+
       letter-spacing: 3px;
+
       line-height: 1.4;
+
       text-transform: uppercase;
     }
 
 
-    /* TEXTO */
+    /* =========================================
+       LÍNEA DE LA PIEZA
+       ========================================= */
+
+    .pieza-linea {
+      width: 80px;
+
+      height: 1px;
+
+      background: #c9a35b;
+
+      margin: 25px auto;
+    }
+
+
+    /* =========================================
+       MARCO DE LA IMAGEN
+       ========================================= */
+
+    .pieza-imagen {
+
+      width: 100%;
+
+      height: 500px;
+
+      border: 1px solid #c9a35b;
+
+      background: #151515;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       IMAGEN
+       ========================================= */
+
+    .pieza-imagen img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    /* =========================================
+       TEXTO
+       ========================================= */
 
     .pieza-texto {
-      max-width: 700px;
-      margin: 0 auto;
 
-      color: #bbbbbb;
+      max-width: 650px;
+
+      margin: 30px auto 0;
+
+      color: #cccccc;
 
       font-size: 16px;
 
@@ -172,10 +275,8 @@
        ========================================= */
 
     .separador {
-      width: 60px;
-      height: 1px;
-      background: #c9a35b;
-      margin: 0 auto 85px;
+
+      display: none;
     }
 
 
@@ -184,12 +285,14 @@
        ========================================= */
 
     .volver {
+
       display: block;
+
       width: fit-content;
 
       margin: 20px auto 0;
 
-      padding: 11px 24px;
+      padding: 14px 30px;
 
       border: 1px solid #c9a35b;
 
@@ -197,15 +300,17 @@
 
       text-decoration: none;
 
-      font-size: 12px;
+      font-size: 13px;
 
       letter-spacing: 2px;
 
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .volver:hover {
+
       background: #c9a35b;
+
       color: #080808;
     }
 
@@ -215,11 +320,12 @@
        ========================================= */
 
     footer {
+
       border-top: 1px solid #222222;
 
       text-align: center;
 
-      padding: 30px 20px 45px;
+      padding: 35px 20px 50px;
 
       color: #777777;
 
@@ -238,43 +344,77 @@
     @media (max-width: 700px) {
 
       .cabecera {
-        padding: 45px 18px 35px;
+
+        padding: 55px 20px 45px;
       }
 
       .cabecera h1 {
-        font-size: 29px;
-        letter-spacing: 3px;
+
+        font-size: 30px;
+
+        letter-spacing: 4px;
       }
 
       .cabecera h2 {
-        font-size: 20px;
+
+        font-size: 19px;
+
         letter-spacing: 2px;
       }
 
       .intro {
+
         font-size: 15px;
       }
 
       main {
-        width: 92%;
-        margin-top: 40px;
+
+        width: 100%;
+
+        margin-top: 50px;
+
+        padding: 0 20px;
       }
 
-      .pieza {
-        margin-bottom: 70px;
-      }
+      .musica {
 
-      .pieza h2 {
-        font-size: 21px;
-        letter-spacing: 2px;
-      }
-
-      .pieza-texto {
-        font-size: 15px;
+        margin-bottom: 55px;
       }
 
       .musica iframe {
+
         width: 280px;
+      }
+
+      .pieza {
+
+        padding: 35px 20px;
+
+        margin-bottom: 55px;
+      }
+
+      .pieza h2 {
+
+        font-size: 23px;
+
+        letter-spacing: 2px;
+      }
+
+      .pieza-imagen {
+
+        height: 350px;
+      }
+
+      .pieza-texto {
+
+        font-size: 15px;
+      }
+
+      .volver {
+
+        font-size: 12px;
+
+        padding: 12px 22px;
       }
 
     }
@@ -348,10 +488,6 @@
 
     <section class="pieza">
 
-      <img
-        src="https://i.pinimg.com/1200x/47/01/38/470138f83644a73227880610fb0910c4.jpg"
-        alt="Rostro de la Esperanza">
-
       <div class="pieza-numero">
         PIEZA I
       </div>
@@ -359,6 +495,16 @@
       <h2>
         UN ROSTRO DE ESPERANZA
       </h2>
+
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="https://i.pinimg.com/1200x/47/01/38/470138f83644a73227880610fb0910c4.jpg"
+          alt="Rostro de la Esperanza">
+
+      </div>
 
       <p class="pieza-texto">
         Un rostro que concentra la devoción,
@@ -370,19 +516,11 @@
 
 
 
-    <div class="separador"></div>
-
-
-
     <!-- =========================================
          PIEZA II
          ========================================= -->
 
     <section class="pieza">
-
-      <img
-        src="https://i.pinimg.com/1200x/99/46/fb/9946fb61d358ad9196b0a899a583516f.jpg"
-        alt="Devoción y Esperanza">
 
       <div class="pieza-numero">
         PIEZA II
@@ -391,6 +529,16 @@
       <h2>
         LA MIRADA DE LA DEVOCIÓN
       </h2>
+
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="https://i.pinimg.com/1200x/99/46/fb/9946fb61d358ad9196b0a899a583516f.jpg"
+          alt="Devoción y Esperanza">
+
+      </div>
 
       <p class="pieza-texto">
         La mirada de una imagen puede convertirse
@@ -402,19 +550,11 @@
 
 
 
-    <div class="separador"></div>
-
-
-
     <!-- =========================================
          PIEZA III
          ========================================= -->
 
     <section class="pieza">
-
-      <img
-        src="https://i.pinimg.com/1200x/ee/62/89/ee6289a739041e023990265c1b76c3bd.jpg"
-        alt="Esperanza en Sevilla">
 
       <div class="pieza-numero">
         PIEZA III
@@ -423,6 +563,16 @@
       <h2>
         ESPERANZA EN SEVILLA
       </h2>
+
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="https://i.pinimg.com/1200x/ee/62/89/ee6289a739041e023990265c1b76c3bd.jpg"
+          alt="Esperanza en Sevilla">
+
+      </div>
 
       <p class="pieza-texto">
         Sevilla ha hecho de la Esperanza una parte
@@ -434,19 +584,11 @@
 
 
 
-    <div class="separador"></div>
-
-
-
     <!-- =========================================
          PIEZA IV
          ========================================= -->
 
     <section class="pieza">
-
-      <img
-        src="https://i.pinimg.com/1200x/71/88/01/71880150e624f65a703feaf069a9e6ca.jpg"
-        alt="Rostro de María">
 
       <div class="pieza-numero">
         PIEZA IV
@@ -455,6 +597,16 @@
       <h2>
         EL ROSTRO DE MARÍA
       </h2>
+
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="https://i.pinimg.com/1200x/71/88/01/71880150e624f65a703feaf069a9e6ca.jpg"
+          alt="Rostro de María">
+
+      </div>
 
       <p class="pieza-texto">
         En cada rostro se encuentra una historia,
@@ -466,19 +618,11 @@
 
 
 
-    <div class="separador"></div>
-
-
-
     <!-- =========================================
          PIEZA V
          ========================================= -->
 
     <section class="pieza">
-
-      <img
-        src="https://i.pinimg.com/1200x/d0/07/da/d007da27be00b90d4e676e4b430d66df.jpg"
-        alt="Devoción a la Esperanza">
 
       <div class="pieza-numero">
         PIEZA V
@@ -487,6 +631,16 @@
       <h2>
         UNA ESPERANZA COMPARTIDA
       </h2>
+
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="https://i.pinimg.com/1200x/d0/07/da/d007da27be00b90d4e676e4b430d66df.jpg"
+          alt="Devoción a la Esperanza">
+
+      </div>
 
       <p class="pieza-texto">
         La devoción se transmite de generación
@@ -498,19 +652,11 @@
 
 
 
-    <div class="separador"></div>
-
-
-
     <!-- =========================================
          PIEZA VI
          ========================================= -->
 
     <section class="pieza">
-
-      <img
-        src="https://i.pinimg.com/1200x/4e/6b/2b/4e6b2b907d587e15c4a0ee5ab869e776.jpg"
-        alt="Esperanza y devoción">
 
       <div class="pieza-numero">
         PIEZA VI
@@ -519,6 +665,16 @@
       <h2>
         LA ESPERANZA PERMANECE
       </h2>
+
+      <div class="pieza-linea"></div>
+
+      <div class="pieza-imagen">
+
+        <img
+          src="https://i.pinimg.com/1200x/4e/6b/2b/4e6b2b907d587e15c4a0ee5ab869e776.jpg"
+          alt="Esperanza y devoción">
+
+      </div>
 
       <p class="pieza-texto">
         Más allá de una noche, de una procesión
@@ -565,6 +721,7 @@
 </body>
 
 </html>
+
 
 
 
