@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sala IV — La Madrugá</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -14,159 +17,321 @@
     body {
       margin: 0;
       background: #080808;
-      color: #f1f1f1;
-      font-family: Georgia, serif;
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 25px;
-    }
 
-    .sala-titulo {
+    /* =========================================
+       CABECERA
+       ========================================= */
+
+    .cabecera {
       text-align: center;
-      margin-bottom: 55px;
+      padding: 55px 20px 40px;
+      border-bottom: 1px solid #c9a35b;
     }
 
-    .numero {
+    .cabecera .museo {
       color: #c9a35b;
+      font-size: 13px;
       letter-spacing: 5px;
-      font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
-    h1 {
+    .cabecera h1 {
+      margin: 0;
+      color: #ffffff;
       font-size: 38px;
-      letter-spacing: 4px;
-      margin: 10px 0;
+      letter-spacing: 5px;
+      text-transform: uppercase;
     }
 
     .linea {
-      width: 120px;
+      width: 100px;
       height: 1px;
       background: #c9a35b;
       margin: 25px auto;
     }
 
+    .cabecera h2 {
+      margin: 0;
+      color: #c9a35b;
+      font-size: 24px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
     .intro {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 22px auto 0;
       color: #cccccc;
-      font-size: 17px;
-      line-height: 1.7;
-      text-align: center;
-    }
-
-    .pieza {
-      margin-bottom: 70px;
-      text-align: center;
-    }
-
-    .pieza img {
-      width: 100%;
-      max-width: 850px;
-      height: auto;
-      display: block;
-      margin: 0 auto 30px;
-      border: 1px solid #c9a35b;
-    }
-
-    .pieza-numero {
-      color: #c9a35b;
-      letter-spacing: 4px;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 26px;
-      letter-spacing: 2px;
-      margin: 10px 0 20px;
-    }
-
-    .pieza-texto {
-      max-width: 700px;
-      margin: auto;
-      color: #bbbbbb;
-      line-height: 1.7;
       font-size: 16px;
+      line-height: 1.8;
     }
 
-    .volver {
-      display: block;
-      width: fit-content;
-      margin: 50px auto 0;
-      color: #c9a35b;
-      text-decoration: none;
-      letter-spacing: 2px;
-      font-size: 14px;
+
+    /* =========================================
+       CONTENIDO
+       ========================================= */
+
+    main {
+      width: min(1000px, 92%);
+      margin: 55px auto 80px;
     }
 
-    .volver:hover {
-      color: #ffffff;
-    }
+
+    /* =========================================
+       MÚSICA
+       ========================================= */
+
     .musica-sala {
       text-align: center;
-      margin: 0 auto 60px;
+      margin-bottom: 65px;
     }
 
     .musica-titulo {
       color: #c9a35b;
-      letter-spacing: 3px;
       font-size: 13px;
-      margin-bottom: 15px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
     }
 
     .musica-sala iframe {
-      width: 100%;
-      max-width: 500px;
-      height: 280px;
+      width: 300px;
+      height: 80px;
       border: 1px solid #c9a35b;
     }
+
+
+    /* =========================================
+       PIEZAS
+       ========================================= */
+
+    .pieza {
+      text-align: center;
+      margin-bottom: 85px;
+    }
+
+
+    /* =========================================
+       IMÁGENES GRANDES
+       ========================================= */
+
+    .pieza img {
+      width: 100%;
+      max-width: none;
+      height: auto;
+
+      display: block;
+
+      margin: 0 auto 30px;
+
+      border: 1px solid #c9a35b;
+
+      box-shadow:
+        0 0 25px rgba(201,163,91,0.08);
+    }
+
+
+    /* =========================================
+       NÚMERO DE PIEZA
+       ========================================= */
+
+    .pieza-numero {
+      color: #c9a35b;
+      font-size: 13px;
+      letter-spacing: 5px;
+      margin-bottom: 14px;
+    }
+
+
+    /* =========================================
+       TÍTULO
+       ========================================= */
+
+    .pieza h2 {
+      margin: 0 0 20px;
+      color: #ffffff;
+      font-size: 25px;
+      letter-spacing: 3px;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================
+       TEXTO
+       ========================================= */
+
+    .pieza-texto {
+      max-width: 700px;
+      margin: 0 auto;
+
+      color: #bbbbbb;
+
+      font-size: 16px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================
+       SEPARADOR
+       ========================================= */
+
+    .separador {
+      width: 60px;
+      height: 1px;
+      background: #c9a35b;
+      margin: 0 auto 85px;
+    }
+
+
+    /* =========================================
+       VOLVER
+       ========================================= */
+
+    .volver {
+      display: block;
+      width: fit-content;
+
+      margin: 20px auto 0;
+
+      padding: 11px 24px;
+
+      border: 1px solid #c9a35b;
+
+      color: #c9a35b;
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      transition: all 0.3s ease;
+    }
+
+    .volver:hover {
+      background: #c9a35b;
+      color: #080808;
+    }
+
+
+    /* =========================================
+       PIE DE PÁGINA
+       ========================================= */
+
+    footer {
+      border-top: 1px solid #222222;
+
+      text-align: center;
+
+      padding: 30px 20px 45px;
+
+      color: #777777;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================
+       MÓVIL
+       ========================================= */
+
     @media (max-width: 700px) {
 
+      .cabecera {
+        padding: 45px 18px 35px;
+      }
+
+      .cabecera h1 {
+        font-size: 29px;
+        letter-spacing: 3px;
+      }
+
+      .cabecera h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+      .intro {
+        font-size: 15px;
+      }
+
       main {
-        padding: 40px 18px;
+        width: 92%;
+        margin-top: 40px;
       }
 
-      h1 {
-        font-size: 28px;
+      .pieza {
+        margin-bottom: 70px;
       }
 
-      h2 {
-        font-size: 22px;
+      .pieza h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
       }
+
+      .pieza-texto {
+        font-size: 15px;
+      }
+
+      .musica-sala iframe {
+        width: 280px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================================
+       CABECERA
+       ========================================= -->
+
+  <header class="cabecera">
+
+    <div class="museo">
+      MUSEO COFRADE DE SEVILLA
+    </div>
+
+    <h1>
+      SALA IV
+    </h1>
+
+    <div class="linea"></div>
+
+    <h2>
+      LA MADRUGÁ
+    </h2>
+
+    <p class="intro">
+      Una mirada a los momentos, las emociones y la devoción
+      que convierten la Madrugá de Sevilla en una noche única.
+    </p>
+
+  </header>
+
+
+
   <main>
 
-    <header class="sala-titulo">
 
-      <div class="numero">
-        MUSEO COFRADE DE SEVILLA
-      </div>
+    <!-- =========================================
+         MÚSICA DE LA SALA
+         ========================================= -->
 
-      <h1>
-        SALA IV
-      </h1>
-
-      <div class="linea"></div>
-
-      <h2>
-        LA MADRUGÁ
-      </h2>
-
-      <p class="intro">
-        Una mirada a los momentos, las emociones y la devoción
-        que convierten la Madrugá de Sevilla en una noche única.
-      </p>
-
-    </header>
     <div class="musica-sala">
 
       <div class="musica-titulo">
@@ -174,8 +339,7 @@
       </div>
 
       <iframe
-     src="https://www.youtube.com/embed/Uq0QTbotmag?controls=1&autoplay=1&rel=0"
-
+        src="https://www.youtube.com/embed/Uq0QTbotmag?controls=1&autoplay=1&rel=0"
         title="Música de la Sala IV — La Madrugá"
         frameborder="0"
         allow="autoplay; encrypted-media"
@@ -184,9 +348,13 @@
 
     </div>
 
-    <!-- PIEZA I -->
 
-    <div class="pieza">
+
+    <!-- =========================================
+         PIEZA I
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
         src="1840226912540626653769dd03f710f5.jpg"
@@ -208,8 +376,18 @@
         de mayor intensidad de esta noche.
       </p>
 
-    </div>
-    <div class="pieza">
+    </section>
+
+
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA II
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
         src="virgen-angustias2.jpg"
@@ -231,14 +409,22 @@
         de una noche de fe y silencio.
       </p>
 
-    </div>
-    <div class="pieza">
+    </section>
+
+
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA III
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
-  
-<img 
-    src="a5b9ecd35ec1b75e3de0c6e7e3a079b4.jpg" 
-    alt="Hermanos de cirio">
+        src="a5b9ecd35ec1b75e3de0c6e7e3a079b4.jpg"
+        alt="Hermanos de cirio">
 
       <div class="pieza-numero">
         PIEZA III
@@ -254,11 +440,21 @@
         avanzan por las calles acompañando a sus titulares.
       </p>
 
-    </div>
-    <div class="pieza">
+    </section>
 
-      <img 
-        src="fd76f13b9e6e8554b1ea6cbe0c863287.jpg" 
+
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA IV
+         ========================================= -->
+
+    <section class="pieza">
+
+      <img
+        src="fd76f13b9e6e8554b1ea6cbe0c863287.jpg"
         alt="Ante la fe">
 
       <div class="pieza-numero">
@@ -275,12 +471,43 @@
         instante de silencio, reflexión y admiración.
       </p>
 
-    </div>
-    <a class="volver" href="salas.html">
+    </section>
+
+
+
+    <!-- =========================================
+         VOLVER
+         ========================================= -->
+
+    <a
+      class="volver"
+      href="salas.html">
+
       ← VOLVER A LAS SALAS
+
     </a>
+
 
   </main>
 
+
+
+  <!-- =========================================
+       PIE DE PÁGINA
+       ========================================= -->
+
+  <footer>
+
+    Museo Cofrade de Sevilla
+
+    <br>
+
+    El Museo del Gran Poder · Sala IV
+
+  </footer>
+
+
 </body>
+
 </html>
+
