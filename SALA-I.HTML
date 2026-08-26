@@ -1,12 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sala I — Los Rostros de la Esperanza</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -14,60 +18,84 @@
     body {
       margin: 0;
       background: #080808;
-      color: #f1f1f1;
-      font-family: Georgia, serif;
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 25px;
-    }
 
-    .sala-titulo {
+    /* =========================================
+       CABECERA
+       ========================================= */
+
+    .cabecera {
       text-align: center;
-      margin-bottom: 55px;
+      padding: 55px 20px 40px;
+      border-bottom: 1px solid #c9a35b;
     }
 
-    .numero {
+    .cabecera .museo {
       color: #c9a35b;
+      font-size: 13px;
       letter-spacing: 5px;
-      font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
-    h1 {
+    .cabecera h1 {
+      margin: 0;
+      color: #ffffff;
       font-size: 38px;
-      letter-spacing: 4px;
-      margin: 10px 0;
+      letter-spacing: 5px;
+      text-transform: uppercase;
     }
 
     .linea {
-      width: 120px;
+      width: 100px;
       height: 1px;
       background: #c9a35b;
       margin: 25px auto;
     }
 
+    .cabecera h2 {
+      margin: 0;
+      color: #c9a35b;
+      font-size: 24px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
     .intro {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 22px auto 0;
       color: #cccccc;
-      font-size: 17px;
-      line-height: 1.7;
-      text-align: center;
+      font-size: 16px;
+      line-height: 1.8;
     }
+
+
+    /* =========================================
+       CONTENIDO
+       ========================================= */
+
+    main {
+      width: min(1000px, 92%);
+      margin: 55px auto 80px;
+    }
+
+
+    /* =========================================
+       MÚSICA
+       ========================================= */
 
     .musica {
       text-align: center;
-      margin: 35px auto 55px;
+      margin-bottom: 65px;
     }
 
     .musica-titulo {
       color: #c9a35b;
+      font-size: 13px;
       letter-spacing: 3px;
-      font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .musica iframe {
@@ -76,10 +104,18 @@
       border: 1px solid #c9a35b;
     }
 
+
+    /* =========================================
+       PIEZAS
+       ========================================= */
+
     .pieza {
-      margin-bottom: 70px;
       text-align: center;
+      margin-bottom: 85px;
     }
+
+
+    /* IMAGEN */
 
     .pieza img {
       width: 100%;
@@ -87,95 +123,206 @@
       height: auto;
       display: block;
       margin: 0 auto 30px;
+
       border: 1px solid #c9a35b;
+
+      box-shadow:
+        0 0 25px rgba(201,163,91,0.08);
     }
+
+
+    /* NÚMERO DE PIEZA */
 
     .pieza-numero {
       color: #c9a35b;
-      letter-spacing: 4px;
-      font-size: 14px;
-      margin-bottom: 15px;
+      font-size: 13px;
+      letter-spacing: 5px;
+      margin-bottom: 14px;
     }
 
-    h2 {
-      font-size: 26px;
-      letter-spacing: 2px;
-      margin: 10px 0 20px;
+
+    /* TÍTULO */
+
+    .pieza h2 {
+      margin: 0 0 20px;
+      color: #ffffff;
+      font-size: 25px;
+      letter-spacing: 3px;
+      line-height: 1.4;
+      text-transform: uppercase;
     }
+
+
+    /* TEXTO */
 
     .pieza-texto {
       max-width: 700px;
-      margin: auto;
+      margin: 0 auto;
+
       color: #bbbbbb;
-      line-height: 1.7;
+
       font-size: 16px;
+
+      line-height: 1.8;
     }
+
+
+    /* =========================================
+       SEPARADOR
+       ========================================= */
+
+    .separador {
+      width: 60px;
+      height: 1px;
+      background: #c9a35b;
+      margin: 0 auto 85px;
+    }
+
+
+    /* =========================================
+       VOLVER
+       ========================================= */
 
     .volver {
       display: block;
       width: fit-content;
-      margin: 50px auto 0;
+
+      margin: 20px auto 0;
+
+      padding: 11px 24px;
+
+      border: 1px solid #c9a35b;
+
       color: #c9a35b;
+
       text-decoration: none;
+
+      font-size: 12px;
+
       letter-spacing: 2px;
-      font-size: 14px;
+
+      transition: all 0.3s ease;
     }
 
     .volver:hover {
-      color: #ffffff;
+      background: #c9a35b;
+      color: #080808;
     }
+
+
+    /* =========================================
+       PIE DE PÁGINA
+       ========================================= */
+
+    footer {
+      border-top: 1px solid #222222;
+
+      text-align: center;
+
+      padding: 30px 20px 45px;
+
+      color: #777777;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================
+       MÓVIL
+       ========================================= */
 
     @media (max-width: 700px) {
 
+      .cabecera {
+        padding: 45px 18px 35px;
+      }
+
+      .cabecera h1 {
+        font-size: 29px;
+        letter-spacing: 3px;
+      }
+
+      .cabecera h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+      .intro {
+        font-size: 15px;
+      }
+
       main {
-        padding: 40px 18px;
+        width: 92%;
+        margin-top: 40px;
       }
 
-      h1 {
-        font-size: 28px;
+      .pieza {
+        margin-bottom: 70px;
       }
 
-      h2 {
-        font-size: 22px;
+      .pieza h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
+      }
+
+      .pieza-texto {
+        font-size: 15px;
       }
 
       .musica iframe {
         width: 280px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================================
+       CABECERA
+       ========================================= -->
+
+  <header class="cabecera">
+
+    <div class="museo">
+      MUSEO COFRADE DE SEVILLA
+    </div>
+
+    <h1>
+      SALA I
+    </h1>
+
+    <div class="linea"></div>
+
+    <h2>
+      LOS ROSTROS DE LA ESPERANZA
+    </h2>
+
+    <p class="intro">
+      Un recorrido por las grandes devociones de la Esperanza
+      en Sevilla y por los rostros que forman parte
+      de la memoria y de la Semana Santa sevillana.
+    </p>
+
+  </header>
+
+
+
   <main>
 
-    <header class="sala-titulo">
 
-      <div class="numero">
-        MUSEO COFRADE DE SEVILLA
-      </div>
-
-      <h1>
-        SALA I
-      </h1>
-
-      <div class="linea"></div>
-
-      <h2>
-        LOS ROSTROS DE LA ESPERANZA
-      </h2>
-
-      <p class="intro">
-        Un recorrido por las grandes devociones de la Esperanza
-        en Sevilla y por las hermandades que forman parte
-        de su historia y de su Semana Santa.
-      </p>
-
-    </header>
-
-
-    <!-- MÚSICA DE LA SALA I -->
+    <!-- =========================================
+         MÚSICA DE LA SALA
+         ========================================= -->
 
     <div class="musica">
 
@@ -194,114 +341,232 @@
     </div>
 
 
-    <!-- PIEZA I -->
 
-    <div class="pieza">
+    <!-- =========================================
+         PIEZA I
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
-        src="0fa8ce813520899f0a0b63db91334ee2.jpg"
-        alt="Esperanza Macarena">
+        src="https://i.pinimg.com/1200x/6e/c3/fd/6ec3fdae205d1ab77039394c2082d906.jpg"
+        alt="Rostro de la Esperanza">
 
       <div class="pieza-numero">
         PIEZA I
       </div>
 
       <h2>
-        LA ESPERANZA MACARENA
+        UN ROSTRO DE ESPERANZA
       </h2>
 
       <p class="pieza-texto">
-        María Santísima de la Esperanza Macarena,
-        una de las grandes devociones de Sevilla
-        y uno de los rostros más universales
-        de nuestra Semana Santa.
+        Un rostro que concentra la devoción,
+        la emoción y la mirada de quienes encuentran
+        en María un motivo de esperanza.
       </p>
 
-    </div>
+    </section>
 
 
-    <!-- PIEZA II -->
 
-    <div class="pieza">
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA II
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
-        src="762250bdbb1016accb271703311c125d (1).jpg"
-        alt="Nuestro Padre Jesús del Gran Poder">
+        src="https://i.pinimg.com/1200x/2f/b7/ce/2fb7cee52525b18c04b48021d4426419.jpg"
+        alt="Devoción y Esperanza">
 
       <div class="pieza-numero">
         PIEZA II
       </div>
 
       <h2>
-        NUESTRO PADRE JESÚS DEL GRAN PODER
+        LA MIRADA DE LA DEVOCIÓN
       </h2>
 
       <p class="pieza-texto">
-        Una de las grandes devociones de Sevilla,
-        imagen profundamente venerada
-        y parte esencial de la historia
-        de la Semana Santa sevillana.
+        La mirada de una imagen puede convertirse
+        en un encuentro íntimo entre la devoción
+        y quien se acerca a ella.
       </p>
 
-    </div>
+    </section>
 
 
-    <!-- PIEZA III -->
 
-    <div class="pieza">
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA III
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
-        src="ce8ccf7c0176a0eb8fe8453b8262f16b.jpg"
-        alt="Santísimo Cristo de la Expiración">
+        src="https://i.pinimg.com/1200x/64/7e/7b/647e7b3e6bdeceda3a1dc5b60a17f46f.jpg"
+        alt="Esperanza en Sevilla">
 
       <div class="pieza-numero">
         PIEZA III
       </div>
 
       <h2>
-        SANTÍSIMO CRISTO DE LA EXPIRACIÓN
+        ESPERANZA EN SEVILLA
       </h2>
 
       <p class="pieza-texto">
-        El Santísimo Cristo de la Expiración,
-        conocido popularmente como El Cachorro,
-        una de las imágenes más emblemáticas
-        de la Semana Santa de Sevilla.
+        Sevilla ha hecho de la Esperanza una parte
+        esencial de su memoria, de sus calles
+        y de su manera de vivir la Semana Santa.
       </p>
 
-    </div>
+    </section>
 
 
-    <!-- PIEZA IV -->
 
-    <div class="pieza">
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA IV
+         ========================================= -->
+
+    <section class="pieza">
 
       <img
-        src="9af212fc13a490edac02811ba5e38cd3.jpg"
-        alt="Esperanza de Triana">
+        src="https://i.pinimg.com/1200x/0e/9e/45/0e9e45ea3716c54c33f06b45c1c1a14c.jpg"
+        alt="Rostro de María">
 
       <div class="pieza-numero">
         PIEZA IV
       </div>
 
       <h2>
-        MARÍA SANTÍSIMA DE LA ESPERANZA DE TRIANA
+        EL ROSTRO DE MARÍA
       </h2>
 
       <p class="pieza-texto">
-        María Santísima de la Esperanza de Triana,
-        una de las grandes devociones del barrio
-        de Triana y de toda Sevilla.
+        En cada rostro se encuentra una historia,
+        una tradición y una forma distinta
+        de entender la esperanza y la fe.
       </p>
 
-    </div>
+    </section>
 
 
-    <a class="volver" href="salas.html">
+
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA V
+         ========================================= -->
+
+    <section class="pieza">
+
+      <img
+        src="https://i.pinimg.com/1200x/71/88/01/71880150e624f65a703feaf069a9e6ca.jpg"
+        alt="Devoción a la Esperanza">
+
+      <div class="pieza-numero">
+        PIEZA V
+      </div>
+
+      <h2>
+        UNA ESPERANZA COMPARTIDA
+      </h2>
+
+      <p class="pieza-texto">
+        La devoción se transmite de generación
+        en generación y permanece viva
+        en el corazón de Sevilla.
+      </p>
+
+    </section>
+
+
+
+    <div class="separador"></div>
+
+
+
+    <!-- =========================================
+         PIEZA VI
+         ========================================= -->
+
+    <section class="pieza">
+
+      <img
+        src="https://i.pinimg.com/1200x/ee/62/89/ee6289a739041e023990265c1b76c3bd.jpg"
+        alt="Esperanza y devoción">
+
+      <div class="pieza-numero">
+        PIEZA VI
+      </div>
+
+      <h2>
+        LA ESPERANZA PERMANECE
+      </h2>
+
+      <p class="pieza-texto">
+        Más allá de una noche, de una procesión
+        o de una fotografía, la Esperanza permanece
+        en la memoria de quienes la contemplan.
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         VOLVER
+         ========================================= -->
+
+    <a
+      class="volver"
+      href="MUSEO-GRAN-PODER.HTML">
+
       ← VOLVER A LAS SALAS
+
     </a>
+
 
   </main>
 
+
+
+  <!-- =========================================
+       PIE DE PÁGINA
+       ========================================= -->
+
+  <footer>
+
+    Museo Cofrade de Sevilla
+
+    <br>
+
+    El Museo del Gran Poder · Sala I
+
+  </footer>
+
+
 </body>
+
 </html>
+
+
+
+
+
