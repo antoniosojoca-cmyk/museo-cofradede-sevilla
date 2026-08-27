@@ -1,18 +1,15 @@
+
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sala IV · La Mirada | Museo del Gran Poder</title>
 
 <style>
-
-/* =========================================
-   CONFIGURACIÓN GENERAL
-   ========================================= */
 
 * {
   box-sizing: border-box;
@@ -29,257 +26,145 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-
-/* =========================================
-   CABECERA
-   ========================================= */
+/* CABECERA */
 
 .cabecera {
-
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   padding: 60px 25px;
 }
 
-
 .museo {
-
   color: #8f7545;
-
   font-size: 13px;
-
   letter-spacing: 5px;
-
   text-transform: uppercase;
-
   margin-bottom: 30px;
 }
 
-
 .numero {
-
   color: #c9a35b;
-
   font-size: 14px;
-
   letter-spacing: 6px;
-
   margin-bottom: 20px;
 }
 
-
 .titulo {
-
   margin: 0;
-
   color: #ffffff;
-
   font-size: 52px;
-
   font-weight: normal;
-
   letter-spacing: 9px;
-
   text-transform: uppercase;
 }
 
-
 .linea {
-
   width: 90px;
-
   height: 1px;
-
   background: #c9a35b;
-
   margin: 30px auto;
 }
 
-
 .entrada {
-
   max-width: 700px;
-
   margin: 0 auto;
-
   color: #aaaaaa;
-
   font-size: 18px;
-
   font-style: italic;
-
   line-height: 1.9;
 }
 
-
-/* =========================================
-   BOTÓN ENTRAR
-   ========================================= */
+/* BOTÓN */
 
 .bajar {
-
   margin-top: 70px;
-
   display: inline-block;
-
   padding: 15px 28px;
-
   border: 1px solid #c9a35b;
-
   color: #c9a35b;
-
   text-decoration: none;
-
   font-size: 12px;
-
   letter-spacing: 3px;
-
   transition: 0.3s;
+  cursor: pointer;
 }
 
-
 .bajar:hover {
-
   background: #c9a35b;
-
   color: #080808;
 }
 
-
-/* =========================================
-   INDICADOR MUSICAL
-   ========================================= */
+/* INDICADOR */
 
 .musica-indicador {
-
   position: fixed;
-
   right: 20px;
-
   bottom: 20px;
-
   z-index: 9998;
-
   padding: 10px 16px;
-
   border: 1px solid #c9a35b;
-
   background: rgba(8,8,8,0.92);
-
   color: #c9a35b;
-
   font-size: 11px;
-
   letter-spacing: 2px;
-
   opacity: 0;
-
   pointer-events: none;
-
   transition: opacity 0.5s ease;
 }
 
-
 .musica-indicador.activo {
-
   opacity: 1;
 }
 
-
-/* =========================================
-   REPRODUCTOR YOUTUBE
-   ========================================= */
+/* REPRODUCTOR */
 
 .reproductor-musica {
-
   position: fixed;
-
-  width: 1px;
-
-  height: 1px;
-
-  left: -10px;
-
-  top: -10px;
-
-  overflow: hidden;
-
-  opacity: 0;
-
-  pointer-events: none;
+  width: 2px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.01;
 }
 
-
 .reproductor-musica iframe {
-
-  width: 1px;
-
-  height: 1px;
-
+  width: 2px;
+  height: 2px;
   border: 0;
 }
 
-
-/* =========================================
-   GALERÍA
-   ========================================= */
+/* GALERÍA */
 
 .galeria {
-
   width: min(1200px, 92%);
-
   margin: 0 auto;
-
   padding-bottom: 100px;
 }
 
-
-/* =========================================
-   CADA PIEZA
-   ========================================= */
-
 .momento {
-
   margin-bottom: 140px;
 }
 
-
 .titulo-momento {
-
   text-align: center;
-
   color: #c9a35b;
-
   font-size: 15px;
-
   letter-spacing: 5px;
-
   margin-bottom: 30px;
-
   text-transform: uppercase;
 }
 
-
-/* =========================================
-   MARCO DORADO
-   ========================================= */
+/* MARCO */
 
 .imagen {
-
   width: 100%;
-
   max-width: 1200px;
-
   margin: 0 auto;
-
   padding: 14px;
 
   background:
@@ -302,704 +187,505 @@ body {
   overflow: hidden;
 }
 
-
-/* =========================================
-   FOTOGRAFÍAS
-   ========================================= */
-
 .imagen img {
-
   width: 100%;
-
   height: 650px;
-
   object-fit: cover;
-
   display: block;
-
   border: 4px solid #0b0b0b;
-
   transition: transform 0.8s ease;
 }
 
-
 .imagen:hover img {
-
   transform: scale(1.025);
 }
 
-
-/* =========================================
-   FRASES
-   ========================================= */
+/* FRASES */
 
 .frase {
-
   max-width: 750px;
-
   margin: 30px auto 0;
-
   text-align: center;
-
   color: #c9a35b;
-
   font-size: 18px;
-
   font-style: italic;
-
   line-height: 1.9;
 }
 
-
-/* =========================================
-   REFLEXIÓN FINAL
-   ========================================= */
+/* REFLEXIÓN */
 
 .reflexion {
-
   min-height: 70vh;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
   padding: 80px 25px;
-
   border-top: 1px solid #222222;
 }
 
-
 .reflexion h2 {
-
   color: #c9a35b;
-
   font-size: 15px;
-
   font-weight: normal;
-
   letter-spacing: 6px;
-
   margin-bottom: 45px;
 }
 
-
 .reflexion p {
-
   max-width: 700px;
-
   margin: 15px auto;
-
   color: #eeeeee;
-
   font-size: 24px;
-
   line-height: 1.9;
-
   font-style: italic;
 }
 
-
 .reflexion .destacado {
-
   margin-top: 50px;
-
   color: #c9a35b;
-
   font-size: 28px;
 }
 
-
-/* =========================================
-   BOTÓN VOLVER
-   ========================================= */
+/* VOLVER */
 
 .volver {
-
   display: inline-block;
-
   margin-top: 70px;
-
   padding: 14px 30px;
-
   border: 1px solid #c9a35b;
-
   color: #c9a35b;
-
   text-decoration: none;
-
   font-size: 12px;
-
   letter-spacing: 3px;
-
   transition: 0.3s;
 }
 
-
 .volver:hover {
-
   background: #c9a35b;
-
   color: #080808;
 }
 
-
-/* =========================================
-   PIE
-   ========================================= */
+/* PIE */
 
 footer {
-
   text-align: center;
-
   padding: 35px 20px;
-
   border-top: 1px solid #222222;
-
   color: #666666;
-
   font-size: 11px;
-
   letter-spacing: 2px;
 }
 
-
-/* =========================================
-   MÓVIL
-   ========================================= */
+/* MÓVIL */
 
 @media (max-width: 700px) {
 
   .cabecera {
-
     min-height: 90vh;
-
     padding: 50px 20px;
   }
 
-
   .titulo {
-
     font-size: 34px;
-
     letter-spacing: 5px;
   }
 
-
   .entrada {
-
     font-size: 16px;
   }
 
-
   .momento {
-
     margin-bottom: 100px;
   }
 
-
   .imagen {
-
     padding: 8px;
   }
 
-
   .imagen img {
-
     height: 430px;
   }
 
-
   .frase {
-
     font-size: 16px;
-
     padding: 0 10px;
   }
 
-
   .reflexion p {
-
     font-size: 20px;
   }
 
-
   .reflexion .destacado {
-
     font-size: 24px;
   }
 
-
   .musica-indicador {
-
     right: 10px;
-
     bottom: 10px;
-
     font-size: 10px;
   }
-
 }
 
 </style>
 
 </head>
 
-
 <body>
 
-
-<!-- =========================================
-     REPRODUCTOR MUSICAL
-     ========================================= -->
+<!-- REPRODUCTOR MUSICAL -->
 
 <div class="reproductor-musica">
 
   <iframe
     id="musicaSalaIV"
-    src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&controls=0&rel=0&playsinline=1"
+    src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&autoplay=0&controls=0&rel=0&playsinline=1"
     title="Música de fondo · Sala IV"
-    allow="autoplay">
+    allow="autoplay; encrypted-media">
   </iframe>
 
 </div>
 
+<!-- INDICADOR -->
 
-<!-- =========================================
-     INDICADOR
-     ========================================= -->
-
-<div
-  id="indicadorMusica"
-  class="musica-indicador">
-
+<div id="indicadorMusica" class="musica-indicador">
   ♪ MÚSICA DE LA SALA
-
 </div>
 
-
-<!-- =========================================
-     CABECERA
-     ========================================= -->
+<!-- CABECERA -->
 
 <section class="cabecera">
 
-
   <div class="museo">
-
     EL MUSEO DEL GRAN PODER
-
   </div>
-
 
   <div class="numero">
-
     SALA IV
-
   </div>
 
-
   <h1 class="titulo">
-
     LA MIRADA
-
   </h1>
-
 
   <div class="linea"></div>
 
-
   <p class="entrada">
 
-    Hay miradas que no se olvidan.
+```
+Hay miradas que no se olvidan.
 
-    <br><br>
+<br><br>
 
-    Y hay encuentros que permanecen
-    para siempre en la memoria.
+Y hay encuentros que permanecen
+para siempre en la memoria.
+```
 
   </p>
 
+<a
+ id="entrarSala"
+ class="bajar"
+ href="#galeria">
 
-  <!-- =========================================
-       ESTE BOTÓN INICIA LA MÚSICA
-       ========================================= -->
-
-  <a
-    id="entrarSala"
-    class="bajar"
-    href="#galeria">
-
-    ↓ &nbsp; CONTEMPLAR LA MIRADA
+```
+↓ &nbsp; CONTEMPLAR LA MIRADA
+```
 
   </a>
 
-
 </section>
 
-
-
-<!-- =========================================
-     GALERÍA
-     ========================================= -->
+<!-- GALERÍA -->
 
 <section id="galeria" class="galeria">
 
-
-  <!-- =========================================
-       PIEZA I
-       ========================================= -->
+  <!-- PIEZA I -->
 
   <div class="momento">
 
-    <div class="titulo-momento">
+```
+<div class="titulo-momento">
+  LA MIRADA QUE DETIENE EL TIEMPO
+</div>
 
-      LA MIRADA QUE DETIENE EL TIEMPO
+<div class="imagen">
 
-    </div>
+  <img
+    src="https://i.pinimg.com/1200x/23/8c/ed/238ced612dbabbd26a14ca8442c8f644.jpg"
+    alt="Nuestro Padre Jesús del Gran Poder">
 
+</div>
 
-    <div class="imagen">
+<div class="frase">
 
-      <img
-        src="https://i.pinimg.com/1200x/23/8c/ed/238ced612dbabbd26a14ca8442c8f644.jpg"
-        alt="Nuestro Padre Jesús del Gran Poder">
+  Hay un instante en el que todo se detiene.
 
-    </div>
+  <br>
 
+  Solo queda su mirada.
 
-    <div class="frase">
-
-      Hay un instante en el que todo se detiene.
-
-      <br>
-
-      Solo queda su mirada.
-
-    </div>
+</div>
+```
 
   </div>
 
-
-
-  <!-- =========================================
-       PIEZA II
-       ========================================= -->
+  <!-- PIEZA II -->
 
   <div class="momento">
 
-    <div class="titulo-momento">
+```
+<div class="titulo-momento">
+  ANTE SUS OJOS
+</div>
 
-      ANTE SUS OJOS
+<div class="imagen">
 
-    </div>
+  <img
+    src="https://i.pinimg.com/1200x/ab/95/6c/ab956c9fc068243cc9a3cc9f52c0502e.jpg"
+    alt="La mirada del Gran Poder">
 
+</div>
 
-    <div class="imagen">
+<div class="frase">
 
-      <img
-        src="https://i.pinimg.com/1200x/ab/95/6c/ab956c9fc068243cc9a3cc9f52c0502e.jpg"
-        alt="La mirada del Gran Poder">
+  Mirarlo es comprender que, a veces,
 
-    </div>
+  <br>
 
+  no hacen falta palabras.
 
-    <div class="frase">
-
-      Mirarlo es comprender que, a veces,
-
-      <br>
-
-      no hacen falta palabras.
-
-    </div>
+</div>
+```
 
   </div>
 
-
-
-  <!-- =========================================
-       PIEZA III
-       ========================================= -->
+  <!-- PIEZA III -->
 
   <div class="momento">
 
-    <div class="titulo-momento">
+```
+<div class="titulo-momento">
+  EL ROSTRO DEL SEÑOR
+</div>
 
-      EL ROSTRO DEL SEÑOR
+<div class="imagen">
 
-    </div>
+  <img
+    src="https://i.pinimg.com/1200x/0b/44/53/0b4453d23ee00bd687d96f7cf8edebca.jpg"
+    alt="El rostro de Nuestro Padre Jesús del Gran Poder">
 
+</div>
 
-    <div class="imagen">
+<div class="frase">
 
-      <img
-        src="https://i.pinimg.com/1200x/0b/44/53/0b4453d23ee00bd687d96f7cf8edebca.jpg"
-        alt="El rostro de Nuestro Padre Jesús del Gran Poder">
+  Un rostro que Sevilla reconoce
 
-    </div>
+  <br>
 
+  incluso antes de verlo llegar.
 
-    <div class="frase">
-
-      Un rostro que Sevilla reconoce
-
-      <br>
-
-      incluso antes de verlo llegar.
-
-    </div>
+</div>
+```
 
   </div>
 
-
-
-  <!-- =========================================
-       PIEZA IV
-       ========================================= -->
+  <!-- PIEZA IV -->
 
   <div class="momento">
 
-    <div class="titulo-momento">
+```
+<div class="titulo-momento">
+  UNA MIRADA EN LA MADRUGÁ
+</div>
 
-      UNA MIRADA EN LA MADRUGÁ
+<div class="imagen">
 
-    </div>
+  <img
+    src="https://i.pinimg.com/1200x/09/6a/01/096a012feace351b060b0b3dd15b8c73.jpg"
+    alt="El Gran Poder durante la Madrugá">
 
+</div>
 
-    <div class="imagen">
+<div class="frase">
 
-      <img
-        src="https://i.pinimg.com/1200x/09/6a/01/096a012feace351b060b0b3dd15b8c73.jpg"
-        alt="El Gran Poder durante la Madrugá">
+  La noche pasa.
 
-    </div>
+  <br>
 
+  Pero algunas miradas permanecen.
 
-    <div class="frase">
-
-      La noche pasa.
-
-      <br>
-
-      Pero algunas miradas permanecen.
-
-    </div>
+</div>
+```
 
   </div>
 
-
-
-  <!-- =========================================
-       PIEZA V
-       ========================================= -->
+  <!-- PIEZA V -->
 
   <div class="momento">
 
-    <div class="titulo-momento">
+```
+<div class="titulo-momento">
+  LA FE FRENTE A ÉL
+</div>
 
-      LA FE FRENTE A ÉL
+<div class="imagen">
 
-    </div>
+  <img
+    src="https://i.pinimg.com/1200x/b6/ab/02/b6ab02ab2a1cb3f2067e5ac165df6e07.jpg"
+    alt="Devoción ante Nuestro Padre Jesús del Gran Poder">
 
+</div>
 
-    <div class="imagen">
+<div class="frase">
 
-      <img
-        src="https://i.pinimg.com/1200x/b6/ab/02/b6ab02ab2a1cb3f2067e5ac165df6e07.jpg"
-        alt="Devoción ante Nuestro Padre Jesús del Gran Poder">
+  Frente a Él,
 
-    </div>
+  <br>
 
+  cada persona guarda su propia oración.
 
-    <div class="frase">
-
-      Frente a Él,
-
-      <br>
-
-      cada persona guarda su propia oración.
-
-    </div>
+</div>
+```
 
   </div>
 
-
-
-  <!-- =========================================
-       PIEZA VI
-       ========================================= -->
+  <!-- PIEZA VI -->
 
   <div class="momento">
 
-    <div class="titulo-momento">
+```
+<div class="titulo-momento">
+  EL ENCUENTRO
+</div>
 
-      EL ENCUENTRO
+<div class="imagen">
 
-    </div>
+  <img
+    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn6u3HG3_ZS03keG1ugWyJM_75J5kDLcKwa9XIJmYrlWO5Yr7P6h1KfpTkrGwCGyL-dYDaE-AXrWl8OtyhUd6oDcVE9dwPMvlYaXmDCc8_cfwAMY6ziDOtP01DpXAn3mpLubmQXmihaXI/s1600/Besamanos+del+Gran+Poder+-+Sevilla+-+JESUSARIO+(1).jpg"
+    alt="Besamanos de Nuestro Padre Jesús del Gran Poder">
 
+</div>
 
-    <div class="imagen">
+<div class="frase">
 
-      <img
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn6u3HG3_ZS03keG1ugWyJM_75J5kDLcKwa9XIJmYrlWO5Yr7P6h1KfpTkrGwCGyL-dYDaE-AXrWl8OtyhUd6oDcVE9dwPMvlYaXmDCc8_cfwAMY6ziDOtP01DpXAn3mpLubmQXmihaXI/s1600/Besamanos+del+Gran+Poder+-+Sevilla+-+JESUSARIO+(1).jpg"
-        alt="Besamanos de Nuestro Padre Jesús del Gran Poder">
+  Al final del camino,
 
-    </div>
+  <br>
 
+  siempre queda un encuentro.
 
-    <div class="frase">
-
-      Al final del camino,
-
-      <br>
-
-      siempre queda un encuentro.
-
-    </div>
+</div>
+```
 
   </div>
-
 
 </section>
 
-
-
-<!-- =========================================
-     REFLEXIÓN FINAL
-     ========================================= -->
+<!-- REFLEXIÓN FINAL -->
 
 <section class="reflexion">
 
-
   <h2>
-
     CUANDO TERMINA LA VISITA
-
   </h2>
 
-
   <p>
-
     Tal vez no recuerdes cada fotografía.
-
   </p>
 
-
   <p>
-
     Tal vez no recuerdes cada palabra.
-
   </p>
-
 
   <p>
-
     Pero hay algo que permanecerá contigo.
-
   </p>
-
 
   <p class="destacado">
-
     La mirada que se encontró con la tuya.
-
   </p>
 
+<a
+ class="volver"
+ href="MUSEO-GRAN-PODER.HTML">
 
-  <a
-    class="volver"
-    href="MUSEO-GRAN-PODER.HTML">
-
-    ← VOLVER A LAS SALAS
+```
+← VOLVER A LAS SALAS
+```
 
   </a>
 
-
 </section>
 
-
-
-<!-- =========================================
-     PIE
-     ========================================= -->
+<!-- PIE -->
 
 <footer>
 
-  MUSEO COFRADE DE SEVILLA
+MUSEO COFRADE DE SEVILLA
 
-  <br><br>
+<br><br>
 
-  EL MUSEO DEL GRAN PODER · SALA IV · LA MIRADA
+EL MUSEO DEL GRAN PODER · SALA IV · LA MIRADA
 
 </footer>
 
-
-
-<!-- =========================================
-     CONTROL DE LA MÚSICA
-     ========================================= -->
+<!-- CONTROL MUSICAL -->
 
 <script>
 
 (function() {
 
   var boton = document.getElementById("entrarSala");
-
   var iframe = document.getElementById("musicaSalaIV");
-
   var indicador = document.getElementById("indicadorMusica");
 
-
   if (!boton || !iframe) {
-
     return;
-
   }
 
+  /* Cargamos la API oficial de YouTube */
+
+  var tag = document.createElement("script");
+
+  tag.src = "https://www.youtube.com/iframe_api";
+
+  document.head.appendChild(tag);
+
+  var reproductor;
+
+  window.onYouTubeIframeAPIReady = function() {
+
+    reproductor = new YT.Player("musicaSalaIV", {
+
+      events: {
+
+        onReady: function() {
+
+          console.log("Reproductor de Sala IV preparado.");
+
+        }
+
+      }
+
+    });
+
+  };
 
   boton.addEventListener("click", function() {
 
-
     /*
-
-       El visitante acaba de realizar
-       una interacción real.
-
-       En ese momento solicitamos
-       la reproducción de YouTube.
-
+      IMPORTANTE:
+      El visitante acaba de hacer clic.
+      Esta acción permite solicitar la reproducción.
     */
 
+    if (reproductor && typeof reproductor.playVideo === "function") {
 
-    try {
-
-      iframe.contentWindow.postMessage(
-        JSON.stringify({
-
-          event: "command",
-
-          func: "playVideo",
-
-          args: []
-
-        }),
-        "*"
-      );
+      reproductor.playVideo();
 
     }
-
-    catch(error) {
-
-      console.log(error);
-
-    }
-
 
     if (indicador) {
 
@@ -1009,13 +695,12 @@ footer {
 
   });
 
-
 })();
 
 </script>
 
-
 </body>
 
 </html>
+
 
