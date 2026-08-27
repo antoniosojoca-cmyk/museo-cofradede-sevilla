@@ -1,15 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sala II · El Gran Poder por Sevilla</title>
-
 
 <style>
 
@@ -38,132 +35,103 @@ body {
    ========================================= */
 
 .cabecera {
-
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   padding: 60px 25px;
 }
 
-
 .museo {
-
   color: #8f7545;
-
   font-size: 13px;
-
   letter-spacing: 5px;
-
   text-transform: uppercase;
-
   margin-bottom: 35px;
 }
 
-
 .numero {
-
   color: #c9a35b;
-
   font-size: 14px;
-
   letter-spacing: 6px;
-
   margin-bottom: 22px;
 }
 
-
 .titulo {
-
   margin: 0;
-
   color: #ffffff;
-
   font-size: 52px;
-
   font-weight: normal;
-
   letter-spacing: 8px;
-
   text-transform: uppercase;
 }
 
-
 .linea {
-
   width: 90px;
-
   height: 1px;
-
   background: #c9a35b;
-
   margin: 35px auto;
 }
 
-
 .entrada {
-
   max-width: 700px;
-
   margin: 0 auto;
-
   color: #aaaaaa;
-
   font-size: 18px;
-
   font-style: italic;
-
   line-height: 1.9;
 }
 
-
 .bajar {
-
   margin-top: 80px;
-
   color: #c9a35b;
-
   text-decoration: none;
-
   font-size: 12px;
-
   letter-spacing: 3px;
-
   transition: 0.3s;
 }
 
-
 .bajar:hover {
-
   color: #ffffff;
 }
 
 
 /* =========================================
-   AUDIO DE FONDO · CANTOS GREGORIANOS
+   CANTOS GREGORIANOS · FONDO
    ========================================= */
 
 .audio-fondo {
-
   position: fixed;
-
   width: 1px;
-
   height: 1px;
-
   left: -9999px;
-
   top: -9999px;
-
   opacity: 0;
-
   pointer-events: none;
+}
+
+
+/* =========================================
+   ZONA DE AMBIENTE
+   ========================================= */
+
+.ambiente {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 25px;
+}
+
+.ambiente p {
+  max-width: 700px;
+  color: #aaaaaa;
+  font-size: 22px;
+  line-height: 1.9;
+  font-style: italic;
 }
 
 
@@ -172,33 +140,21 @@ body {
    ========================================= */
 
 .galeria {
-
   width: min(1200px, 92%);
-
   margin: 0 auto;
-
   padding-bottom: 120px;
 }
 
-
 .momento {
-
   margin-bottom: 150px;
 }
 
-
 .titulo-momento {
-
   text-align: center;
-
   color: #c9a35b;
-
   font-size: 15px;
-
   letter-spacing: 5px;
-
   margin-bottom: 30px;
-
   text-transform: uppercase;
 }
 
@@ -208,11 +164,8 @@ body {
    ========================================= */
 
 .imagen {
-
   width: 100%;
-
   max-width: 1200px;
-
   margin: 0 auto;
 
   padding: 14px;
@@ -237,57 +190,32 @@ body {
   overflow: hidden;
 }
 
-
-/* =========================================
-   FOTOGRAFÍAS
-   ========================================= */
-
 .imagen img {
-
   width: 100%;
-
   height: 600px;
-
   display: block;
-
   object-fit: cover;
-
   border: 4px solid #0b0b0b;
-
   transition: transform 0.8s ease;
 }
 
-
 .imagen:hover img {
-
   transform: scale(1.02);
 }
 
-
-/* =========================================
-   FRASES
-   ========================================= */
-
 .frase {
-
   max-width: 700px;
-
   margin: 30px auto 0;
-
   text-align: center;
-
   color: #888888;
-
   font-size: 17px;
-
   font-style: italic;
-
   line-height: 1.8;
 }
 
 
 /* =========================================
-   BLOQUE DEL PREGÓN
+   PREGÓN · CHARO PADILLA
    ========================================= */
 
 .pregon {
@@ -302,11 +230,10 @@ body {
 
   border-bottom: 1px solid #c9a35b;
 
-  text-align: center;
-
   background: #0b0b0b;
-}
 
+  text-align: center;
+}
 
 .pregon-simbolo {
 
@@ -318,7 +245,6 @@ body {
 
   margin-bottom: 18px;
 }
-
 
 .pregon-etiqueta {
 
@@ -333,7 +259,6 @@ body {
   text-transform: uppercase;
 }
 
-
 .pregon-titulo {
 
   color: #ffffff;
@@ -344,7 +269,6 @@ body {
 
   margin-bottom: 12px;
 }
-
 
 .pregon-descripcion {
 
@@ -361,7 +285,7 @@ body {
 
 
 /* =========================================
-   REPRODUCTOR OCULTO
+   AUDIO OCULTO DE CHARO
    ========================================= */
 
 .pregon-audio {
@@ -405,7 +329,6 @@ body {
   border-top: 1px solid #222222;
 }
 
-
 .final h2 {
 
   color: #c9a35b;
@@ -416,7 +339,6 @@ body {
 
   letter-spacing: 6px;
 }
-
 
 .final p {
 
@@ -430,7 +352,6 @@ body {
 
   font-style: italic;
 }
-
 
 .volver {
 
@@ -453,7 +374,6 @@ body {
   transition: 0.3s;
 }
 
-
 .volver:hover {
 
   background: #c9a35b;
@@ -475,48 +395,45 @@ body {
     letter-spacing: 4px;
   }
 
-
   .entrada {
 
     font-size: 16px;
   }
 
+  .ambiente p {
+
+    font-size: 19px;
+  }
 
   .momento {
 
     margin-bottom: 100px;
   }
 
-
   .imagen {
 
     padding: 8px;
   }
-
 
   .imagen img {
 
     height: 400px;
   }
 
-
   .frase {
 
     font-size: 16px;
   }
-
 
   .pregon {
 
     padding: 45px 20px;
   }
 
-
   .pregon-titulo {
 
     font-size: 21px;
   }
-
 
   .final p {
 
@@ -534,7 +451,7 @@ body {
 
 
 <!-- =========================================
-     CANTOS GREGORIANOS · FONDO
+     CANTOS GREGORIANOS · AMBIENTE DE FONDO
      ========================================= -->
 
 <iframe
@@ -560,13 +477,11 @@ body {
 
   </div>
 
-
   <div class="numero">
 
     SALA II
 
   </div>
-
 
   <h1 class="titulo">
 
@@ -574,9 +489,7 @@ body {
 
   </h1>
 
-
   <div class="linea"></div>
-
 
   <p class="entrada">
 
@@ -587,7 +500,6 @@ body {
     Y Sevilla comienza a caminar con Él.
 
   </p>
-
 
   <a
     class="bajar"
@@ -602,26 +514,14 @@ body {
 
 
 <!-- =========================================
-     INDICACIÓN DEL AMBIENTE
+     AMBIENTE
      ========================================= -->
 
-<section id="ambiente"
-         style="
-           min-height:35vh;
-           display:flex;
-           align-items:center;
-           justify-content:center;
-           text-align:center;
-           padding:70px 25px;
-         ">
+<section
+  id="ambiente"
+  class="ambiente">
 
-  <p style="
-    max-width:700px;
-    color:#aaaaaa;
-    font-size:22px;
-    line-height:1.9;
-    font-style:italic;
-  ">
+  <p>
 
     El camino comienza.
 
@@ -655,7 +555,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -663,7 +562,6 @@ body {
         alt="El Gran Poder · La salida">
 
     </div>
-
 
     <div class="frase">
 
@@ -687,7 +585,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -695,7 +592,6 @@ body {
         alt="El Gran Poder · San Lorenzo">
 
     </div>
-
 
     <div class="frase">
 
@@ -719,7 +615,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -727,7 +622,6 @@ body {
         alt="El Gran Poder · El cortejo">
 
     </div>
-
 
     <div class="frase">
 
@@ -751,7 +645,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -759,7 +652,6 @@ body {
         alt="El Gran Poder · Sevilla lo espera">
 
     </div>
-
 
     <div class="frase">
 
@@ -783,7 +675,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -791,7 +682,6 @@ body {
         alt="El Gran Poder · El Señor camina">
 
     </div>
-
 
     <div class="frase">
 
@@ -815,20 +705,17 @@ body {
 
     </div>
 
-
     <div class="pregon-etiqueta">
 
       EL PREGÓN
 
     </div>
 
-
     <div class="pregon-titulo">
 
       LAS PISADAS DEL GRAN PODER
 
     </div>
-
 
     <div class="pregon-descripcion">
 
@@ -837,13 +724,16 @@ body {
     </div>
 
 
-    <!-- AUDIO OCULTO -->
+    <!--
+       El audio permanece completamente oculto.
+       No aparece ningún vídeo.
+    -->
 
     <iframe
       id="audioCharo"
       class="pregon-audio"
-      src="https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505&autoplay=0"
-      title="Pregón de Charo Padilla · Las pisadas del Gran Poder"
+      src="https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505"
+      title="Pregón de Charo Padilla"
       frameborder="0"
       allow="autoplay; encrypted-media">
     </iframe>
@@ -864,7 +754,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -872,7 +761,6 @@ body {
         alt="El Gran Poder · Sevilla">
 
     </div>
-
 
     <div class="frase">
 
@@ -896,7 +784,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -904,7 +791,6 @@ body {
         alt="El Gran Poder · Camino de vuelta">
 
     </div>
-
 
     <div class="frase">
 
@@ -928,7 +814,6 @@ body {
 
     </div>
 
-
     <div class="imagen">
 
       <img
@@ -936,7 +821,6 @@ body {
         alt="El Gran Poder · San Lorenzo">
 
     </div>
-
 
     <div class="frase">
 
@@ -963,7 +847,6 @@ body {
 
   </h2>
 
-
   <p>
 
     El Señor vuelve a San Lorenzo.
@@ -975,7 +858,6 @@ body {
     Sevilla ha caminado con Él.
 
   </p>
-
 
   <a
     class="volver"
@@ -997,61 +879,68 @@ body {
 
 (function () {
 
-  const pregon = document.getElementById("audioCharo");
+  const gregoriano =
+    document.getElementById("gregoriano");
 
-  const gregoriano = document.getElementById("gregoriano");
+  const pregon =
+    document.getElementById("audioCharo");
 
-  const zonaPregon = document.querySelector(".pregon");
+  const zonaPregon =
+    document.querySelector(".pregon");
 
-  let iniciado = false;
+  let pregonIniciado = false;
 
 
   /*
-     Cuando el visitante llega al bloque del pregón,
-     intentamos iniciar el audio de Charo.
+     Al entrar en la sala, los cantos gregorianos
+     permanecen como ambiente de fondo.
   */
 
-  const observador = new IntersectionObserver(
 
-    function (entradas) {
+  /*
+     Cuando el visitante llega al pregón,
+     comienza Charo Padilla.
+  */
 
-      entradas.forEach(function (entrada) {
+  const observador =
+    new IntersectionObserver(
 
-        if (entrada.isIntersecting && !iniciado) {
+      function (entradas) {
 
-          iniciado = true;
+        entradas.forEach(function (entrada) {
 
+          if (
+            entrada.isIntersecting &&
+            !pregonIniciado
+          ) {
 
-          /*
-             El pregón sustituye al ambiente gregoriano.
-          */
-
-          try {
-
-            gregoriano.src =
-              "https://www.youtube.com/embed/kpYBa7jBzY4?loop=1&playlist=kpYBa7jBzY4";
-
-          } catch (e) {}
+            pregonIniciado = true;
 
 
-          /*
-             Arranca el fragmento del pregón.
-          */
+            /*
+               Los cantos gregorianos siguen
+               sonando como fondo.
+            */
 
-          pregon.src =
-            "https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505&autoplay=1";
 
-        }
+            /*
+               Comienza el fragmento de Charo.
+            */
 
-      });
+            pregon.src =
+              "https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505&autoplay=1";
 
-    },
+          }
 
-    {
-      threshold: 0.35
-    }
+        });
 
-  );
+      },
+
+      {
+        threshold: 0.35
+      }
+
+    );
 
 
   observador.observe(zonaPregon);
@@ -1087,5 +976,5 @@ body {
 </body>
 
 </html>
-```
+
 
