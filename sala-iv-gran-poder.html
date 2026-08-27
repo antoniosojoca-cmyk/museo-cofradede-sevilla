@@ -9,7 +9,6 @@
 
 <title>Sala IV · La Mirada | Museo del Gran Poder</title>
 
-
 <style>
 
 /* =========================================
@@ -147,26 +146,6 @@ body {
 
 
 /* =========================================
-   PEQUEÑO INDICADOR DE MÚSICA
-   ========================================= */
-
-.indicador-musica {
-
-  margin-top: 28px;
-
-  color: #555555;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  opacity: 0.8;
-}
-
-
-/* =========================================
    GALERÍA
    ========================================= */
 
@@ -207,7 +186,7 @@ body {
 
 
 /* =========================================
-   MARCO DORADO · MUSEO
+   MARCO DORADO
    ========================================= */
 
 .imagen {
@@ -388,30 +367,10 @@ body {
 
 
 /* =========================================
-   PIE DE PÁGINA
+   REPRODUCTOR OCULTO
    ========================================= */
 
-footer {
-
-  text-align: center;
-
-  padding: 35px 20px;
-
-  border-top: 1px solid #222222;
-
-  color: #666666;
-
-  font-size: 11px;
-
-  letter-spacing: 2px;
-}
-
-
-/* =========================================
-   REPRODUCTOR COMPLETAMENTE OCULTO
-   ========================================= */
-
-#reproductorMusica {
+#musicaSalaIV {
 
   position: fixed;
 
@@ -428,6 +387,26 @@ footer {
   pointer-events: none;
 
   border: 0;
+}
+
+
+/* =========================================
+   PIE
+   ========================================= */
+
+footer {
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-top: 1px solid #222222;
+
+  color: #666666;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
 }
 
 
@@ -511,96 +490,52 @@ footer {
      ========================================= -->
 
 <iframe
-  id="reproductorMusica"
-  src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&controls=0&rel=0&playsinline=1"
+  id="musicaSalaIV"
+  src="https://www.youtube.com/embed/O4rhWBrIS28?autoplay=0&controls=0&rel=0&playsinline=1"
   title="Música de fondo · Sala IV"
-  allow="autoplay"
-  frameborder="0">
+  frameborder="0"
+  allow="autoplay; encrypted-media">
 </iframe>
 
 
 <script>
 
 /* =========================================
-   SISTEMA DE MÚSICA
-   LA MÚSICA SE ACTIVA AL PULSAR
-   "CONTEMPLAR LA MIRADA"
+   ACTIVAR MÚSICA
    ========================================= */
-
-var reproductorSalaIV = null;
-var musicaPreparada = false;
-
-
-/* Cargar API de YouTube */
-
-var etiquetaAPI = document.createElement("script");
-
-etiquetaAPI.src = "https://www.youtube.com/iframe_api";
-
-document.head.appendChild(etiquetaAPI);
-
-
-/* Cuando YouTube esté preparado */
-
-function onYouTubeIframeAPIReady() {
-
-  reproductorSalaIV = new YT.Player("reproductorMusica", {
-
-    events: {
-
-      "onReady": function() {
-
-        musicaPreparada = true;
-
-      }
-
-    }
-
-  });
-
-}
-
-
-/* Activar música */
 
 function iniciarMusicaSalaIV() {
 
-  if (reproductorSalaIV) {
+  var iframe = document.getElementById("musicaSalaIV");
 
-    reproductorSalaIV.playVideo();
-
-    reproductorSalaIV.unMute();
-
-    reproductorSalaIV.setVolume(45);
-
+  if (!iframe) {
+    return;
   }
+
+  iframe.src =
+    "https://www.youtube.com/embed/O4rhWBrIS28?autoplay=1&controls=0&rel=0&playsinline=1";
 
 }
 
 
 /* =========================================
-   SI EL VISITANTE PULSA CUALQUIER PARTE
-   DE LA SALA, LA MÚSICA TAMBIÉN PUEDE ACTIVARSE
+   PRIMER CLIC EN LA PÁGINA
    ========================================= */
 
-document.addEventListener("click", function activarMusica() {
+document.addEventListener("click", function() {
 
   iniciarMusicaSalaIV();
-
-  document.removeEventListener("click", activarMusica);
 
 }, { once: true });
 
 
 /* =========================================
-   EN MÓVILES
+   PRIMER TOQUE EN MÓVIL
    ========================================= */
 
-document.addEventListener("touchstart", function activarMusicaMovil() {
+document.addEventListener("touchstart", function() {
 
   iniciarMusicaSalaIV();
-
-  document.removeEventListener("touchstart", activarMusicaMovil);
 
 }, { once: true });
 
@@ -651,10 +586,6 @@ document.addEventListener("touchstart", function activarMusicaMovil() {
   </p>
 
 
-  <!-- =====================================
-       ESTE ENLACE ACTIVA LA MÚSICA
-       ===================================== -->
-
   <a
     class="bajar"
     href="#galeria"
@@ -663,13 +594,6 @@ document.addEventListener("touchstart", function activarMusicaMovil() {
     ↓ &nbsp; CONTEMPLAR LA MIRADA
 
   </a>
-
-
-  <div class="indicador-musica">
-
-    ♪ · Música de la sala
-
-  </div>
 
 
 </section>
@@ -958,7 +882,7 @@ document.addEventListener("touchstart", function activarMusicaMovil() {
 
 
 <!-- =========================================
-     PIE
+     PIE DE PÁGINA
      ========================================= -->
 
 <footer>
@@ -975,4 +899,3 @@ document.addEventListener("touchstart", function activarMusicaMovil() {
 </body>
 
 </html>
-
