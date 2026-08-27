@@ -459,8 +459,11 @@ footer {
 
 
 <body>
-<!-- =========================================
+
+   
+   <!-- =========================================
      MÚSICA DE FONDO · SALA IV
+     LA MIRADA
      ========================================= -->
 
 <div style="
@@ -489,20 +492,65 @@ footer {
 </div>
 
 
+<!-- VÍDEO COMPLETAMENTE OCULTO -->
+
 <iframe
+  id="musicaSalaIV"
   width="1"
   height="1"
-  src="https://www.youtube.com/embed/O4rhWBrIS28?autoplay=1&loop=1&playlist=O4rhWBrIS28"
-  title="Música de la Sala IV"
+  src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&loop=1&playlist=O4rhWBrIS28"
+  title="Música de fondo · Sala IV"
   frameborder="0"
   allow="autoplay"
   style="
-    position:absolute;
-    left:-9999px;
-    top:-9999px;
+    position:fixed;
+    width:1px;
+    height:1px;
+    left:-100px;
+    top:-100px;
+    opacity:0;
+    pointer-events:none;
     border:0;
   ">
 </iframe>
+
+
+<script>
+
+document.addEventListener("click", function iniciarMusica() {
+
+  var iframe = document.getElementById("musicaSalaIV");
+
+  iframe.contentWindow.postMessage(
+    '{"event":"command","func":"playVideo","args":""}',
+    "*"
+  );
+
+  document.removeEventListener("click", iniciarMusica);
+
+});
+
+
+document.addEventListener("touchstart", function iniciarMusicaMovil() {
+
+  var iframe = document.getElementById("musicaSalaIV");
+
+  iframe.contentWindow.postMessage(
+    '{"event":"command","func":"playVideo","args":""}',
+    "*"
+  );
+
+  document.removeEventListener("touchstart", iniciarMusicaMovil);
+
+});
+
+</script>
+  </div>
+
+</div>
+
+
+   
 
 <!-- =========================================
      CABECERA
