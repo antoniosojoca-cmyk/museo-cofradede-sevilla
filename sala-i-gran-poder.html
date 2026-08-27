@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -26,12 +28,43 @@ html {
 
 body {
   margin: 0;
-
   background: #080808;
-
   color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   MÚSICA DE FONDO
+   ========================================= */
+
+.musica-sala {
+
+  text-align: center;
+
+  margin: 20px auto 25px;
+}
+
+.musica-sala .simbolo {
+
+  color: #c9a35b;
+
+  font-size: 24px;
+
+  margin-bottom: 8px;
+}
+
+.musica-sala .texto {
+
+  color: #c9a35b;
 
   font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
 }
 
 
@@ -54,7 +87,6 @@ body {
   text-align: center;
 
   padding: 60px 25px;
-
 }
 
 
@@ -69,7 +101,6 @@ body {
   text-transform: uppercase;
 
   margin-bottom: 35px;
-
 }
 
 
@@ -82,7 +113,6 @@ body {
   letter-spacing: 6px;
 
   margin-bottom: 22px;
-
 }
 
 
@@ -99,7 +129,6 @@ body {
   letter-spacing: 10px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -112,7 +141,6 @@ body {
   background: #c9a35b;
 
   margin: 35px auto;
-
 }
 
 
@@ -129,7 +157,6 @@ body {
   font-style: italic;
 
   line-height: 1.9;
-
 }
 
 
@@ -150,14 +177,12 @@ body {
   letter-spacing: 3px;
 
   transition: 0.3s;
-
 }
 
 
 .bajar:hover {
 
   color: #ffffff;
-
 }
 
 
@@ -178,7 +203,6 @@ body {
   text-align: center;
 
   padding: 80px 25px;
-
 }
 
 
@@ -195,7 +219,6 @@ body {
   font-style: italic;
 
   line-height: 1.8;
-
 }
 
 
@@ -204,12 +227,11 @@ body {
   color: #c9a35b;
 
   font-weight: normal;
-
 }
 
 
 /* =========================================
-   GRAN IMAGEN
+   GRAN IMAGEN · MARCO DORADO
    ========================================= */
 
 .imagen-principal {
@@ -218,25 +240,52 @@ body {
 
   margin: 30px auto 0;
 
-  border: 1px solid #c9a35b;
+  padding: 14px;
 
-  background: #111111;
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
 
   overflow: hidden;
-
 }
 
+
+/* =========================================
+   FOTOGRAFÍA PRINCIPAL
+   ========================================= */
 
 .imagen-principal img {
 
   width: 100%;
 
-  display: block;
+  height: 650px;
 
-  max-height: 850px;
+  display: block;
 
   object-fit: cover;
 
+  border: 4px solid #0b0b0b;
+
+  transition: transform 0.8s ease;
+}
+
+
+.imagen-principal:hover img {
+
+  transform: scale(1.02);
 }
 
 
@@ -259,7 +308,6 @@ body {
   font-style: italic;
 
   line-height: 1.9;
-
 }
 
 
@@ -280,7 +328,6 @@ body {
   border-bottom: 1px solid #c9a35b;
 
   text-align: center;
-
 }
 
 
@@ -295,7 +342,6 @@ body {
   margin-bottom: 25px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -312,7 +358,6 @@ body {
   letter-spacing: 4px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -325,7 +370,6 @@ body {
   background: #c9a35b;
 
   margin: 30px auto;
-
 }
 
 
@@ -342,7 +386,6 @@ body {
   font-style: italic;
 
   line-height: 2;
-
 }
 
 
@@ -355,7 +398,84 @@ body {
   font-size: 22px;
 
   line-height: 1.7;
+}
 
+
+/* =========================================
+   AUDIO · ANTE TI
+   ========================================= */
+
+.audio-pregon {
+
+  max-width: 650px;
+
+  margin: 55px auto 20px;
+
+  padding: 30px 25px;
+
+  border: 1px solid #c9a35b;
+
+  background: #0d0d0d;
+
+  text-align: center;
+}
+
+
+.audio-simbolo {
+
+  color: #c9a35b;
+
+  font-size: 28px;
+
+  letter-spacing: 7px;
+
+  margin-bottom: 18px;
+}
+
+
+.audio-titulo {
+
+  color: #c9a35b;
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 14px;
+}
+
+
+.audio-nombre {
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
+}
+
+
+.audio-autor {
+
+  color: #888888;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  margin-bottom: 25px;
+}
+
+
+.audio-pregon iframe {
+
+  width: 100%;
+
+  height: 180px;
+
+  border: 0;
 }
 
 
@@ -376,14 +496,12 @@ body {
   text-align: center;
 
   padding: 100px 25px;
-
 }
 
 
 .reflexion-contenido {
 
   max-width: 760px;
-
 }
 
 
@@ -400,7 +518,6 @@ body {
   letter-spacing: 6px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -413,7 +530,6 @@ body {
   font-size: 22px;
 
   line-height: 2;
-
 }
 
 
@@ -426,7 +542,6 @@ body {
   font-size: 28px;
 
   font-style: italic;
-
 }
 
 
@@ -451,7 +566,6 @@ body {
   padding: 80px 25px;
 
   border-top: 1px solid #222222;
-
 }
 
 
@@ -464,7 +578,6 @@ body {
   letter-spacing: 8px;
 
   margin-bottom: 70px;
-
 }
 
 
@@ -479,7 +592,6 @@ body {
   font-size: 25px;
 
   line-height: 1.9;
-
 }
 
 
@@ -492,7 +604,6 @@ body {
   font-size: 30px;
 
   font-style: italic;
-
 }
 
 
@@ -519,7 +630,6 @@ body {
   letter-spacing: 3px;
 
   transition: 0.3s;
-
 }
 
 
@@ -528,7 +638,6 @@ body {
   background: #c9a35b;
 
   color: #080808;
-
 }
 
 
@@ -549,7 +658,6 @@ footer {
   font-size: 11px;
 
   letter-spacing: 2px;
-
 }
 
 
@@ -562,7 +670,6 @@ footer {
   .cabecera {
 
     min-height: 90vh;
-
   }
 
 
@@ -571,35 +678,44 @@ footer {
     font-size: 34px;
 
     letter-spacing: 5px;
-
   }
 
 
   .entrada {
 
     font-size: 16px;
-
   }
 
 
   .silencio {
 
     min-height: 60vh;
-
   }
 
 
   .silencio p {
 
     font-size: 22px;
+  }
 
+
+  .imagen-principal {
+
+    width: 92%;
+
+    padding: 8px;
+  }
+
+
+  .imagen-principal img {
+
+    height: 400px;
   }
 
 
   .pregon {
 
     padding: 55px 20px;
-
   }
 
 
@@ -608,42 +724,48 @@ footer {
     font-size: 24px;
 
     letter-spacing: 2px;
-
   }
 
 
   .texto-pregon {
 
     font-size: 16px;
-
   }
 
 
   .cita {
 
     font-size: 19px;
+  }
 
+
+  .audio-pregon {
+
+    padding: 25px 15px;
+  }
+
+
+  .audio-nombre {
+
+    font-size: 21px;
   }
 
 
   .reflexion p {
 
     font-size: 19px;
-
   }
 
 
   .final p {
 
     font-size: 21px;
-
   }
 
 
   .final .ultimo {
 
     font-size: 25px;
-
   }
 
 }
@@ -654,6 +776,41 @@ footer {
 
 
 <body>
+
+
+<!-- =========================================
+     MÚSICA DE FONDO · SALA I
+     ========================================= -->
+
+<div class="musica-sala">
+
+  <div class="simbolo">
+    ♪
+  </div>
+
+  <div class="texto">
+    Música de la Sala
+  </div>
+
+</div>
+
+
+<iframe
+  width="1"
+  height="1"
+  src="https://www.youtube.com/embed/4yHxRP8PVXI?autoplay=1&loop=1&playlist=4yHxRP8PVXI"
+  title="Música de fondo · Sala I"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  style="
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    width:1px;
+    height:1px;
+    border:0;
+  ">
+</iframe>
 
 
 <!-- =========================================
@@ -732,7 +889,7 @@ footer {
 
 
 <!-- =========================================
-     IMAGEN DEL GRAN PODER
+     IMAGEN DEL GRAN PODER · MARCO DORADO
      ========================================= -->
 
 <div class="imagen-principal">
@@ -806,78 +963,50 @@ footer {
   </div>
 
 
-   
+  <!-- =========================================
+       AUDIO · ANTE TI
+       ========================================= -->
 
-  
-
-   <!-- AUDIO DEL PREGÓN -->
-
-<div style="
-  max-width:650px;
-  margin:55px auto 20px;
-  padding:30px 25px;
-  border:1px solid #c9a35b;
-  background:#0d0d0d;
-  text-align:center;
-">
+  <div class="audio-pregon">
 
 
-   
-    
-   <div style="
-  color:#c9a35b;
-  font-size:28px;
-  letter-spacing:7px;
-  margin-bottom:18px;
-">
-  ♪ 〰 ♪
+    <div class="audio-simbolo">
 
-   
-</div>
+      ♪ 〰 ♪
 
-<div style="
-  color:#c9a35b;
-  font-size:12px;
-  letter-spacing:5px;
-  margin-bottom:14px;
-">
-  ESCUCHAR EL PREGÓN
-</div>
+    </div>
+
+
+    <div class="audio-titulo">
+
+      ESCUCHAR EL PREGÓN
+
+    </div>
+
+
+    <div class="audio-nombre">
+
+      ANTE TI
+
+    </div>
+
+
+    <div class="audio-autor">
+
+      Rafa Serna
+
+    </div>
+
+
+    <iframe
+      src="https://www.youtube.com/embed/MZKWbWn_gvM?start=91"
+      title="Ante Ti — Rafa Serna"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+
   </div>
-
-  <div style="
-    color:#ffffff;
-    font-size:24px;
-    letter-spacing:2px;
-    margin-bottom:8px;
-  ">
-    ANTE TI
-  </div>
-
-  <div style="
-    color:#888888;
-    font-size:14px;
-    font-style:italic;
-    margin-bottom:25px;
-  ">
-    Rafa Serna
-  </div>
-
-  <iframe
-    width="100%"
-    height="180"
-    src="https://www.youtube.com/embed/MZKWbWn_gvM?start=91"
-    title="Ante Ti — Rafa Serna"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-
-</div>
-
-
-   
-
 
 
 </section>
@@ -1022,3 +1151,5 @@ footer {
 </body>
 
 </html>
+```
+
