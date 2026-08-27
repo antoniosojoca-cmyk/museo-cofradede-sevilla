@@ -12,10 +12,6 @@
 
 <style>
 
-/* =========================================
-   CONFIGURACIÓN GENERAL
-   ========================================= */
-
 * {
   box-sizing: border-box;
 }
@@ -31,10 +27,7 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-
-/* =========================================
-   CABECERA
-   ========================================= */
+/* CABECERA */
 
 .cabecera {
   min-height: 100vh;
@@ -86,26 +79,7 @@ body {
   line-height: 1.9;
 }
 
-
-/* =========================================
-   MÚSICA DE FONDO
-   MISMO SISTEMA QUE SALA II
-   ========================================= */
-
-.audio-fondo {
-  position: fixed;
-  width: 1px;
-  height: 1px;
-  left: -9999px;
-  top: -9999px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-/* =========================================
-   BOTÓN ENTRAR
-   ========================================= */
+/* BOTÓN ENTRAR */
 
 .bajar {
   margin-top: 70px;
@@ -124,10 +98,7 @@ body {
   color: #080808;
 }
 
-
-/* =========================================
-   GALERÍA
-   ========================================= */
+/* GALERÍA */
 
 .galeria {
   width: min(1200px, 92%);
@@ -148,10 +119,7 @@ body {
   text-transform: uppercase;
 }
 
-
-/* =========================================
-   MARCO DORADO
-   ========================================= */
+/* MARCO DORADO */
 
 .imagen {
   width: 100%;
@@ -179,10 +147,7 @@ body {
   overflow: hidden;
 }
 
-
-/* =========================================
-   FOTOGRAFÍAS
-   ========================================= */
+/* FOTOGRAFÍAS */
 
 .imagen img {
   width: 100%;
@@ -197,10 +162,7 @@ body {
   transform: scale(1.025);
 }
 
-
-/* =========================================
-   FRASES
-   ========================================= */
+/* FRASES */
 
 .frase {
   max-width: 750px;
@@ -212,10 +174,7 @@ body {
   line-height: 1.9;
 }
 
-
-/* =========================================
-   REFLEXIÓN FINAL
-   ========================================= */
+/* REFLEXIÓN FINAL */
 
 .reflexion {
   min-height: 70vh;
@@ -251,10 +210,7 @@ body {
   font-size: 28px;
 }
 
-
-/* =========================================
-   BOTÓN VOLVER
-   ========================================= */
+/* BOTÓN VOLVER */
 
 .volver {
   display: inline-block;
@@ -273,10 +229,7 @@ body {
   color: #080808;
 }
 
-
-/* =========================================
-   PIE
-   ========================================= */
+/* PIE */
 
 footer {
   text-align: center;
@@ -287,10 +240,7 @@ footer {
   letter-spacing: 2px;
 }
 
-
-/* =========================================
-   MÓVIL
-   ========================================= */
+/* MÓVIL */
 
 @media (max-width: 700px) {
 
@@ -341,96 +291,43 @@ footer {
 
 <body>
 
-<!-- =========================================
-     MÚSICA DE FONDO
-     EXACTAMENTE COMO EN SALA II
-     ========================================= -->
-
-<iframe
-  id="musicaSalaIV"
-  class="audio-fondo"
-  src="https://www.youtube.com/embed/O4rhWBrIS28?autoplay=1&loop=1&playlist=O4rhWBrIS28"
-  title="Música de fondo · Sala IV"
-  frameborder="0"
-  allow="autoplay; encrypted-media">
-</iframe>
-
-<!-- =========================================
-     CABECERA
-     ========================================= -->
-
 <section class="cabecera">
 
   <div class="museo">
-
-```
-EL MUSEO DEL GRAN PODER
-```
-
+    EL MUSEO DEL GRAN PODER
   </div>
 
   <div class="numero">
-
-```
-SALA IV
-```
-
+    SALA IV
   </div>
 
   <h1 class="titulo">
-
-```
-LA MIRADA
-```
-
+    LA MIRADA
   </h1>
 
   <div class="linea"></div>
 
   <p class="entrada">
-
-```
-Hay miradas que no se olvidan.
-
-<br><br>
-
-Y hay encuentros que permanecen
-para siempre en la memoria.
-```
-
+    Hay miradas que no se olvidan.
+    <br><br>
+    Y hay encuentros que permanecen
+    para siempre en la memoria.
   </p>
 
-<a
- class="bajar"
- href="#galeria">
-
-```
-↓ &nbsp; CONTEMPLAR LA MIRADA
-```
-
+  <a class="bajar" href="#galeria">
+    ↓ &nbsp; CONTEMPLAR LA MIRADA
   </a>
 
 </section>
 
-<!-- =========================================
-     GALERÍA
-     ========================================= -->
-
 <section id="galeria" class="galeria">
-
-  <!-- =========================================
-       PIEZA I
-       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
-
   LA MIRADA QUE DETIENE EL TIEMPO
-
 </div>
-
 
 <div class="imagen">
 
@@ -440,33 +337,21 @@ para siempre en la memoria.
 
 </div>
 
-
 <div class="frase">
-
   Hay un instante en el que todo se detiene.
-
   <br>
-
   Solo queda su mirada.
-
 </div>
 ```
 
   </div>
 
-  <!-- =========================================
-       PIEZA II
-       ========================================= -->
-
   <div class="momento">
 
 ```
 <div class="titulo-momento">
-
   ANTE SUS OJOS
-
 </div>
-
 
 <div class="imagen">
 
@@ -476,33 +361,21 @@ para siempre en la memoria.
 
 </div>
 
-
 <div class="frase">
-
   Mirarlo es comprender que, a veces,
-
   <br>
-
   no hacen falta palabras.
-
 </div>
 ```
 
   </div>
 
-  <!-- =========================================
-       PIEZA III
-       ========================================= -->
-
   <div class="momento">
 
 ```
 <div class="titulo-momento">
-
   EL ROSTRO DEL SEÑOR
-
 </div>
-
 
 <div class="imagen">
 
@@ -512,33 +385,21 @@ para siempre en la memoria.
 
 </div>
 
-
 <div class="frase">
-
   Un rostro que Sevilla reconoce
-
   <br>
-
   incluso antes de verlo llegar.
-
 </div>
 ```
 
   </div>
 
-  <!-- =========================================
-       PIEZA IV
-       ========================================= -->
-
   <div class="momento">
 
 ```
 <div class="titulo-momento">
-
   UNA MIRADA EN LA MADRUGÁ
-
 </div>
-
 
 <div class="imagen">
 
@@ -548,33 +409,21 @@ para siempre en la memoria.
 
 </div>
 
-
 <div class="frase">
-
   La noche pasa.
-
   <br>
-
   Pero algunas miradas permanecen.
-
 </div>
 ```
 
   </div>
 
-  <!-- =========================================
-       PIEZA V
-       ========================================= -->
-
   <div class="momento">
 
 ```
 <div class="titulo-momento">
-
   LA FE FRENTE A ÉL
-
 </div>
-
 
 <div class="imagen">
 
@@ -584,33 +433,21 @@ para siempre en la memoria.
 
 </div>
 
-
 <div class="frase">
-
   Frente a Él,
-
   <br>
-
   cada persona guarda su propia oración.
-
 </div>
 ```
 
   </div>
 
-  <!-- =========================================
-       PIEZA VI
-       ========================================= -->
-
   <div class="momento">
 
 ```
 <div class="titulo-momento">
-
   EL ENCUENTRO
-
 </div>
-
 
 <div class="imagen">
 
@@ -620,15 +457,10 @@ para siempre en la memoria.
 
 </div>
 
-
 <div class="frase">
-
   Al final del camino,
-
   <br>
-
   siempre queda un encuentro.
-
 </div>
 ```
 
@@ -636,67 +468,33 @@ para siempre en la memoria.
 
 </section>
 
-<!-- =========================================
-     REFLEXIÓN FINAL
-     ========================================= -->
-
 <section class="reflexion">
 
   <h2>
-
-```
-CUANDO TERMINA LA VISITA
-```
-
+    CUANDO TERMINA LA VISITA
   </h2>
 
   <p>
-
-```
-Tal vez no recuerdes cada fotografía.
-```
-
+    Tal vez no recuerdes cada fotografía.
   </p>
 
   <p>
-
-```
-Tal vez no recuerdes cada palabra.
-```
-
+    Tal vez no recuerdes cada palabra.
   </p>
 
   <p>
-
-```
-Pero hay algo que permanecerá contigo.
-```
-
+    Pero hay algo que permanecerá contigo.
   </p>
 
   <p class="destacado">
-
-```
-La mirada que se encontró con la tuya.
-```
-
+    La mirada que se encontró con la tuya.
   </p>
 
-<a
- class="volver"
- href="MUSEO-GRAN-PODER.HTML">
-
-```
-← VOLVER A LAS SALAS
-```
-
+  <a class="volver" href="MUSEO-GRAN-PODER.HTML">
+    ← VOLVER A LAS SALAS
   </a>
 
 </section>
-
-<!-- =========================================
-     PIE
-     ========================================= -->
 
 <footer>
 
@@ -711,6 +509,7 @@ EL MUSEO DEL GRAN PODER · SALA IV · LA MIRADA
 </body>
 
 </html>
+
 
 
 
