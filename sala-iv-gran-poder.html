@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -135,6 +134,8 @@ body {
   letter-spacing: 3px;
 
   transition: 0.3s;
+
+  cursor: pointer;
 }
 
 
@@ -386,6 +387,30 @@ footer {
 
 
 /* =========================================
+   MÚSICA OCULTA
+   ========================================= */
+
+.musica-oculta {
+
+  position: fixed;
+
+  width: 1px;
+
+  height: 1px;
+
+  left: -100px;
+
+  top: -100px;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  border: 0;
+}
+
+
+/* =========================================
    MÓVIL
    ========================================= */
 
@@ -460,97 +485,40 @@ footer {
 
 <body>
 
-   
-   <!-- =========================================
+
+<!-- =========================================
      MÚSICA DE FONDO · SALA IV
-     LA MIRADA
      ========================================= -->
-
-<div style="
-  text-align:center;
-  margin:20px auto 25px;
-">
-
-  <div style="
-    color:#c9a35b;
-    font-size:24px;
-    margin-bottom:8px;
-  ">
-    ♪
-  </div>
-
-  <div style="
-    color:#c9a35b;
-    font-family:Georgia,'Times New Roman',serif;
-    font-size:11px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-  ">
-    Música de la Sala
-  </div>
-
-</div>
-
-
-<!-- VÍDEO COMPLETAMENTE OCULTO -->
 
 <iframe
   id="musicaSalaIV"
-  width="1"
-  height="1"
-  src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&loop=1&playlist=O4rhWBrIS28"
+  class="musica-oculta"
+  src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&autoplay=0&controls=0&loop=1&playlist=O4rhWBrIS28&rel=0"
   title="Música de fondo · Sala IV"
-  frameborder="0"
-  allow="autoplay"
-  style="
-    position:fixed;
-    width:1px;
-    height:1px;
-    left:-100px;
-    top:-100px;
-    opacity:0;
-    pointer-events:none;
-    border:0;
-  ">
+  allow="autoplay; encrypted-media">
 </iframe>
 
 
 <script>
 
-document.addEventListener("click", function iniciarMusica() {
+function iniciarMusicaSalaIV() {
 
   var iframe = document.getElementById("musicaSalaIV");
 
   iframe.contentWindow.postMessage(
-    '{"event":"command","func":"playVideo","args":""}',
+    JSON.stringify({
+      event: "command",
+      func: "playVideo",
+      args: []
+    }),
     "*"
   );
 
-  document.removeEventListener("click", iniciarMusica);
-
-});
-
-
-document.addEventListener("touchstart", function iniciarMusicaMovil() {
-
-  var iframe = document.getElementById("musicaSalaIV");
-
-  iframe.contentWindow.postMessage(
-    '{"event":"command","func":"playVideo","args":""}',
-    "*"
-  );
-
-  document.removeEventListener("touchstart", iniciarMusicaMovil);
-
-});
+}
 
 </script>
-  </div>
-
-</div>
 
 
-   
 
 <!-- =========================================
      CABECERA
@@ -595,7 +563,10 @@ document.addEventListener("touchstart", function iniciarMusicaMovil() {
   </p>
 
 
-  <a class="bajar" href="#galeria">
+  <a
+    class="bajar"
+    href="#galeria"
+    onclick="iniciarMusicaSalaIV();">
 
     ↓ &nbsp; CONTEMPLAR LA MIRADA
 
@@ -613,231 +584,221 @@ document.addEventListener("touchstart", function iniciarMusicaMovil() {
 <section id="galeria" class="galeria">
 
 
-  <!-- =========================================
-       PIEZA I
-       ========================================= -->
 
-  <div class="momento">
+<!-- =========================================
+     PIEZA I
+     ========================================= -->
 
+<div class="momento">
 
-    <div class="titulo-momento">
+  <div class="titulo-momento">
 
-      LA MIRADA QUE DETIENE EL TIEMPO
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://i.pinimg.com/1200x/23/8c/ed/238ced612dbabbd26a14ca8442c8f644.jpg"
-        alt="Nuestro Padre Jesús del Gran Poder">
-
-    </div>
-
-
-    <div class="frase">
-
-      Hay un instante en el que todo se detiene.
-
-      <br>
-
-      Solo queda su mirada.
-
-    </div>
-
+    LA MIRADA QUE DETIENE EL TIEMPO
 
   </div>
 
 
+  <div class="imagen">
 
-  <!-- =========================================
-       PIEZA II
-       ========================================= -->
-
-  <div class="momento">
-
-
-    <div class="titulo-momento">
-
-      ANTE SUS OJOS
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://i.pinimg.com/1200x/ab/95/6c/ab956c9fc068243cc9a3cc9f52c0502e.jpg"
-        alt="La mirada del Gran Poder">
-
-    </div>
-
-
-    <div class="frase">
-
-      Mirarlo es comprender que, a veces,
-
-      <br>
-
-      no hacen falta palabras.
-
-    </div>
-
+    <img
+      src="https://i.pinimg.com/1200x/23/8c/ed/238ced612dbabbd26a14ca8442c8f644.jpg"
+      alt="Nuestro Padre Jesús del Gran Poder">
 
   </div>
 
 
+  <div class="frase">
 
-  <!-- =========================================
-       PIEZA III
-       ========================================= -->
+    Hay un instante en el que todo se detiene.
 
-  <div class="momento">
+    <br>
 
+    Solo queda su mirada.
 
-    <div class="titulo-momento">
+  </div>
 
-      EL ROSTRO DEL SEÑOR
-
-    </div>
+</div>
 
 
-    <div class="imagen">
 
-      <img
-        src="https://i.pinimg.com/1200x/0b/44/53/0b4453d23ee00bd687d96f7cf8edebca.jpg"
-        alt="El rostro de Nuestro Padre Jesús del Gran Poder">
+<!-- =========================================
+     PIEZA II
+     ========================================= -->
 
-    </div>
+<div class="momento">
 
+  <div class="titulo-momento">
 
-    <div class="frase">
-
-      Un rostro que Sevilla reconoce
-
-      <br>
-
-      incluso antes de verlo llegar.
-
-    </div>
-
+    ANTE SUS OJOS
 
   </div>
 
 
+  <div class="imagen">
 
-  <!-- =========================================
-       PIEZA IV
-       ========================================= -->
-
-  <div class="momento">
-
-
-    <div class="titulo-momento">
-
-      UNA MIRADA EN LA MADRUGÁ
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://i.pinimg.com/1200x/09/6a/01/096a012feace351b060b0b3dd15b8c73.jpg"
-        alt="El Gran Poder durante la Madrugá">
-
-    </div>
-
-
-    <div class="frase">
-
-      La noche pasa.
-
-      <br>
-
-      Pero algunas miradas permanecen.
-
-    </div>
-
+    <img
+      src="https://i.pinimg.com/1200x/ab/95/6c/ab956c9fc068243cc9a3cc9f52c0502e.jpg"
+      alt="La mirada del Gran Poder">
 
   </div>
 
 
+  <div class="frase">
 
-  <!-- =========================================
-       PIEZA V
-       ========================================= -->
+    Mirarlo es comprender que, a veces,
 
-  <div class="momento">
+    <br>
 
+    no hacen falta palabras.
 
-    <div class="titulo-momento">
+  </div>
 
-      LA FE FRENTE A ÉL
-
-    </div>
+</div>
 
 
-    <div class="imagen">
 
-      <img
-        src="https://i.pinimg.com/1200x/b6/ab/02/b6ab02ab2a1cb3f2067e5ac165df6e07.jpg"
-        alt="Devoción ante Nuestro Padre Jesús del Gran Poder">
+<!-- =========================================
+     PIEZA III
+     ========================================= -->
 
-    </div>
+<div class="momento">
 
+  <div class="titulo-momento">
 
-    <div class="frase">
-
-      Frente a Él,
-
-      <br>
-
-      cada persona guarda su propia oración.
-
-    </div>
-
+    EL ROSTRO DEL SEÑOR
 
   </div>
 
 
+  <div class="imagen">
 
-  <!-- =========================================
-       PIEZA VI
-       ========================================= -->
-
-  <div class="momento">
-
-
-    <div class="titulo-momento">
-
-      EL ENCUENTRO
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn6u3HG3_ZS03keG1ugWyJM_75J5kDLcKwa9XIJmYrlWO5Yr7P6h1KfpTkrGwCGyL-dYDaE-AXrWl8OtyhUd6oDcVE9dwPMvlYaXmDCc8_cfwAMY6ziDOtP01DpXAn3mpLubmQXmihaXI/s1600/Besamanos+del+Gran+Poder+-+Sevilla+-+JESUSARIO+(1).jpg"
-        alt="Besamanos de Nuestro Padre Jesús del Gran Poder">
-
-    </div>
-
-
-    <div class="frase">
-
-      Al final del camino,
-
-      <br>
-
-      siempre queda un encuentro.
-
-    </div>
-
+    <img
+      src="https://i.pinimg.com/1200x/0b/44/53/0b4453d23ee00bd687d96f7cf8edebca.jpg"
+      alt="El rostro de Nuestro Padre Jesús del Gran Poder">
 
   </div>
+
+
+  <div class="frase">
+
+    Un rostro que Sevilla reconoce
+
+    <br>
+
+    incluso antes de verlo llegar.
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================
+     PIEZA IV
+     ========================================= -->
+
+<div class="momento">
+
+  <div class="titulo-momento">
+
+    UNA MIRADA EN LA MADRUGÁ
+
+  </div>
+
+
+  <div class="imagen">
+
+    <img
+      src="https://i.pinimg.com/1200x/09/6a/01/096a012feace351b060b0b3dd15b8c73.jpg"
+      alt="El Gran Poder durante la Madrugá">
+
+  </div>
+
+
+  <div class="frase">
+
+    La noche pasa.
+
+    <br>
+
+    Pero algunas miradas permanecen.
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================
+     PIEZA V
+     ========================================= -->
+
+<div class="momento">
+
+  <div class="titulo-momento">
+
+    LA FE FRENTE A ÉL
+
+  </div>
+
+
+  <div class="imagen">
+
+    <img
+      src="https://i.pinimg.com/1200x/b6/ab/02/b6ab02ab2a1cb3f2067e5ac165df6e07.jpg"
+      alt="Devoción ante Nuestro Padre Jesús del Gran Poder">
+
+  </div>
+
+
+  <div class="frase">
+
+    Frente a Él,
+
+    <br>
+
+    cada persona guarda su propia oración.
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================
+     PIEZA VI
+     ========================================= -->
+
+<div class="momento">
+
+  <div class="titulo-momento">
+
+    EL ENCUENTRO
+
+  </div>
+
+
+  <div class="imagen">
+
+    <img
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn6u3HG3_ZS03keG1ugWyJM_75J5kDLcKwa9XIJmYrlWO5Yr7P6h1KfpTkrGwCGyL-dYDaE-AXrWl8OtyhUd6oDcVE9dwPMvlYaXmDCc8_cfwAMY6ziDOtP01DpXAn3mpLubmQXmihaXI/s1600/Besamanos+del+Gran+Poder+-+Sevilla+-+JESUSARIO+(1).jpg"
+      alt="Besamanos de Nuestro Padre Jesús del Gran Poder">
+
+  </div>
+
+
+  <div class="frase">
+
+    Al final del camino,
+
+    <br>
+
+    siempre queda un encuentro.
+
+  </div>
+
+</div>
+
 
 
 </section>
@@ -899,6 +860,10 @@ document.addEventListener("touchstart", function iniciarMusicaMovil() {
 
 
 
+<!-- =========================================
+     PIE
+     ========================================= -->
+
 <footer>
 
   MUSEO COFRADE DE SEVILLA
@@ -913,3 +878,4 @@ document.addEventListener("touchstart", function iniciarMusicaMovil() {
 </body>
 
 </html>
+
