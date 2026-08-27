@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -121,9 +122,19 @@ body {
 }
 
 
+/* =========================================
+   ENTRAR EN LA SALA
+   ========================================= */
+
 .bajar {
 
+  display: inline-block;
+
   margin-top: 70px;
+
+  padding: 15px 28px;
+
+  border: 1px solid #c9a35b;
 
   color: #c9a35b;
 
@@ -133,7 +144,7 @@ body {
 
   letter-spacing: 3px;
 
-  transition: 0.3s;
+  transition: all 0.3s ease;
 
   cursor: pointer;
 }
@@ -141,7 +152,33 @@ body {
 
 .bajar:hover {
 
-  color: #ffffff;
+  background: #c9a35b;
+
+  color: #080808;
+}
+
+
+/* =========================================
+   REPRODUCTOR INVISIBLE
+   ========================================= */
+
+.musica-sala {
+
+  position: fixed;
+
+  width: 1px;
+
+  height: 1px;
+
+  left: -9999px;
+
+  top: -9999px;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  border: 0;
 }
 
 
@@ -387,35 +424,10 @@ footer {
 
 
 /* =========================================
-   MÚSICA OCULTA
-   ========================================= */
-
-.musica-oculta {
-
-  position: fixed;
-
-  width: 1px;
-
-  height: 1px;
-
-  left: -100px;
-
-  top: -100px;
-
-  opacity: 0;
-
-  pointer-events: none;
-
-  border: 0;
-}
-
-
-/* =========================================
    MÓVIL
    ========================================= */
 
 @media (max-width: 700px) {
-
 
   .cabecera {
 
@@ -487,32 +499,39 @@ footer {
 
 
 <!-- =========================================
-     MÚSICA DE FONDO · SALA IV
+     MÚSICA · SALA IV
      ========================================= -->
 
 <iframe
   id="musicaSalaIV"
-  class="musica-oculta"
-  src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&autoplay=0&controls=0&loop=1&playlist=O4rhWBrIS28&rel=0"
+  class="musica-sala"
   title="Música de fondo · Sala IV"
+  frameborder="0"
   allow="autoplay; encrypted-media">
 </iframe>
 
 
 <script>
 
-function iniciarMusicaSalaIV() {
+function entrarEnSalaIV() {
 
   var iframe = document.getElementById("musicaSalaIV");
 
-  iframe.contentWindow.postMessage(
-    JSON.stringify({
-      event: "command",
-      func: "playVideo",
-      args: []
-    }),
-    "*"
-  );
+  /*
+     El vídeo se carga SOLO después del clic
+     del visitante. De esta manera el navegador
+     reconoce la acción del usuario y permite
+     el sonido.
+  */
+
+  iframe.src =
+    "https://www.youtube.com/embed/O4rhWBrIS28" +
+    "?autoplay=1" +
+    "&controls=0" +
+    "&loop=1" +
+    "&playlist=O4rhWBrIS28" +
+    "&rel=0" +
+    "&modestbranding=1";
 
 }
 
@@ -566,7 +585,7 @@ function iniciarMusicaSalaIV() {
   <a
     class="bajar"
     href="#galeria"
-    onclick="iniciarMusicaSalaIV();">
+    onclick="entrarEnSalaIV();">
 
     ↓ &nbsp; CONTEMPLAR LA MIRADA
 
