@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sala II · El Gran Poder por Sevilla</title>
+
 
 <style>
 
@@ -133,6 +134,8 @@ body {
   font-size: 12px;
 
   letter-spacing: 3px;
+
+  transition: 0.3s;
 }
 
 
@@ -143,102 +146,24 @@ body {
 
 
 /* =========================================
-   AMBIENTE SONORO
+   AUDIO DE FONDO · CANTOS GREGORIANOS
    ========================================= */
 
-.sonido {
+.audio-fondo {
 
-  width: min(900px, 92%);
+  position: fixed;
 
-  margin: 0 auto 120px;
+  width: 1px;
 
-  padding: 40px 30px;
+  height: 1px;
 
-  border: 1px solid #c9a35b;
+  left: -9999px;
 
-  background: #0d0d0d;
+  top: -9999px;
 
-  text-align: center;
-}
+  opacity: 0;
 
-
-.simbolo-sonido {
-
-  color: #c9a35b;
-
-  font-size: 28px;
-
-  letter-spacing: 7px;
-
-  margin-bottom: 18px;
-}
-
-
-.etiqueta-sonido {
-
-  color: #c9a35b;
-
-  font-size: 12px;
-
-  letter-spacing: 5px;
-
-  margin-bottom: 14px;
-
-  text-transform: uppercase;
-}
-
-
-.titulo-sonido {
-
-  color: #ffffff;
-
-  font-size: 24px;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 10px;
-}
-
-
-.descripcion-sonido {
-
-  color: #888888;
-
-  font-size: 14px;
-
-  font-style: italic;
-
-  margin-bottom: 28px;
-}
-
-
-.boton-sonido {
-
-  padding: 14px 30px;
-
-  border: 1px solid #c9a35b;
-
-  background: transparent;
-
-  color: #c9a35b;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 12px;
-
-  letter-spacing: 3px;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-
-.boton-sonido:hover {
-
-  background: #c9a35b;
-
-  color: #080808;
+  pointer-events: none;
 }
 
 
@@ -278,37 +203,70 @@ body {
 }
 
 
+/* =========================================
+   MARCO DORADO · MUSEO
+   ========================================= */
+
 .imagen {
 
   width: 100%;
 
-  border: 1px solid #c9a35b;
+  max-width: 1200px;
 
-  background: #111111;
+  margin: 0 auto;
+
+  padding: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
 
   overflow: hidden;
 }
 
 
+/* =========================================
+   FOTOGRAFÍAS
+   ========================================= */
+
 .imagen img {
 
   width: 100%;
 
-  display: block;
+  height: 600px;
 
-  max-height: 800px;
+  display: block;
 
   object-fit: cover;
 
-  transition: transform 1s ease;
+  border: 4px solid #0b0b0b;
+
+  transition: transform 0.8s ease;
 }
 
 
 .imagen:hover img {
 
-  transform: scale(1.025);
+  transform: scale(1.02);
 }
 
+
+/* =========================================
+   FRASES
+   ========================================= */
 
 .frase {
 
@@ -329,72 +287,98 @@ body {
 
 
 /* =========================================
-   VENTANAS DE AUDIO
+   BLOQUE DEL PREGÓN
    ========================================= */
 
-.modal-audio {
+.pregon {
 
-  display: none;
+  width: min(900px, 92%);
 
-  position: fixed;
+  margin: 0 auto 150px;
 
-  inset: 0;
+  padding: 55px 30px;
 
-  z-index: 9999;
+  border-top: 1px solid #c9a35b;
 
-  background: rgba(0,0,0,0.92);
+  border-bottom: 1px solid #c9a35b;
 
-  align-items: center;
+  text-align: center;
 
-  justify-content: center;
-
-  padding: 20px;
+  background: #0b0b0b;
 }
 
 
-.modal-contenido {
-
-  position: relative;
-
-  width: min(800px, 95%);
-
-  background: #080808;
-
-  border: 1px solid #c9a35b;
-
-  padding: 20px;
-}
-
-
-.cerrar-modal {
-
-  position: absolute;
-
-  right: 10px;
-
-  top: 8px;
-
-  z-index: 2;
-
-  background: none;
-
-  border: 0;
+.pregon-simbolo {
 
   color: #c9a35b;
 
   font-size: 28px;
 
-  cursor: pointer;
+  letter-spacing: 7px;
+
+  margin-bottom: 18px;
 }
 
 
-.modal-contenido iframe {
+.pregon-etiqueta {
 
-  width: 100%;
+  color: #c9a35b;
 
-  height: 315px;
+  font-size: 12px;
 
-  border: 0;
+  letter-spacing: 5px;
+
+  margin-bottom: 14px;
+
+  text-transform: uppercase;
+}
+
+
+.pregon-titulo {
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+
+.pregon-descripcion {
+
+  color: #888888;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   REPRODUCTOR OCULTO
+   ========================================= */
+
+.pregon-audio {
+
+  position: absolute;
+
+  width: 1px;
+
+  height: 1px;
+
+  left: -9999px;
+
+  top: -9999px;
+
+  opacity: 0;
+
+  pointer-events: none;
 }
 
 
@@ -491,40 +475,48 @@ body {
     letter-spacing: 4px;
   }
 
+
   .entrada {
 
     font-size: 16px;
   }
 
-  .sonido {
-
-    padding: 35px 20px;
-  }
-
-  .titulo-sonido {
-
-    font-size: 20px;
-  }
 
   .momento {
 
     margin-bottom: 100px;
   }
 
+
+  .imagen {
+
+    padding: 8px;
+  }
+
+
   .imagen img {
 
-    max-height: 600px;
+    height: 400px;
   }
+
 
   .frase {
 
     font-size: 16px;
   }
 
-  .modal-contenido iframe {
 
-    height: 230px;
+  .pregon {
+
+    padding: 45px 20px;
   }
+
+
+  .pregon-titulo {
+
+    font-size: 21px;
+  }
+
 
   .final p {
 
@@ -539,6 +531,21 @@ body {
 
 
 <body>
+
+
+<!-- =========================================
+     CANTOS GREGORIANOS · FONDO
+     ========================================= -->
+
+<iframe
+  id="gregoriano"
+  class="audio-fondo"
+  src="https://www.youtube.com/embed/kpYBa7jBzY4?autoplay=1&loop=1&playlist=kpYBa7jBzY4"
+  title="Cantos Gregorianos · Ambiente de Sala II"
+  frameborder="0"
+  allow="autoplay; encrypted-media">
+</iframe>
+
 
 
 <!-- =========================================
@@ -582,7 +589,9 @@ body {
   </p>
 
 
-  <a class="bajar" href="#ambiente">
+  <a
+    class="bajar"
+    href="#ambiente">
 
     ↓ &nbsp; COMENZAR EL RECORRIDO
 
@@ -593,46 +602,35 @@ body {
 
 
 <!-- =========================================
-     AMBIENTE SACRO
+     INDICACIÓN DEL AMBIENTE
      ========================================= -->
 
-<section id="ambiente" class="sonido">
+<section id="ambiente"
+         style="
+           min-height:35vh;
+           display:flex;
+           align-items:center;
+           justify-content:center;
+           text-align:center;
+           padding:70px 25px;
+         ">
 
-  <div class="simbolo-sonido">
+  <p style="
+    max-width:700px;
+    color:#aaaaaa;
+    font-size:22px;
+    line-height:1.9;
+    font-style:italic;
+  ">
 
-    ♪ 〰 ♪
+    El camino comienza.
 
-  </div>
+    <br><br>
 
+    Los cantos acompañan sus pasos
+    por las calles de Sevilla.
 
-  <div class="etiqueta-sonido">
-
-    AMBIENTE SACRO
-
-  </div>
-
-
-  <div class="titulo-sonido">
-
-    CANTOS GREGORIANOS
-
-  </div>
-
-
-  <div class="descripcion-sonido">
-
-    Música sacra · Para acompañar el recorrido
-
-  </div>
-
-
-  <button
-    class="boton-sonido"
-    onclick="document.getElementById('ventanaGregoriano').style.display='flex'">
-
-    ▶ &nbsp; ESCUCHAR
-
-  </button>
+  </p>
 
 </section>
 
@@ -645,7 +643,9 @@ body {
 <section class="galeria">
 
 
-  <!-- 1 · LA SALIDA -->
+  <!-- =========================================
+       1 · LA SALIDA
+       ========================================= -->
 
   <div class="momento">
 
@@ -675,7 +675,9 @@ body {
 
 
 
-  <!-- 2 · SAN LORENZO -->
+  <!-- =========================================
+       2 · SAN LORENZO
+       ========================================= -->
 
   <div class="momento">
 
@@ -705,7 +707,9 @@ body {
 
 
 
-  <!-- 3 · EL CORTEJO -->
+  <!-- =========================================
+       3 · EL CORTEJO
+       ========================================= -->
 
   <div class="momento">
 
@@ -735,7 +739,9 @@ body {
 
 
 
-  <!-- 4 · SEVILLA LO ESPERA -->
+  <!-- =========================================
+       4 · SEVILLA LO ESPERA
+       ========================================= -->
 
   <div class="momento">
 
@@ -765,7 +771,9 @@ body {
 
 
 
-  <!-- 5 · EL SEÑOR CAMINA -->
+  <!-- =========================================
+       5 · EL SEÑOR CAMINA
+       ========================================= -->
 
   <div class="momento">
 
@@ -799,49 +807,54 @@ body {
        PREGÓN · CHARO PADILLA
        ========================================= -->
 
-  <section class="sonido">
+  <section class="pregon">
 
-    <div class="simbolo-sonido">
+    <div class="pregon-simbolo">
 
       ♪ 〰 ♪
 
     </div>
 
 
-    <div class="etiqueta-sonido">
+    <div class="pregon-etiqueta">
 
-      ESCUCHAR EL PREGÓN
+      EL PREGÓN
 
     </div>
 
 
-    <div class="titulo-sonido">
+    <div class="pregon-titulo">
 
       LAS PISADAS DEL GRAN PODER
 
     </div>
 
 
-    <div class="descripcion-sonido">
+    <div class="pregon-descripcion">
 
       Charo Padilla · Pregón de la Semana Santa de Sevilla · 2019
 
     </div>
 
 
-    <button
-      class="boton-sonido"
-      onclick="document.getElementById('ventanaPregon').style.display='flex'">
+    <!-- AUDIO OCULTO -->
 
-      ▶ &nbsp; ESCUCHAR
-
-    </button>
+    <iframe
+      id="audioCharo"
+      class="pregon-audio"
+      src="https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505&autoplay=0"
+      title="Pregón de Charo Padilla · Las pisadas del Gran Poder"
+      frameborder="0"
+      allow="autoplay; encrypted-media">
+    </iframe>
 
   </section>
 
 
 
-  <!-- 6 · SEVILLA Y EL GRAN PODER -->
+  <!-- =========================================
+       6 · SEVILLA Y EL GRAN PODER
+       ========================================= -->
 
   <div class="momento">
 
@@ -871,7 +884,9 @@ body {
 
 
 
-  <!-- 7 · EL CAMINO DE VUELTA -->
+  <!-- =========================================
+       7 · EL CAMINO DE VUELTA
+       ========================================= -->
 
   <div class="momento">
 
@@ -901,7 +916,9 @@ body {
 
 
 
-  <!-- 8 · DE NUEVO EN SAN LORENZO -->
+  <!-- =========================================
+       8 · DE NUEVO EN SAN LORENZO
+       ========================================= -->
 
   <div class="momento">
 
@@ -973,70 +990,81 @@ body {
 
 
 <!-- =========================================
-     VENTANA · CANTOS GREGORIANOS
+     CONTROL DEL AUDIO
      ========================================= -->
 
-<div
-  id="ventanaGregoriano"
-  class="modal-audio">
+<script>
 
-  <div class="modal-contenido">
+(function () {
 
-    <button
-      class="cerrar-modal"
-      onclick="document.getElementById('ventanaGregoriano').style.display='none'">
+  const pregon = document.getElementById("audioCharo");
 
-      ×
+  const gregoriano = document.getElementById("gregoriano");
 
-    </button>
+  const zonaPregon = document.querySelector(".pregon");
+
+  let iniciado = false;
 
 
-    <iframe
-      src="https://www.youtube.com/embed/kpYBa7jBzY4"
-      title="Cantos Gregorianos · Música Sacra"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
+  /*
+     Cuando el visitante llega al bloque del pregón,
+     intentamos iniciar el audio de Charo.
+  */
 
-    </iframe>
+  const observador = new IntersectionObserver(
 
-  </div>
+    function (entradas) {
 
-</div>
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting && !iniciado) {
+
+          iniciado = true;
+
+
+          /*
+             El pregón sustituye al ambiente gregoriano.
+          */
+
+          try {
+
+            gregoriano.src =
+              "https://www.youtube.com/embed/kpYBa7jBzY4?loop=1&playlist=kpYBa7jBzY4";
+
+          } catch (e) {}
+
+
+          /*
+             Arranca el fragmento del pregón.
+          */
+
+          pregon.src =
+            "https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505&autoplay=1";
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold: 0.35
+    }
+
+  );
+
+
+  observador.observe(zonaPregon);
+
+})();
+
+</script>
 
 
 
 <!-- =========================================
-     VENTANA · PREGÓN CHARO PADILLA
+     PIE
      ========================================= -->
-
-<div
-  id="ventanaPregon"
-  class="modal-audio">
-
-  <div class="modal-contenido">
-
-    <button
-      class="cerrar-modal"
-      onclick="document.getElementById('ventanaPregon').style.display='none'">
-
-      ×
-
-    </button>
-
-
-    <iframe
-      src="https://www.youtube.com/embed/vivcLnoPKJo?start=3275&end=3505"
-      title="Fragmento del Pregón de Charo Padilla"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-
-    </iframe>
-
-  </div>
-
-</div>
-
-
 
 <footer style="
   text-align:center;
@@ -1059,3 +1087,5 @@ body {
 </body>
 
 </html>
+```
+
