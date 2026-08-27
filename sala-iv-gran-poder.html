@@ -4,12 +4,17 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sala IV · La Mirada | Museo del Gran Poder</title>
 
 <style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
 
 * {
   box-sizing: border-box;
@@ -26,7 +31,10 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* CABECERA */
+
+/* =========================================
+   CABECERA
+   ========================================= */
 
 .cabecera {
   min-height: 100vh;
@@ -78,7 +86,26 @@ body {
   line-height: 1.9;
 }
 
-/* BOTÓN */
+
+/* =========================================
+   MÚSICA DE FONDO
+   MISMO SISTEMA QUE SALA II
+   ========================================= */
+
+.audio-fondo {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BOTÓN ENTRAR
+   ========================================= */
 
 .bajar {
   margin-top: 70px;
@@ -90,7 +117,6 @@ body {
   font-size: 12px;
   letter-spacing: 3px;
   transition: 0.3s;
-  cursor: pointer;
 }
 
 .bajar:hover {
@@ -98,48 +124,10 @@ body {
   color: #080808;
 }
 
-/* INDICADOR MUSICAL */
 
-.musica-indicador {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9998;
-  padding: 10px 16px;
-  border: 1px solid #c9a35b;
-  background: rgba(8,8,8,0.92);
-  color: #c9a35b;
-  font-size: 11px;
-  letter-spacing: 2px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
-
-.musica-indicador.activo {
-  opacity: 1;
-}
-
-/* REPRODUCTOR INVISIBLE */
-
-.reproductor-musica {
-  position: fixed;
-  width: 200px;
-  height: 115px;
-  left: -250px;
-  top: 50%;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.reproductor-musica iframe {
-  width: 200px;
-  height: 115px;
-  border: 0;
-}
-
-/* GALERÍA */
+/* =========================================
+   GALERÍA
+   ========================================= */
 
 .galeria {
   width: min(1200px, 92%);
@@ -160,7 +148,10 @@ body {
   text-transform: uppercase;
 }
 
-/* MARCO */
+
+/* =========================================
+   MARCO DORADO
+   ========================================= */
 
 .imagen {
   width: 100%;
@@ -188,6 +179,11 @@ body {
   overflow: hidden;
 }
 
+
+/* =========================================
+   FOTOGRAFÍAS
+   ========================================= */
+
 .imagen img {
   width: 100%;
   height: 650px;
@@ -201,7 +197,10 @@ body {
   transform: scale(1.025);
 }
 
-/* FRASES */
+
+/* =========================================
+   FRASES
+   ========================================= */
 
 .frase {
   max-width: 750px;
@@ -213,7 +212,10 @@ body {
   line-height: 1.9;
 }
 
-/* REFLEXIÓN */
+
+/* =========================================
+   REFLEXIÓN FINAL
+   ========================================= */
 
 .reflexion {
   min-height: 70vh;
@@ -249,7 +251,10 @@ body {
   font-size: 28px;
 }
 
-/* VOLVER */
+
+/* =========================================
+   BOTÓN VOLVER
+   ========================================= */
 
 .volver {
   display: inline-block;
@@ -268,7 +273,10 @@ body {
   color: #080808;
 }
 
-/* PIE */
+
+/* =========================================
+   PIE
+   ========================================= */
 
 footer {
   text-align: center;
@@ -279,7 +287,10 @@ footer {
   letter-spacing: 2px;
 }
 
-/* MÓVIL */
+
+/* =========================================
+   MÓVIL
+   ========================================= */
 
 @media (max-width: 700px) {
 
@@ -322,12 +333,6 @@ footer {
     font-size: 24px;
   }
 
-  .musica-indicador {
-    right: 10px;
-    bottom: 10px;
-    font-size: 10px;
-  }
-
 }
 
 </style>
@@ -337,27 +342,18 @@ footer {
 <body>
 
 <!-- =========================================
-     REPRODUCTOR MUSICAL INVISIBLE
+     MÚSICA DE FONDO
+     EXACTAMENTE COMO EN SALA II
      ========================================= -->
 
-<div class="reproductor-musica">
-
-  <iframe
-    id="musicaSalaIV"
-    src="https://www.youtube.com/embed/O4rhWBrIS28?enablejsapi=1&autoplay=0&controls=0&rel=0&playsinline=1"
-    title="Música de fondo · Sala IV"
-    allow="autoplay; encrypted-media">
-  </iframe>
-
-</div>
-
-<!-- INDICADOR -->
-
-<div id="indicadorMusica" class="musica-indicador">
-
-♪ MÚSICA DE LA SALA
-
-</div>
+<iframe
+  id="musicaSalaIV"
+  class="audio-fondo"
+  src="https://www.youtube.com/embed/O4rhWBrIS28?autoplay=1&loop=1&playlist=O4rhWBrIS28"
+  title="Música de fondo · Sala IV"
+  frameborder="0"
+  allow="autoplay; encrypted-media">
+</iframe>
 
 <!-- =========================================
      CABECERA
@@ -366,15 +362,27 @@ footer {
 <section class="cabecera">
 
   <div class="museo">
-    EL MUSEO DEL GRAN PODER
+
+```
+EL MUSEO DEL GRAN PODER
+```
+
   </div>
 
   <div class="numero">
-    SALA IV
+
+```
+SALA IV
+```
+
   </div>
 
   <h1 class="titulo">
-    LA MIRADA
+
+```
+LA MIRADA
+```
+
   </h1>
 
   <div class="linea"></div>
@@ -393,7 +401,6 @@ para siempre en la memoria.
   </p>
 
 <a
- id="entrarSala"
  class="bajar"
  href="#galeria">
 
@@ -411,14 +418,19 @@ para siempre en la memoria.
 
 <section id="galeria" class="galeria">
 
-  <!-- PIEZA I -->
+  <!-- =========================================
+       PIEZA I
+       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
+
   LA MIRADA QUE DETIENE EL TIEMPO
+
 </div>
+
 
 <div class="imagen">
 
@@ -427,6 +439,7 @@ para siempre en la memoria.
     alt="Nuestro Padre Jesús del Gran Poder">
 
 </div>
+
 
 <div class="frase">
 
@@ -441,14 +454,19 @@ para siempre en la memoria.
 
   </div>
 
-  <!-- PIEZA II -->
+  <!-- =========================================
+       PIEZA II
+       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
+
   ANTE SUS OJOS
+
 </div>
+
 
 <div class="imagen">
 
@@ -457,6 +475,7 @@ para siempre en la memoria.
     alt="La mirada del Gran Poder">
 
 </div>
+
 
 <div class="frase">
 
@@ -471,14 +490,19 @@ para siempre en la memoria.
 
   </div>
 
-  <!-- PIEZA III -->
+  <!-- =========================================
+       PIEZA III
+       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
+
   EL ROSTRO DEL SEÑOR
+
 </div>
+
 
 <div class="imagen">
 
@@ -487,6 +511,7 @@ para siempre en la memoria.
     alt="El rostro de Nuestro Padre Jesús del Gran Poder">
 
 </div>
+
 
 <div class="frase">
 
@@ -501,14 +526,19 @@ para siempre en la memoria.
 
   </div>
 
-  <!-- PIEZA IV -->
+  <!-- =========================================
+       PIEZA IV
+       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
+
   UNA MIRADA EN LA MADRUGÁ
+
 </div>
+
 
 <div class="imagen">
 
@@ -517,6 +547,7 @@ para siempre en la memoria.
     alt="El Gran Poder durante la Madrugá">
 
 </div>
+
 
 <div class="frase">
 
@@ -531,14 +562,19 @@ para siempre en la memoria.
 
   </div>
 
-  <!-- PIEZA V -->
+  <!-- =========================================
+       PIEZA V
+       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
+
   LA FE FRENTE A ÉL
+
 </div>
+
 
 <div class="imagen">
 
@@ -547,6 +583,7 @@ para siempre en la memoria.
     alt="Devoción ante Nuestro Padre Jesús del Gran Poder">
 
 </div>
+
 
 <div class="frase">
 
@@ -561,14 +598,19 @@ para siempre en la memoria.
 
   </div>
 
-  <!-- PIEZA VI -->
+  <!-- =========================================
+       PIEZA VI
+       ========================================= -->
 
   <div class="momento">
 
 ```
 <div class="titulo-momento">
+
   EL ENCUENTRO
+
 </div>
+
 
 <div class="imagen">
 
@@ -577,6 +619,7 @@ para siempre en la memoria.
     alt="Besamanos de Nuestro Padre Jesús del Gran Poder">
 
 </div>
+
 
 <div class="frase">
 
@@ -600,23 +643,43 @@ para siempre en la memoria.
 <section class="reflexion">
 
   <h2>
-    CUANDO TERMINA LA VISITA
+
+```
+CUANDO TERMINA LA VISITA
+```
+
   </h2>
 
   <p>
-    Tal vez no recuerdes cada fotografía.
+
+```
+Tal vez no recuerdes cada fotografía.
+```
+
   </p>
 
   <p>
-    Tal vez no recuerdes cada palabra.
+
+```
+Tal vez no recuerdes cada palabra.
+```
+
   </p>
 
   <p>
-    Pero hay algo que permanecerá contigo.
+
+```
+Pero hay algo que permanecerá contigo.
+```
+
   </p>
 
   <p class="destacado">
-    La mirada que se encontró con la tuya.
+
+```
+La mirada que se encontró con la tuya.
+```
+
   </p>
 
 <a
@@ -631,7 +694,9 @@ para siempre en la memoria.
 
 </section>
 
-<!-- PIE -->
+<!-- =========================================
+     PIE
+     ========================================= -->
 
 <footer>
 
@@ -643,61 +708,10 @@ EL MUSEO DEL GRAN PODER · SALA IV · LA MIRADA
 
 </footer>
 
-<!-- =========================================
-     CONTROL DE LA MÚSICA
-     ========================================= -->
-
-<script>
-
-(function() {
-
-  var boton = document.getElementById("entrarSala");
-  var iframe = document.getElementById("musicaSalaIV");
-  var indicador = document.getElementById("indicadorMusica");
-
-  if (!boton || !iframe) {
-    return;
-  }
-
-  boton.addEventListener("click", function(e) {
-
-    /*
-      No impedimos el desplazamiento hacia la galería.
-      Primero enviamos la orden de reproducción.
-    */
-
-    try {
-
-      iframe.contentWindow.postMessage(
-        JSON.stringify({
-          event: "command",
-          func: "playVideo",
-          args: []
-        }),
-        "https://www.youtube.com"
-      );
-
-    } catch(error) {
-
-      console.log("Error al iniciar la música:", error);
-
-    }
-
-    if (indicador) {
-
-      indicador.classList.add("activo");
-
-    }
-
-  });
-
-})();
-
-</script>
-
 </body>
 
 </html>
+
 
 
 
