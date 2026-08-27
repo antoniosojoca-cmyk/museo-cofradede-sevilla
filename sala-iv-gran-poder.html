@@ -27,10 +27,13 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* CABECERA */
+
+/* =========================================
+   CABECERA
+   ========================================= */
 
 .cabecera {
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +62,7 @@ body {
   color: #ffffff;
   font-size: 52px;
   font-weight: normal;
-  letter-spacing: 9px;
+  letter-spacing: 8px;
   text-transform: uppercase;
 }
 
@@ -79,32 +82,47 @@ body {
   line-height: 1.9;
 }
 
-/* BOTÓN ENTRAR */
 
-.bajar {
-  margin-top: 70px;
-  display: inline-block;
-  padding: 15px 28px;
-  border: 1px solid #c9a35b;
+/* =========================================
+   MÚSICA
+   ========================================= */
+
+.musica {
+  text-align: center;
+  margin: 20px auto 50px;
+  padding: 0 20px;
+}
+
+.musica-simbolo {
   color: #c9a35b;
-  text-decoration: none;
-  font-size: 12px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.musica-titulo {
+  color: #c9a35b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
   letter-spacing: 3px;
-  transition: 0.3s;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
-.bajar:hover {
-  background: #c9a35b;
-  color: #080808;
-}
 
-/* GALERÍA */
+/* =========================================
+   GALERÍA
+   ========================================= */
 
 .galeria {
   width: min(1200px, 92%);
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
+
+
+/* =========================================
+   CADA PIEZA
+   ========================================= */
 
 .momento {
   margin-bottom: 140px;
@@ -119,7 +137,10 @@ body {
   text-transform: uppercase;
 }
 
-/* MARCO DORADO */
+
+/* =========================================
+   MARCO DORADO
+   ========================================= */
 
 .imagen {
   width: 100%;
@@ -147,11 +168,14 @@ body {
   overflow: hidden;
 }
 
-/* FOTOGRAFÍAS */
+
+/* =========================================
+   FOTOGRAFÍAS
+   ========================================= */
 
 .imagen img {
   width: 100%;
-  height: 650px;
+  height: 600px;
   object-fit: cover;
   display: block;
   border: 4px solid #0b0b0b;
@@ -159,25 +183,31 @@ body {
 }
 
 .imagen:hover img {
-  transform: scale(1.025);
+  transform: scale(1.02);
 }
 
-/* FRASES */
+
+/* =========================================
+   FRASES
+   ========================================= */
 
 .frase {
-  max-width: 750px;
+  max-width: 700px;
   margin: 30px auto 0;
   text-align: center;
   color: #c9a35b;
-  font-size: 18px;
+  font-size: 17px;
   font-style: italic;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
-/* REFLEXIÓN FINAL */
 
-.reflexion {
-  min-height: 70vh;
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +217,7 @@ body {
   border-top: 1px solid #222222;
 }
 
-.reflexion h2 {
+.final h2 {
   color: #c9a35b;
   font-size: 15px;
   font-weight: normal;
@@ -195,26 +225,24 @@ body {
   margin-bottom: 45px;
 }
 
-.reflexion p {
+.final p {
   max-width: 700px;
-  margin: 15px auto;
   color: #eeeeee;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.9;
   font-style: italic;
 }
 
-.reflexion .destacado {
-  margin-top: 50px;
-  color: #c9a35b;
-  font-size: 28px;
+.destacado {
+  color: #c9a35b !important;
+  font-size: 28px !important;
+  margin-top: 35px;
 }
 
-/* BOTÓN VOLVER */
 
 .volver {
   display: inline-block;
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 14px 30px;
   border: 1px solid #c9a35b;
   color: #c9a35b;
@@ -229,7 +257,10 @@ body {
   color: #080808;
 }
 
-/* PIE */
+
+/* =========================================
+   PIE
+   ========================================= */
 
 footer {
   text-align: center;
@@ -240,22 +271,29 @@ footer {
   letter-spacing: 2px;
 }
 
-/* MÓVIL */
+
+/* =========================================
+   MÓVIL
+   ========================================= */
 
 @media (max-width: 700px) {
 
   .cabecera {
-    min-height: 90vh;
+    min-height: 70vh;
     padding: 50px 20px;
   }
 
   .titulo {
-    font-size: 34px;
-    letter-spacing: 5px;
+    font-size: 32px;
+    letter-spacing: 4px;
   }
 
   .entrada {
     font-size: 16px;
+  }
+
+  .galeria {
+    width: 92%;
   }
 
   .momento {
@@ -263,11 +301,12 @@ footer {
   }
 
   .imagen {
+    width: 100%;
     padding: 8px;
   }
 
   .imagen img {
-    height: 430px;
+    height: 400px;
   }
 
   .frase {
@@ -275,12 +314,12 @@ footer {
     padding: 0 10px;
   }
 
-  .reflexion p {
+  .final p {
     font-size: 20px;
   }
 
-  .reflexion .destacado {
-    font-size: 24px;
+  .destacado {
+    font-size: 24px !important;
   }
 
 }
@@ -290,6 +329,57 @@ footer {
 </head>
 
 <body>
+
+<!-- =========================================
+     MÚSICA DE LA SALA
+     MISMO SISTEMA QUE SALA III
+     ========================================= -->
+
+<div style="
+  text-align:center;
+  margin:20px auto 25px;
+">
+
+  <div style="
+    color:#c9a35b;
+    font-size:24px;
+    margin-bottom:8px;
+  ">
+    ♪
+  </div>
+
+  <div style="
+    color:#c9a35b;
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+  ">
+    Música de la Sala
+  </div>
+
+</div>
+
+<iframe
+  width="1"
+  height="1"
+  src="https://www.youtube.com/embed/O4rhWBrIS28?autoplay=1&loop=1&playlist=O4rhWBrIS28"
+  title="Música de la Sala IV"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  style="
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    width:1px;
+    height:1px;
+    border:0;
+  ">
+</iframe>
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
 
 <section class="cabecera">
 
@@ -314,17 +404,19 @@ footer {
     para siempre en la memoria.
   </p>
 
-  <a class="bajar" href="#galeria">
-    ↓ &nbsp; CONTEMPLAR LA MIRADA
-  </a>
-
 </section>
 
-<section id="galeria" class="galeria">
+<!-- =========================================
+     GALERÍA
+     ========================================= -->
+
+<section class="galeria">
+
+  <!-- PIEZA I -->
 
   <div class="momento">
 
-```
+
 <div class="titulo-momento">
   LA MIRADA QUE DETIENE EL TIEMPO
 </div>
@@ -342,13 +434,15 @@ footer {
   <br>
   Solo queda su mirada.
 </div>
-```
+
 
   </div>
 
+  <!-- PIEZA II -->
+
   <div class="momento">
 
-```
+
 <div class="titulo-momento">
   ANTE SUS OJOS
 </div>
@@ -366,13 +460,15 @@ footer {
   <br>
   no hacen falta palabras.
 </div>
-```
+
 
   </div>
 
+  <!-- PIEZA III -->
+
   <div class="momento">
 
-```
+
 <div class="titulo-momento">
   EL ROSTRO DEL SEÑOR
 </div>
@@ -390,13 +486,14 @@ footer {
   <br>
   incluso antes de verlo llegar.
 </div>
-```
+
 
   </div>
 
+  <!-- PIEZA IV -->
+
   <div class="momento">
 
-```
 <div class="titulo-momento">
   UNA MIRADA EN LA MADRUGÁ
 </div>
@@ -414,13 +511,15 @@ footer {
   <br>
   Pero algunas miradas permanecen.
 </div>
-```
+
 
   </div>
 
+  <!-- PIEZA V -->
+
   <div class="momento">
 
-```
+
 <div class="titulo-momento">
   LA FE FRENTE A ÉL
 </div>
@@ -438,13 +537,15 @@ footer {
   <br>
   cada persona guarda su propia oración.
 </div>
-```
+
 
   </div>
 
+  <!-- PIEZA VI -->
+
   <div class="momento">
 
-```
+
 <div class="titulo-momento">
   EL ENCUENTRO
 </div>
@@ -462,13 +563,16 @@ footer {
   <br>
   siempre queda un encuentro.
 </div>
-```
 
   </div>
 
 </section>
 
-<section class="reflexion">
+<!-- =========================================
+     FINAL
+     ========================================= -->
+
+<section class="final">
 
   <h2>
     CUANDO TERMINA LA VISITA
@@ -490,11 +594,21 @@ footer {
     La mirada que se encontró con la tuya.
   </p>
 
-  <a class="volver" href="MUSEO-GRAN-PODER.HTML">
-    ← VOLVER A LAS SALAS
+<a
+ class="volver"
+ href="MUSEO-GRAN-PODER.HTML">
+
+
+← VOLVER A LAS SALAS
+
+
   </a>
 
 </section>
+
+<!-- =========================================
+     PIE
+     ========================================= -->
 
 <footer>
 
@@ -509,6 +623,7 @@ EL MUSEO DEL GRAN PODER · SALA IV · LA MIRADA
 </body>
 
 </html>
+
 
 
 
