@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala IV · La Mirada | Museo del Gran Poder</title>
+
+<style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.cabecera {
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 25px;
+
+}
+
+
+.museo {
+
+  color: #8f7545;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 35px;
+
+}
+
+
+.numero {
+
+  color: #c9a35b;
+
+  font-size: 14px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 22px;
+
+}
+
+
+.titulo {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 58px;
+
+  font-weight: normal;
+
+  letter-spacing: 10px;
+
+  text-transform: uppercase;
+
+}
+
+
+.linea {
+
+  width: 90px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 35px auto;
+
+}
+
+
+.entrada {
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #aaaaaa;
+
+  font-size: 19px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================================
+   INDICACIÓN
+   ========================================= */
+
+.bajar {
+
+  margin-top: 80px;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s;
+
+}
+
+
+.bajar:hover {
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+   ========================================= */
+
+.introduccion {
+
+  min-height: 65vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+}
+
+
+.introduccion-contenido {
+
+  max-width: 750px;
+
+}
+
+
+.introduccion p {
+
+  margin: 22px 0;
+
+  color: #dddddd;
+
+  font-size: 24px;
+
+  line-height: 1.9;
+
+  font-style: italic;
+
+}
+
+
+.introduccion .destacado {
+
+  margin-top: 55px;
+
+  color: #c9a35b;
+
+  font-size: 28px;
+
+}
+
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+.galeria {
+
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding-bottom: 100px;
+
+}
+
+
+/* =========================================
+   CADA PIEZA
+   ========================================= */
+
+.momento {
+
+  margin-bottom: 160px;
+
+}
+
+
+.titulo-momento {
+
+  text-align: center;
+
+  color: #c9a35b;
+
+  font-size: 15px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   MARCO DORADO DE MUSEO
+   ========================================= */
+
+.imagen {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================
+   FOTOGRAFÍA
+   ========================================= */
+
+.imagen img {
+
+  width: 100%;
+
+  height: 620px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 4px solid #0b0b0b;
+
+  transition: transform 0.8s ease;
+
+}
+
+
+.imagen:hover img {
+
+  transform: scale(1.02);
+
+}
+
+
+/* =========================================
+   TEXTO DE CADA PIEZA
+   ========================================= */
+
+.frase {
+
+  max-width: 750px;
+
+  margin: 32px auto 0;
+
+  text-align: center;
+
+  color: #aaaaaa;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================================
+   SEPARADOR
+   ========================================= */
+
+.separador {
+
+  width: 50px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 80px auto;
+
+  opacity: 0.7;
+
+}
+
+
+/* =========================================
+   REFLEXIÓN FINAL
+   ========================================= */
+
+.reflexion {
+
+  min-height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+  border-top: 1px solid #222222;
+
+}
+
+
+.reflexion-contenido {
+
+  max-width: 760px;
+
+}
+
+
+.reflexion h2 {
+
+  margin: 0 0 50px;
+
+  color: #c9a35b;
+
+  font-size: 16px;
+
+  font-weight: normal;
+
+  letter-spacing: 7px;
+
+}
+
+
+.reflexion p {
+
+  margin: 25px 0;
+
+  color: #dddddd;
+
+  font-size: 23px;
+
+  line-height: 2;
+
+}
+
+
+.reflexion .destacado {
+
+  margin-top: 60px;
+
+  color: #c9a35b;
+
+  font-size: 29px;
+
+  font-style: italic;
+
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+
+  min-height: 80vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 25px;
+
+  border-top: 1px solid #222222;
+
+}
+
+
+.final-titulo {
+
+  color: #c9a35b;
+
+  font-size: 15px;
+
+  letter-spacing: 7px;
+
+  margin-bottom: 60px;
+
+}
+
+
+.final p {
+
+  max-width: 680px;
+
+  margin: 20px auto;
+
+  color: #eeeeee;
+
+  font-size: 25px;
+
+  line-height: 1.9;
+
+}
+
+
+.final .ultimo {
+
+  margin-top: 70px;
+
+  color: #c9a35b;
+
+  font-size: 30px;
+
+  font-style: italic;
+
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+   ========================================= */
+
+.volver {
+
+  display: inline-block;
+
+  margin-top: 100px;
+
+  padding: 14px 30px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s;
+
+}
+
+
+.volver:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
+
+}
+
+
+/* =========================================
+   PIE
+   ========================================= */
+
+footer {
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-top: 1px solid #222222;
+
+  color: #666666;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .cabecera {
+
+    min-height: 90vh;
+
+    padding: 50px 20px;
+
+  }
+
+
+  .titulo {
+
+    font-size: 34px;
+
+    letter-spacing: 5px;
+
+  }
+
+
+  .entrada {
+
+    font-size: 16px;
+
+  }
+
+
+  .introduccion {
+
+    min-height: 60vh;
+
+    padding: 80px 20px;
+
+  }
+
+
+  .introduccion p {
+
+    font-size: 21px;
+
+  }
+
+
+  .introduccion .destacado {
+
+    font-size: 24px;
+
+  }
+
+
+  .momento {
+
+    margin-bottom: 110px;
+
+  }
+
+
+  .imagen {
+
+    padding: 8px;
+
+  }
+
+
+  .imagen img {
+
+    height: 420px;
+
+  }
+
+
+  .frase {
+
+    font-size: 16px;
+
+    padding: 0 10px;
+
+  }
+
+
+  .reflexion {
+
+    padding: 80px 20px;
+
+  }
+
+
+  .reflexion p {
+
+    font-size: 20px;
+
+  }
+
+
+  .reflexion .destacado {
+
+    font-size: 24px;
+
+  }
+
+
+  .final {
+
+    padding: 70px 20px;
+
+  }
+
+
+  .final p {
+
+    font-size: 21px;
+
+  }
+
+
+  .final .ultimo {
+
+    font-size: 25px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
+<section class="cabecera">
+
+
+  <div class="museo">
+
+    EL MUSEO DEL GRAN PODER
+
+  </div>
+
+
+  <div class="numero">
+
+    SALA IV
+
+  </div>
+
+
+  <h1 class="titulo">
+
+    LA MIRADA
+
+  </h1>
+
+
+  <div class="linea"></div>
+
+
+  <p class="entrada">
+
+    Hay imágenes que no necesitan caminar
+    para encontrarse con Sevilla.
+
+    <br><br>
+
+    Basta una mirada.
+
+  </p>
+
+
+  <a
+    class="bajar"
+    href="#comienzo">
+
+    ↓ &nbsp; ENTRAR EN LA SALA
+
+  </a>
+
+
+</section>
+
+
+
+<!-- =========================================
+     INTRODUCCIÓN
+     ========================================= -->
+
+<section
+  id="comienzo"
+  class="introduccion">
+
+
+  <div class="introduccion-contenido">
+
+
+    <p>
+
+      Hay miradas que permanecen
+      mucho después de que la imagen
+      haya desaparecido.
+
+    </p>
+
+
+    <p>
+
+      Miradas que atraviesan
+      el tiempo, la distancia
+      y el silencio.
+
+    </p>
+
+
+    <p class="destacado">
+
+      Esta sala está dedicada
+      a una mirada.
+
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     GALERÍA
+     ========================================= -->
+
+<section class="galeria">
+
+
+  <!-- =========================================
+       PIEZA I · LA MIRADA DEL SEÑOR
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      LA MIRADA DEL SEÑOR
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/fe/53/73/fe53737f81cb9fa5072124bc55fc932a.jpg"
+        alt="Nuestro Padre Jesús del Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      No hace falta que hable.
+
+      <br>
+
+      Hay miradas que lo dicen todo.
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA II · LOS OJOS DE SEVILLA
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      LOS OJOS DE SEVILLA
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://www.gran-poder.es/wp-content/uploads/2018/04/IMG_9175-1.jpg"
+        alt="El Gran Poder rodeado por Sevilla">
+
+    </div>
+
+
+    <div class="frase">
+
+      Miles de personas lo miran.
+
+      <br>
+
+      Y durante un instante,
+      cada una encuentra su propia historia.
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA III · UNA MIRADA QUE DETIENE EL TIEMPO
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      UNA MIRADA QUE DETIENE EL TIEMPO
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/2a/fe/b1/2afeb1630e583a080485848cc121c200.jpg"
+        alt="Devoción ante el Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      Todo se detiene.
+
+      <br>
+
+      Solo quedan Él y quien lo contempla.
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA IV · ANTE ÉL
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      ANTE ÉL
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://www.gran-poder.es/wp-content/uploads/2014/11/Besamanos-10.png"
+        alt="Devoto ante el Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      A veces no se viene a pedir.
+
+      <br>
+
+      A veces solamente se viene
+      a estar delante de Él.
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA V · LA DEVOCIÓN
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      LA DEVOCIÓN
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://static.grupojoly.com/clip/14890049-7fea-4006-9332-eed8ccc63c26_source-aspect-ratio_1600w_0.webp"
+        alt="Devotos ante el Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      No hay distancia cuando existe devoción.
+
+      <br>
+
+      Sevilla sabe cómo acercarse a Él.
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA VI · LA ÚLTIMA MIRADA
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      LA ÚLTIMA MIRADA
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://static.grupojoly.com/clip/09fed4d0-768f-44e6-95f9-1bdd7dac208b_source-aspect-ratio_1600w_0.webp"
+        alt="El Gran Poder ante Sevilla">
+
+    </div>
+
+
+    <div class="frase">
+
+      La noche termina.
+
+      <br>
+
+      Pero hay miradas que permanecen
+      para siempre.
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     REFLEXIÓN
+     ========================================= -->
+
+<section class="reflexion">
+
+
+  <div class="reflexion-contenido">
+
+
+    <h2>
+
+      DETENTE ANTE ÉL
+
+    </h2>
+
+
+    <p>
+
+      Mira despacio.
+
+    </p>
+
+
+    <p>
+
+      No busques una explicación.
+
+    </p>
+
+
+    <p>
+
+      No intentes encontrar
+      todas las respuestas.
+
+    </p>
+
+
+    <p>
+
+      Simplemente mira.
+
+    </p>
+
+
+    <p class="destacado">
+
+      Quizás Él también te esté mirando.
+
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL
+     ========================================= -->
+
+<section class="final">
+
+
+  <div class="final-titulo">
+
+    LA MIRADA
+
+  </div>
+
+
+  <p>
+
+    Hay imágenes que desaparecen
+    cuando termina la visita.
+
+  </p>
+
+
+  <p>
+
+    Y hay otras que continúan
+    dentro de nosotros.
+
+  </p>
+
+
+  <p class="ultimo">
+
+    Esta es una de ellas.
+
+  </p>
+
+
+  <a
+    class="volver"
+    href="MUSEO-GRAN-PODER.HTML">
+
+    ← VOLVER A LAS SALAS
+
+  </a>
+
+
+</section>
+
+
+
+<!-- =========================================
+     PIE
+     ========================================= -->
+
+<footer>
+
+  MUSEO COFRADE DE SEVILLA
+
+  <br><br>
+
+  EL MUSEO DEL GRAN PODER · SALA IV
+
+</footer>
+
+
+</body>
+
+</html>
