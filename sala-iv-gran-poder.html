@@ -9,6 +9,7 @@
 
 <title>Sala IV · La Mirada | Museo del Gran Poder</title>
 
+
 <style>
 
 /* =========================================
@@ -37,7 +38,7 @@ body {
 
 .cabecera {
 
-  min-height: 90vh;
+  min-height: 85vh;
 
   display: flex;
   flex-direction: column;
@@ -48,7 +49,6 @@ body {
   text-align: center;
 
   padding: 60px 25px;
-
 }
 
 
@@ -62,8 +62,7 @@ body {
 
   text-transform: uppercase;
 
-  margin-bottom: 35px;
-
+  margin-bottom: 30px;
 }
 
 
@@ -75,8 +74,7 @@ body {
 
   letter-spacing: 6px;
 
-  margin-bottom: 22px;
-
+  margin-bottom: 20px;
 }
 
 
@@ -86,14 +84,13 @@ body {
 
   color: #ffffff;
 
-  font-size: 58px;
+  font-size: 52px;
 
   font-weight: normal;
 
-  letter-spacing: 10px;
+  letter-spacing: 9px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -105,8 +102,7 @@ body {
 
   background: #c9a35b;
 
-  margin: 35px auto;
-
+  margin: 30px auto;
 }
 
 
@@ -123,13 +119,12 @@ body {
   font-style: italic;
 
   line-height: 1.9;
-
 }
 
 
 .bajar {
 
-  margin-top: 80px;
+  margin-top: 70px;
 
   color: #c9a35b;
 
@@ -140,66 +135,12 @@ body {
   letter-spacing: 3px;
 
   transition: 0.3s;
-
 }
 
 
 .bajar:hover {
 
   color: #ffffff;
-
-}
-
-
-/* =========================================
-   INTRODUCCIÓN
-   ========================================= */
-
-.introduccion {
-
-  min-height: 55vh;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  padding: 90px 25px;
-
-}
-
-
-.introduccion-contenido {
-
-  max-width: 760px;
-
-}
-
-
-.introduccion p {
-
-  margin: 22px 0;
-
-  color: #dddddd;
-
-  font-size: 23px;
-
-  line-height: 2;
-
-  font-style: italic;
-
-}
-
-
-.introduccion .destacado {
-
-  color: #c9a35b;
-
-  font-size: 28px;
-
 }
 
 
@@ -214,7 +155,6 @@ body {
   margin: 0 auto;
 
   padding-bottom: 100px;
-
 }
 
 
@@ -224,8 +164,7 @@ body {
 
 .momento {
 
-  margin-bottom: 170px;
-
+  margin-bottom: 140px;
 }
 
 
@@ -239,20 +178,21 @@ body {
 
   letter-spacing: 5px;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 
   text-transform: uppercase;
-
 }
 
 
 /* =========================================
-   MARCO DORADO
+   MARCO DORADO · MUSEO
    ========================================= */
 
 .imagen {
 
   width: 100%;
+
+  max-width: 1200px;
 
   margin: 0 auto;
 
@@ -276,43 +216,44 @@ body {
     inset 0 0 0 6px #c9a35b;
 
   overflow: hidden;
-
 }
 
+
+/* =========================================
+   FOTOGRAFÍAS
+   ========================================= */
 
 .imagen img {
 
   width: 100%;
 
-  max-height: 720px;
-
-  display: block;
+  height: 650px;
 
   object-fit: cover;
+
+  display: block;
 
   border: 4px solid #0b0b0b;
 
   transition: transform 0.8s ease;
-
 }
 
 
 .imagen:hover img {
 
-  transform: scale(1.02);
-
+  transform: scale(1.025);
 }
 
 
 /* =========================================
-   FRASE DE CADA PIEZA
+   FRASE
    ========================================= */
 
 .frase {
 
-  max-width: 760px;
+  max-width: 750px;
 
-  margin: 32px auto 0;
+  margin: 30px auto 0;
 
   text-align: center;
 
@@ -323,166 +264,16 @@ body {
   font-style: italic;
 
   line-height: 1.9;
-
 }
 
 
 /* =========================================
-   TEXTO DE SALA
+   REFLEXIÓN FINAL
    ========================================= */
 
-.texto-sala {
+.reflexion {
 
-  max-width: 750px;
-
-  margin: -50px auto 150px;
-
-  text-align: center;
-
-  color: #999999;
-
-  font-size: 16px;
-
-  line-height: 2;
-
-  font-style: italic;
-
-}
-
-
-/* =========================================
-   EPÍLOGO HISTÓRICO
-   ========================================= */
-
-.epilogo {
-
-  width: min(1000px, 92%);
-
-  margin: 80px auto 150px;
-
-  padding: 70px 35px;
-
-  border-top: 1px solid #c9a35b;
-
-  border-bottom: 1px solid #c9a35b;
-
-  text-align: center;
-
-}
-
-
-.epilogo-fecha {
-
-  color: #c9a35b;
-
-  font-size: 13px;
-
-  letter-spacing: 5px;
-
-  margin-bottom: 25px;
-
-}
-
-
-.epilogo h2 {
-
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: 30px;
-
-  font-weight: normal;
-
-  letter-spacing: 4px;
-
-  text-transform: uppercase;
-
-}
-
-
-.epilogo-linea {
-
-  width: 70px;
-
-  height: 1px;
-
-  background: #c9a35b;
-
-  margin: 30px auto;
-
-}
-
-
-.epilogo-texto {
-
-  max-width: 720px;
-
-  margin: 0 auto 40px;
-
-  color: #cccccc;
-
-  font-size: 17px;
-
-  line-height: 2;
-
-  font-style: italic;
-
-}
-
-
-/* =========================================
-   MARCO HISTÓRICO
-   ========================================= */
-
-.imagen-historica {
-
-  width: 100%;
-
-  max-width: 850px;
-
-  margin: 40px auto;
-
-  padding: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #3a2b16,
-      #c9a35b 18%,
-      #6f5228 45%,
-      #d8b96d 65%,
-      #4a3519
-    );
-
-  border: 1px solid #e2c47b;
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,0.85),
-    inset 0 0 0 3px #5b431f,
-    inset 0 0 0 6px #c9a35b;
-
-}
-
-
-.imagen-historica img {
-
-  width: 100%;
-
-  display: block;
-
-  border: 4px solid #0b0b0b;
-
-}
-
-
-/* =========================================
-   CIERRE
-   ========================================= */
-
-.cierre {
-
-  min-height: 80vh;
+  min-height: 60vh;
 
   display: flex;
 
@@ -494,14 +285,13 @@ body {
 
   text-align: center;
 
-  padding: 100px 25px;
+  padding: 80px 25px;
 
   border-top: 1px solid #222222;
-
 }
 
 
-.cierre h2 {
+.reflexion h2 {
 
   color: #c9a35b;
 
@@ -509,18 +299,17 @@ body {
 
   font-weight: normal;
 
-  letter-spacing: 7px;
+  letter-spacing: 6px;
 
-  margin-bottom: 60px;
-
+  margin-bottom: 45px;
 }
 
 
-.cierre p {
+.reflexion p {
 
   max-width: 700px;
 
-  margin: 20px auto;
+  margin: 15px auto;
 
   color: #eeeeee;
 
@@ -529,18 +318,16 @@ body {
   line-height: 1.9;
 
   font-style: italic;
-
 }
 
 
-.cierre .ultimo {
+.reflexion .destacado {
 
-  margin-top: 65px;
+  margin-top: 50px;
 
   color: #c9a35b;
 
-  font-size: 30px;
-
+  font-size: 28px;
 }
 
 
@@ -552,7 +339,7 @@ body {
 
   display: inline-block;
 
-  margin-top: 80px;
+  margin-top: 70px;
 
   padding: 14px 30px;
 
@@ -567,7 +354,6 @@ body {
   letter-spacing: 3px;
 
   transition: 0.3s;
-
 }
 
 
@@ -576,12 +362,11 @@ body {
   background: #c9a35b;
 
   color: #080808;
-
 }
 
 
 /* =========================================
-   PIE
+   PIE DE PÁGINA
    ========================================= */
 
 footer {
@@ -597,7 +382,6 @@ footer {
   font-size: 11px;
 
   letter-spacing: 2px;
-
 }
 
 
@@ -607,12 +391,12 @@ footer {
 
 @media (max-width: 700px) {
 
+
   .cabecera {
 
-    min-height: 85vh;
+    min-height: 75vh;
 
     padding: 50px 20px;
-
   }
 
 
@@ -621,56 +405,30 @@ footer {
     font-size: 34px;
 
     letter-spacing: 5px;
-
   }
 
 
   .entrada {
 
     font-size: 16px;
-
-  }
-
-
-  .introduccion {
-
-    min-height: 60vh;
-
-  }
-
-
-  .introduccion p {
-
-    font-size: 20px;
-
-  }
-
-
-  .introduccion .destacado {
-
-    font-size: 24px;
-
   }
 
 
   .momento {
 
-    margin-bottom: 110px;
-
+    margin-bottom: 100px;
   }
 
 
   .imagen {
 
     padding: 8px;
-
   }
 
 
   .imagen img {
 
-    max-height: 500px;
-
+    height: 430px;
   }
 
 
@@ -678,43 +436,19 @@ footer {
 
     font-size: 16px;
 
+    padding: 0 10px;
   }
 
 
-  .epilogo {
-
-    padding: 55px 20px;
-
-  }
-
-
-  .epilogo h2 {
-
-    font-size: 23px;
-
-    letter-spacing: 2px;
-
-  }
-
-
-  .epilogo-texto {
-
-    font-size: 16px;
-
-  }
-
-
-  .cierre p {
+  .reflexion p {
 
     font-size: 20px;
-
   }
 
 
-  .cierre .ultimo {
+  .reflexion .destacado {
 
-    font-size: 25px;
-
+    font-size: 24px;
   }
 
 }
@@ -728,10 +462,11 @@ footer {
 
 
 <!-- =========================================
-     ENTRADA A LA SALA
+     CABECERA
      ========================================= -->
 
 <section class="cabecera">
+
 
   <div class="museo">
 
@@ -759,59 +494,22 @@ footer {
 
   <p class="entrada">
 
-    Hay miradas que no necesitan palabras.
+    Hay miradas que no se olvidan.
 
     <br><br>
 
-    Solo hace falta detenerse
-    y mirar.
+    Y hay encuentros que permanecen
+    para siempre en la memoria.
 
   </p>
 
 
-  <a
-    class="bajar"
-    href="#comienzo">
+  <a class="bajar" href="#galeria">
 
-    ↓ &nbsp; ENTRAR EN LA SALA
+    ↓ &nbsp; CONTEMPLAR LA MIRADA
 
   </a>
 
-</section>
-
-
-
-<!-- =========================================
-     INTRODUCCIÓN
-     ========================================= -->
-
-<section
-  id="comienzo"
-  class="introduccion">
-
-  <div class="introduccion-contenido">
-
-    <p>
-
-      El Gran Poder no necesita acercarse.
-
-    </p>
-
-
-    <p>
-
-      Basta con levantar los ojos.
-
-    </p>
-
-
-    <p class="destacado">
-
-      Y entonces comienza el encuentro.
-
-    </p>
-
-  </div>
 
 </section>
 
@@ -821,18 +519,19 @@ footer {
      GALERÍA
      ========================================= -->
 
-<section class="galeria">
+<section id="galeria" class="galeria">
 
 
-  <!-- =======================================
-       PIEZA I · LA MIRADA
-       ======================================= -->
+  <!-- =========================================
+       PIEZA I
+       ========================================= -->
 
   <div class="momento">
 
+
     <div class="titulo-momento">
 
-      LA MIRADA
+      LA MIRADA QUE DETIENE EL TIEMPO
 
     </div>
 
@@ -840,32 +539,37 @@ footer {
     <div class="imagen">
 
       <img
-        src="https://www.gran-poder.es/wp-content/uploads/2018/04/IMG_9175-1.jpg"
-        alt="Nuestro Padre Jesús del Gran Poder · La mirada">
+        src="https://i.pinimg.com/1200x/23/8c/ed/238ced612dbabbd26a14ca8442c8f644.jpg"
+        alt="Nuestro Padre Jesús del Gran Poder">
 
     </div>
 
 
     <div class="frase">
 
-      Hay una mirada que permanece,
-      incluso cuando apartamos los ojos.
+      Hay un instante en el que todo se detiene.
+
+      <br>
+
+      Solo queda su mirada.
 
     </div>
+
 
   </div>
 
 
 
-  <!-- =======================================
-       PIEZA II · SUS OJOS
-       ======================================= -->
+  <!-- =========================================
+       PIEZA II
+       ========================================= -->
 
   <div class="momento">
 
+
     <div class="titulo-momento">
 
-      SUS OJOS
+      ANTE SUS OJOS
 
     </div>
 
@@ -873,28 +577,147 @@ footer {
     <div class="imagen">
 
       <img
-        src="https://www.gran-poder.es/wp-content/uploads/2014/11/Besamanos-10.png"
-        alt="Nuestro Padre Jesús del Gran Poder · Sus ojos">
+        src="https://i.pinimg.com/1200x/ab/95/6c/ab956c9fc068243cc9a3cc9f52c0502e.jpg"
+        alt="La mirada del Gran Poder">
 
     </div>
 
 
     <div class="frase">
 
-      En sus ojos parece caber
-      todo aquello que no sabemos decir.
+      Mirarlo es comprender que, a veces,
+
+      <br>
+
+      no hacen falta palabras.
 
     </div>
+
 
   </div>
 
 
 
-  <!-- =======================================
-       PIEZA III · EL ENCUENTRO
-       ======================================= -->
+  <!-- =========================================
+       PIEZA III
+       ========================================= -->
 
   <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      EL ROSTRO DEL SEÑOR
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/0b/44/53/0b4453d23ee00bd687d96f7cf8edebca.jpg"
+        alt="El rostro de Nuestro Padre Jesús del Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      Un rostro que Sevilla reconoce
+
+      <br>
+
+      incluso antes de verlo llegar.
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =========================================
+       PIEZA IV
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      UNA MIRADA EN LA MADRUGÁ
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/09/6a/01/096a012feace351b060b0b3dd15b8c73.jpg"
+        alt="El Gran Poder durante la Madrugá">
+
+    </div>
+
+
+    <div class="frase">
+
+      La noche pasa.
+
+      <br>
+
+      Pero algunas miradas permanecen.
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =========================================
+       PIEZA V
+       ========================================= -->
+
+  <div class="momento">
+
+
+    <div class="titulo-momento">
+
+      LA FE FRENTE A ÉL
+
+    </div>
+
+
+    <div class="imagen">
+
+      <img
+        src="https://i.pinimg.com/1200x/b6/ab/02/b6ab02ab2a1cb3f2067e5ac165df6e07.jpg"
+        alt="Devoción ante Nuestro Padre Jesús del Gran Poder">
+
+    </div>
+
+
+    <div class="frase">
+
+      Frente a Él,
+
+      <br>
+
+      cada persona guarda su propia oración.
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =========================================
+       PIEZA VI
+       ========================================= -->
+
+  <div class="momento">
+
 
     <div class="titulo-momento">
 
@@ -906,121 +729,22 @@ footer {
     <div class="imagen">
 
       <img
-        src="https://static.grupojoly.com/clip/14890049-7fea-4006-9332-eed8ccc63c26_source-aspect-ratio_1600w_0.webp"
-        alt="Devotos ante el Gran Poder · El encuentro">
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn6u3HG3_ZS03keG1ugWyJM_75J5kDLcKwa9XIJmYrlWO5Yr7P6h1KfpTkrGwCGyL-dYDaE-AXrWl8OtyhUd6oDcVE9dwPMvlYaXmDCc8_cfwAMY6ziDOtP01DpXAn3mpLubmQXmihaXI/s1600/Besamanos+del+Gran+Poder+-+Sevilla+-+JESUSARIO+(1).jpg"
+        alt="Besamanos de Nuestro Padre Jesús del Gran Poder">
 
     </div>
 
 
     <div class="frase">
 
-      A veces la fe comienza
-      simplemente mirando.
+      Al final del camino,
+
+      <br>
+
+      siempre queda un encuentro.
 
     </div>
 
-  </div>
-
-
-
-  <!-- =======================================
-       PIEZA IV · ANTE SU MIRADA
-       ======================================= -->
-
-  <div class="momento">
-
-    <div class="titulo-momento">
-
-      ANTE SU MIRADA
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://static.grupojoly.com/clip/09fed4d0-768f-44e6-95f9-1bdd7dac208b_source-aspect-ratio_1600w_0.webp"
-        alt="El Gran Poder y sus devotos">
-
-    </div>
-
-
-    <div class="frase">
-
-      Cada persona llega hasta Él
-      con una historia diferente.
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =======================================
-       PIEZA V · LA MIRADA EN LA NOCHE
-       ======================================= -->
-
-  <div class="momento">
-
-    <div class="titulo-momento">
-
-      LA MIRADA EN LA NOCHE
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://i.pinimg.com/1200x/79/d1/41/79d1412a94449950423a78a63e427ae1.jpg"
-        alt="El Gran Poder durante la Madrugá">
-
-    </div>
-
-
-    <div class="frase">
-
-      En medio de la noche,
-      su rostro sigue siendo luz.
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =======================================
-       PIEZA VI · UNA MIRADA QUE PERMANECE
-       ======================================= -->
-
-  <div class="momento">
-
-    <div class="titulo-momento">
-
-      UNA MIRADA QUE PERMANECE
-
-    </div>
-
-
-    <div class="imagen">
-
-      <img
-        src="https://i.pinimg.com/1200x/fe/53/73/fe53737f81cb9fa5072124bc55fc932a.jpg"
-        alt="Nuestro Padre Jesús del Gran Poder · Una mirada que permanece">
-
-    </div>
-
-
-    <div class="frase">
-
-      Sevilla sigue caminando.
-
-      <br><br>
-
-      Pero hay miradas
-      que nunca se olvidan.
-
-    </div>
 
   </div>
 
@@ -1030,116 +754,43 @@ footer {
 
 
 <!-- =========================================
-     EPÍLOGO HISTÓRICO
+     REFLEXIÓN FINAL
      ========================================= -->
 
-<section class="epilogo">
-
-
-  <div class="epilogo-fecha">
-
-    SEVILLA · 1862
-
-  </div>
+<section class="reflexion">
 
 
   <h2>
 
-    LA MIRADA A TRAVÉS DEL TIEMPO
-
-  </h2>
-
-
-  <div class="epilogo-linea"></div>
-
-
-  <p class="epilogo-texto">
-
-    Hace más de un siglo y medio,
-    Sevilla detuvo por un instante
-    la imagen del Gran Poder.
-
-    <br><br>
-
-    Luis León Masson fotografió al Señor
-    ante la puerta de San Lorenzo.
-
-    <br><br>
-
-    Desde entonces han cambiado las calles,
-    las luces y las generaciones.
-
-    <br><br>
-
-    Pero el rostro permanece.
-
-  </p>
-
-
-  <div class="imagen-historica">
-
-    <img
-      src="https://cfrivero.blog/wp-content/uploads/2012/03/gran-poder-1862.jpg"
-      alt="Gran Poder fotografiado por Luis León Masson en 1862">
-
-  </div>
-
-
-  <p class="frase">
-
-    Una fotografía de 1862.
-    Una mirada que atraviesa el tiempo.
-
-  </p>
-
-
-</section>
-
-
-
-<!-- =========================================
-     CIERRE
-     ========================================= -->
-
-<section class="cierre">
-
-
-  <h2>
-
-    DETENTE
+    CUANDO TERMINA LA VISITA
 
   </h2>
 
 
   <p>
 
-    Ya has recorrido la sala.
+    Tal vez no recuerdes cada fotografía.
 
   </p>
 
 
   <p>
 
-    Ya has visto su rostro.
+    Tal vez no recuerdes cada palabra.
 
   </p>
 
 
   <p>
 
-    Ya has encontrado su mirada.
+    Pero hay algo que permanecerá contigo.
 
   </p>
 
 
-  <p class="ultimo">
+  <p class="destacado">
 
-    Ahora puedes seguir caminando.
-
-    <br><br>
-
-    Pero quizá esa mirada
-    camine contigo.
+    La mirada que se encontró con la tuya.
 
   </p>
 
@@ -1163,7 +814,7 @@ footer {
 
   <br><br>
 
-  EL MUSEO DEL GRAN PODER · SALA IV
+  EL MUSEO DEL GRAN PODER · SALA IV · LA MIRADA
 
 </footer>
 
