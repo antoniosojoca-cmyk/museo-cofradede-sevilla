@@ -6,125 +6,306 @@
 
 <meta charset="UTF-8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Domingo de Ramos | Museo Cofrade de Sevilla</title>
 
 <style>
 
-body {
-    margin: 0;
-    background: #080808;
-    color: white;
-    font-family: Georgia, serif;
-    text-align: center;
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
 
 header {
-    padding: 45px 20px 30px;
-    border-bottom: 2px solid #c9a35b;
+  padding: 55px 20px 40px;
+  border-bottom: 1px solid #c9a35b;
 }
 
-h1 {
-    color: #c9a35b;
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin: 0 0 15px;
+header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 38px;
+  letter-spacing: 5px;
 }
 
 .subtitulo {
-    color: #dddddd;
-    font-size: 18px;
-    font-style: italic;
+  color: #c9a35b;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 25px;
 }
+
+.linea {
+  width: 100px;
+  height: 1px;
+  background: #c9a35b;
+  margin: 25px auto;
+}
+
+
+/* =========================================
+   CONTENEDOR
+   ========================================= */
 
 .contenedor {
-    max-width: 1000px;
-    margin: auto;
-    padding: 50px 20px;
+  width: min(1000px, 92%);
+  margin: 55px auto 80px;
 }
 
-.pieza {
-    margin-bottom: 60px;
-    padding-bottom: 45px;
-    border-bottom: 1px solid #c9a35b;
-}
 
-.pieza-numero {
-    color: #c9a35b;
-    font-size: 17px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.pieza h2 {
-    font-size: 28px;
-    color: white;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-}
-
-.pieza img {
-    width: 100%;
-    max-width: 850px;
-    display: block;
-    margin: auto;
-    border: 2px solid #c9a35b;
-}
-
-/* BOTÓN DE MÚSICA */
+/* =========================================
+   MÚSICA
+   ========================================= */
 
 .musica {
-    margin: 35px auto 50px;
+  margin: 0 auto 65px;
 }
 
 .boton-musica {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #080808;
-    color: #c9a35b;
-    border: 1px solid #c9a35b;
-    font-family: Georgia, serif;
-    font-size: 16px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.3s;
+  display: inline-block;
+
+  padding: 14px 30px;
+
+  background: #111111;
+
+  color: #c9a35b;
+
+  border: 1px solid #c9a35b;
+
+  font-family: Georgia, serif;
+
+  font-size: 16px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
 }
 
 .boton-musica:hover {
-    background: #c9a35b;
-    color: #080808;
+  background: #c9a35b;
+  color: #080808;
 }
-
-/* REPRODUCTOR DE YOUTUBE */
 
 .youtube-oculto {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
+
+/* =========================================
+   PIEZAS — MARCO EXTERIOR
+   ========================================= */
+
+.pieza {
+
+  background: #101010;
+
+  border: 1px solid #c9a35b;
+
+  padding: 30px;
+
+  margin-bottom: 70px;
+
+  text-align: center;
+
+}
+
+
+/* =========================================
+   NÚMERO DE PIEZA
+   ========================================= */
+
+.pieza-numero {
+
+  color: #c9a35b;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 18px;
+
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.pieza h2 {
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  letter-spacing: 3px;
+
+  line-height: 1.4;
+
+  margin: 0 0 25px;
+
+}
+
+
+/* =========================================
+   IMAGEN — MARCO INTERIOR
+   ========================================= */
+
+.pieza img {
+
+  width: 100%;
+
+  max-width: none;
+
+  height: auto;
+
+  display: block;
+
+  margin: 0 auto;
+
+  border: 1px solid #c9a35b;
+
+  box-shadow:
+    0 0 25px rgba(201,163,91,0.08);
+
+}
+
+
+/* =========================================
+   SEPARADOR
+   ========================================= */
+
+.separador {
+
+  width: 60px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 0 auto 70px;
+
+}
+
+
+/* =========================================
+   VOLVER
+   ========================================= */
+
 .volver {
-    display: inline-block;
-    margin: 20px 0 50px;
-    padding: 12px 30px;
-    border: 1px solid #c9a35b;
-    color: #c9a35b;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
+
+  display: block;
+
+  width: fit-content;
+
+  margin: 20px auto 0;
+
+  padding: 11px 24px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+
 }
 
 .volver:hover {
-    background: #c9a35b;
-    color: #080808;
+
+  background: #c9a35b;
+
+  color: #080808;
+
 }
 
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
 footer {
-    border-top: 1px solid #c9a35b;
-    padding: 25px;
-    color: #999999;
-    font-size: 14px;
+
+  border-top: 1px solid #222222;
+
+  text-align: center;
+
+  padding: 30px 20px 45px;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 45px 18px 35px;
+  }
+
+  header h1 {
+    font-size: 29px;
+    letter-spacing: 3px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .contenedor {
+    width: 92%;
+    margin-top: 40px;
+  }
+
+  .pieza {
+    padding: 20px;
+    margin-bottom: 55px;
+  }
+
+  .pieza h2 {
+    font-size: 21px;
+    letter-spacing: 2px;
+  }
+
 }
 
 </style>
@@ -134,13 +315,22 @@ footer {
 
 <body>
 
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
 <header>
 
-<h1>DOMINGO DE RAMOS</h1>
+  <h1>
+    DOMINGO DE RAMOS
+  </h1>
 
-<div class="subtitulo">
-Sala I · Hermandades
-</div>
+  <div class="linea"></div>
+
+  <div class="subtitulo">
+    Sala I · Hermandades
+  </div>
 
 </header>
 
@@ -148,100 +338,152 @@ Sala I · Hermandades
 <div class="contenedor">
 
 
-<!-- MÚSICA -->
+  <!-- =========================================
+       MÚSICA
+       ========================================= -->
 
-<div class="musica">
+  <div class="musica">
 
-<button class="boton-musica" onclick="reproducirMusica()">
-▶ ESCUCHAR MÚSICA
-</button>
+    <button
+      class="boton-musica"
+      onclick="reproducirMusica()">
 
-<iframe
-    id="youtube"
-    class="youtube-oculto"
-    src="https://www.youtube.com/embed/QxklwhOydco?enablejsapi=1"
-    title="Música Domingo de Ramos"
-    allow="autoplay">
-</iframe>
+      ▶ ESCUCHAR MÚSICA
+
+    </button>
+
+    <iframe
+      id="youtube"
+      class="youtube-oculto"
+      src="https://www.youtube.com/embed/QxklwhOydco?enablejsapi=1"
+      title="Música Domingo de Ramos"
+      allow="autoplay">
+    </iframe>
+
+  </div>
+
+
+
+  <!-- =========================================
+       PIEZA I
+       ========================================= -->
+
+  <section class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA I
+    </div>
+
+    <h2>
+      HERMANDAD DEL DOMINGO DE RAMOS
+    </h2>
+
+    <img
+      src="https://i.pinimg.com/1200x/57/b8/d3/57b8d31b8f7fc9908d302db1f9a448a1.jpg"
+      alt="Hermandad del Domingo de Ramos">
+
+  </section>
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA II
+       ========================================= -->
+
+  <section class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA II
+    </div>
+
+    <h2>
+      HERMANDAD DEL DOMINGO DE RAMOS
+    </h2>
+
+    <img
+      src="https://i.pinimg.com/1200x/46/6d/b7/466db7294c9e89e48e4bb2d48c332273.jpg"
+      alt="Hermandad del Domingo de Ramos">
+
+  </section>
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA III
+       ========================================= -->
+
+  <section class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA III
+    </div>
+
+    <h2>
+      HERMANDAD DEL DOMINGO DE RAMOS
+    </h2>
+
+    <img
+      src="https://i.pinimg.com/1200x/57/f8/a3/57f8a3a2b20912a5aaba5740ea6fa24d.jpg"
+      alt="Hermandad del Domingo de Ramos">
+
+  </section>
+
+
+  <div class="separador"></div>
+
+
+
+  <!-- =========================================
+       PIEZA IV
+       ========================================= -->
+
+  <section class="pieza">
+
+    <div class="pieza-numero">
+      PIEZA IV
+    </div>
+
+    <h2>
+      HERMANDAD DEL DOMINGO DE RAMOS
+    </h2>
+
+    <img
+      src="https://i.pinimg.com/1200x/71/26/9a/71269a3a85407c592fbbeb670ecc0561.jpg"
+      alt="Hermandad del Domingo de Ramos">
+
+  </section>
+
+
+
+  <!-- =========================================
+       VOLVER
+       ========================================= -->
+
+  <a
+    href="HERMANDADES.HTML"
+    class="volver">
+
+    ← VOLVER A HERMANDADES
+
+  </a>
+
 
 </div>
 
 
-<!-- PIEZA I -->
-
-<div class="pieza">
-
-<div class="pieza-numero">
-PIEZA I
-</div>
-
-<h2>HERMANDAD DEL DOMINGO DE RAMOS</h2>
-
-<img src="https://i.pinimg.com/1200x/57/b8/d3/57b8d31b8f7fc9908d302db1f9a448a1.jpg"
-alt="Hermandad del Domingo de Ramos">
-
-</div>
-
-
-<!-- PIEZA II -->
-
-<div class="pieza">
-
-<div class="pieza-numero">
-PIEZA II
-</div>
-
-<h2>HERMANDAD DEL DOMINGO DE RAMOS</h2>
-
-<img src="https://i.pinimg.com/1200x/46/6d/b7/466db7294c9e89e48e4bb2d48c332273.jpg"
-alt="Hermandad del Domingo de Ramos">
-
-</div>
-
-
-<!-- PIEZA III -->
-
-<div class="pieza">
-
-<div class="pieza-numero">
-PIEZA III
-</div>
-
-<h2>HERMANDAD DEL DOMINGO DE RAMOS</h2>
-
-<img src="https://i.pinimg.com/1200x/57/f8/a3/57f8a3a2b20912a5aaba5740ea6fa24d.jpg"
-alt="Hermandad del Domingo de Ramos">
-
-</div>
-
-
-<!-- PIEZA IV -->
-
-<div class="pieza">
-
-<div class="pieza-numero">
-PIEZA IV
-</div>
-
-<h2>HERMANDAD DEL DOMINGO DE RAMOS</h2>
-
-<img src="https://i.pinimg.com/1200x/71/26/9a/71269a3a85407c592fbbeb670ecc0561.jpg"
-alt="Hermandad del Domingo de Ramos">
-
-</div>
-
-
-<a href="HERMANDADES.HTML" class="volver">
-← VOLVER A HERMANDADES
-</a>
-
-
-</div>
-
+<!-- =========================================
+     PIE DE PÁGINA
+     ========================================= -->
 
 <footer>
 
-MUSEO COFRADE DE SEVILLA
+  MUSEO COFRADE DE SEVILLA
 
 </footer>
 
@@ -250,10 +492,11 @@ MUSEO COFRADE DE SEVILLA
 
 function reproducirMusica() {
 
-    const iframe = document.getElementById("youtube");
+  const iframe =
+    document.getElementById("youtube");
 
-    iframe.src =
-        "https://www.youtube.com/embed/QxklwhOydco?autoplay=1&enablejsapi=1";
+  iframe.src =
+    "https://www.youtube.com/embed/QxklwhOydco?autoplay=1&enablejsapi=1";
 
 }
 
