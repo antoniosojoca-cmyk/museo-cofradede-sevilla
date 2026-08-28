@@ -12,6 +12,10 @@
 
 <style>
 
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
 * {
   box-sizing: border-box;
 }
@@ -90,6 +94,7 @@ body {
 .musica {
   text-align: center;
   margin: 20px auto 25px;
+  padding: 0 20px;
 }
 
 .musica-simbolo {
@@ -117,6 +122,11 @@ body {
   padding-bottom: 120px;
 }
 
+
+/* =========================================
+   CADA PIEZA
+   ========================================= */
+
 .momento {
   margin-bottom: 140px;
 }
@@ -137,7 +147,7 @@ body {
 
 .imagen {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 14px;
 
@@ -164,12 +174,13 @@ body {
 
 /* =========================================
    FOTOGRAFÍAS
+   SIN RECORTE
    ========================================= */
 
 .imagen img {
   width: 100%;
-  height: 600px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   border: 4px solid #0b0b0b;
   transition: transform 0.8s ease;
@@ -304,7 +315,9 @@ footer {
   }
 
   .imagen img {
-    height: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .frase {
@@ -320,6 +333,20 @@ footer {
     font-size: 24px;
   }
 
+}
+
+
+/* =========================================
+   MÚSICA OCULTA
+   ========================================= */
+
+.reproductor-sala-v {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  border: 0;
 }
 
 </style>
@@ -358,20 +385,11 @@ footer {
 </div>
 
 <iframe
-  width="1"
-  height="1"
+  class="reproductor-sala-v"
   src="https://www.youtube.com/embed/GCuDBo4F-Ac?start=2765&amp;autoplay=1&amp;loop=1&amp;playlist=GCuDBo4F-Ac"
   title="Música de la Sala V"
   frameborder="0"
-  allow="autoplay; encrypted-media"
-  style="
-    position:absolute;
-    left:-9999px;
-    top:-9999px;
-    width:1px;
-    height:1px;
-    border:0;
-  ">
+  allow="autoplay; encrypted-media">
 </iframe>
 
 <!-- =========================================
@@ -634,4 +652,5 @@ EL MUSEO DEL GRAN PODER · SALA V · EL RECUERDO
 </body>
 
 </html>
+
 
