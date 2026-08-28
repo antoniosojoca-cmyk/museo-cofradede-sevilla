@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala VI · La Oración | Museo del Gran Poder</title>
+
+<style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.cabecera {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 25px;
+}
+
+.museo {
+  color: #8f7545;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.numero {
+  color: #c9a35b;
+  font-size: 14px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  margin: 0;
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: normal;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.linea {
+  width: 90px;
+  height: 1px;
+  background: #c9a35b;
+  margin: 30px auto;
+}
+
+.entrada {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #aaaaaa;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   MÚSICA
+   ========================================= */
+
+.musica {
+  text-align: center;
+  margin: 20px auto 25px;
+  padding: 0 20px;
+}
+
+.musica-simbolo {
+  color: #c9a35b;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.musica-titulo {
+  color: #c9a35b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+.galeria {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+
+/* =========================================
+   CADA PIEZA
+   ========================================= */
+
+.momento {
+  margin-bottom: 140px;
+}
+
+.titulo-momento {
+  text-align: center;
+  color: #c9a35b;
+  font-size: 15px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MARCO DORADO
+   ========================================= */
+
+.imagen {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   FOTOGRAFÍAS
+   SIN RECORTE
+   ========================================= */
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border: 4px solid #0b0b0b;
+  transition: transform 0.8s ease;
+}
+
+.imagen:hover img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   FRASES
+   ========================================= */
+
+.frase {
+  max-width: 720px;
+  margin: 30px auto 0;
+  text-align: center;
+  color: #c9a35b;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 25px;
+  border-top: 1px solid #222222;
+}
+
+.final h2 {
+  color: #c9a35b;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 6px;
+  margin-bottom: 45px;
+}
+
+.final p {
+  max-width: 700px;
+  color: #eeeeee;
+  font-size: 23px;
+  line-height: 1.9;
+  font-style: italic;
+  margin: 12px auto;
+}
+
+.final .destacado {
+  margin-top: 35px;
+  color: #c9a35b;
+  font-size: 28px;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+   ========================================= */
+
+.volver {
+  display: inline-block;
+  margin-top: 55px;
+  padding: 14px 30px;
+  border: 1px solid #c9a35b;
+  color: #c9a35b;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+
+.volver:hover {
+  background: #c9a35b;
+  color: #080808;
+}
+
+
+/* =========================================
+   PIE
+   ========================================= */
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid #222222;
+  color: #666666;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   MÚSICA OCULTA
+   ========================================= */
+
+.reproductor-sala-vi {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .cabecera {
+    min-height: 70vh;
+    padding: 50px 20px;
+  }
+
+  .titulo {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .entrada {
+    font-size: 16px;
+  }
+
+  .galeria {
+    width: 92%;
+  }
+
+  .momento {
+    margin-bottom: 100px;
+  }
+
+  .imagen {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .frase {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .final p {
+    font-size: 20px;
+  }
+
+  .final .destacado {
+    font-size: 24px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================================
+     MÚSICA DE LA SALA VI
+     ========================================= -->
+
+<div style="
+  text-align:center;
+  margin:20px auto 25px;
+">
+
+  <div style="
+    color:#c9a35b;
+    font-size:24px;
+    margin-bottom:8px;
+  ">
+    ♪
+  </div>
+
+  <div style="
+    color:#c9a35b;
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+  ">
+    Música de la Sala
+  </div>
+
+</div>
+
+<iframe
+  class="reproductor-sala-vi"
+  src="https://www.youtube.com/embed/6_8foa5Beqo?autoplay=1&loop=1&playlist=6_8foa5Beqo"
+  title="Música de la Sala VI"
+  frameborder="0"
+  allow="autoplay; encrypted-media">
+</iframe>
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
+<section class="cabecera">
+
+  <div class="museo">
+    EL MUSEO DEL GRAN PODER
+  </div>
+
+  <div class="numero">
+    SALA VI
+  </div>
+
+  <h1 class="titulo">
+    LA ORACIÓN
+  </h1>
+
+  <div class="linea"></div>
+
+  <p class="entrada">
+    Hay momentos en los que no hacen falta palabras.
+    <br><br>
+    Basta con estar ante Él.
+  </p>
+
+</section>
+
+<!-- =========================================
+     GALERÍA
+     ========================================= -->
+
+<section class="galeria">
+
+  <!-- =========================================
+       PIEZA I
+       ========================================= -->
+
+  <div class="momento">
+
+```
+<div class="titulo-momento">
+  EL SILENCIO
+</div>
+
+<div class="imagen">
+
+  <img
+    src="https://i.pinimg.com/1200x/ef/75/ca/ef75ca6fa9f6fbf44fc7cf91cf53e722.jpg"
+    alt="El Gran Poder de Sevilla">
+
+</div>
+
+<div class="frase">
+  Ante Él,
+  <br>
+  hasta el silencio parece una oración.
+</div>
+```
+
+  </div>
+
+  <!-- =========================================
+       PIEZA II
+       ========================================= -->
+
+  <div class="momento">
+
+```
+<div class="titulo-momento">
+  ANTE ÉL
+</div>
+
+<div class="imagen">
+
+  <img
+    src="https://static.grupojoly.com/clip/7c581630-2334-4fbc-9503-259cda4881eb_source-aspect-ratio_1600w_0.webp"
+    alt="Devoción ante el Gran Poder">
+
+</div>
+
+<div class="frase">
+  Cada persona llega con su propia historia.
+  <br>
+  Y cada una encuentra su momento ante Él.
+</div>
+```
+
+  </div>
+
+  <!-- =========================================
+       PIEZA III
+       ========================================= -->
+
+  <div class="momento">
+
+```
+<div class="titulo-momento">
+  LAS MANOS
+</div>
+
+<div class="imagen">
+
+  <img
+    src="https://static.grupojoly.com/clip/6d74ce84-bacc-455d-b125-0116e46b5cba_source-aspect-ratio_1600w_0.webp"
+    alt="Devoción y oración ante el Gran Poder">
+
+</div>
+
+<div class="frase">
+  Hay peticiones que solamente
+  <br>
+  conocen las manos que las elevan.
+</div>
+```
+
+  </div>
+
+  <!-- =========================================
+       PIEZA IV
+       ========================================= -->
+
+  <div class="momento">
+
+```
+<div class="titulo-momento">
+  UNA PETICIÓN
+</div>
+
+<div class="imagen">
+
+  <img
+    src="https://s1.abcstatics.com/abc/www/multimedia/sevilla/2024/03/23/besamanos-gran-poder-sevilla(9)_xoptimizadax.jpg?width=1106"
+    alt="Besamanos del Gran Poder de Sevilla">
+
+</div>
+
+<div class="frase">
+  Cada oración lleva consigo
+  <br>
+  una petición, una esperanza o un agradecimiento.
+</div>
+```
+
+  </div>
+
+  <!-- =========================================
+       PIEZA V
+       ========================================= -->
+
+  <div class="momento">
+
+```
+<div class="titulo-momento">
+  LA ESPERANZA
+</div>
+
+<div class="imagen">
+
+  <img
+    src="https://s1.abcstatics.com/abc/www/multimedia/sevilla/2024/03/23/besamanos-gran-poder-sevilla(11)_xoptimizadax.jpg?width=1106"
+    alt="Devoción durante el Besamanos del Gran Poder">
+
+</div>
+
+<div class="frase">
+  A veces no se pide nada.
+  <br>
+  Solamente se busca esperanza.
+</div>
+```
+
+  </div>
+
+  <!-- =========================================
+       PIEZA VI
+       ========================================= -->
+
+  <div class="momento">
+
+```
+<div class="titulo-momento">
+  LA ORACIÓN
+</div>
+
+<div class="imagen">
+
+  <img
+    src="https://s1.abcstatics.com/abc/www/multimedia/sevilla/2024/03/23/besamanos-gran-poder-sevilla(19)_xoptimizadax.jpg?width=1106"
+    alt="Oración ante Nuestro Padre Jesús del Gran Poder">
+
+</div>
+
+<div class="frase">
+  Hay oraciones que no necesitan palabras.
+  <br>
+  Solamente necesitan estar ante Él.
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================
+     FINAL DE LA SALA
+     ========================================= -->
+
+<section class="final">
+
+  <h2>
+    CUANDO TERMINA LA ORACIÓN
+  </h2>
+
+  <p>
+    Tal vez no hayas dicho una palabra.
+  </p>
+
+  <p>
+    Tal vez tampoco hayas pedido nada.
+  </p>
+
+  <p>
+    Pero algo habrá cambiado dentro de ti.
+  </p>
+
+  <p class="destacado">
+    Hay oraciones que solamente se sienten.
+  </p>
+
+<a
+ class="volver"
+ href="MUSEO-GRAN-PODER.HTML">
+
+```
+← VOLVER A LAS SALAS
+```
+
+  </a>
+
+</section>
+
+<!-- =========================================
+     PIE
+     ========================================= -->
+
+<footer>
+
+MUSEO COFRADE DE SEVILLA
+
+<br><br>
+
+EL MUSEO DEL GRAN PODER · SALA VI · LA ORACIÓN
+
+</footer>
+
+</body>
+
+</html>
