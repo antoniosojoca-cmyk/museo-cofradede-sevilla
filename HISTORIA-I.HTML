@@ -27,13 +27,13 @@ body {
 
 
 /* =========================================
-   CONTENIDO GENERAL
+   CONTENEDOR GENERAL
    ========================================= */
 
 main {
-  max-width: 1100px;
+  width: min(1200px, 94%);
   margin: auto;
-  padding: 60px 25px;
+  padding: 70px 20px 100px;
 }
 
 
@@ -41,39 +41,68 @@ main {
    CABECERA
    ========================================= */
 
-.sala-titulo-principal {
+.cabecera {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
-.sala-numero {
+.museo {
+  color: #8f7545;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.numero {
   color: #c9a35b;
   font-size: 15px;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   margin-bottom: 18px;
 }
 
-.sala-titulo-principal h1 {
-  color: #ffffff;
-  font-size: 42px;
-  letter-spacing: 6px;
+h1 {
   margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: 7px;
   text-transform: uppercase;
 }
 
 .linea {
   width: 100px;
-  height: 2px;
+  height: 1px;
   background: #c9a35b;
-  margin: 25px auto;
+  margin: 30px auto;
 }
 
-.sala-intro {
-  max-width: 750px;
+.intro {
+  max-width: 760px;
   margin: auto;
-  color: #cccccc;
+  color: #bdbdbd;
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.9;
+  font-style: italic;
+}
+
+
+/* =========================================
+   BLOQUE HISTÓRICO
+   ========================================= */
+
+.presentacion {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  text-align: center;
+  color: #dddddd;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.presentacion strong {
+  color: #c9a35b;
+  font-weight: normal;
 }
 
 
@@ -82,42 +111,33 @@ main {
    ========================================= */
 
 .pieza {
-  background: #111111;
-  border: 1px solid #c9a35b;
-  padding: 35px;
-  margin-bottom: 70px;
+  margin-bottom: 110px;
   text-align: center;
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.65);
 }
 
 
 /* =========================================
-   NÚMERO
+   TÍTULO DE PIEZA
    ========================================= */
 
 .pieza-numero {
   color: #c9a35b;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 5px;
   margin-bottom: 15px;
 }
 
-
-/* =========================================
-   TÍTULO
-   ========================================= */
-
 .pieza h2 {
   color: #ffffff;
-  font-size: 28px;
+  font-size: 27px;
+  font-weight: normal;
   letter-spacing: 3px;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
   text-transform: uppercase;
 }
 
 .pieza-linea {
-  width: 80px;
+  width: 70px;
   height: 1px;
   background: #c9a35b;
   margin: 0 auto 30px;
@@ -125,14 +145,12 @@ main {
 
 
 /* =========================================
-   MARCO DE LA IMAGEN
+   MARCO DE LA FOTOGRAFÍA
    ========================================= */
 
-.pieza-imagen {
-
+.marco {
   width: 100%;
-
-  padding: 10px;
+  padding: 14px;
 
   background:
     linear-gradient(
@@ -157,60 +175,87 @@ main {
 
 /* =========================================
    IMAGEN
-   IMPORTANTE:
-   NO SE RECORTA
    ========================================= */
 
-.pieza-imagen img {
+.marco img {
+  display: block;
 
   width: 100%;
 
-  height: auto;
+  height: 600px;
 
-  display: block;
+  object-fit: contain;
 
-  margin: 0;
+  object-position: center;
 
-  border: 4px solid #0b0b0b;
+  background: #111111;
 
+  border: 4px solid #080808;
+
+  transition: transform 0.7s ease;
+}
+
+.marco:hover img {
+  transform: scale(1.015);
 }
 
 
 /* =========================================
-   TEXTO
+   TEXTO HISTÓRICO
    ========================================= */
 
-.pieza-texto {
-
-  max-width: 760px;
-
+.texto {
+  max-width: 780px;
   margin: 30px auto 0;
 
-  color: #dddddd;
-
-  font-size: 17px;
-
-  line-height: 1.8;
-
-}
-
-
-/* =========================================
-   FRASE
-   ========================================= */
-
-.frase {
-
-  margin-top: 25px;
-
-  color: #c9a35b;
+  color: #cccccc;
 
   font-size: 16px;
 
+  line-height: 1.8;
+}
+
+.fecha {
+  color: #c9a35b;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   FRASE FINAL
+   ========================================= */
+
+.final {
+  margin-top: 80px;
+  padding: 80px 25px;
+
+  text-align: center;
+
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+}
+
+.final h2 {
+  color: #c9a35b;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.final p {
+  max-width: 750px;
+  margin: auto;
+
+  color: #dddddd;
+
+  font-size: 21px;
+
+  line-height: 1.9;
+
   font-style: italic;
-
-  line-height: 1.7;
-
 }
 
 
@@ -219,14 +264,11 @@ main {
    ========================================= */
 
 .volver {
+  display: inline-block;
 
-  display: block;
+  margin-top: 60px;
 
-  width: fit-content;
-
-  margin: 50px auto 20px;
-
-  padding: 13px 28px;
+  padding: 14px 30px;
 
   border: 1px solid #c9a35b;
 
@@ -234,20 +276,50 @@ main {
 
   text-decoration: none;
 
-  letter-spacing: 2px;
+  font-size: 12px;
 
-  font-size: 13px;
+  letter-spacing: 3px;
 
   transition: 0.3s;
-
 }
 
 .volver:hover {
-
   background: #c9a35b;
-
   color: #080808;
+}
 
+
+/* =========================================
+   MÚSICA
+   ========================================= */
+
+.bloque-musica {
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+.bloque-musica button {
+  background: #111111;
+  color: #c9a35b;
+
+  border: 1px solid #c9a35b;
+
+  padding: 14px 28px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.bloque-musica button:hover {
+  background: #c9a35b;
+  color: #080808;
 }
 
 
@@ -258,59 +330,42 @@ main {
 @media (max-width: 700px) {
 
   main {
-
-    padding: 45px 15px;
-
+    width: 94%;
+    padding: 50px 10px 80px;
   }
 
-  .sala-titulo-principal h1 {
-
-    font-size: 30px;
-
+  h1 {
+    font-size: 31px;
     letter-spacing: 4px;
-
   }
 
-  .sala-intro {
-
-    font-size: 15px;
-
+  .intro {
+    font-size: 16px;
   }
 
   .pieza {
-
-    padding: 20px;
-
-    margin-bottom: 55px;
-
+    margin-bottom: 85px;
   }
 
   .pieza h2 {
-
     font-size: 21px;
-
     letter-spacing: 2px;
-
   }
 
-  .pieza-imagen {
-
-    padding: 7px;
-
+  .marco {
+    padding: 9px;
   }
 
-  .pieza-imagen img {
-
-    width: 100%;
-
-    height: auto;
-
+  .marco img {
+    height: 420px;
   }
 
-  .pieza-texto {
-
+  .texto {
     font-size: 15px;
+  }
 
+  .final p {
+    font-size: 18px;
   }
 
 }
@@ -322,7 +377,6 @@ main {
 
 <body>
 
-
 <main>
 
 
@@ -330,9 +384,13 @@ main {
      CABECERA
      ========================================= -->
 
-<div class="sala-titulo-principal">
+<header class="cabecera">
 
-  <div class="sala-numero">
+  <div class="museo">
+    MUSEO COFRADE DE SEVILLA
+  </div>
+
+  <div class="numero">
     SALA I
   </div>
 
@@ -342,16 +400,32 @@ main {
 
   <div class="linea"></div>
 
-  <p class="sala-intro">
-
-    Un recorrido por los primeros tiempos de las
-    cofradías de Sevilla y por la evolución de sus
-    procesiones a través de la memoria fotográfica.
-
+  <p class="intro">
+    Un recorrido por las primeras huellas de la Semana Santa
+    sevillana y por las imágenes que comenzaron a dejar memoria
+    de sus cofradías en las calles de la ciudad.
   </p>
 
-</div>
+</header>
 
+
+<!-- =========================================
+     PRESENTACIÓN
+     ========================================= -->
+
+<div class="presentacion">
+
+  La historia de la Semana Santa de Sevilla se construye
+  a través de siglos de devoción, hermandades y tradición.
+
+  <br><br>
+
+  En esta sala nos detenemos especialmente en
+  <strong>las primeras fotografías y testimonios gráficos</strong>
+  que permiten contemplar cómo eran las cofradías
+  sevillanas en otra época.
+
+</div>
 
 
 <!-- =========================================
@@ -365,37 +439,31 @@ main {
   </div>
 
   <h2>
-    LAS PRIMERAS COFRADÍAS
+    UNA DE LAS PRIMERAS MIRADAS
   </h2>
 
   <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
+  <div class="marco">
 
     <img
-      src="https://pictures.abebooks.com/inventory/30636103717.jpg"
-      alt="Antigua procesión de Semana Santa de Sevilla">
+      src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/01_sxix29_166.jpg/%40%40images/01ec5e48-edba-40df-bc9d-671e315d5c3e.jpeg"
+      alt="Paso de palio de la Virgen del Rosario de Montesión hacia 1886">
 
   </div>
 
-  <p class="pieza-texto">
+  <div class="fecha">
+    HACIA 1886
+  </div>
 
-    Las primeras cofradías de penitencia forman parte
-    de los orígenes de la Semana Santa sevillana.
-    La tradición de estas corporaciones fue creciendo
-    con el paso de los siglos hasta convertirse en una
-    de las grandes señas de identidad de Sevilla.
-
+  <p class="texto">
+    Una de las primeras fotografías conservadas de la Semana Santa
+    sevillana. El paso de palio de la Virgen del Rosario de la
+    Hermandad de Montesión nos permite acercarnos a la estética
+    de las cofradías del siglo XIX.
   </p>
 
-  <div class="frase">
-
-    El comienzo de una historia que todavía continúa.
-
-  </div>
-
 </section>
-
 
 
 <!-- =========================================
@@ -409,37 +477,32 @@ main {
   </div>
 
   <h2>
-    LOS PRIMEROS PASOS
+    LAS COFRADÍAS EN LA CALLE
   </h2>
 
   <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
+  <div class="marco">
 
     <img
-      src="https://pictures.abebooks.com/inventory/30636103717.jpg"
-      alt="Santo Cristo de la Salud de la Carretería en una antigua procesión">
+      src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/02_sxix29_104.jpg/%40%40images/a6767f88-12c6-4349-b9b9-30608b00b28b.jpeg"
+      alt="Paso de misterio del Cristo de las Cinco Llagas de la Trinidad en 1917">
 
   </div>
 
-  <p class="pieza-texto">
+  <div class="fecha">
+    1917
+  </div>
 
-    La antigua fotografía permite contemplar cómo eran
-    las procesiones sevillanas de finales del siglo XIX.
-    Los pasos, los nazarenos y la propia forma de recorrer
-    las calles muestran una Semana Santa muy diferente
-    de la actual.
-
+  <p class="texto">
+    El misterio del Cristo de las Cinco Llagas de la Hermandad
+    de la Trinidad por la antigua calle Arrebolera.
+    Una imagen que conserva la memoria de una Sevilla muy
+    diferente y de unas cofradías que ya formaban parte esencial
+    de la vida de la ciudad.
   </p>
 
-  <div class="frase">
-
-    La memoria de los primeros pasos.
-
-  </div>
-
 </section>
-
 
 
 <!-- =========================================
@@ -453,37 +516,31 @@ main {
   </div>
 
   <h2>
-    EL CACHORRO EN LA ANTIGUA SEVILLA
+    LOS NAZARENOS
   </h2>
 
   <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
+  <div class="marco">
 
     <img
-      src="https://beauchyphoto.com/wp-content/uploads/Beauchyphoto_Cristo_de_la_Expiracion_El_Cachorro_Emilio_Beauchy_Cano_fotografias_antiguas_postales_semana_santa.jpg"
-      alt="Santísimo Cristo de la Expiración El Cachorro en una antigua procesión">
+      src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/03_ca4_448.jpg/%40%40images/57150181-efd3-456c-a372-b63dac58b84c.jpeg"
+      alt="Nazarenos de la Hermandad de la Hiniesta en 1930">
 
   </div>
 
-  <p class="pieza-texto">
+  <div class="fecha">
+    1930
+  </div>
 
-    El Santísimo Cristo de la Expiración, conocido
-    popularmente como El Cachorro, aparece aquí en
-    una fotografía histórica que nos permite contemplar
-    una Sevilla de finales del siglo XIX y comienzos
-    del siglo XX.
-
+  <p class="texto">
+    Los nazarenos forman parte inseparable de la identidad
+    de nuestras cofradías. Esta fotografía de la Hermandad
+    de la Hiniesta muestra un cortejo atravesando una de las
+    estrechas calles del casco histórico de Sevilla.
   </p>
 
-  <div class="frase">
-
-    Sevilla cambia. La devoción permanece.
-
-  </div>
-
 </section>
-
 
 
 <!-- =========================================
@@ -497,37 +554,32 @@ main {
   </div>
 
   <h2>
-    LOS PRIMEROS NAZARENOS
+    EL SEÑOR DE LA SALUD
   </h2>
 
   <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
+  <div class="marco">
 
     <img
-      src="https://estaticos-cdn.prensaiberica.es/clip/f1ac0a53-84ca-40fa-9505-0fa072e5718c_alta-libre-aspect-ratio_default_0.jpg"
-      alt="Nazarenos en una antigua procesión de Semana Santa de Sevilla">
+      src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/04_ca4_498.jpg/%40%40images/20d1e5ac-7de9-46bd-949c-52abffecc30f.jpeg"
+      alt="Nuestro Padre Jesús de la Salud de la Hermandad de los Gitanos">
 
   </div>
 
-  <p class="pieza-texto">
+  <div class="fecha">
+    1922 — 1923
+  </div>
 
-    El nazareno se convirtió en uno de los grandes
-    símbolos de las cofradías sevillanas.
-    Esta fotografía muestra la solemnidad de aquellos
-    antiguos cortejos y la estrecha relación entre
-    la procesión y las calles de la ciudad.
-
+  <p class="texto">
+    Nuestro Padre Jesús de la Salud de la Hermandad de los Gitanos
+    aparece en una Sevilla que conserva todavía muchos de los
+    escenarios urbanos que posteriormente desaparecerían.
+    La fotografía se convierte aquí en memoria de una ciudad
+    y de una devoción.
   </p>
 
-  <div class="frase">
-
-    Tras cada capirote, una historia.
-
-  </div>
-
 </section>
-
 
 
 <!-- =========================================
@@ -541,37 +593,31 @@ main {
   </div>
 
   <h2>
-    LAS COFRADÍAS EN LA CALLE
+    LAS CIGARRERAS
   </h2>
 
   <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
+  <div class="marco">
 
     <img
-      src="https://estaticos-cdn.prensaiberica.es/clip/325122ac-8397-4eb1-9370-cab220dd9212_alta-libre-aspect-ratio_default_0.jpg"
-      alt="Macarena durante la Semana Santa de Sevilla en 1924">
+      src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/05_se6_pu-c1_sf_010.jpg/%40%40images/e3cf33b9-3243-4d8b-aace-b4743deb6bab.jpeg"
+      alt="Hermandad de las Cigarreras en Sevilla entre 1921 y 1925">
 
   </div>
 
-  <p class="pieza-texto">
+  <div class="fecha">
+    1921 — 1925
+  </div>
 
-    En las primeras décadas del siglo XX la Semana Santa
-    sevillana alcanza una enorme presencia en las calles.
-    Las cofradías, sus pasos, sus nazarenos y el público
-    forman una imagen colectiva que empieza a quedar
-    registrada para siempre en la fotografía.
-
+  <p class="texto">
+    El Señor Atado a la Columna de la Hermandad de las Cigarreras
+    aparece en los jardines de la antigua Real Fábrica de Tabacos.
+    Una estampa que une la historia de la hermandad con uno de
+    los lugares más importantes de la Sevilla de aquella época.
   </p>
 
-  <div class="frase">
-
-    La ciudad entera se convierte en escenario.
-
-  </div>
-
 </section>
-
 
 
 <!-- =========================================
@@ -585,66 +631,115 @@ main {
   </div>
 
   <h2>
-    SEVILLA Y SUS HERMANDADES
+    LAS COFRADÍAS DE LOS BARRIOS
   </h2>
 
   <div class="pieza-linea"></div>
 
-  <div class="pieza-imagen">
+  <div class="marco">
 
     <img
-      src="https://static.grupojoly.com/clip/5101fc96-6965-4f99-bdc4-ae048555ce7a_source-aspect-ratio_1600w_0.jpg"
-      alt="La Macarena por la calle Sierpes en Sevilla en 1927">
+      src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/06_se6_pu-c1_sf_019.jpg/%40%40images/c99c15f9-7686-44d5-b759-9af74b907b4c.jpeg"
+      alt="Cristo de la Salud de la Hermandad de San Bernardo">
 
   </div>
 
-  <p class="pieza-texto">
+  <div class="fecha">
+    1925 — 1927
+  </div>
 
-    La fotografía de la Macarena por la calle Sierpes
-    en 1927 nos acerca a una Sevilla en la que la Semana
-    Santa ya forma parte esencial de la identidad de
-    la ciudad.
-
+  <p class="texto">
+    El Cristo de la Salud de la Hermandad de San Bernardo
+    avanza por las calles del barrio. La fotografía muestra
+    la estrecha relación entre las cofradías, sus barrios
+    y la propia ciudad de Sevilla.
   </p>
 
-  <div class="frase">
-
-    Desde entonces, Sevilla sigue caminando con sus cofradías.
-
-  </div>
-
 </section>
-
 
 
 <!-- =========================================
      FINAL
      ========================================= -->
 
-<div style="
-  text-align:center;
-  margin:80px auto 40px;
-  color:#c9a35b;
-  font-size:18px;
-  letter-spacing:3px;
-">
+<section class="final">
 
-  LOS ORÍGENES DE UNA HISTORIA QUE CONTINÚA
+  <h2>
+    EL COMIENZO DE UNA MEMORIA
+  </h2>
+
+  <p>
+    Antes de las fotografías digitales,
+    antes de los vídeos y antes de las redes sociales,
+    hubo imágenes que quedaron para siempre.
+  </p>
+
+  <br>
+
+  <p>
+    Ellas nos permiten mirar hacia atrás
+    y descubrir cómo comenzó a construirse
+    la memoria visual de nuestra Semana Santa.
+  </p>
+
+</section>
+
+
+<!-- =========================================
+     VOLVER
+     ========================================= -->
+
+<div style="text-align:center;">
+
+  <a
+    class="volver"
+    href="HISTORIA.HTML">
+
+    ← VOLVER A HISTORIA
+
+  </a>
 
 </div>
 
 
-<a
-  class="volver"
-  href="salas.html">
+<!-- =========================================
+     MÚSICA
+     ========================================= -->
 
-  ← VOLVER A HISTORIA
+<div class="bloque-musica">
 
-</a>
+  <button
+    onclick="
+      document.getElementById('musica-sala-I').src =
+      'https://www.youtube.com/embed/crnVuKw1Cvk?autoplay=1&controls=0&rel=0';
+    ">
+
+    🎵 ESCUCHAR LA MÚSICA
+
+  </button>
+
+
+  <iframe
+    id="musica-sala-I"
+    width="1"
+    height="1"
+    src=""
+    style="
+      position:absolute;
+      left:-9999px;
+      top:-9999px;
+      width:1px;
+      height:1px;
+      border:0;
+    "
+    allow="autoplay">
+
+  </iframe>
+
+</div>
 
 
 </main>
-
 
 </body>
 
