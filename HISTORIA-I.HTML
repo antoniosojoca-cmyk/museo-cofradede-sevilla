@@ -1,5 +1,5 @@
+```html
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -7,12 +7,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sala I — Los Orígenes | Museo Cofrade de Sevilla</title>
+<title>Sala I · Los Orígenes | Historia de la Semana Santa de Sevilla</title>
 
 <style>
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,83 +32,59 @@ body {
    ========================================= */
 
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 60px 25px;
 }
 
 
 /* =========================================
-   TÍTULO DE LA SALA
+   CABECERA
    ========================================= */
 
-.sala-titulo-principal {
+.cabecera {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
-.sala-numero {
+.museo {
+  color: #8f7545;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.numero {
   color: #c9a35b;
   font-size: 15px;
-  letter-spacing: 5px;
-  margin-bottom: 15px;
+  letter-spacing: 6px;
+  margin-bottom: 18px;
 }
 
-.sala-titulo-principal h1 {
-  color: #ffffff;
-  font-size: 38px;
-  letter-spacing: 4px;
+.titulo {
   margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: 7px;
   text-transform: uppercase;
 }
 
 .linea {
   width: 100px;
-  height: 2px;
+  height: 1px;
   background: #c9a35b;
-  margin: 25px auto;
+  margin: 30px auto;
 }
 
-.sala-intro {
-  max-width: 700px;
-  margin: 0 auto;
+.intro {
+  max-width: 750px;
+  margin: auto;
   color: #cccccc;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-
-/* =========================================
-   IMAGEN PRINCIPAL
-   ========================================= */
-
-.imagen-sala {
-  width: 100%;
-  height: 420px;
-  overflow: hidden;
-  border: 1px solid #c9a35b;
-  margin-bottom: 45px;
-}
-
-.imagen-sala img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: brightness(65%);
-}
-
-
-/* =========================================
-   TÍTULO DE PIEZAS
-   ========================================= */
-
-.sala-subtitulo {
-  text-align: center;
-  color: #c9a35b;
-  font-size: 20px;
-  letter-spacing: 3px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.9;
+  font-style: italic;
 }
 
 
@@ -113,41 +93,131 @@ main {
    ========================================= */
 
 .pieza {
-  background: #111111;
-  border: 1px solid #c9a35b;
-  padding: 30px;
-  margin-bottom: 45px;
+  margin-bottom: 120px;
   text-align: center;
-}
-
-.pieza img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 25px;
-  border: 1px solid #c9a35b;
 }
 
 .pieza-numero {
   color: #c9a35b;
-  font-size: 15px;
-  letter-spacing: 3px;
-  margin-bottom: 12px;
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
 }
 
-.pieza h2 {
+.pieza-titulo {
   color: #ffffff;
-  font-size: 28px;
-  margin: 10px 0 20px;
+  font-size: 27px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
-.pieza-texto {
-  max-width: 750px;
+.pieza-linea {
+  width: 70px;
+  height: 1px;
+  background: #c9a35b;
+  margin: 0 auto 30px;
+}
+
+
+/* =========================================
+   MARCO DE LA IMAGEN
+   ========================================= */
+
+.imagen {
+  width: 100%;
+  max-width: 1000px;
   margin: auto;
-  color: #dddddd;
+  padding: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   FOTOGRAFÍAS
+   ========================================= */
+
+.imagen img {
+  width: 100%;
+  height: 560px;
+  object-fit: contain;
+  display: block;
+  background: #080808;
+  border: 4px solid #0b0b0b;
+  transition: transform 0.8s ease;
+}
+
+.imagen:hover img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   TEXTO DE LAS PIEZAS
+   ========================================= */
+
+.texto {
+  max-width: 750px;
+  margin: 30px auto 0;
+  color: #cccccc;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.8;
+}
+
+.frase {
+  max-width: 700px;
+  margin: 25px auto 0;
+  color: #c9a35b;
+  font-size: 16px;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+  text-align: center;
+  margin-top: 40px;
+  padding: 90px 25px;
+  border-top: 1px solid #222222;
+}
+
+.final h2 {
+  color: #c9a35b;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.final p {
+  max-width: 700px;
+  margin: auto;
+  color: #eeeeee;
+  font-size: 22px;
+  line-height: 1.9;
+  font-style: italic;
 }
 
 
@@ -156,14 +226,15 @@ main {
    ========================================= */
 
 .volver {
-  display: block;
-  width: fit-content;
-  margin: 40px auto 0;
-  padding: 12px 25px;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 30px;
   border: 1px solid #c9a35b;
   color: #c9a35b;
   text-decoration: none;
-  letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  transition: 0.3s;
 }
 
 .volver:hover {
@@ -173,29 +244,16 @@ main {
 
 
 /* =========================================
-   MÚSICA
+   PIE DE PÁGINA
    ========================================= */
 
-.bloque-musica {
+footer {
   text-align: center;
-  margin: 55px 0;
-}
-
-.bloque-musica button {
-  background: #111111;
-  color: #c9a35b;
-  border: 1px solid #c9a35b;
-  padding: 14px 28px;
-  font-family: Georgia, serif;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 35px 20px;
+  border-top: 1px solid #222222;
+  color: #666666;
+  font-size: 11px;
   letter-spacing: 2px;
-  transition: 0.3s;
-}
-
-.bloque-musica button:hover {
-  background: #c9a35b;
-  color: #080808;
 }
 
 
@@ -209,25 +267,43 @@ main {
     padding: 45px 18px;
   }
 
-  .sala-titulo-principal h1 {
-    font-size: 29px;
-    letter-spacing: 3px;
+  .titulo {
+    font-size: 31px;
+    letter-spacing: 4px;
   }
 
-  .imagen-sala {
-    height: 280px;
+  .intro {
+    font-size: 16px;
   }
 
   .pieza {
-    padding: 20px;
+    margin-bottom: 90px;
   }
 
-  .pieza h2 {
-    font-size: 22px;
+  .pieza-titulo {
+    font-size: 21px;
+    letter-spacing: 2px;
   }
 
-  .pieza-texto {
+  .imagen {
+    padding: 8px;
+  }
+
+  .imagen img {
+    height: 400px;
+    object-fit: contain;
+  }
+
+  .texto {
     font-size: 15px;
+  }
+
+  .frase {
+    font-size: 15px;
+  }
+
+  .final p {
+    font-size: 19px;
   }
 
 }
@@ -236,55 +312,41 @@ main {
 
 </head>
 
+
 <body>
 
+
 <main>
+
 
 <!-- =========================================
      CABECERA
      ========================================= -->
 
-<div class="sala-titulo-principal">
+<section class="cabecera">
 
-  <div class="sala-numero">
+  <div class="museo">
+    MUSEO COFRADE DE SEVILLA
+  </div>
+
+  <div class="numero">
     SALA I
   </div>
 
-  <h1>
+  <h1 class="titulo">
     LOS ORÍGENES
   </h1>
 
   <div class="linea"></div>
 
-  <p class="sala-intro">
-
-Un recorrido por los primeros pasos de las cofradías
-y por la historia de una tradición que, con el paso
-de los siglos, se convirtió en una de las grandes
-expresiones de Sevilla.
-
-
+  <p class="intro">
+    Un recorrido por los primeros pasos de la Semana Santa
+    de Sevilla, desde sus orígenes hasta la consolidación
+    de las grandes hermandades y sus devociones.
   </p>
 
-</div>
+</section>
 
-<!-- =========================================
-     IMAGEN PRINCIPAL
-     ========================================= -->
-
-<div class="imagen-sala">
-
-<img
- src="https://static.grupojoly.com/clip/64a8f090-fb3e-446b-945c-83fa6d5e3e84_source-aspect-ratio_1600w_0.webp"
- alt="Historia de la Semana Santa de Sevilla">
-
-</div>
-
-<div class="sala-subtitulo">
-
-LOS PRIMEROS TIEMPOS
-
-</div>
 
 <!-- =========================================
      PIEZA I
@@ -292,31 +354,36 @@ LOS PRIMEROS TIEMPOS
 
 <section class="pieza">
 
-<img
- src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhyphenhyphenjO6Ess3_6UzssrGSCMjcvm2Mh7-8jdNGI2KDN-7TB4KaYjHFTkBylpRVxkSjCYm85SGowo33vAJWkuPPYmWlGUMQfV7klAonjuh9pFVynZAowMMW_ZiMB3hh6G9A2P81jqk5w7Tp9SV/s1600/fa-cachorro-en-paso-san-esteban_15338687411_o.jpg"
- alt="Antigua Semana Santa de Sevilla">
-
   <div class="pieza-numero">
     PIEZA I
   </div>
 
-  <h2>
-    LAS PRIMERAS COFRADÍAS
-  </h2>
+  <div class="pieza-titulo">
+    LOS PRIMEROS PASOS
+  </div>
 
-  <p class="pieza-texto">
+  <div class="pieza-linea"></div>
 
+  <div class="imagen">
 
+    <img
+      src="https://static.grupojoly.com/clip/64a8f090-fb3e-446b-945c-83fa6d5e3e84_source-aspect-ratio_1600w_0.webp"
+      alt="Orígenes de la Semana Santa de Sevilla">
 
-Las primeras hermandades fueron dando forma,
-con el paso de los siglos, a una tradición que
-acabaría convirtiendo las calles de Sevilla
-en uno de los grandes escenarios de la Semana Santa.
+  </div>
 
+  <p class="texto">
+    La Semana Santa de Sevilla nace de una larga tradición
+    de fe, devoción y manifestaciones religiosas que fueron
+    tomando forma a lo largo de los siglos.
+  </p>
 
+  <p class="frase">
+    Todo gran camino comienza con los primeros pasos.
   </p>
 
 </section>
+
 
 <!-- =========================================
      PIEZA II
@@ -324,31 +391,37 @@ en uno de los grandes escenarios de la Semana Santa.
 
 <section class="pieza">
 
-<img
- src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqhCndRJQ1BIL_InIz5LfjFlCn7hUVH9UqAfkLBibshCf_u157zY5STdM2FLsiN5inaJ3IDtyQjB4l38rVLcWI8MIXAWdv70uXlLfE28y65tl_bYTFIlR6TN6jsIZMSlmHhpHjPYFa0Wr/s1600/fa-stmo-cristo-tres-caidas-triana_15155158160_o.jpg"
- alt="Santísimo Cristo de las Tres Caídas">
-
   <div class="pieza-numero">
     PIEZA II
   </div>
 
-  <h2>
-    LA SEMANA SANTA ANTIGUA
-  </h2>
+  <div class="pieza-titulo">
+    LAS PRIMERAS HERMANDADES
+  </div>
 
-  <p class="pieza-texto">
+  <div class="pieza-linea"></div>
 
+  <div class="imagen">
 
-Sevilla fue construyendo poco a poco una forma
-propia de vivir la Pasión. Las cofradías,
-los nazarenos y los pasos comenzaron a formar
-parte de la identidad de la ciudad.
+    <img
+      src="https://i.pinimg.com/1200x/98/54/11/9854114c420fedbf83af53a8e62ea685.jpg"
+      alt="Primeras hermandades de Sevilla">
 
+  </div>
 
+  <p class="texto">
+    Las hermandades fueron adquiriendo un papel fundamental
+    en la vida religiosa y social de Sevilla. A través de ellas
+    se fueron organizando cultos, procesiones y formas de
+    devoción que terminarían dando identidad a la Semana Santa.
+  </p>
 
+  <p class="frase">
+    La historia de Sevilla también se escribió en sus hermandades.
   </p>
 
 </section>
+
 
 <!-- =========================================
      PIEZA III
@@ -356,29 +429,37 @@ parte de la identidad de la ciudad.
 
 <section class="pieza">
 
-<img
- src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgip58dBkkLhkE5R-AjgxLoNG1N2LkfLRFCb2qf5CCgKifH5cJYiURmAE-msUaSV4TUV42VAGzxC67OMHRzVlbw93ADJUrSfmhPF2j5HP_pcdxcm_fqKa8VphOqK-tMsVAN-BPBEizZRWa6/s1600/fa-mara-stma-presentacin_15155323827_o.jpg"
- alt="María Santísima de la Presentación">
-
   <div class="pieza-numero">
     PIEZA III
   </div>
 
-  <h2>
-    LA DEVOCIÓN EN SEVILLA
-  </h2>
+  <div class="pieza-titulo">
+    EL CACHORRO
+  </div>
 
-  <p class="pieza-texto">
-`
-La devoción fue creciendo alrededor de las imágenes
-titulares de las hermandades. Cristo y María pasaron
-a ocupar un lugar fundamental en la vida espiritual
-y sentimental de muchas generaciones de sevillanos.
-```
+  <div class="pieza-linea"></div>
 
+  <div class="imagen">
+
+    <img
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqhCndRJQ1BIL_InIz5L1fjFlCn7hUVH9UqAfkLBibshCf_u157zY5STdM2FLsiN5inaJ3IDtyQjB4l38rVLcWI8MIXAWdv70uXlLfE28y65tl_bYTFIlR6TN6jsIZMSlmHhpHjPYFa0Wr/s1600/fa-cachorro-en-paso-san-esteban_15338687411_o.jpg"
+      alt="Santísimo Cristo de la Expiración El Cachorro">
+
+  </div>
+
+  <p class="texto">
+    El Santísimo Cristo de la Expiración, conocido popularmente
+    como El Cachorro, representa una de las grandes imágenes
+    que forman parte de la historia artística y devocional
+    de Sevilla.
+  </p>
+
+  <p class="frase">
+    Una imagen que forma parte de la memoria viva de la ciudad.
   </p>
 
 </section>
+
 
 <!-- =========================================
      PIEZA IV
@@ -386,29 +467,36 @@ y sentimental de muchas generaciones de sevillanos.
 
 <section class="pieza">
 
-<img
- src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfvpGdYWlpYY16ds3Um5yEaEHXU_4_61TnQQOVUpnlUjykzI6OJE4F27St0d-YrzD6-WLkPgrVtVv1mGFipV4GBdF-o4ws2o44FjFy6tzWQewj_TNhkKBaK5EiphAo8Z08jjCYd9IdGPhv/s1600/fa-stmo-cristo--presentacion-por-san-bernardo_15338688881_o.jpg"
- alt="Cristo por las calles de Sevilla">
-
   <div class="pieza-numero">
     PIEZA IV
   </div>
 
-  <h2>
-    LAS COFRADÍAS EN LA CALLE
-  </h2>
+  <div class="pieza-titulo">
+    TRIANA Y SUS DEVOCIONES
+  </div>
 
-  <p class="pieza-texto">
+  <div class="pieza-linea"></div>
 
-La salida de las hermandades convirtió las calles
-de Sevilla en un espacio de encuentro entre la fe,
-la tradición y la cultura. Cada barrio fue aportando
-su propia personalidad a esta historia.
-```
+  <div class="imagen">
 
+    <img
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfvpGdYWlpYY16ds3Um5yEaEHXU_4_61TnQQOVUpnlUjykzI6OJE4F27St0d-YrzD6-WLkPgrVtVv1mGFipV4GBdF-o4ws2o44FjFy6tzWQewj_TNhkKBaK5EiphAo8Z08jjCYd9IdGPhv/s1600/fa-stmo-cristo--presentacion-por-san-bernardo_15338688881_o.jpg"
+      alt="Devoción y Semana Santa de Sevilla">
+
+  </div>
+
+  <p class="texto">
+    Los barrios de Sevilla fueron construyendo también su propia
+    identidad cofrade. Triana se convirtió en uno de los grandes
+    referentes de la devoción popular y de la Semana Santa sevillana.
+  </p>
+
+  <p class="frase">
+    Cada barrio tiene una historia. Cada devoción, un recuerdo.
   </p>
 
 </section>
+
 
 <!-- =========================================
      PIEZA V
@@ -416,30 +504,36 @@ su propia personalidad a esta historia.
 
 <section class="pieza">
 
-<img
- src="https://scontent.fsvq2-2.fna.fbcdn.net/v/t39.30808-6/596973631_122184213398486974_5145292612249810248_n.jpg?stp=dst-jpg_tt6&cstp=mx1288x1080&ctp=s600x600&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=pnAno_lDyxAQ7kNvwHuo3pY&_nc_oc=AdoRAGYUkQ0clxakLSSYi-P9TWuDeRdpVe-LTsdhmmS3-ZlIPPXHGSeI21u6T5_Lhgo&_nc_zt=23&_nc_ht=scontent.fsvq2-2.fna&_nc_gid=W-ZFGw9MDAOvtL273ZyCJg&_nc_ss=7b2a8&oh=00_AQHycJGB4wDM3EkGQvrffnPvYxt640NlOQRJSlSXCr-5Eg&oe=6A978FF7"
- alt="Semana Santa de Sevilla">
-
   <div class="pieza-numero">
     PIEZA V
   </div>
 
-  <h2>
-    SEVILLA Y SUS HERMANDADES
-  </h2>
+  <div class="pieza-titulo">
+    LA DEVOCIÓN POPULAR
+  </div>
 
-  <p class="pieza-texto">
+  <div class="pieza-linea"></div>
 
+  <div class="imagen">
 
-Las hermandades fueron creciendo junto a sus barrios,
-creando vínculos que todavía permanecen vivos.
-La Semana Santa se convirtió así en una parte
-inseparable de la memoria de Sevilla.
-```
+    <img
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgip58dBkkLhkE5R-AjgxLoNG1N2LkfLRFCb2qf5CCgKifH5cJYiURmAE-msUaSV4TUV42VAGzxC67OMHRzVlbw93ADJUrSfmhPF2j5HP_pcdxcm_fqKa8VphOqK-tMsVAN-BPBEizZRWa6/s1600/fa-mara-stma-presentacin_15155323827_o.jpg"
+      alt="Devoción popular de Sevilla">
 
+  </div>
+
+  <p class="texto">
+    Con el paso del tiempo, la Semana Santa fue creciendo
+    alrededor de sus imágenes titulares, sus hermandades
+    y la relación íntima entre los sevillanos y sus devociones.
+  </p>
+
+  <p class="frase">
+    La fe también se transmite de generación en generación.
   </p>
 
 </section>
+
 
 <!-- =========================================
      PIEZA VI
@@ -447,79 +541,90 @@ inseparable de la memoria de Sevilla.
 
 <section class="pieza">
 
-<img
- src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqhCndRJQ1BIL_InIz5LfjFlCn7hUVH9UqAfkLBibshCf_u157zY5STdM2FLsiN5inaJ3IDtyQjB4l38rVLcWI8MIXAWdv70uXlLfE28y65tl_bYTFIlR6TN6jsIZMSlmHhpHjPYFa0Wr/s1600/fa-stmo-cristo-tres-caidas-triana_15155158160_o.jpg"
- alt="El legado de la Semana Santa de Sevilla">
-
   <div class="pieza-numero">
     PIEZA VI
   </div>
 
-  <h2>
-    EL LEGADO
-  </h2>
+  <div class="pieza-titulo">
+    UNA HISTORIA QUE CONTINÚA
+  </div>
 
-  <p class="pieza-texto">
+  <div class="pieza-linea"></div>
 
+  <div class="imagen">
 
-Desde aquellos primeros tiempos hasta nuestros días,
-las cofradías han transmitido una herencia de fe,
-arte y tradición. Un legado que continúa vivo
-cada Semana Santa en las calles de Sevilla.
+    <img
+      src="https://i.pinimg.com/736x/71/95/09/719509ea772b5b4f0641b8fdd596fc18.jpg"
+      alt="Semana Santa de Sevilla">
 
+  </div>
 
+  <p class="texto">
+    Los orígenes dieron paso a una tradición que ha llegado
+    hasta nuestros días. Las generaciones fueron dejando su
+    huella y construyendo una Semana Santa que continúa
+    formando parte de la identidad de Sevilla.
+  </p>
+
+  <p class="frase">
+    Lo que comenzó hace siglos continúa caminando hoy.
   </p>
 
 </section>
 
+
 <!-- =========================================
-     VOLVER
+     FINAL DE LA SALA
      ========================================= -->
 
-<a class="volver" href="index.html">
+<section class="final">
 
-← VOLVER AL MUSEO
+  <h2>
+    EL PRINCIPIO DE UNA HISTORIA
+  </h2>
 
-</a>
+  <p>
+    Aquí comienza nuestro recorrido por la historia
+    de la Semana Santa de Sevilla.
+    <br><br>
+    Una historia construida con siglos de fe,
+    arte, tradición y memoria.
+  </p>
+
+  <a
+    class="volver"
+    href="historia.html">
+
+    ← VOLVER A HISTORIA
+
+  </a>
+
+</section>
+
 
 </main>
 
+
 <!-- =========================================
-     MÚSICA
+     PIE DE PÁGINA
      ========================================= -->
 
-<div class="bloque-musica">
+<footer>
 
-<button
- onclick="
-   document.getElementById('marcha-youtube').src =
-   'https://www.youtube.com/embed/ZQm6kIUK-m0?autoplay=1&controls=0&rel=0';
- ">
+  MUSEO COFRADE DE SEVILLA
 
+  <br><br>
 
-🎵 ESCUCHAR LA MÚSICA
+  HISTORIA · SALA I · LOS ORÍGENES
 
+</footer>
 
-  </button>
-
-  <iframe
-    id="marcha-youtube"
-    width="1"
-    height="1"
-    src=""
-    style="
-      position:absolute;
-      left:-9999px;
-      border:0;
-    "
-    allow="autoplay">
-
-  </iframe>
-
-</div>
 
 </body>
 
 </html>
+
+
+
 
 
