@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Historia · Museo Cofrade de Sevilla</title>
+
+  <style>
+
+    /* =========================================
+       CONFIGURACIÓN GENERAL
+       ========================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f1f1f1;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+
+    /* =========================================
+       CONTENEDOR
+       ========================================= */
+
+    .contenedor {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+
+    /* =========================================
+       CABECERA
+       ========================================= */
+
+    .numero {
+      color: #c9a35b;
+      letter-spacing: 5px;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: 4px;
+      margin: 10px 0;
+      font-weight: normal;
+    }
+
+    .linea {
+      width: 120px;
+      height: 1px;
+      background: #c9a35b;
+      margin: 25px auto 45px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 55px;
+      color: #cccccc;
+      font-size: 17px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+
+    /* =========================================
+       LAS SEIS SALAS
+       ========================================= */
+
+    .salas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+
+    /* =========================================
+       RECUADRO DE CADA SALA
+       ========================================= */
+
+    .sala {
+      border: 1px solid #c9a35b;
+      padding: 35px 25px;
+      background: #111111;
+      transition: 0.3s ease;
+    }
+
+    .sala:hover {
+      transform: translateY(-5px);
+      background: #181818;
+    }
+
+
+    /* =========================================
+       NÚMERO
+       ========================================= */
+
+    .sala-numero {
+      color: #c9a35b;
+      letter-spacing: 4px;
+      font-size: 14px;
+    }
+
+
+    /* =========================================
+       TÍTULO
+       ========================================= */
+
+    h2 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: normal;
+      margin: 18px 0;
+      line-height: 1.4;
+    }
+
+
+    /* =========================================
+       DESCRIPCIÓN
+       ========================================= */
+
+    .sala p {
+      color: #bbbbbb;
+      line-height: 1.6;
+      font-size: 15px;
+      min-height: 72px;
+      margin: 0;
+    }
+
+
+    /* =========================================
+       BOTÓN ENTRAR
+       ========================================= */
+
+    .entrar {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 11px 22px;
+      border: 1px solid #c9a35b;
+      color: #c9a35b;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 13px;
+      transition: 0.3s ease;
+    }
+
+    .entrar:hover {
+      background: #c9a35b;
+      color: #080808;
+    }
+
+
+    /* =========================================
+       VOLVER
+       ========================================= */
+
+    .volver {
+      display: inline-block;
+      margin-top: 60px;
+      color: #c9a35b;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .volver:hover {
+      color: #ffffff;
+    }
+
+
+    /* =========================================
+       MÓVIL
+       ========================================= */
+
+    @media (max-width: 700px) {
+
+      .contenedor {
+        padding: 45px 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+      }
+
+      .intro {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+
+      .salas {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .sala {
+        padding: 30px 22px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================================
+       CABECERA HISTORIA
+       ========================================= -->
+
+  <main class="contenedor">
+
+```
+<div class="numero">
+  MUSEO COFRADE DE SEVILLA
+</div>
+
+
+<h1>
+  HISTORIA
+</h1>
+
+
+<div class="linea"></div>
+
+
+<p class="intro">
+  Un recorrido visual por el origen, la evolución
+  y la memoria de la Semana Santa de Sevilla.
+</p>
+
+
+<!-- =========================================
+     SEIS SALAS
+     ========================================= -->
+
+<section class="salas">
+
+
+  <!-- =====================================
+       SALA I
+       ===================================== -->
+
+  <div class="sala">
+
+    <div class="sala-numero">
+      SALA I
+    </div>
+
+    <h2>
+      LOS ORÍGENES
+    </h2>
+
+    <p>
+      Los primeros pasos de la tradición cofrade
+      y el nacimiento de las primeras devociones.
+    </p>
+
+    <a
+      class="entrar"
+      href="HISTORIA-I.HTML">
+
+      ENTRAR
+
+    </a>
+
+  </div>
+
+
+  <!-- =====================================
+       SALA II
+       ===================================== -->
+
+  <div class="sala">
+
+    <div class="sala-numero">
+      SALA II
+    </div>
+
+    <h2>
+      LAS PRIMERAS COFRADÍAS
+    </h2>
+
+    <p>
+      Las hermandades históricas que comenzaron
+      a dar forma a la Semana Santa sevillana.
+    </p>
+
+    <a
+      class="entrar"
+      href="HISTORIA-II.HTML">
+
+      ENTRAR
+
+    </a>
+
+  </div>
+
+
+  <!-- =====================================
+       SALA III
+       ===================================== -->
+
+  <div class="sala">
+
+    <div class="sala-numero">
+      SALA III
+    </div>
+
+    <h2>
+      LOS PASOS Y EL CORTEJO
+    </h2>
+
+    <p>
+      La evolución de los pasos, los nazarenos,
+      las insignias y los cortejos procesionales.
+    </p>
+
+    <a
+      class="entrar"
+      href="HISTORIA-III.HTML">
+
+      ENTRAR
+
+    </a>
+
+  </div>
+
+
+  <!-- =====================================
+       SALA IV
+       ===================================== -->
+
+  <div class="sala">
+
+    <div class="sala-numero">
+      SALA IV
+    </div>
+
+    <h2>
+      SEVILLA Y LA CATEDRAL
+    </h2>
+
+    <p>
+      La evolución de los recorridos y la relación
+      de las cofradías con la Catedral de Sevilla.
+    </p>
+
+    <a
+      class="entrar"
+      href="HISTORIA-IV.HTML">
+
+      ENTRAR
+
+    </a>
+
+  </div>
+
+
+  <!-- =====================================
+       SALA V
+       ===================================== -->
+
+  <div class="sala">
+
+    <div class="sala-numero">
+      SALA V
+    </div>
+
+    <h2>
+      TIEMPOS DE CAMBIO
+    </h2>
+
+    <p>
+      Épocas de dificultades, transformaciones
+      y recuperación de las hermandades sevillanas.
+    </p>
+
+    <a
+      class="entrar"
+      href="HISTORIA-V.HTML">
+
+      ENTRAR
+
+    </a>
+
+  </div>
+
+
+  <!-- =====================================
+       SALA VI
+       ===================================== -->
+
+  <div class="sala">
+
+    <div class="sala-numero">
+      SALA VI
+    </div>
+
+    <h2>
+      LA SEMANA SANTA DE HOY
+    </h2>
+
+    <p>
+      La Semana Santa contemporánea y la tradición
+      que continúa viva en las calles de Sevilla.
+    </p>
+
+    <a
+      class="entrar"
+      href="HISTORIA-VI.HTML">
+
+      ENTRAR
+
+    </a>
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================
+     VOLVER AL MUSEO
+     ========================================= -->
+
+<a
+  class="volver"
+  href="index.html">
+
+  ← VOLVER AL MUSEO
+
+</a>
+```
+
+  </main>
+
+</body>
+
+</html>
