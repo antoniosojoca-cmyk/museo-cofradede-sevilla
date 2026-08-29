@@ -416,6 +416,66 @@ footer {
 </head>
 
 
+
+
+
+
+  
+
+
+  /* =========================================
+     INTENTO DE AUTOPLAY AL ENTRAR
+     ========================================= */
+
+  window.addEventListener("load", function() {
+
+    setTimeout(function() {
+
+      iniciarMusica();
+
+    }, 800);
+
+  });
+
+
+  /* =========================================
+     SI EL NAVEGADOR BLOQUEA EL AUTOPLAY
+     LA PRIMERA INTERACCIÓN DEL VISITANTE
+     ARRANCA LA MÚSICA
+     ========================================= */
+
+  document.addEventListener(
+    "click",
+    iniciarMusica,
+    {
+      once: true,
+      passive: true
+    }
+  );
+
+
+  document.addEventListener(
+    "touchstart",
+    iniciarMusica,
+    {
+      once: true,
+      passive: true
+    }
+  );
+
+
+  document.addEventListener(
+    "keydown",
+    iniciarMusica,
+    {
+      once: true
+    }
+  );
+
+
+})();
+
+</script>
 <body>
 
 <main>
