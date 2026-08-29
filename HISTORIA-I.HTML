@@ -88,7 +88,7 @@ h1 {
 
 
 /* =========================================
-   BLOQUE HISTÓRICO
+   PRESENTACIÓN
    ========================================= */
 
 .presentacion {
@@ -111,7 +111,7 @@ h1 {
    ========================================= */
 
 .pieza {
-  margin-bottom: 110px;
+  margin-bottom: 115px;
   text-align: center;
 }
 
@@ -145,7 +145,7 @@ h1 {
 
 
 /* =========================================
-   MARCO DE LA FOTOGRAFÍA
+   MARCO DORADO
    ========================================= */
 
 .marco {
@@ -174,7 +174,13 @@ h1 {
 
 
 /* =========================================
-   IMAGEN
+   IMÁGENES
+   =========================================
+   
+   IMPORTANTE:
+   ALTURA AUTOMÁTICA.
+   LA FOTOGRAFÍA CONSERVA SU FORMATO ORIGINAL.
+   
    ========================================= */
 
 .marco img {
@@ -182,18 +188,27 @@ h1 {
 
   width: 100%;
 
-  height: 600px;
+  height: auto;
 
-  object-fit: contain;
+  max-width: 100%;
+
+  object-fit: initial;
 
   object-position: center;
 
-  background: #111111;
+  background: #080808;
 
   border: 4px solid #080808;
 
+  margin: 0;
+
   transition: transform 0.7s ease;
 }
+
+
+/* =========================================
+   EFECTO AL PASAR EL RATÓN
+   ========================================= */
 
 .marco:hover img {
   transform: scale(1.015);
@@ -201,8 +216,15 @@ h1 {
 
 
 /* =========================================
-   TEXTO HISTÓRICO
+   INFORMACIÓN HISTÓRICA
    ========================================= */
+
+.fecha {
+  color: #c9a35b;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-top: 22px;
+}
 
 .texto {
   max-width: 780px;
@@ -215,16 +237,9 @@ h1 {
   line-height: 1.8;
 }
 
-.fecha {
-  color: #c9a35b;
-  font-size: 13px;
-  letter-spacing: 3px;
-  margin-top: 22px;
-}
-
 
 /* =========================================
-   FRASE FINAL
+   FINAL
    ========================================= */
 
 .final {
@@ -295,11 +310,13 @@ h1 {
 
 .bloque-musica {
   text-align: center;
-  margin: 50px 0 20px;
+  margin: 55px 0 20px;
 }
 
 .bloque-musica button {
+
   background: #111111;
+
   color: #c9a35b;
 
   border: 1px solid #c9a35b;
@@ -318,8 +335,11 @@ h1 {
 }
 
 .bloque-musica button:hover {
+
   background: #c9a35b;
+
   color: #080808;
+
 }
 
 
@@ -344,7 +364,7 @@ h1 {
   }
 
   .pieza {
-    margin-bottom: 85px;
+    margin-bottom: 90px;
   }
 
   .pieza h2 {
@@ -357,7 +377,8 @@ h1 {
   }
 
   .marco img {
-    height: 420px;
+    width: 100%;
+    height: auto;
   }
 
   .texto {
@@ -368,6 +389,26 @@ h1 {
     font-size: 18px;
   }
 
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+footer {
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-top: 1px solid #222222;
+
+  color: #666666;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
 }
 
 </style>
@@ -401,9 +442,11 @@ h1 {
   <div class="linea"></div>
 
   <p class="intro">
+
     Un recorrido por las primeras huellas de la Semana Santa
     sevillana y por las imágenes que comenzaron a dejar memoria
     de sus cofradías en las calles de la ciudad.
+
   </p>
 
 </header>
@@ -448,7 +491,7 @@ h1 {
 
     <img
       src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/01_sxix29_166.jpg/%40%40images/01ec5e48-edba-40df-bc9d-671e315d5c3e.jpeg"
-      alt="Paso de palio de la Virgen del Rosario de Montesión hacia 1886">
+      alt="Fotografía histórica de la Semana Santa de Sevilla">
 
   </div>
 
@@ -457,10 +500,12 @@ h1 {
   </div>
 
   <p class="texto">
+
     Una de las primeras fotografías conservadas de la Semana Santa
-    sevillana. El paso de palio de la Virgen del Rosario de la
-    Hermandad de Montesión nos permite acercarnos a la estética
-    de las cofradías del siglo XIX.
+    sevillana. Una imagen que nos permite acercarnos a la estética
+    de las cofradías del siglo XIX y contemplar una Sevilla
+    muy diferente a la actual.
+
   </p>
 
 </section>
@@ -486,7 +531,7 @@ h1 {
 
     <img
       src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/02_sxix29_104.jpg/%40%40images/a6767f88-12c6-4349-b9b9-30608b00b28b.jpeg"
-      alt="Paso de misterio del Cristo de las Cinco Llagas de la Trinidad en 1917">
+      alt="Cristo de las Cinco Llagas de la Hermandad de la Trinidad en 1917">
 
   </div>
 
@@ -495,11 +540,13 @@ h1 {
   </div>
 
   <p class="texto">
+
     El misterio del Cristo de las Cinco Llagas de la Hermandad
     de la Trinidad por la antigua calle Arrebolera.
-    Una imagen que conserva la memoria de una Sevilla muy
-    diferente y de unas cofradías que ya formaban parte esencial
+    Una imagen que conserva la memoria de una Sevilla muy diferente
+    y de unas cofradías que ya formaban parte esencial
     de la vida de la ciudad.
+
   </p>
 
 </section>
@@ -525,19 +572,21 @@ h1 {
 
     <img
       src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/03_ca4_448.jpg/%40%40images/57150181-efd3-456c-a372-b63dac58b84c.jpeg"
-      alt="Nazarenos de la Hermandad de la Hiniesta en 1930">
+      alt="Nazarenos de una cofradía sevillana">
 
   </div>
 
   <div class="fecha">
-    1930
+    SIGLO XX
   </div>
 
   <p class="texto">
+
     Los nazarenos forman parte inseparable de la identidad
-    de nuestras cofradías. Esta fotografía de la Hermandad
-    de la Hiniesta muestra un cortejo atravesando una de las
-    estrechas calles del casco histórico de Sevilla.
+    de nuestras cofradías. Esta fotografía nos acerca
+    a los antiguos cortejos y a la forma en que las hermandades
+    recorrían las calles del casco histórico de Sevilla.
+
   </p>
 
 </section>
@@ -563,20 +612,21 @@ h1 {
 
     <img
       src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/04_ca4_498.jpg/%40%40images/20d1e5ac-7de9-46bd-949c-52abffecc30f.jpeg"
-      alt="Nuestro Padre Jesús de la Salud de la Hermandad de los Gitanos">
+      alt="Nuestro Padre Jesús de la Salud">
 
   </div>
 
   <div class="fecha">
-    1922 — 1923
+    SIGLO XX
   </div>
 
   <p class="texto">
-    Nuestro Padre Jesús de la Salud de la Hermandad de los Gitanos
-    aparece en una Sevilla que conserva todavía muchos de los
-    escenarios urbanos que posteriormente desaparecerían.
-    La fotografía se convierte aquí en memoria de una ciudad
-    y de una devoción.
+
+    Nuestro Padre Jesús de la Salud aparece en una Sevilla
+    que conserva todavía muchos de los escenarios urbanos
+    de aquella época. La fotografía se convierte aquí
+    en memoria de una ciudad y de una devoción.
+
   </p>
 
 </section>
@@ -602,19 +652,22 @@ h1 {
 
     <img
       src="https://www.sevilla.org/no8do-digital/expo-no8do/cien-fotografias-de-semana-santa-de-sevilla-que-deberias-conocer/galeria-fotografica-semana-santa-sevilla/05_se6_pu-c1_sf_010.jpg/%40%40images/e3cf33b9-3243-4d8b-aace-b4743deb6bab.jpeg"
-      alt="Hermandad de las Cigarreras en Sevilla entre 1921 y 1925">
+      alt="Hermandad de las Cigarreras">
 
   </div>
 
   <div class="fecha">
-    1921 — 1925
+    SIGLO XX
   </div>
 
   <p class="texto">
+
     El Señor Atado a la Columna de la Hermandad de las Cigarreras
-    aparece en los jardines de la antigua Real Fábrica de Tabacos.
-    Una estampa que une la historia de la hermandad con uno de
-    los lugares más importantes de la Sevilla de aquella época.
+    aparece en una estampa histórica vinculada a la antigua
+    Real Fábrica de Tabacos. Una imagen que une la historia
+    de la hermandad con uno de los lugares más importantes
+    de la Sevilla de aquella época.
+
   </p>
 
 </section>
@@ -645,14 +698,16 @@ h1 {
   </div>
 
   <div class="fecha">
-    1925 — 1927
+    SIGLO XX
   </div>
 
   <p class="texto">
+
     El Cristo de la Salud de la Hermandad de San Bernardo
     avanza por las calles del barrio. La fotografía muestra
     la estrecha relación entre las cofradías, sus barrios
     y la propia ciudad de Sevilla.
+
   </p>
 
 </section>
@@ -669,24 +724,28 @@ h1 {
   </h2>
 
   <p>
+
     Antes de las fotografías digitales,
     antes de los vídeos y antes de las redes sociales,
     hubo imágenes que quedaron para siempre.
+
   </p>
 
   <br>
 
   <p>
+
     Ellas nos permiten mirar hacia atrás
     y descubrir cómo comenzó a construirse
     la memoria visual de nuestra Semana Santa.
+
   </p>
 
 </section>
 
 
 <!-- =========================================
-     VOLVER
+     VOLVER A HISTORIA
      ========================================= -->
 
 <div style="text-align:center;">
@@ -741,9 +800,26 @@ h1 {
 
 </main>
 
+
+<!-- =========================================
+     PIE
+     ========================================= -->
+
+<footer>
+
+  MUSEO COFRADE DE SEVILLA
+
+  <br><br>
+
+  HISTORIA · SALA I · LOS ORÍGENES
+
+</footer>
+
+
 </body>
 
 </html>
+
 
 
 
