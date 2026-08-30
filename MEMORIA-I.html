@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala I · El Besamanos | Museo Cofrade de Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  color: #e8e0d2;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* CABECERA */
+
+header {
+  text-align: center;
+  padding: 70px 20px 45px;
+  border-bottom: 1px solid #4b443b;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: #a99b87;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(34px, 6vw, 64px);
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  color: #bdb2a2;
+}
+
+/* INTRODUCCIÓN */
+
+.intro {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 55px 25px 35px;
+  text-align: center;
+}
+
+.intro p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #c9c0b3;
+}
+
+/* GALERÍA */
+
+.gallery {
+  width: min(1400px, 92%);
+  margin: 30px auto 80px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 38px;
+}
+
+.photo {
+  background: #181818;
+  padding: 12px;
+  border: 1px solid #403a33;
+  transition: transform 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+  border-color: #9d8b72;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+.photo img {
+  width: 100%;
+  height: 430px;
+  display: block;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 17px 12px 10px;
+  text-align: center;
+}
+
+.caption span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #938674;
+  margin-bottom: 7px;
+}
+
+.caption h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #ddd3c4;
+}
+
+/* NAVEGACIÓN */
+
+.navigation {
+  border-top: 1px solid #403a33;
+  padding: 40px 20px 65px;
+  text-align: center;
+}
+
+.navigation a {
+  display: inline-block;
+  margin: 8px 12px;
+  padding: 13px 25px;
+  border: 1px solid #655b4e;
+  color: #d8cdbd;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+  background: #d8cdbd;
+  color: #111;
+  border-color: #d8cdbd;
+}
+
+/* PIE */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #302c27;
+  color: #71695f;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* MÓVIL */
+
+@media (max-width: 750px) {
+
+  header {
+    padding: 50px 20px 35px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    width: 94%;
+    gap: 28px;
+  }
+
+  .photo img {
+    height: auto;
+    max-height: none;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="eyebrow">MEMORIA · SALA I</div>
+
+  <h1>EL BESAMANOS</h1>
+
+  <div class="subtitle">
+    Una tradición. Una mirada. Un encuentro.
+  </div>
+
+</header>
+
+<section class="intro">
+
+  <p>
+    Hay momentos en los que la Semana Santa parece detenerse.
+    El ruido desaparece, el tiempo se hace más lento y solo queda
+    la emoción de quien se acerca a contemplar y venerar.
+    El besamanos pertenece a esos momentos íntimos de la memoria cofrade.
+  </p>
+
+</section>
+
+<section class="gallery">
+
+  <!-- FOTOGRAFÍA 01 -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://static.grupojoly.com/clip/18a0f9b1-12e2-42dd-8616-5ed8f9bd8094_16-9-aspect-ratio_1600w_0.webp"
+  alt="El Besamanos · Fotografía 1"
+  loading="lazy">
+
+<div class="caption">
+  <span>MEMORIA · I</span>
+  <h2>El encuentro</h2>
+</div>
+```
+
+  </article>
+
+  <!-- FOTOGRAFÍA 02 -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://fotografias-2.larazon.es/clipping/cmsimages02/2021/12/16/93E32A16-280A-48C9-8355-EAA2F8511C51/95.jpg?crop=2048,1152,x0,y106&width=1028&height=578&optimize=medium&format=webply"
+  alt="El Besamanos · Fotografía 2"
+  loading="lazy">
+
+<div class="caption">
+  <span>MEMORIA · II</span>
+  <h2>Ante la imagen</h2>
+</div>
+```
+
+  </article>
+
+  <!-- FOTOGRAFÍA 03 -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://fotografias-2.larazon.es/clipping/cmsimages02/2019/12/16/6FCF8662-1B66-4DBF-B95E-1F32D37F78CA/58.jpg?crop=1016,576,x16,y0&width=1000&height=567&optimize=high&format=webply"
+  alt="El Besamanos · Fotografía 3"
+  loading="lazy">
+
+<div class="caption">
+  <span>MEMORIA · III</span>
+  <h2>La cercanía</h2>
+</div>
+```
+
+  </article>
+
+  <!-- FOTOGRAFÍA 04 -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://fotografias-2.larazon.es/clipping/cmsimages01/2021/12/16/9596680B-E190-4F5D-B217-1FD29B8ED7EB/58.jpg?crop=2048,1161,x0,y101&width=1000&height=567&optimize=high&format=webply"
+  alt="El Besamanos · Fotografía 4"
+  loading="lazy">
+
+<div class="caption">
+  <span>MEMORIA · IV</span>
+  <h2>Devoción</h2>
+</div>
+```
+
+  </article>
+
+  <!-- FOTOGRAFÍA 05 -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://static.grupojoly.com/clip/bce73fd7-747a-4828-aa58-59d265b4a12b_source-aspect-ratio_1600w_0.webp"
+  alt="El Besamanos · Fotografía 5"
+  loading="lazy">
+
+<div class="caption">
+  <span>MEMORIA · V</span>
+  <h2>El silencio</h2>
+</div>
+```
+
+  </article>
+
+  <!-- FOTOGRAFÍA 06 -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://static.grupojoly.com/clip/fe02a2dc-d888-472f-b458-9c50ff8de9f6_source-aspect-ratio_1600w_0.webp"
+  alt="El Besamanos · Fotografía 6"
+  loading="lazy">
+
+<div class="caption">
+  <span>MEMORIA · VI</span>
+  <h2>La memoria permanece</h2>
+</div>
+```
+
+  </article>
+
+</section>
+
+<nav class="navigation">
+
+  <a href="MEMORIA.html">
+    ← VOLVER A MEMORIA
+  </a>
+
+  <a href="index.html">
+    MUSEO
+  </a>
+
+</nav>
+
+<footer>
+
+MUSEO COFRADE DE SEVILLA · MEMORIA
+
+</footer>
+
+</body>
+</html>
