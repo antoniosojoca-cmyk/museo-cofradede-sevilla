@@ -1,0 +1,425 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memoria · La Macarena</title>
+
+<style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #080808;
+    color: #e8e0d0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.museo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 20px 70px;
+    box-sizing: border-box;
+}
+
+
+/* CABECERA */
+
+.cabecera {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.cabecera h1 {
+    margin: 0;
+    color: #c9a35b;
+    font-size: 44px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.cabecera h2 {
+    margin: 14px 0 0;
+    color: #8f7545;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.linea {
+    width: 130px;
+    height: 1px;
+    background: #8f7545;
+    margin: 25px auto 0;
+}
+
+
+/* INTRODUCCIÓN */
+
+.introduccion {
+    max-width: 780px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.introduccion .frase {
+    margin: 0;
+    color: #d8ccb9;
+    font-size: 23px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.introduccion .texto {
+    margin-top: 22px;
+    color: #9d927f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* CONTENEDOR DE LAS SEIS SALAS */
+
+.salas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+
+/* TARJETAS */
+
+.sala {
+    display: block;
+    text-decoration: none;
+    background: #101010;
+    border: 1px solid #4b3b23;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+.sala:hover {
+    border-color: #c9a35b;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+
+/* IMÁGENES */
+
+.sala img {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+
+/* INFORMACIÓN */
+
+.info {
+    text-align: center;
+    padding: 23px 15px 20px;
+}
+
+.numero {
+    color: #8f7545;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 9px;
+}
+
+.info h3 {
+    margin: 0 0 12px;
+    color: #c9a35b;
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
+}
+
+.sala:hover .info h3 {
+    color: #e2c47d;
+}
+
+.info p {
+    margin: 0;
+    color: #bdb3a3;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* PIE DE PÁGINA */
+
+.final {
+    text-align: center;
+    margin-top: 70px;
+    padding-top: 30px;
+    border-top: 1px solid #3d3020;
+}
+
+.final .frase-final {
+    color: #c9a35b;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.final .firma {
+    margin-top: 18px;
+    color: #8f7545;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+
+/* MÓVILES */
+
+@media (max-width: 700px) {
+
+    .salas {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera h1 {
+        font-size: 34px;
+    }
+
+    .sala img {
+        height: 280px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="museo">
+
+
+    <!-- CABECERA -->
+
+    <div class="cabecera">
+
+        <h1>Memoria</h1>
+
+        <h2>La Macarena</h2>
+
+        <div class="linea"></div>
+
+    </div>
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <div class="introduccion">
+
+        <p class="frase">
+            Hay imágenes que se miran.<br>
+            Y hay imágenes que se sienten.
+        </p>
+
+        <p class="texto">
+            Seis momentos para acercarnos a la Esperanza Macarena
+            desde la emoción, la mirada y la memoria.
+        </p>
+
+    </div>
+
+
+    <!-- SEIS SALAS -->
+
+    <div class="salas">
+
+
+        <!-- MEMORIA I -->
+
+        <a class="sala" href="MEMORIA-I.HTML">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/NTRA._SRA._DE_LA_ESPERANZA_MACARENA.jpg"
+            alt="Nuestra Señora de la Esperanza Macarena">
+
+            <div class="info">
+
+                <div class="numero">
+                    I
+                </div>
+
+                <h3>El Besamanos</h3>
+
+                <p>
+                    La cercanía, las manos y el encuentro
+                    con la Esperanza.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MEMORIA II -->
+
+        <a class="sala" href="MEMORIA-II.HTML">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/ESPERANZA_MACARENA.jpg"
+            alt="Esperanza Macarena">
+
+            <div class="info">
+
+                <div class="numero">
+                    II
+                </div>
+
+                <h3>Las Miradas</h3>
+
+                <p>
+                    Cuando una mirada puede decir
+                    más que cualquier palabra.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MEMORIA III -->
+
+        <a class="sala" href="MEMORIA-III.HTML">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Virgen_de_la_Macarena_2026_01.jpg"
+            alt="Virgen de la Macarena">
+
+            <div class="info">
+
+                <div class="numero">
+                    III
+                </div>
+
+                <h3>Los Rezos</h3>
+
+                <p>
+                    El silencio y la oración
+                    ante la Virgen.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MEMORIA IV -->
+
+        <a class="sala" href="MEMORIA-IV.HTML">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Macarena_Sevilla-detail.jpg"
+            alt="Detalle de la Macarena">
+
+            <div class="info">
+
+                <div class="numero">
+                    IV
+                </div>
+
+                <h3>Las Manos</h3>
+
+                <p>
+                    Pequeños gestos que también
+                    forman parte de la memoria.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MEMORIA V -->
+
+        <a class="sala" href="MEMORIA-V.HTML">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/EpTJEfoW4AU8A9q.jpg"
+            alt="Esperanza Macarena en Sevilla">
+
+            <div class="info">
+
+                <div class="numero">
+                    V
+                </div>
+
+                <h3>Momentos Especiales</h3>
+
+                <p>
+                    Instantes únicos que permanecen
+                    para siempre en el recuerdo.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MEMORIA VI -->
+
+        <a class="sala" href="MEMORIA-VI.HTML">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Hermandad_de_la_Esperanza_Macarena_Sevilla.jpg"
+            alt="Hermandad de la Esperanza Macarena">
+
+            <div class="info">
+
+                <div class="numero">
+                    VI
+                </div>
+
+                <h3>La Memoria</h3>
+
+                <p>
+                    Una tradición que continúa
+                    de generación en generación.
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- CIERRE -->
+
+    <div class="final">
+
+        <p class="frase-final">
+            La memoria no es solamente recordar.<br>
+            Es volver a sentir.
+        </p>
+
+        <p class="firma">
+            MEMORIA · LA MACARENA
+        </p>
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
+```
