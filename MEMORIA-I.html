@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="es">
@@ -25,7 +24,29 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* CABECERA */
+/* =========================================
+   AUDIO · RAFA SERNA
+   ========================================= */
+
+.rafa-audio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rafa-audio iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
 
 header {
   text-align: center;
@@ -54,7 +75,10 @@ h1 {
   color: #bdb2a2;
 }
 
-/* INTRODUCCIÓN */
+
+/* =========================================
+   INTRODUCCIÓN
+   ========================================= */
 
 .intro {
   max-width: 850px;
@@ -70,7 +94,10 @@ h1 {
   color: #c9c0b3;
 }
 
-/* GALERÍA */
+
+/* =========================================
+   GALERÍA
+   ========================================= */
 
 .gallery {
   width: min(1400px, 92%);
@@ -80,6 +107,7 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   gap: 38px;
 }
+
 
 .photo {
   background: #181818;
@@ -95,20 +123,29 @@ h1 {
     box-shadow 0.35s ease;
 }
 
+
+/* TODAS LAS FOTOGRAFÍAS
+   MISMA ALTURA VISUAL */
+
 .photo img {
   width: 100%;
-  height: auto;
+  height: 560px;
   display: block;
   object-fit: contain;
-
   margin-top: auto;
 }
+
 
 .photo:hover {
   transform: translateY(-5px);
   border-color: #9d8b72;
   box-shadow: 0 15px 40px rgba(0,0,0,0.45);
 }
+
+
+/* =========================================
+   PIEZAS / TÍTULOS
+   ========================================= */
 
 .caption {
   padding: 17px 12px 10px;
@@ -131,69 +168,10 @@ h1 {
   color: #ddd3c4;
 }
 
-/* AUDIOVISUAL */
 
-.video-section {
-  width: min(1000px, 92%);
-  margin: 0 auto 90px;
-  padding-top: 15px;
-  border-top: 1px solid #403a33;
-  text-align: center;
-}
-
-.video-title {
-  padding: 35px 20px 25px;
-}
-
-.video-title span {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #938674;
-  margin-bottom: 10px;
-}
-
-.video-title h2 {
-  margin: 0;
-  font-size: 27px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  color: #ddd3c4;
-}
-
-.video-title p {
-  margin: 15px auto 0;
-  font-size: 16px;
-  font-style: italic;
-  color: #a99f92;
-}
-
-.video-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #181818;
-  border: 1px solid #403a33;
-  padding: 12px;
-
-  transition:
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.video-frame:hover {
-  border-color: #9d8b72;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
-}
-
-.video-frame iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* NAVEGACIÓN */
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
 
 .navigation {
   border-top: 1px solid #403a33;
@@ -219,7 +197,10 @@ h1 {
   border-color: #d8cdbd;
 }
 
-/* PIE */
+
+/* =========================================
+   PIE
+   ========================================= */
 
 footer {
   text-align: center;
@@ -230,7 +211,10 @@ footer {
   letter-spacing: 2px;
 }
 
-/* MÓVIL */
+
+/* =========================================
+   MÓVIL
+   ========================================= */
 
 @media (max-width: 750px) {
 
@@ -253,8 +237,17 @@ footer {
     font-size: 16px;
   }
 
-  .video-section {
-    width: 94%;
+}
+
+
+/* =========================================
+   PANTALLAS MÁS PEQUEÑAS
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  .photo img {
+    height: auto;
   }
 
 }
@@ -265,17 +258,43 @@ footer {
 
 <body>
 
+<!-- =========================================
+     RAFA SERNA · VÍDEO OCULTO
+     ========================================= -->
+
+<div class="rafa-audio">
+
+  <iframe
+    src="https://www.youtube.com/embed/cQjKkCpjn-c?autoplay=1&mute=1&loop=1&playlist=cQjKkCpjn-c"
+    title="Rafa Serna · Pregón de la Semana Santa de Sevilla"
+    allow="autoplay; encrypted-media">
+  </iframe>
+
+</div>
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
 <header>
 
-  <div class="eyebrow">MEMORIA · SALA I</div>
+  <div class="eyebrow">
+    MEMORIA · SALA I
+  </div>
 
-  <h1>EL BESAMANOS</h1>
+  <h1>
+    EL BESAMANOS
+  </h1>
 
   <div class="subtitle">
     Un encuentro de fe, emoción y Esperanza.
   </div>
 
 </header>
+
+<!-- =========================================
+     INTRODUCCIÓN
+     ========================================= -->
 
 <section class="intro">
 
@@ -289,9 +308,13 @@ footer {
 
 </section>
 
+<!-- =========================================
+     GALERÍA · SEIS PIEZAS
+     ========================================= -->
+
 <section class="gallery">
 
-  <!-- FOTOGRAFÍA 01 -->
+  <!-- PIEZA I -->
 
   <article class="photo">
 
@@ -302,14 +325,21 @@ footer {
   loading="lazy">
 
 <div class="caption">
-  <span>MEMORIA · I</span>
-  <h2>Ante la Esperanza</h2>
+
+  <span>
+    MEMORIA · I
+  </span>
+
+  <h2>
+    Ante la Esperanza
+  </h2>
+
 </div>
 ```
 
   </article>
 
-  <!-- FOTOGRAFÍA 02 -->
+  <!-- PIEZA II -->
 
   <article class="photo">
 
@@ -320,14 +350,21 @@ footer {
   loading="lazy">
 
 <div class="caption">
-  <span>MEMORIA · II</span>
-  <h2>El encuentro</h2>
+
+  <span>
+    MEMORIA · II
+  </span>
+
+  <h2>
+    El encuentro
+  </h2>
+
 </div>
 ```
 
   </article>
 
-  <!-- FOTOGRAFÍA 03 -->
+  <!-- PIEZA III -->
 
   <article class="photo">
 
@@ -338,14 +375,21 @@ footer {
   loading="lazy">
 
 <div class="caption">
-  <span>MEMORIA · III</span>
-  <h2>Frente a Ella</h2>
+
+  <span>
+    MEMORIA · III
+  </span>
+
+  <h2>
+    Frente a Ella
+  </h2>
+
 </div>
 ```
 
   </article>
 
-  <!-- FOTOGRAFÍA 04 -->
+  <!-- PIEZA IV -->
 
   <article class="photo">
 
@@ -356,14 +400,21 @@ footer {
   loading="lazy">
 
 <div class="caption">
-  <span>MEMORIA · IV</span>
-  <h2>Una mirada</h2>
+
+  <span>
+    MEMORIA · IV
+  </span>
+
+  <h2>
+    Una mirada
+  </h2>
+
 </div>
 ```
 
   </article>
 
-  <!-- FOTOGRAFÍA 05 -->
+  <!-- PIEZA V -->
 
   <article class="photo">
 
@@ -374,14 +425,21 @@ footer {
   loading="lazy">
 
 <div class="caption">
-  <span>MEMORIA · V</span>
-  <h2>La devoción</h2>
+
+  <span>
+    MEMORIA · V
+  </span>
+
+  <h2>
+    La devoción
+  </h2>
+
 </div>
 ```
 
   </article>
 
-  <!-- FOTOGRAFÍA 06 -->
+  <!-- PIEZA VI -->
 
   <article class="photo">
 
@@ -392,8 +450,15 @@ footer {
   loading="lazy">
 
 <div class="caption">
-  <span>MEMORIA · VI</span>
-  <h2>El recuerdo</h2>
+
+  <span>
+    MEMORIA · VI
+  </span>
+
+  <h2>
+    El recuerdo
+  </h2>
+
 </div>
 ```
 
@@ -401,38 +466,9 @@ footer {
 
 </section>
 
-<!-- LA VOZ DE RAFA SERNA -->
-
-<section class="video-section">
-
-  <div class="video-title">
-
-```
-<span>MEMORIA · VII</span>
-
-<h2>LA VOZ DE LA ESPERANZA</h2>
-
-<p>
-  Rafa Serna · Pregón de la Semana Santa de Sevilla
-</p>
-```
-
-  </div>
-
-  <div class="video-frame">
-
-```
-<iframe
-  src="https://www.youtube.com/embed/cQjKkCpjn-c"
-  title="Rafa Serna · Pregón de la Semana Santa de Sevilla"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
-```
-
-  </div>
-
-</section>
+<!-- =========================================
+     NAVEGACIÓN
+     ========================================= -->
 
 <nav class="navigation">
 
@@ -450,6 +486,10 @@ footer {
 
 </nav>
 
+<!-- =========================================
+     PIE
+     ========================================= -->
+
 <footer>
 
 MUSEO COFRADE DE SEVILLA · MEMORIA
@@ -458,4 +498,5 @@ MUSEO COFRADE DE SEVILLA · MEMORIA
 
 </body>
 </html>
+
 
