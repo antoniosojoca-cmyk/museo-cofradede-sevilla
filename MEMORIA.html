@@ -179,6 +179,96 @@ html, body {
 }
 
 
+/* =====================================================
+   HILO SONORO · RAFA SERNA
+   ===================================================== */
+
+#sonido-memoria {
+
+    position: fixed;
+
+    bottom: 22px;
+    right: 22px;
+
+    z-index: 99999;
+
+}
+
+
+/* BOTÓN */
+
+#boton-sonido {
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    border: 1px solid #8f7545;
+
+    background: rgba(8,8,8,0.92);
+
+    color: #c9a35b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.4s ease;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.5);
+
+}
+
+
+#boton-sonido:hover {
+
+    border-color: #c9a35b;
+
+    color: #e2c47d;
+
+    transform: scale(1.08);
+
+}
+
+
+/* INDICADOR CUANDO ESTÁ SONANDO */
+
+#boton-sonido.activo {
+
+    color: #e2c47d;
+
+    border-color: #c9a35b;
+
+    box-shadow:
+        0 0 14px rgba(201,163,91,0.25);
+
+}
+
+
+/* YOUTUBE COMPLETAMENTE OCULTO */
+
+#youtube-sonido {
+
+    position: fixed;
+
+    width: 1px;
+    height: 1px;
+
+    left: -100px;
+    top: -100px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
 /* MÓVILES */
 
 @media (max-width: 700px) {
@@ -195,6 +285,13 @@ html, body {
         height: 280px;
     }
 
+    #sonido-memoria {
+
+        bottom: 16px;
+        right: 16px;
+
+    }
+
 }
 
 </style>
@@ -204,10 +301,13 @@ html, body {
 
 <body>
 
+
 <div class="museo">
 
 
-    <!-- CABECERA -->
+    <!-- =========================================
+         CABECERA
+    ========================================== -->
 
     <div class="cabecera">
 
@@ -220,30 +320,39 @@ html, body {
     </div>
 
 
-    <!-- INTRODUCCIÓN -->
+    <!-- =========================================
+         INTRODUCCIÓN
+    ========================================== -->
 
     <div class="introduccion">
 
         <p class="frase">
+
             Hay imágenes que se miran.<br>
+
             Y hay imágenes que se sienten.
+
         </p>
 
+
         <p class="texto">
+
             Seis momentos para acercarnos a la Esperanza Macarena
             desde la emoción, la mirada y la memoria.
+
         </p>
 
     </div>
 
 
-    <!-- SEIS SALAS -->
+    <!-- =========================================
+         SEIS SALAS
+    ========================================== -->
 
     <div class="salas">
 
 
         <!-- MEMORIA I -->
-
 
         <a class="sala" href="MEMORIA-I.html">
 
@@ -257,11 +366,15 @@ html, body {
                     I
                 </div>
 
-                <h3>El Besamanos</h3>
+                <h3>
+                    El Besamanos
+                </h3>
 
                 <p>
+
                     La cercanía, las manos y el encuentro
                     con la Esperanza.
+
                 </p>
 
             </div>
@@ -283,11 +396,15 @@ html, body {
                     II
                 </div>
 
-                <h3>Las Miradas</h3>
+                <h3>
+                    Las Miradas
+                </h3>
 
                 <p>
+
                     Cuando una mirada puede decir
                     más que cualquier palabra.
+
                 </p>
 
             </div>
@@ -309,11 +426,15 @@ html, body {
                     III
                 </div>
 
-                <h3>Los Rezos</h3>
+                <h3>
+                    Los Rezos
+                </h3>
 
                 <p>
+
                     El silencio y la oración
                     ante la Virgen.
+
                 </p>
 
             </div>
@@ -335,11 +456,15 @@ html, body {
                     IV
                 </div>
 
-                <h3>Las Manos</h3>
+                <h3>
+                    Las Manos
+                </h3>
 
                 <p>
+
                     Pequeños gestos que también
                     forman parte de la memoria.
+
                 </p>
 
             </div>
@@ -361,11 +486,15 @@ html, body {
                     V
                 </div>
 
-                <h3>Momentos Especiales</h3>
+                <h3>
+                    Momentos Especiales
+                </h3>
 
                 <p>
+
                     Instantes únicos que permanecen
                     para siempre en el recuerdo.
+
                 </p>
 
             </div>
@@ -387,11 +516,15 @@ html, body {
                     VI
                 </div>
 
-                <h3>La Memoria</h3>
+                <h3>
+                    La Memoria
+                </h3>
 
                 <p>
+
                     Una tradición que continúa
                     de generación en generación.
+
                 </p>
 
             </div>
@@ -402,23 +535,403 @@ html, body {
     </div>
 
 
-    <!-- CIERRE -->
+    <!-- =========================================
+         CIERRE
+    ========================================== -->
 
     <div class="final">
 
         <p class="frase-final">
+
             La memoria no es solamente recordar.<br>
+
             Es volver a sentir.
+
         </p>
 
+
         <p class="firma">
+
             MEMORIA · LA MACARENA
+
         </p>
 
     </div>
 
 
 </div>
+
+
+
+<!-- =====================================================
+     HILO SONORO
+     RAFA SERNA · A LA MACARENA
+     DESDE 0:00 HASTA 5:40
+====================================================== -->
+
+<div id="sonido-memoria">
+
+
+    <button
+        id="boton-sonido"
+        aria-label="Activar o desactivar sonido"
+        title="Activar / desactivar sonido">
+
+        ♪
+
+    </button>
+
+
+    <div id="youtube-sonido"></div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     YOUTUBE API
+====================================================== -->
+
+<script>
+
+var reproductorMemoria = null;
+
+
+/* Duración máxima: 5 minutos 40 segundos */
+
+var DURACION_MAXIMA = 340;
+
+
+/* Recuperar posición anterior */
+
+var posicionGuardada =
+    parseFloat(
+        localStorage.getItem(
+            "memoriaRafaPosicion"
+        )
+    ) || 0;
+
+
+/* Recuperar estado del sonido */
+
+var sonidoActivo =
+    localStorage.getItem(
+        "memoriaRafaSonido"
+    ) === "si";
+
+
+
+/* =====================================================
+   CREAR REPRODUCTOR
+===================================================== */
+
+function crearReproductor() {
+
+
+    if (typeof YT === "undefined") {
+
+        return;
+
+    }
+
+
+    reproductorMemoria =
+        new YT.Player(
+
+            "youtube-sonido",
+
+            {
+
+                height: "1",
+
+                width: "1",
+
+                videoId: "cQjKkCpjn-c",
+
+
+                playerVars: {
+
+                    autoplay: 0,
+
+                    controls: 0,
+
+                    start:
+                        Math.floor(
+                            posicionGuardada
+                        ),
+
+                    end:
+                        DURACION_MAXIMA,
+
+                    rel: 0,
+
+                    modestbranding: 1
+
+                },
+
+
+                events: {
+
+                    onReady:
+                    function(event) {
+
+
+                        /*
+                         * Si anteriormente
+                         * estaba activado,
+                         * intentamos continuar.
+                         */
+
+                        if (sonidoActivo) {
+
+                            event.target.playVideo();
+
+                            document
+                                .getElementById(
+                                    "boton-sonido"
+                                )
+                                .classList
+                                .add("activo");
+
+                        }
+
+                    },
+
+
+                    onStateChange:
+                    function(event) {
+
+
+                        /*
+                         * Cuando termina,
+                         * volvemos al principio.
+                         */
+
+                        if (
+                            event.data ===
+                            YT.PlayerState.ENDED
+                        ) {
+
+                            localStorage.setItem(
+                                "memoriaRafaPosicion",
+                                "0"
+                            );
+
+                            reproductorMemoria
+                                .seekTo(
+                                    0,
+                                    true
+                                );
+
+                            reproductorMemoria
+                                .playVideo();
+
+                        }
+
+
+                        /*
+                         * Cuando comienza
+                         * a reproducirse.
+                         */
+
+                        if (
+                            event.data ===
+                            YT.PlayerState.PLAYING
+                        ) {
+
+                            localStorage.setItem(
+                                "memoriaRafaSonido",
+                                "si"
+                            );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        );
+
+}
+
+
+
+/* =====================================================
+   CARGAR API DE YOUTUBE
+===================================================== */
+
+if (
+    !window.YT ||
+    !window.YT.Player
+) {
+
+    var etiqueta =
+        document.createElement(
+            "script"
+        );
+
+    etiqueta.src =
+        "https://www.youtube.com/iframe_api";
+
+    document.head.appendChild(
+        etiqueta
+    );
+
+}
+
+
+
+/* =====================================================
+   FUNCIÓN QUE YOUTUBE EJECUTA
+===================================================== */
+
+function onYouTubeIframeAPIReady() {
+
+    crearReproductor();
+
+}
+
+
+
+/* =====================================================
+   BOTÓN DE SONIDO
+===================================================== */
+
+document
+    .getElementById(
+        "boton-sonido"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+
+            if (!reproductorMemoria) {
+
+                return;
+
+            }
+
+
+            var estado =
+                reproductorMemoria
+                    .getPlayerState();
+
+
+
+            /*
+             * SI ESTÁ SONANDO
+             */
+
+            if (
+                estado ===
+                YT.PlayerState.PLAYING
+            ) {
+
+                reproductorMemoria
+                    .pauseVideo();
+
+
+                localStorage.setItem(
+                    "memoriaRafaSonido",
+                    "no"
+                );
+
+
+                this.innerHTML =
+                    "♪";
+
+
+                this.classList
+                    .remove(
+                        "activo"
+                    );
+
+            }
+
+
+            /*
+             * SI ESTÁ PARADO
+             */
+
+            else {
+
+                reproductorMemoria
+                    .playVideo();
+
+
+                localStorage.setItem(
+                    "memoriaRafaSonido",
+                    "si"
+                );
+
+
+                this.innerHTML =
+                    "♫";
+
+
+                this.classList
+                    .add(
+                        "activo"
+                    );
+
+            }
+
+        }
+    );
+
+
+
+/* =====================================================
+   GUARDAR POSICIÓN CADA SEGUNDO
+===================================================== */
+
+setInterval(
+
+    function() {
+
+
+        if (
+            reproductorMemoria &&
+            reproductorMemoria
+                .getCurrentTime
+        ) {
+
+
+            var tiempo =
+                reproductorMemoria
+                    .getCurrentTime();
+
+
+
+            if (
+                tiempo >= 0 &&
+                tiempo < DURACION_MAXIMA
+            ) {
+
+                localStorage.setItem(
+
+                    "memoriaRafaPosicion",
+
+                    tiempo
+
+                );
+
+            }
+
+        }
+
+    },
+
+    1000
+
+);
+
+</script>
+
 
 </body>
 
