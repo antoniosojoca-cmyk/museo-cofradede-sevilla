@@ -1,13 +1,21 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sala I · El Besamanos | Museo Cofrade de Sevilla</title>
+<title>Memoria · Sala I</title>
+
 
 <style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
 
 * {
   box-sizing: border-box;
@@ -19,189 +27,839 @@ html {
 
 body {
   margin: 0;
-  background: #111;
-  color: #e8e0d2;
+  background: #080808;
+  color: #ffffff;
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* CABECERA */
 
-header {
-  text-align: center;
-  padding: 70px 20px 45px;
-  border-bottom: 1px solid #4b443b;
+/* =========================================
+   HILO SONORO · MEMORIA
+   ========================================= */
+
+#hilo-sonoro {
+
+  position: fixed;
+
+  width: 1px;
+  height: 1px;
+
+  left: -100px;
+  top: -100px;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
 }
 
-.eyebrow {
+#hilo-sonoro iframe {
+
+  width: 1px;
+  height: 1px;
+
+  border: 0;
+}
+
+
+/* =========================================
+   BOTÓN DISCRETO DEL HILO SONORO
+   ========================================= */
+
+.boton-sonido {
+
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #8f7545;
+
+  border-radius: 50%;
+
+  background: rgba(8,8,8,0.94);
+
+  color: #c9a35b;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.boton-sonido:hover {
+
+  border-color: #c9a35b;
+
+  color: #ffffff;
+
+  background: rgba(20,20,20,0.98);
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   MÚSICA DE FONDO
+   ========================================= */
+
+.musica-sala {
+
+  text-align: center;
+
+  margin: 20px auto 25px;
+}
+
+
+.musica-sala .simbolo {
+
+  color: #c9a35b;
+
+  font-size: 24px;
+
+  margin-bottom: 8px;
+}
+
+
+.musica-sala .texto {
+
+  color: #c9a35b;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.cabecera {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 25px;
+}
+
+
+.museo {
+
+  color: #8f7545;
+
   font-size: 13px;
+
   letter-spacing: 5px;
-  color: #a99b87;
+
+  text-transform: uppercase;
+
+  margin-bottom: 35px;
+}
+
+
+.numero {
+
+  color: #c9a35b;
+
+  font-size: 14px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 22px;
+}
+
+
+.titulo {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 58px;
+
+  font-weight: normal;
+
+  letter-spacing: 10px;
+
+  text-transform: uppercase;
+}
+
+
+.linea {
+
+  width: 90px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 35px auto;
+}
+
+
+.entrada {
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #aaaaaa;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   INDICACIÓN PARA BAJAR
+   ========================================= */
+
+.bajar {
+
+  margin-top: 80px;
+
+  color: #c9a35b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s;
+}
+
+
+.bajar:hover {
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   PRIMER SILENCIO
+   ========================================= */
+
+.silencio {
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 25px;
+}
+
+
+.silencio p {
+
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #dddddd;
+
+  font-size: 28px;
+
+  font-style: italic;
+
+  line-height: 1.8;
+}
+
+
+.silencio strong {
+
+  color: #c9a35b;
+
+  font-weight: normal;
+}
+
+
+/* =========================================
+   GRAN IMAGEN · MARCO DORADO
+   ========================================= */
+
+.imagen-principal {
+
+  width: min(1100px, 92%);
+
+  margin: 30px auto 0;
+
+  padding: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3a2b16,
+      #c9a35b 18%,
+      #6f5228 45%,
+      #d8b96d 65%,
+      #4a3519
+    );
+
+  border: 1px solid #e2c47b;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.85),
+    inset 0 0 0 3px #5b431f,
+    inset 0 0 0 6px #c9a35b;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   FOTOGRAFÍA PRINCIPAL
+   ========================================= */
+
+.imagen-principal img {
+
+  width: 100%;
+
+  height: 650px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 4px solid #0b0b0b;
+
+  transition: transform 0.8s ease;
+}
+
+
+.imagen-principal:hover img {
+
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   TEXTO DE LA IMAGEN
+   ========================================= */
+
+.pie-imagen {
+
+  width: min(750px, 88%);
+
+  margin: 35px auto 120px;
+
+  text-align: center;
+
+  color: #888888;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   PREGÓN DE 1975
+   ========================================= */
+
+.pregon {
+
+  width: min(900px, 90%);
+
+  margin: 0 auto 120px;
+
+  padding: 70px 35px;
+
+  border-top: 1px solid #c9a35b;
+
+  border-bottom: 1px solid #c9a35b;
+
+  text-align: center;
+}
+
+
+.pregon-fecha {
+
+  color: #c9a35b;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 25px;
+
+  text-transform: uppercase;
+}
+
+
+.pregon h2 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: normal;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+.pregon-linea {
+
+  width: 70px;
+
+  height: 1px;
+
+  background: #c9a35b;
+
+  margin: 30px auto;
+}
+
+
+.texto-pregon {
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #cccccc;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 2;
+}
+
+
+.cita {
+
+  margin-top: 35px;
+
+  color: #c9a35b;
+
+  font-size: 22px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   HILO SONORO · RAFA SERNA
+   ========================================= */
+
+.audio-pregon {
+
+  max-width: 650px;
+
+  margin: 55px auto 20px;
+
+  padding: 30px 25px;
+
+  border: 1px solid #c9a35b;
+
+  background: #0d0d0d;
+
+  text-align: center;
+}
+
+
+.audio-simbolo {
+
+  color: #c9a35b;
+
+  font-size: 28px;
+
+  letter-spacing: 7px;
+
   margin-bottom: 18px;
 }
 
-h1 {
-  margin: 0;
-  font-size: clamp(34px, 6vw, 64px);
-  font-weight: normal;
-  letter-spacing: 3px;
+
+.audio-titulo {
+
+  color: #c9a35b;
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 14px;
 }
 
-.subtitle {
-  margin-top: 20px;
-  font-size: 18px;
+
+.audio-nombre {
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
+}
+
+
+.audio-autor {
+
+  color: #888888;
+
+  font-size: 14px;
+
   font-style: italic;
-  color: #bdb2a2;
+
+  margin-bottom: 25px;
 }
 
-/* INTRODUCCIÓN */
 
-.intro {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 55px 25px 35px;
-  text-align: center;
-}
+.audio-ayuda {
 
-.intro p {
-  margin: 0;
-  font-size: 18px;
+  color: #777777;
+
+  font-size: 12px;
+
   line-height: 1.8;
-  color: #c9c0b3;
-}
-
-/* GALERÍA */
-
-
-  
-.gallery {
-  width: min(1500px, 96%);
-  margin: 30px auto 80px;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
 }
 
 
-  .photo {
-  background: #181818;
-  padding: 12px;
-  border: 1px solid #403a33;
+/* =========================================
+   REFLEXIÓN
+   ========================================= */
+
+.reflexion {
+
+  min-height: 75vh;
 
   display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+}
+
+
+.reflexion-contenido {
+
+  max-width: 760px;
+}
+
+
+.reflexion h2 {
+
+  margin: 0 0 45px;
+
+  color: #c9a35b;
+
+  font-size: 16px;
+
+  font-weight: normal;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+}
+
+
+.reflexion p {
+
+  margin: 25px 0;
+
+  color: #dddddd;
+
+  font-size: 22px;
+
+  line-height: 2;
+}
+
+
+.reflexion .destacado {
+
+  margin-top: 60px;
+
+  color: #c9a35b;
+
+  font-size: 28px;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+.final {
+
+  min-height: 100vh;
+
+  display: flex;
+
   flex-direction: column;
 
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
+  align-items: center;
 
-.photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+  justify-content: center;
 
-  margin-top: auto;
-}
-
-.photo:hover {
-  transform: translateY(-5px);
-  border-color: #9d8b72;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
-}
-
-
-
-
-
-  .photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-
-.caption {
-  padding: 17px 12px 10px;
   text-align: center;
+
+  padding: 80px 25px;
+
+  border-top: 1px solid #222222;
 }
 
-.caption span {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #938674;
-  margin-bottom: 7px;
+
+.final .detente {
+
+  color: #c9a35b;
+
+  font-size: 16px;
+
+  letter-spacing: 8px;
+
+  margin-bottom: 70px;
 }
 
-.caption h2 {
-  margin: 0;
-  font-size: 19px;
-  font-weight: normal;
-  letter-spacing: 1px;
-  color: #ddd3c4;
+
+.final p {
+
+  max-width: 650px;
+
+  margin: 20px auto;
+
+  color: #eeeeee;
+
+  font-size: 25px;
+
+  line-height: 1.9;
 }
 
-/* NAVEGACIÓN */
 
-.navigation {
-  border-top: 1px solid #403a33;
-  padding: 40px 20px 65px;
-  text-align: center;
+.final .ultimo {
+
+  margin-top: 80px;
+
+  color: #c9a35b;
+
+  font-size: 30px;
+
+  font-style: italic;
 }
 
-.navigation a {
+
+/* =========================================
+   BOTÓN VOLVER
+   ========================================= */
+
+.volver {
+
   display: inline-block;
-  margin: 8px 12px;
-  padding: 13px 25px;
-  border: 1px solid #655b4e;
-  color: #d8cdbd;
+
+  margin-top: 100px;
+
+  padding: 14px 30px;
+
+  border: 1px solid #c9a35b;
+
+  color: #c9a35b;
+
   text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s;
 }
 
-.navigation a:hover {
-  background: #d8cdbd;
-  color: #111;
-  border-color: #d8cdbd;
+
+.volver:hover {
+
+  background: #c9a35b;
+
+  color: #080808;
 }
 
-/* PIE */
+
+/* =========================================
+   PIE
+   ========================================= */
 
 footer {
+
   text-align: center;
-  padding: 25px;
-  border-top: 1px solid #302c27;
-  color: #71695f;
-  font-size: 12px;
+
+  padding: 35px 20px;
+
+  border-top: 1px solid #222222;
+
+  color: #666666;
+
+  font-size: 11px;
+
   letter-spacing: 2px;
 }
 
-/* MÓVIL */
 
-@media (max-width: 750px) {
+/* =========================================
+   MÓVIL
+   ========================================= */
 
-  header {
-    padding: 50px 20px 35px;
+@media (max-width: 700px) {
+
+  .cabecera {
+
+    min-height: 90vh;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
-    width: 94%;
-    gap: 28px;
+
+  .titulo {
+
+    font-size: 34px;
+
+    letter-spacing: 5px;
   }
 
-  .photo img {
-    height: auto;
-    max-height: none;
+
+  .entrada {
+
+    font-size: 16px;
   }
 
-  .intro p {
+
+  .silencio {
+
+    min-height: 60vh;
+  }
+
+
+  .silencio p {
+
+    font-size: 22px;
+  }
+
+
+  .imagen-principal {
+
+    width: 92%;
+
+    padding: 8px;
+  }
+
+
+  .imagen-principal img {
+
+    height: 400px;
+  }
+
+
+  .pregon {
+
+    padding: 55px 20px;
+  }
+
+
+  .pregon h2 {
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .texto-pregon {
+
+    font-size: 16px;
+  }
+
+
+  .cita {
+
+    font-size: 19px;
+  }
+
+
+  .audio-pregon {
+
+    padding: 25px 15px;
+  }
+
+
+  .audio-nombre {
+
+    font-size: 21px;
+  }
+
+
+  .reflexion p {
+
+    font-size: 19px;
+  }
+
+
+  .final p {
+
+    font-size: 21px;
+  }
+
+
+  .final .ultimo {
+
+    font-size: 25px;
+  }
+
+
+  .boton-sonido {
+
+    right: 15px;
+
+    bottom: 15px;
+
+    width: 38px;
+
+    height: 38px;
+
     font-size: 16px;
   }
 
@@ -211,163 +869,765 @@ footer {
 
 </head>
 
+
 <body>
 
-<header>
 
-  <div class="eyebrow">MEMORIA · SALA I</div>
+<!-- =========================================
+     HILO SONORO OCULTO
+     RAFA SERNA · LA MACARENA
+     ========================================= -->
 
-  <h1>EL BESAMANOS</h1>
+<div id="hilo-sonoro">
 
-  <div class="subtitle">
-    Una tradición. Una mirada. Un encuentro.
+  <div id="youtube-player"></div>
+
+</div>
+
+
+<!-- =========================================
+     BOTÓN SONIDO
+     ========================================= -->
+
+<button
+  id="boton-sonido"
+  class="boton-sonido"
+  aria-label="Activar o pausar el hilo sonoro"
+  title="Hilo sonoro de la memoria">
+
+  ♪
+
+</button>
+
+
+
+<!-- =========================================
+     ENTRADA A LA SALA
+     ========================================= -->
+
+<section class="cabecera">
+
+
+  <div class="museo">
+
+    MEMORIA · LA MACARENA
+
   </div>
 
-</header>
 
-<section class="intro">
+  <div class="numero">
+
+    SALA I
+
+  </div>
+
+
+  <h1 class="titulo">
+
+    EL SILENCIO
+
+  </h1>
+
+
+  <div class="linea"></div>
+
+
+  <p class="entrada">
+
+    Hay lugares a los que no se entra hablando.
+
+    <br><br>
+
+    Hay miradas ante las que
+    las palabras dejan de ser necesarias.
+
+  </p>
+
+
+  <a class="bajar" href="#comienzo">
+
+    ↓ &nbsp; ENTRAR EN SILENCIO
+
+  </a>
+
+
+</section>
+
+
+
+<!-- =========================================
+     PRIMER MOMENTO
+     ========================================= -->
+
+<section id="comienzo" class="silencio">
 
   <p>
-    Hay momentos en los que la Semana Santa parece detenerse.
-    El ruido desaparece, el tiempo se hace más lento y solo queda
-    la emoción de quien se acerca a contemplar y venerar.
-    El besamanos pertenece a esos momentos íntimos de la memoria cofrade.
+
+    Sevilla despierta.
+
+    <br><br>
+
+    Pero antes de que llegue el ruido,
+    <strong>Él ya está caminando.</strong>
+
   </p>
 
 </section>
 
-<section class="gallery">
-
-  <!-- FOTOGRAFÍA 01 -->
-
-  <article class="photo">
 
 
-<img
-  src="https://i.pinimg.com/736x/cd/cf/91/cdcf91e22dc305d147a7a3fc41545afe.jpg"
-  alt="El Besamanos · Fotografía 1"
-  loading="lazy">
+<!-- =========================================
+     IMAGEN PRINCIPAL
+     ========================================= -->
 
-<div class="caption">
-  <span>MEMORIA · I</span>
-  <h2>El encuentro</h2>
+<div class="imagen-principal">
+
+  <img
+    src="https://i.pinimg.com/1200x/fe/53/73/fe53737f81cb9fa5072124bc55fc932a.jpg"
+    alt="Imagen de la sala">
+
 </div>
 
 
-  </article>
 
-  <!-- FOTOGRAFÍA 02 -->
+<div class="pie-imagen">
 
-  <article class="photo">
+  Una imagen puede contener
+  todo aquello que no somos capaces de decir.
 
-
-<img
-  src="https://i.pinimg.com/1200x/00/7a/e9/007ae9610043c63e3016f1802243a213.jpg"
-
-  
-  alt="El Besamanos · Fotografía 2"
-  loading="lazy">
-
-<div class="caption">
-  <span>MEMORIA · II</span>
-  <h2>Ante la imagen</h2>
-</div>
-
-  </article>
-
-  <!-- FOTOGRAFÍA 03 -->
-
-  <article class="photo">
-
-
-<img
-   src="https://i.pinimg.com/736x/9c/3e/80/9c3e8064c0a897916c5bb7ce95739208.jpg"
-  alt="El Besamanos · Fotografía 3"
-  loading="lazy">
-
-<div class="caption">
-  <span>MEMORIA · III</span>
-  <h2>La cercanía</h2>
 </div>
 
 
-  </article>
 
-  <!-- FOTOGRAFÍA 04 -->
+<!-- =========================================
+     PREGÓN
+     ========================================= -->
 
-  <article class="photo">
-
-
-<img
-  src="https://i.pinimg.com/736x/14/26/21/14262135e4c355bdee4535bb6c9b62a5.jpg"
-  
-  
-  alt="El Besamanos · Fotografía 4"
-  loading="lazy">
-
-<div class="caption">
-  <span>MEMORIA · IV</span>
-  <h2>Devoción</h2>
-</div>
+<section class="pregon">
 
 
-  </article>
+  <div class="pregon-fecha">
 
-  <!-- FOTOGRAFÍA 05 -->
+    SEVILLA
 
-  <article class="photo">
-
-
-<img
-  src="https://i.pinimg.com/1200x/c0/ca/09/c0ca0973fc27cc0b725b8c205d1ee244.jpg"
-  alt="El Besamanos · Fotografía 5"
-  loading="lazy">
-
-<div class="caption">
-  <span>MEMORIA · V</span>
-  <h2>El silencio</h2>
-</div>
+  </div>
 
 
-  </article>
+  <h2>
 
-  <!-- FOTOGRAFÍA 06 -->
+    EL RECUERDO DE UN PREGÓN
 
-  <article class="photo">
-
-
-<img
-  src="https://i.pinimg.com/1200x/a7/f2/29/a7f2296a84ff8eba9916879aeea486c4.jpg"
-  alt="El Besamanos · Fotografía 6"
-  loading="lazy">
-
-<div class="caption">
-  <span>MEMORIA · VI</span>
-  <h2>La memoria permanece</h2>
-</div>
+  </h2>
 
 
-  </article>
+  <div class="pregon-linea"></div>
+
+
+  <p class="texto-pregon">
+
+    Hay palabras que permanecen
+    mucho después de haber sido pronunciadas.
+
+    <br><br>
+
+    Y hay voces que, con el paso del tiempo,
+    terminan formando parte de nuestra memoria.
+
+  </p>
+
+
+  <div class="cita">
+
+    «La memoria también se escucha.»
+
+  </div>
+
+
+
+  <!-- =========================================
+       HILO SONORO
+       ========================================= -->
+
+  <div class="audio-pregon">
+
+
+    <div class="audio-simbolo">
+
+      ♪ 〰 ♪
+
+    </div>
+
+
+    <div class="audio-titulo">
+
+      HILO SONORO DE LA MEMORIA
+
+    </div>
+
+
+    <div class="audio-nombre">
+
+      CINCO LÁGRIMAS
+
+    </div>
+
+
+    <div class="audio-autor">
+
+      Rafa Serna · La Macarena
+
+    </div>
+
+
+    <div class="audio-ayuda">
+
+      La voz que acompaña esta exposición
+      continúa su camino por las salas.
+
+      <br><br>
+
+      Pulsa <strong>♪</strong> para escuchar.
+
+    </div>
+
+  </div>
+
 
 </section>
 
-<nav class="navigation">
 
-  <a href="MEMORIA.html">
+
+<!-- =========================================
+     REFLEXIÓN
+     ========================================= -->
+
+<section class="reflexion">
+
+
+  <div class="reflexion-contenido">
+
+
+    <h2>
+
+      AHORA MÍRALO
+
+    </h2>
+
+
+    <p>
+
+      No tengas prisa.
+
+    </p>
+
+
+    <p>
+
+      No hace falta entenderlo todo.
+
+    </p>
+
+
+    <p>
+
+      Quizás hayas llegado hasta aquí
+      con preguntas.
+
+    </p>
+
+
+    <p>
+
+      Quizás con recuerdos.
+
+    </p>
+
+
+    <p>
+
+      Quizás simplemente porque necesitabas
+      detenerte.
+
+    </p>
+
+
+    <p class="destacado">
+
+      El silencio también puede ser una oración.
+
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL DE LA SALA
+     ========================================= -->
+
+<section class="final">
+
+
+  <div class="detente">
+
+    DETENTE
+
+  </div>
+
+
+  <p>
+
+    No tienes que decir nada.
+
+  </p>
+
+
+  <p>
+
+    No tienes que explicar
+    por qué has venido.
+
+  </p>
+
+
+  <p>
+
+    Quédate un momento más.
+
+  </p>
+
+
+  <p class="ultimo">
+
+    Él ya sabe por qué has venido.
+
+  </p>
+
+
+  <a
+    class="volver"
+    href="MEMORIA.html">
+
     ← VOLVER A MEMORIA
+
   </a>
 
-  <a href="index.html">
-    MUSEO
-  </a>
 
-</nav>
+</section>
+
+
 
 <footer>
 
-MUSEO COFRADE DE SEVILLA · MEMORIA
+  MEMORIA · LA MACARENA
+
+  <br><br>
+
+  SALA I
 
 </footer>
 
+
+
+<!-- =========================================
+     YOUTUBE IFRAME API
+     HILO SONORO COMPARTIDO
+     ========================================= -->
+
+<script>
+
+let player = null;
+
+let intervaloGuardado = null;
+
+
+/* =========================================
+   CONFIGURACIÓN
+   ========================================= */
+
+const VIDEO_ID = "cQjKkCpjn-c";
+
+const DURACION = 340;
+
+const STORAGE_POS =
+  "memoria_macarena_posicion";
+
+const STORAGE_ACTIVO =
+  "memoria_macarena_audio";
+
+
+/* =========================================
+   CARGAR API DE YOUTUBE
+   ========================================= */
+
+const tag =
+  document.createElement("script");
+
+tag.src =
+  "https://www.youtube.com/iframe_api";
+
+document.head.appendChild(tag);
+
+
+/* =========================================
+   CREAR REPRODUCTOR
+   ========================================= */
+
+function onYouTubeIframeAPIReady() {
+
+  player = new YT.Player(
+    "youtube-player",
+    {
+
+      videoId: VIDEO_ID,
+
+      playerVars: {
+
+        autoplay: 0,
+
+        controls: 0,
+
+        disablekb: 1,
+
+        fs: 0,
+
+        modestbranding: 1,
+
+        playsinline: 1,
+
+        rel: 0,
+
+        start: 0,
+
+        end: DURACION
+
+      },
+
+      events: {
+
+        onReady:
+          reproductorPreparado,
+
+        onStateChange:
+          cambioEstado
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   REPRODUCTOR PREPARADO
+   ========================================= */
+
+function reproductorPreparado(event) {
+
+  let posicion =
+    parseFloat(
+      localStorage.getItem(
+        STORAGE_POS
+      )
+    );
+
+
+  if (
+    isNaN(posicion) ||
+    posicion < 0 ||
+    posicion >= DURACION
+  ) {
+
+    posicion = 0;
+
+  }
+
+
+  event.target.seekTo(
+    posicion,
+    true
+  );
+
+
+  const activo =
+    localStorage.getItem(
+      STORAGE_ACTIVO
+    ) === "true";
+
+
+  /*
+     Intentamos continuar.
+
+     Algunos navegadores bloquearán
+     el autoplay con sonido.
+
+     En ese caso el botón ♪
+     permite iniciarlo manualmente.
+  */
+
+  if (activo) {
+
+    try {
+
+      event.target.playVideo();
+
+    }
+
+    catch(error) {
+
+      /* El navegador ha bloqueado autoplay */
+
+    }
+
+  }
+
+}
+
+
+/* =========================================
+   CAMBIO DE ESTADO
+   ========================================= */
+
+function cambioEstado(event) {
+
+  const boton =
+    document.getElementById(
+      "boton-sonido"
+    );
+
+
+  /* -----------------------------------------
+     REPRODUCIENDO
+     ----------------------------------------- */
+
+  if (
+    event.data ===
+    YT.PlayerState.PLAYING
+  ) {
+
+    boton.innerHTML = "Ⅱ";
+
+
+    localStorage.setItem(
+      STORAGE_ACTIVO,
+      "true"
+    );
+
+
+    iniciarGuardado();
+
+  }
+
+
+  /* -----------------------------------------
+     PAUSADO
+     ----------------------------------------- */
+
+  else if (
+    event.data ===
+    YT.PlayerState.PAUSED
+  ) {
+
+    boton.innerHTML = "♪";
+
+
+    guardarPosicion();
+
+    detenerGuardado();
+
+  }
+
+
+  /* -----------------------------------------
+     TERMINADO
+     ----------------------------------------- */
+
+  else if (
+    event.data ===
+    YT.PlayerState.ENDED
+  ) {
+
+    boton.innerHTML = "♪";
+
+
+    localStorage.setItem(
+      STORAGE_POS,
+      "0"
+    );
+
+
+    localStorage.setItem(
+      STORAGE_ACTIVO,
+      "false"
+    );
+
+
+    detenerGuardado();
+
+  }
+
+}
+
+
+/* =========================================
+   BOTÓN DE SONIDO
+   ========================================= */
+
+document
+  .getElementById(
+    "boton-sonido"
+  )
+  .addEventListener(
+    "click",
+    function() {
+
+      if (!player) {
+
+        return;
+
+      }
+
+
+      const estado =
+        player.getPlayerState();
+
+
+      /* PAUSAR */
+
+      if (
+        estado ===
+        YT.PlayerState.PLAYING
+      ) {
+
+        player.pauseVideo();
+
+
+        localStorage.setItem(
+          STORAGE_ACTIVO,
+          "false"
+        );
+
+      }
+
+
+      /* REANUDAR */
+
+      else {
+
+        player.playVideo();
+
+
+        localStorage.setItem(
+          STORAGE_ACTIVO,
+          "true"
+        );
+
+      }
+
+    }
+  );
+
+
+/* =========================================
+   GUARDAR POSICIÓN
+   ========================================= */
+
+function guardarPosicion() {
+
+  if (!player) {
+
+    return;
+
+  }
+
+
+  try {
+
+    const posicion =
+      player.getCurrentTime();
+
+
+    if (
+      posicion >= 0 &&
+      posicion < DURACION
+    ) {
+
+      localStorage.setItem(
+        STORAGE_POS,
+        posicion.toString()
+      );
+
+    }
+
+  }
+
+  catch(error) {
+
+    /* Reproductor todavía no disponible */
+
+  }
+
+}
+
+
+/* =========================================
+   GUARDADO AUTOMÁTICO
+   ========================================= */
+
+function iniciarGuardado() {
+
+  detenerGuardado();
+
+
+  intervaloGuardado =
+    setInterval(
+      function() {
+
+        guardarPosicion();
+
+      },
+      1000
+    );
+
+}
+
+
+function detenerGuardado() {
+
+  if (intervaloGuardado) {
+
+    clearInterval(
+      intervaloGuardado
+    );
+
+    intervaloGuardado = null;
+
+  }
+
+}
+
+
+/* =========================================
+   GUARDAR AL SALIR DE LA SALA
+   ========================================= */
+
+window.addEventListener(
+  "beforeunload",
+  function() {
+
+    guardarPosicion();
+
+  }
+);
+
+</script>
+
+
 </body>
+
 </html>
