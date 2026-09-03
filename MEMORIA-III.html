@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala III · Los Rezos | Museo Cofrade de Sevilla</title>
+
+<style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+header {
+  text-align: center;
+  padding: 70px 20px 50px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+header .memoria {
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: #b99558;
+  margin-bottom: 18px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: normal;
+  letter-spacing: 4px;
+}
+
+header p {
+  margin: 20px auto 0;
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #bbb;
+  font-style: italic;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+   ========================================= */
+
+.intro {
+  max-width: 850px;
+  margin: 55px auto 65px;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+.gallery {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 25px 70px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 38px;
+}
+
+
+/* =========================================
+   PIEZAS
+   ========================================= */
+
+.photo {
+  background: #181818;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(185,149,88,0.65);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================
+   PIE DE FOTO
+   ========================================= */
+
+.caption {
+  padding: 20px 10px 12px;
+  text-align: center;
+}
+
+.caption .numero {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #b99558;
+  margin-bottom: 8px;
+}
+
+.caption h2 {
+  margin: 0;
+
+  font-size: 23px;
+  font-weight: normal;
+
+  letter-spacing: 1px;
+}
+
+.caption p {
+  margin: 10px 0 0;
+
+  color: #999;
+
+  font-size: 14px;
+  font-style: italic;
+}
+
+
+/* =========================================
+   HILO SONORO
+   ========================================= */
+
+.rezo-audio {
+  position: fixed;
+
+  width: 1px;
+  height: 1px;
+
+  left: -100px;
+  top: -100px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.rezo-audio iframe {
+  width: 1px;
+  height: 1px;
+
+  border: 0;
+}
+
+
+/* =========================================
+   BOTÓN SONIDO
+   ========================================= */
+
+.boton-sonido {
+
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 9999;
+
+  padding: 12px 20px;
+
+  background: rgba(20,20,20,0.92);
+
+  color: #c8a66a;
+
+  border: 1px solid rgba(200,166,106,0.65);
+
+  border-radius: 2px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.boton-sonido:hover {
+
+  background: #c8a66a;
+
+  color: #111;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+.navigation {
+
+  text-align: center;
+
+  padding: 30px 20px 60px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.1);
+}
+
+.navigation a {
+
+  color: #b99558;
+
+  text-decoration: none;
+
+  margin: 0 12px;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  header {
+    padding: 50px 15px 35px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  .intro {
+    margin: 40px auto 45px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .gallery {
+    padding: 0 12px 50px;
+    gap: 25px;
+  }
+
+  .boton-sonido {
+
+    right: 15px;
+    bottom: 15px;
+
+    font-size: 11px;
+
+    padding: 10px 14px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     CABECERA
+     ========================================= -->
+
+<header>
+
+  <div class="memoria">
+    MEMORIA · SALA III
+  </div>
+
+  <h1>LOS REZOS</h1>
+
+  <p>
+    Hay silencios que también son una oración.
+  </p>
+
+</header>
+
+
+<!-- =========================================
+     INTRODUCCIÓN
+     ========================================= -->
+
+<section class="intro">
+
+  <p>
+    Hay una Semana Santa que no necesita palabras.
+    Vive en el silencio de una iglesia, en el movimiento
+    lento de un rosario, en la llama de un cirio y en las
+    manos que se unen para rezar.
+
+    Son momentos íntimos que pasan desapercibidos
+    entre la multitud, pero que forman parte de la
+    memoria más profunda de Sevilla.
+  </p>
+
+</section>
+
+
+<!-- =========================================
+     GALERÍA · LOS REZOS
+     ========================================= -->
+
+<section class="gallery">
+
+
+  <!-- =======================================
+       PIEZA I · LA ORACIÓN
+       ======================================= -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/SemanaSantaSevillaMontesion1.jpg"
+      alt="La oración">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · I
+      </div>
+
+      <h2>La oración</h2>
+
+      <p>
+        Cuando la fe se convierte en silencio.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- =======================================
+       PIEZA II · EL RECOGIMIENTO
+       ======================================= -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Nazarenos%20hiniesta.jpg"
+      alt="El recogimiento">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · II
+      </div>
+
+      <h2>El recogimiento</h2>
+
+      <p>
+        Un camino recorrido hacia dentro.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- =======================================
+       PIEZA III · EL SILENCIO
+       ======================================= -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Solemnes%20Velas.jpg"
+      alt="El silencio">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · III
+      </div>
+
+      <h2>El silencio</h2>
+
+      <p>
+        Cuando una llama también parece rezar.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- =======================================
+       PIEZA IV · LA FE
+       ======================================= -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Nuestro%20Padre%20Jes%C3%BAs%20Nazareno%20de%20La%20O%2CSevilla.jpg"
+      alt="La fe">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · IV
+      </div>
+
+      <h2>La fe</h2>
+
+      <p>
+        Una mirada que nace de la devoción.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- =======================================
+       PIEZA V · LA ESPERANZA
+       ======================================= -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Procesi%C3%B3n%20de%20Jes%C3%BAs%20Nazareno.jpg"
+      alt="La esperanza">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · V
+      </div>
+
+      <h2>La esperanza</h2>
+
+      <p>
+        Seguir caminando incluso en el silencio.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- =======================================
+       PIEZA VI · EL REZO
+       ======================================= -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla%2C%20Semana%20Santa.jpg"
+      alt="El rezo">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · VI
+      </div>
+
+      <h2>El rezo</h2>
+
+      <p>
+        Lo que permanece cuando todo calla.
+      </p>
+
+    </div>
+
+  </article>
+
+
+</section>
+
+
+<!-- =========================================
+     HILO SONORO · SALA III
+     
+     AQUÍ PONDREMOS EL ENLACE QUE ME DES
+     ========================================= -->
+
+<!--
+<div class="rezo-audio">
+
+  <iframe
+    id="rezoAudio"
+    src="AQUI-IRA-EL-ENLACE-DE-YOUTUBE"
+    title="Los Rezos · Museo Cofrade de Sevilla"
+    allow="autoplay; encrypted-media"
+    frameborder="0">
+  </iframe>
+
+</div>
+-->
+
+
+<!-- =========================================
+     BOTÓN SONIDO
+     ========================================= -->
+
+<!--
+<button
+  class="boton-sonido"
+  id="botonSonido"
+  type="button">
+
+  ♪ ESCUCHAR
+
+</button>
+-->
+
+
+<!-- =========================================
+     NAVEGACIÓN
+     ========================================= -->
+
+<div class="navigation">
+
+  <a href="MEMORIA.html">
+    MEMORIA
+  </a>
+
+  <a href="MEMORIA-II.html">
+    SALA II
+  </a>
+
+  <a href="index.html">
+    MUSEO
+  </a>
+
+</div>
+
+
+</body>
+
+</html>
