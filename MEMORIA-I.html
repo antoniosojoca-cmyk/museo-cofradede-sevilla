@@ -24,14 +24,17 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* =========================================
+
+  /* =========================================
    AUDIO · RAFA SERNA
    ========================================= */
 
 .rafa-audio {
-  position: absolute;
+  position: fixed;
   width: 1px;
   height: 1px;
+  left: -100px;
+  top: -100px;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
@@ -258,18 +261,18 @@ footer {
 
 <body>
 
-<!-- =========================================
-     RAFA SERNA · VÍDEO OCULTO
+
+  <!-- =========================================
+     HILO SONORO · RAFA SERNA
      ========================================= -->
 
 <div class="rafa-audio">
-
   <iframe
-    src="https://www.youtube.com/embed/cQjKkCpjn-c?autoplay=1&mute=1&loop=1&playlist=cQjKkCpjn-c"
-    title="Rafa Serna · Pregón de la Semana Santa de Sevilla"
-    allow="autoplay; encrypted-media">
+    src="https://www.youtube.com/embed/cQjKkCpjn-c?autoplay=1&playsinline=1&rel=0"
+    title="Rafa Serna · La Macarena"
+    allow="autoplay; encrypted-media"
+    frameborder="0">
   </iframe>
-
 </div>
 
 <!-- =========================================
