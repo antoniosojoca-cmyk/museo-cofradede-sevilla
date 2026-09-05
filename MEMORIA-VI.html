@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala VI · La Memoria | Museo Cofrade de Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0d0d0d;
+  color: #e8dfd2;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================
+   CABECERA
+========================= */
+
+header {
+  text-align: center;
+  padding: 70px 20px 45px;
+  border-bottom: 1px solid #3d362e;
+}
+
+.eyebrow {
+  color: #b69b68;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: #e8dfd2;
+}
+
+.subtitulo {
+  margin-top: 18px;
+  color: #a99d8e;
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro {
+  width: min(900px, 88%);
+  margin: 55px auto 20px;
+  text-align: center;
+}
+
+.intro p {
+  margin: 0;
+  color: #bdb3a7;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery {
+  width: min(1400px, 92%);
+  margin: 30px auto 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 38px;
+}
+
+.photo {
+  background: #181818;
+  padding: 12px;
+  border: 1px solid #403a33;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+  border-color: #8e774c;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-top: auto;
+  background: #111;
+}
+
+.caption {
+  padding: 22px 12px 12px;
+  text-align: center;
+}
+
+.caption .numero {
+  color: #9d8557;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 9px;
+}
+
+.caption h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: normal;
+  color: #e4d5b8;
+  letter-spacing: 1px;
+}
+
+.caption p {
+  margin: 0 auto;
+  max-width: 600px;
+  color: #aaa096;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CIERRE
+========================= */
+
+.cierre {
+  width: min(850px, 88%);
+  margin: 10px auto 80px;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #3d362e;
+  border-bottom: 1px solid #3d362e;
+}
+
+.cierre .simbolo {
+  color: #a88d59;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cierre p {
+  margin: 0;
+  color: #b9aea0;
+  font-size: 18px;
+  line-height: 1.9;
+  font-style: italic;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+.navegacion {
+  width: min(1100px, 90%);
+  margin: 0 auto 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.navegacion a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #514738;
+  color: #cbb995;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.navegacion a:hover {
+  background: #b09560;
+  border-color: #b09560;
+  color: #111;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+.rezo-audio {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -100px;
+  top: -100px;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.rezo-audio iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+.boton-sonido {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #b09560;
+  background: #171411;
+  color: #cbb995;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.boton-sonido:hover {
+  background: #b09560;
+  color: #111;
+  transform: scale(1.08);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  header {
+    padding: 50px 18px 35px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    width: 92%;
+    gap: 30px;
+  }
+
+  .intro {
+    margin-top: 40px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .caption h2 {
+    font-size: 20px;
+  }
+
+  .caption p {
+    font-size: 14px;
+  }
+
+  .navegacion {
+    width: 92%;
+  }
+
+  .navegacion a {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="eyebrow">
+    MEMORIA · LA MACARENA
+  </div>
+
+  <h1>VI · LA MEMORIA</h1>
+
+  <div class="subtitulo">
+    Lo que permanece cuando el tiempo pasa
+  </div>
+
+</header>
+
+<section class="intro">
+
+  <p>
+    Hay imágenes que no necesitan explicar nada.
+    Permanecen en la memoria de quienes las contemplaron,
+    de quienes las acompañaron y de quienes las recibieron
+    como parte de una historia que pasa de generación en generación.
+  </p>
+
+</section>
+
+<main class="gallery">
+
+  <!-- I -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Virgen%20de%20la%20Macarena%202026%2001.jpg"
+  alt="Virgen de la Macarena"
+  loading="lazy">
+
+<div class="caption">
+
+  <div class="numero">
+    I · LA MEMORIA DE UN BARRIO
+  </div>
+
+  <h2>La memoria de un barrio</h2>
+
+  <p>
+    La Esperanza forma parte de la vida de la Macarena.
+    Su imagen permanece unida a las calles, a las personas
+    y a una manera de entender la devoción que ha pasado
+    de padres a hijos.
+  </p>
+
+</div>
+```
+
+  </article>
+
+  <!-- II -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Esperanza%20Macarena%20-%20Bas%C3%ADlica%20de%20La%20Macarena%20-%20Seville%20%283%29.JPG"
+  alt="Esperanza Macarena en la Basílica de la Macarena"
+  loading="lazy">
+
+<div class="caption">
+
+  <div class="numero">
+    II · LA MEMORIA DEL TEMPLO
+  </div>
+
+  <h2>La memoria del templo</h2>
+
+  <p>
+    Dentro de la Basílica, el tiempo parece detenerse.
+    Cada mirada, cada oración y cada visita forma parte
+    de una memoria colectiva que continúa escribiéndose.
+  </p>
+
+</div>
+```
+
+  </article>
+
+  <!-- III -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/NTRA.%20SRA.%20DE%20LA%20ESPERANZA%20MACARENA.jpg"
+  alt="Nuestra Señora de la Esperanza Macarena"
+  loading="lazy">
+
+<div class="caption">
+
+  <div class="numero">
+    III · LA MEMORIA DE SUS DEVOTOS
+  </div>
+
+  <h2>La memoria de sus devotos</h2>
+
+  <p>
+    Miles de personas han encontrado en la Esperanza
+    una forma de expresar sus alegrías, sus penas,
+    sus promesas y sus recuerdos.
+    La devoción también es memoria.
+  </p>
+
+</div>
+```
+
+  </article>
+
+  <!-- IV -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rostro%20Esperanza%20Macarena.JPG"
+  alt="Rostro de la Esperanza Macarena"
+  loading="lazy">
+
+<div class="caption">
+
+  <div class="numero">
+    IV · LA MEMORIA DE SU MIRADA
+  </div>
+
+  <h2>La memoria de su mirada</h2>
+
+  <p>
+    Hay miradas que permanecen para siempre.
+    En los ojos de la Esperanza se encuentran
+    muchas de las historias personales de quienes
+    se han acercado a Ella a lo largo de los años.
+  </p>
+
+</div>
+```
+
+  </article>
+
+  <!-- V -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sevilla%20-%20Bas%C3%ADlica%20de%20la%20Macarena%20-%20Esperanza.jpg"
+  alt="Esperanza Macarena en la Basílica"
+  loading="lazy">
+
+<div class="caption">
+
+  <div class="numero">
+    V · LA MEMORIA QUE PERMANECE
+  </div>
+
+  <h2>La memoria que permanece</h2>
+
+  <p>
+    Cambian los años, cambian las generaciones
+    y cambian las calles, pero algunas cosas permanecen.
+    La Esperanza continúa ocupando el mismo lugar
+    en la memoria de Sevilla y de su gente.
+  </p>
+
+</div>
+```
+
+  </article>
+
+  <!-- VI -->
+
+  <article class="photo">
+
+```
+<img
+  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Basilica%20de%20la%20Macarena%20desde%20el%20coro.jpg"
+  alt="Basílica de la Macarena desde el coro"
+  loading="lazy">
+
+<div class="caption">
+
+  <div class="numero">
+    VI · LA MEMORIA DEL TEMPLO
+  </div>
+
+  <h2>La memoria del templo</h2>
+
+  <p>
+    Y al final queda el lugar.
+    La Basílica, sus muros y sus espacios guardan
+    la memoria de quienes estuvieron antes y de quienes
+    seguirán llegando para encontrarse con la Esperanza.
+  </p>
+
+</div>
+```
+
+  </article>
+
+</main>
+
+<section class="cierre">
+
+  <div class="simbolo">✦</div>
+
+  <p>
+    La memoria no es solamente recordar lo que ocurrió.
+    Es conservar aquello que seguimos sintiendo.
+  </p>
+
+</section>
+
+<nav class="navegacion">
+
+  <a href="MEMORIA.html">
+    ← MEMORIA
+  </a>
+
+  <a href="MEMORIA-V.html">
+    ← SALA V · MOMENTOS ESPECIALES
+  </a>
+
+  <a href="index.html">
+    MUSEO COFRADE DE SEVILLA
+  </a>
+
+</nav>
+
+<!-- =========================
+     HILO SONORO
+========================= -->
+
+<div class="rezo-audio">
+
+  <iframe
+    id="rezoAudio"
+    src="https://www.youtube.com/embed/cQjKkCpjn-c?autoplay=1&mute=1&controls=0&loop=1&playlist=cQjKkCpjn-c&rel=0&modestbranding=1&playsinline=1"
+    title="Hilo sonoro · La Macarena"
+    allow="autoplay; encrypted-media"
+    frameborder="0">
+  </iframe>
+
+</div>
+
+<button
+class="boton-sonido"
+id="botonSonido"
+type="button"
+onclick="activarSonido()"
+aria-label="Activar sonido">
+♪ </button>
+
+<script>
+
+function activarSonido() {
+
+  const iframe = document.getElementById("rezoAudio");
+
+  iframe.src =
+    "https://www.youtube.com/embed/cQjKkCpjn-c?autoplay=1&mute=0&controls=0&loop=1&playlist=cQjKkCpjn-c&rel=0&modestbranding=1&playsinline=1";
+
+  document.getElementById("botonSonido").innerHTML = "♫";
+
+}
+
+</script>
+
+</body>
+</html>
