@@ -573,34 +573,56 @@ header p {
      HILO SONORO · SALA III
      ======================================= -->
 
-<div id="hilo-sonoro">
+
+   <!-- =========================================
+     HILO SONORO · SALA III
+     MARCHA DE LA MACARENA
+     ========================================= -->
+
+<div class="rezo-audio">
 
   <iframe
-    src="https://www.youtube.com/embed/El7vSCWe8Mg?autoplay=1&mute=1&loop=1&playlist=El7vSCWe8Mg&controls=0&modestbranding=1&rel=0"
-    title="Marcha · La Macarena"
+    id="rezoAudio"
+    src="https://www.youtube.com/embed/El7vSCWe8Mg?autoplay=1&mute=1&controls=0&loop=1&playlist=El7vSCWe8Mg&rel=0&modestbranding=1"
+    title="Marcha de La Macarena"
     allow="autoplay; encrypted-media"
     frameborder="0">
   </iframe>
 
 </div>
 
+
+<!-- =========================================
+     BOTÓN SONIDO
+     ========================================= -->
+
 <button
-  id="boton-sonido"
+  class="boton-sonido"
+  id="botonSonido"
   type="button"
   onclick="activarSonido()">
-  ♪
+
+  ♪ ESCUCHAR
+
 </button>
 
+
 <script>
+
 function activarSonido() {
 
-  const iframe = document.querySelector('#hilo-sonoro iframe');
+  const iframe = document.getElementById("rezoAudio");
 
   iframe.src =
-    'https://www.youtube.com/embed/El7vSCWe8Mg?autoplay=1&mute=0&loop=1&playlist=El7vSCWe8Mg&controls=0&modestbranding=1&rel=0';
+    "https://www.youtube.com/embed/El7vSCWe8Mg?autoplay=1&mute=0&controls=0&loop=1&playlist=El7vSCWe8Mg&rel=0&modestbranding=1";
+
+  document.getElementById("botonSonido").innerHTML = "♪ SONANDO";
 
 }
+
 </script>
+
+  
          
 
      
