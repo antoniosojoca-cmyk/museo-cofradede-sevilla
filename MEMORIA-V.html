@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sala V · Momentos Especiales | Museo Cofrade de Sevilla</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* CABECERA */
+
+header {
+  text-align: center;
+  padding: 70px 20px 50px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+header .memoria {
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: #b99558;
+  margin-bottom: 18px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: normal;
+  letter-spacing: 4px;
+}
+
+header p {
+  margin: 20px auto 0;
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #bbb;
+  font-style: italic;
+}
+
+/* INTRODUCCIÓN */
+
+.intro {
+  max-width: 850px;
+  margin: 55px auto 65px;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+/* GALERÍA */
+
+.gallery {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 25px 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 38px;
+}
+
+/* FOTOGRAFÍAS */
+
+.photo {
+  background: #181818;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+  border-color: rgba(185,149,88,0.65);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.photo img {
+  width: 100%;
+  height: 650px;
+  display: block;
+  object-fit: contain;
+  background: #111;
+}
+
+/* TEXTOS */
+
+.caption {
+  padding: 20px 10px 12px;
+  text-align: center;
+}
+
+.caption .numero {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #b99558;
+  margin-bottom: 8px;
+}
+
+.caption h2 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.caption p {
+  margin: 10px 0 0;
+  color: #999;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* HILO SONORO */
+
+.rezo-audio {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -100px;
+  top: -100px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rezo-audio iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+/* BOTÓN DE SONIDO */
+
+.boton-sonido {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 9999;
+
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  background: rgba(17,17,17,0.88);
+  color: #b99558;
+
+  border: 1px solid rgba(185,149,88,0.55);
+  border-radius: 50%;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.boton-sonido:hover {
+  background: rgba(185,149,88,0.12);
+  color: #d6b878;
+  border-color: rgba(185,149,88,0.9);
+  box-shadow: 0 0 15px rgba(185,149,88,0.18);
+  transform: scale(1.08);
+}
+
+/* NAVEGACIÓN */
+
+.navigation {
+  text-align: center;
+  padding: 30px 20px 60px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.navigation a {
+  color: #b99558;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* MÓVIL */
+
+@media (max-width: 500px) {
+
+  header {
+    padding: 50px 15px 35px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  .intro {
+    margin: 40px auto 45px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .gallery {
+    padding: 0 12px 50px;
+    gap: 25px;
+  }
+
+  .boton-sonido {
+    right: 15px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 17px;
+  }
+
+  .photo img {
+    height: auto;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- CABECERA -->
+
+<header>
+
+  <div class="memoria">
+    MEMORIA · SALA V
+  </div>
+
+  <h1>
+    MOMENTOS ESPECIALES
+  </h1>
+
+  <p>
+    Hay momentos que no necesitan explicación.
+  </p>
+
+</header>
+
+
+<!-- INTRODUCCIÓN -->
+
+<section class="intro">
+
+  <p>
+    La memoria también se construye con instantes.
+    Una salida, una noche de Madrugá, una oración,
+    unas manos que se acercan, el regreso al barrio
+    después de una larga noche.
+    Son momentos que pasan una sola vez,
+    pero que permanecen para siempre
+    en quienes los vivieron.
+  </p>
+
+</section>
+
+
+<!-- GALERÍA -->
+
+<section class="gallery">
+
+
+  <!-- I · LA MADRUGÁ -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2022%2004%2015%20-%20Madrug%C3%A1%20en%20Sevilla%2C%20salida%20de%20la%20Macarena%20-%2052014135350.jpg"
+      alt="La Macarena durante la Madrugá de Sevilla"
+      loading="lazy">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · I
+      </div>
+
+      <h2>
+        La Madrugá
+      </h2>
+
+      <p>
+        Una noche que Sevilla guarda en la memoria.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- II · LA SALIDA -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:Redirect/file/La%20Virgen%20bajo%20Palio%20dentro%20del%20Templo%20antes%20de%20salir%20en%20procesi%C3%B3n.JPG"
+      alt="La Macarena bajo palio antes de salir en procesión"
+      loading="lazy">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · II
+      </div>
+
+      <h2>
+        La salida
+      </h2>
+
+      <p>
+        El instante en que comienza el camino.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- III · EL BESAMANOS -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:Redirect/file/ESPERANZA%20MACARENA.jpg"
+      alt="Esperanza Macarena de Sevilla"
+      loading="lazy">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · III
+      </div>
+
+      <h2>
+        El besamanos
+      </h2>
+
+      <p>
+        La cercanía entre la Esperanza y sus devotos.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- IV · EL REZO -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Altar%20de%20la%20Macarena.jpg"
+      alt="Altar de la Esperanza Macarena en la Basílica de la Macarena"
+      loading="lazy">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · IV
+      </div>
+
+      <h2>
+        El rezo
+      </h2>
+
+      <p>
+        Cuando el ruido desaparece y solo queda la oración.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- V · EL REGRESO -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Misterio%20de%20la%20Hermandad%20de%20la%20Esperanza%20Macarena%20Sevilla.jpg"
+      alt="Hermandad de la Esperanza Macarena durante la Madrugá"
+      loading="lazy">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · V
+      </div>
+
+      <h2>
+        El regreso
+      </h2>
+
+      <p>
+        Volver al barrio después de una noche inolvidable.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- VI · MOMENTO EXTRAORDINARIO -->
+
+  <article class="photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Palio%20de%20la%20Macarena%20en%20la%20Magna%20de%20Sevilla%202024%201.jpg"
+      alt="Esperanza Macarena en la Magna de Sevilla de 2024"
+      loading="lazy">
+
+    <div class="caption">
+
+      <div class="numero">
+        MEMORIA · VI
+      </div>
+
+      <h2>
+        Un momento extraordinario
+      </h2>
+
+      <p>
+        La Esperanza en una jornada que ya forma parte de la historia.
+      </p>
+
+    </div>
+
+  </article>
+
+
+</section>
+
+
+<!-- HILO SONORO · SALA V -->
+
+<div class="rezo-audio">
+
+  <iframe
+    id="rezoAudio"
+    src="https://www.youtube.com/embed/NBbXm0Rm31A?autoplay=1&mute=1&controls=0&loop=1&playlist=NBbXm0Rm31A&rel=0&modestbranding=1"
+    title="Esperanza Macarena"
+    allow="autoplay; encrypted-media"
+    frameborder="0">
+  </iframe>
+
+</div>
+
+
+<!-- BOTÓN SONIDO -->
+
+<button
+  class="boton-sonido"
+  id="botonSonido"
+  type="button"
+  onclick="activarSonido()"
+  aria-label="Activar sonido">
+
+  ♪
+
+</button>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function activarSonido() {
+
+  const iframe = document.getElementById("rezoAudio");
+
+  iframe.src =
+    "https://www.youtube.com/embed/NBbXm0Rm31A?autoplay=1&mute=0&controls=0&loop=1&playlist=NBbXm0Rm31A&rel=0&modestbranding=1";
+
+  document.getElementById("botonSonido").innerHTML = "♪";
+
+}
+
+</script>
+
+
+<!-- NAVEGACIÓN -->
+
+<div class="navigation">
+
+  <a href="MEMORIA.html">
+    MEMORIA
+  </a>
+
+  <a href="MEMORIA-IV.html">
+    SALA IV
+  </a>
+
+  <a href="index.html">
+    MUSEO
+  </a>
+
+</div>
+
+
+</body>
+
+</html>
