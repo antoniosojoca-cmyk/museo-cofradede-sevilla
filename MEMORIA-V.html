@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -100,10 +101,21 @@ header p {
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
 }
 
+/* IMÁGENES VERTICALES */
+
 .photo img {
   width: 100%;
   height: 650px;
   display: block;
+  object-fit: contain;
+  background: #111;
+}
+
+/* IMÁGENES HORIZONTALES I Y II */
+
+.photo.horizontal img {
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   background: #111;
 }
@@ -270,6 +282,11 @@ header p {
     height: auto;
   }
 
+  .photo.horizontal img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
 }
 
 </style>
@@ -321,7 +338,7 @@ header p {
 
   <!-- I · LA MADRUGÁ -->
 
-  <article class="photo">
+  <article class="photo horizontal">
 
     <img
       src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2022%2004%2015%20-%20Madrug%C3%A1%20en%20Sevilla%2C%20salida%20de%20la%20Macarena%20-%2052014135350.jpg"
@@ -349,7 +366,7 @@ header p {
 
   <!-- II · LA SALIDA -->
 
-  <article class="photo">
+  <article class="photo horizontal">
 
     <img
       src="https://commons.wikimedia.org/wiki/Special:Redirect/file/La%20Virgen%20bajo%20Palio%20dentro%20del%20Templo%20antes%20de%20salir%20en%20procesi%C3%B3n.JPG"
@@ -559,3 +576,6 @@ function activarSonido() {
 </body>
 
 </html>
+```
+
+
