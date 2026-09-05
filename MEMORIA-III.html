@@ -569,52 +569,44 @@ header p {
 
 
    
+<!-- =======================================
+     HILO SONORO · SALA III
+     ======================================= -->
 
+<div id="hilo-sonoro">
+
+  <iframe
+    src="https://www.youtube.com/embed/El7vSCWe8Mg?autoplay=1&mute=1&loop=1&playlist=El7vSCWe8Mg&controls=0&modestbranding=1&rel=0"
+    title="Marcha · La Macarena"
+    allow="autoplay; encrypted-media"
+    frameborder="0">
+  </iframe>
+
+</div>
+
+<button
+  id="boton-sonido"
+  type="button"
+  onclick="activarSonido()">
+  ♪
+</button>
+
+<script>
+function activarSonido() {
+
+  const iframe = document.querySelector('#hilo-sonoro iframe');
+
+  iframe.src =
+    'https://www.youtube.com/embed/El7vSCWe8Mg?autoplay=1&mute=0&loop=1&playlist=El7vSCWe8Mg&controls=0&modestbranding=1&rel=0';
+
+}
+</script>
          
 
      
        
 
    
-
-
-<!-- =========================================
-     HILO SONORO · SALA III
-
-     TODAVÍA SIN ACTIVAR
-     ========================================= -->
-
-<!--
-<div class="rezo-audio">
-
-  <iframe
-    id="rezoAudio"
-    src="AQUI-IRA-EL-ENLACE-DE-YOUTUBE"
-    title="Los Rezos · Museo Cofrade de Sevilla"
-    allow="autoplay; encrypted-media"
-    frameborder="0">
-  </iframe>
-
-</div>
--->
-
-
-<!-- =========================================
-     BOTÓN SONIDO
-
-     TODAVÍA SIN ACTIVAR
-     ========================================= -->
-
-<!--
-<button
-  class="boton-sonido"
-  id="botonSonido"
-  type="button">
-
-  ♪ ESCUCHAR
-
-</button>
--->
 
 
 <!-- =========================================
