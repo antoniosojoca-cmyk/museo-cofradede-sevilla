@@ -458,7 +458,8 @@
 
   <main>
 
-```
+
+
 <!-- =========================================
      MÚSICA DE LA SALA
      ========================================= -->
@@ -469,43 +470,27 @@
     ♪ MÚSICA DE LA SALA
   </div>
 
-  <!--
-    VÍDEO OCULTO.
-    La música intenta comenzar automáticamente
-    al entrar en la sala.
-  -->
-
-  <div id="hilo-sonoro">
-
-    <iframe
-      id="youtube-musica"
-      src="https://www.youtube.com/embed/crnVuKw1Cvk?autoplay=1&enablejsapi=1&controls=0&rel=0&playsinline=1"
-      title="Música Sala I"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-
-  </div>
+  <iframe
+    width="1"
+    height="1"
+    src="https://www.youtube.com/embed/crnVuKw1Cvk?autoplay=1&loop=1&playlist=crnVuKw1Cvk"
+    title="Música de la Sala I"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    style="
+      position:fixed;
+      left:-100px;
+      top:-100px;
+      width:1px;
+      height:1px;
+      border:0;
+    ">
+  </iframe>
 
 </div>
 
 
 
-<!-- =========================================
-     BOTÓN DE SONIDO
-     ========================================= -->
-
-<button
-  class="boton-sonido"
-  id="botonSonido"
-  type="button"
-  aria-label="Activar música"
-  title="Activar música">
-
-  ♪
-
-</button>
 
 
 
